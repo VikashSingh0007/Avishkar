@@ -1,0 +1,94 @@
+.scrollerPastPerformance {
+  max-width: 1600px;
+}
+
+.scroller__innerPastPerformance {
+  /* padding-block: 1.5rem; */
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+
+  .photo-container {
+    height: 300px; /* Set the desired height */
+    width: 300px; /* Set the desired width */
+    margin-bottom: 20px; /* Add some space between photos */
+  }
+
+  .photo-container img {
+    width: 100%; /* Ensure the image fills the container */
+    height: 100%; /* Ensure the image fills the container */
+    object-fit: cover; /* Maintain aspect ratio while covering the container */
+  }
+}
+
+.scrollerPastPerformance[data-animated="true"] {
+  overflow: hidden;
+  -webkit-mask: linear-gradient(
+    90deg,
+    transparent,
+    white 20%,
+    white 80%,
+    transparent
+  );
+  mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
+}
+
+.scrollerPastPerformance[data-animated="true"] .scroller__innerPastPerformance {
+  width: max-content;
+  flex-wrap: nowrap;
+  animation: scroll var(--_animation-duration, 90s)
+    var(--_animation-direction, forwards) linear infinite;
+}
+
+.scrollerPastPerformance[data-direction="right"] {
+  --_animation-direction: reverse;
+}
+
+.scrollerPastPerformance[data-direction="left"] {
+  --_animation-direction: forwards;
+}
+
+.scrollerPastPerformance[data-speed="fast"] {
+  --_animation-duration: 90s;
+}
+
+.scrollerPastPerformance[data-speed="slow"] {
+  --_animation-duration: 90s;
+}
+
+@keyframes scroll {
+  to {
+    transform: translate(calc(-50% - 0.5rem));
+  }
+}
+
+/* general styles */
+
+/* body {
+  display: flex;
+  min-block-size: 100vh;
+  
+  align-items: flex-end;
+  justify-content: space-around;
+  font-family: system-ui;
+  font-size: 1.125rem;
+  background-color: var(--clr-primary-800);
+} */
+
+.tag-listPastPerformance {
+  margin: 0;
+  padding-inline: 0;
+  list-style: none;
+}
+
+.tag-listPastPerformance li {
+  padding: 1rem;
+  background: var(--clr-primary-400);
+  border-radius: 0.5rem;
+  box-shadow: 0 0.5rem 1rem -0.25rem var(--clr-primary-900);
+}
+
+/* for testing purposed to ensure the animation lined up correctly */
+.testPastPerformance {
+  background: red !important;
+}

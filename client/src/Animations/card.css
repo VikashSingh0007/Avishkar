@@ -1,0 +1,158 @@
+.avishkarCard {
+    position: relative;
+    height: 300px;
+    width: 230px;
+  }
+  .avishkarCard:nth-child(2) {
+    filter: hue-rotate(300deg) brightness(1.3);
+  }
+  .avishkarCard:nth-child(3) {
+    filter: hue-rotate(200deg) brightness(1.5);
+  }
+  .avishkarCard:nth-child(4) {
+    filter: hue-rotate(60deg) brightness(3);
+  }
+  .avishkarCard .boxshadow {
+    position: absolute;
+    height: 80%;
+    width: 80%;
+    border: 1px solid rgb(255, 128, 0);
+    transform: scale(0.8);
+    box-shadow: rgb(255, 128, 0) 0px 35px 70px 0px;
+    transition: all 0.5s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+  }
+  .avishkarCard .avishkarMain {
+    width: 230px;
+    height: 300px;
+    overflow: hidden;
+    background: rgb(255, 128, 0);
+    background: linear-gradient(
+      0deg,
+      #3e0000 0%,
+      rgb(255, 149, 0) 60%,
+      #3e0000 100%
+    );
+    position: relative;
+    clip-path: polygon(
+      0 0,
+      100% 0,
+      100% 40px,
+      100% calc(100% - 40px),
+      calc(100% - 40px) 100%,
+      40px 100%,
+      0 calc(100% - 40px)
+    );
+    box-shadow: rgb(255, 149, 0) 0px 17px 49px 0px;
+    transition: all 0.3s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+  }
+  .avishkarCard .avishkarMain .top {
+    position: absolute;
+    top: 0px;
+    left: 0;
+    width: 0px;
+    height: 0px;
+    z-index: 2;
+    border-top: 115px solid black;
+    border-left: 115px solid transparent;
+    border-right: 115px solid transparent;
+    transition: all 0.5s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+  }
+  .avishkarCard .avishkarMain .side {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    transform: translateX(-50%);
+    height: 101%;
+    background: black;
+    clip-path: polygon(0% 0%, 50% 0, 95% 45%, 100% 100%, 0% 100%);
+    transition: all 0.5s cubic-bezier(0.785, 0.135, 0.15, 0.86) 1s;
+  }
+  .avishkarCard .avishkarMain .left {
+    left: 0;
+  }
+  .avishkarCard .avishkarMain .right {
+    right: 0;
+    transform: translateX(50%) scale(-1, 1);
+  }
+  .avishkarCard .avishkarMain .avishkartitle {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 90px;
+    font-weight: bold;
+    font-size: 2rem;
+    opacity: 0;
+    z-index: -1;
+    transition: all 0.2s ease-out 0s;
+  }
+  .avishkarCard .avishkarMain .button-container {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .avishkarCard .avishkarMain .button-container .avishkar_button {
+    position: absolute;
+    transform: translateX(-50%);
+    padding: 5px 16px;
+    clip-path: polygon(0 0, 100% 0, 81% 100%, 21% 100%);
+    background: black;
+    border: none;
+    color: white;
+    display: grid;
+    place-content: center;
+    transition: all 0.5s cubic-bezier(0.6, 0.1, 0.1, 0);
+  }
+  .avishkarCard .avishkarMain .button-container .avishkar_button .svg {
+    width: 15px;
+    transition: all 0.2s cubic-bezier(0.6, 0.1, 0.1, 0);
+  }
+  .avishkarCard .avishkarMain .button-container .avishkar_button:nth-child(1) {
+    bottom: 300px;
+    transition-delay: 0.4s;
+  }
+  .avishkarCard .avishkarMain .button-container .avishkar_button:nth-child(2) {
+    bottom: 300px;
+    transition-delay: 0.6s;
+  }
+  .avishkarCard .avishkarMain .button-container .avishkar_button:nth-child(3) {
+    bottom: 300px;
+    transition-delay: 0.8s;
+  }
+  .avishkarCard .avishkarMain .button-container .avishkar_button:hover .svg {
+    transform: scale(1.2);
+  }
+  .avishkarCard .avishkarMain .button-container .avishkar_button:active .svg {
+    transform: scale(0.7);
+  }
+  .avishkarCard:hover .avishkarMain {
+    transform: scale(1.1);
+  }
+  .avishkarCard:hover .avishkarMain .top {
+    top: -50px;
+  }
+  .avishkarCard:hover .avishkarMain .left {
+    left: -50px;
+    transition: all 0.5s cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.1s;
+  }
+  .avishkarCard:hover .avishkarMain .right {
+    right: -50px;
+    transition: all 0.5s cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.1s;
+  }
+  .avishkarCard:hover .avishkarMain .avishkartitle {
+    opacity: 1;
+    transition: all 0.2s ease-out 1.3s;
+  }
+  .avishkarCard:hover .avishkarMain .button-container .avishkar_button:nth-child(1) {
+    bottom: 80px;
+    transition-delay: 0.8s;
+  }
+  .avishkarCard:hover .avishkarMain .button-container .avishkar_button:nth-child(2) {
+    bottom: 40px;
+    transition-delay: 0.6s;
+  }
+  .avishkarCard:hover .avishkarMain .button-container .avishkar_button:nth-child(3) {
+    bottom: 0;
+    transition-delay: 0.4s;
+  }
+  

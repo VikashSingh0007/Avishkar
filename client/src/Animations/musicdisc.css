@@ -1,0 +1,47 @@
+.musicDisc {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border-radius: 50%;
+    height: 8rem;
+    width: 8rem;
+    border: 1px solid black;
+    animation: rotate_3922 1.2s linear infinite;
+    background-color: #ed9026;
+    background-image: linear-gradient(black, #ed9026, black);
+  }
+  
+  .musicDisc span {
+    position: absolute;
+    border-radius: 50%;
+    height: 100%;
+    width: 100%;
+    background-color: #ed9026;
+    background-image: linear-gradient(#ed9026, white, black);
+  }
+  
+  .musicDisc span {
+    filter: blur(20px);
+  }
+  .musicDisc::after {
+    content: "";
+    position: absolute;
+    top: 50px;
+    left: 50px;
+    right: 50px;
+    bottom: 50px;
+    background-color: black;
+    border: solid 1px black;
+    border-radius: 50%;
+  }
+  
+  @keyframes rotate_3922 {
+    from {
+      transform: translate(-50%, -50%) rotate(0deg);
+    }
+  
+    to {
+      transform: translate(-50%, -50%) rotate(360deg);
+    }
+  }
+  

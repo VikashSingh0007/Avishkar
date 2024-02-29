@@ -1,0 +1,69 @@
+/* html,
+body {
+  height: 100%;
+} */
+/* 
+body {
+  display: flex;
+  background: #4a7e8b;
+} */
+.protest-revolution-regular {
+  /* font-family: "Kode Mono", monospace; */
+  font-family: "Libre Bodoni", serif;
+  font-optical-sizing: auto;
+  font-weight: 800;
+  font-style: normal;
+}
+.record {
+  position: relative;
+  margin: auto;
+  width: 300px;
+  height: 300px;
+  border-radius: 300px;
+  background: radial-gradient(
+      white 2%,
+      #c00000 2%,
+      #c00000 22%,
+      black 22%,
+      black 27%,
+      transparent 27%,
+      transparent 37%,
+      black 37%,
+      black 37.5%,
+      transparent 37.5%,
+      transparent 49%,
+      black 49%,
+      black 49.5%,
+      transparent 49.5%,
+      transparent 55%,
+      black 56%,
+      black 49.5%,
+      transparent 49.5%,
+      transparent 69%,
+      black 69%
+    ),
+    linear-gradient(35deg, black 35%, transparent 68%),
+    linear-gradient(50deg, #e3e3e3 50%, transparent 60%), black;
+  animation: rotation 3s infinite linear;
+}
+
+.record span {
+  display: block;
+  padding: 110px;
+  line-height: 42px;
+  text-align: center;
+  font-family: sans-serif;
+  color: #ddd;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}

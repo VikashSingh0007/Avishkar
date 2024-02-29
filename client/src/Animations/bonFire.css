@@ -1,0 +1,160 @@
+/* Define Colors */
+:root {
+    --black: #111217;
+    --brown-light: #70392F;
+    --brown-dark: #612E25;
+    --yellow: #FFDC01;
+    --orange: #FDAC01;
+    --red: #F73B01;
+    --animation-time: 1.5s;
+  }
+  
+
+  .fire {
+    /* transform: translate(%, -15%); */
+    height: 7vw;
+    width: 7vw;
+  }
+  
+  .flames {
+    position: absolute;
+    bottom: 40%;
+    left: 50%;
+    width: 60%;
+    height: 60%;
+    transform: translateX(-50%) rotate(45deg);
+  }
+  
+  .flame {
+    position: absolute;
+    right: 0%;
+    bottom: 0%;
+    width: 0%;
+    height: 0%;
+    background-color: var(--yellow);
+    border-radius: 1vw;
+  }
+  
+  .flame:nth-child(2n + 1) {
+    animation: flameodd var(--animation-time) ease-in infinite;
+  }
+  
+  .flame:nth-child(2n) {
+    animation: flameeven var(--animation-time) ease-in infinite;
+  }
+  
+  .flame:nth-child(1) {
+    animation-delay: 0s;
+  }
+  
+  .flame:nth-child(2) {
+    animation-delay: calc(var(--animation-time) / 4);
+  }
+  
+  .flame:nth-child(3) {
+    animation-delay: calc(var(--animation-time) / 4 * 2);
+  }
+  
+  .flame:nth-child(4) {
+    animation-delay: calc(var(--animation-time) / 4 * 3);
+  }
+  
+  .logs {
+    position: absolute;
+    bottom: 25%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    height: 15%;
+  }
+  
+  .logs:before,
+  .logs:after {
+    position: absolute;
+    content: '';
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(20deg);
+    height: 100%;
+    width: 100%;
+    border-radius: 1vw;
+    background-color: var(--brown-dark);
+
+  }
+  
+  .logs:before {
+    transform: translate(-50%, -50%) rotate(-20deg);
+    background-color: var(--brown-dark);
+
+  }
+  
+  @keyframes flameodd {
+    0%, 100% {
+      width: 0%;
+      height: 0%;
+    }
+    25% {
+      width: 100%;
+      height: 100%;
+    }
+    0% {
+      background-color: var(--yellow);
+      z-index: 1000000;
+    }
+    40% {
+      background-color: var(--orange);
+      z-index: 1000000;
+    }
+    100% {
+      background-color: var(--red);
+      z-index: -10;
+    }
+    0% {
+      right: 0%;
+      bottom: 0%;
+    }
+    25% {
+      right: 1%;
+      bottom: 2%;
+    }
+    100% {
+      right: 150%;
+      bottom: 170%;
+    }
+  }
+  
+  @keyframes flameeven {
+    0%, 100% {
+      width: 0%;
+      height: 0%;
+    }
+    25% {
+      width: 100%;
+      height: 100%;
+    }
+    0% {
+      background-color: var(--yellow);
+      z-index: 1000000;
+    }
+    40% {
+      background-color: var(--orange);
+      z-index: 1000000;
+    }
+    100% {
+      background-color: var(--red);
+      z-index: -10;
+    }
+    0% {
+      right: 0%;
+      bottom: 0%;
+    }
+    25% {
+      right: 2%;
+      bottom: 1%;
+    }
+    100% {
+      right: 170%;
+      bottom: 150%;
+    }
+  }
+  

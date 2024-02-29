@@ -1,0 +1,18 @@
+/* powerOnButton.css */
+@keyframes glow {
+  0% {
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.9);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.9);
+  }
+  100% {
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.7);
+  }
+}
+
+.power-on-button {
+  animation: glow 2s infinite alternate;
+}
+
+/* Add any other styles you need for the button here */

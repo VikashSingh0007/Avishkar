@@ -1,0 +1,83 @@
+:root {
+  --card-height: 40vh;
+  --card-width: calc(var(--card-height) / 1.1);
+}
+* {
+  box-sizing: border-box;
+}
+@media screen and (max-width: 1024px) {
+  :root {
+    --card-height: 20vh;
+    --card-width: calc(var(--card-height) / 0.75);
+  }
+}
+.protest-revolution-regular {
+    /* font-family: "Kode Mono", monospace; */
+    font-family: "Libre Bodoni", serif;
+    font-optical-sizing: auto;
+    font-weight: 800;
+    font-style: normal;
+  }
+
+.card {
+  width: var(--card-width);
+  height: var(--card-height);
+  position: absolute;
+  display: flex;
+
+  justify-content: center;
+  align-items: flex-end;
+
+  perspective: 2500px;
+  transform: translateX(-50%);
+  opacity: 0.9;
+}
+
+.cover-image {
+  width: 100%;
+  height: 100%;
+  margin-top: 20px;
+  /* margin-bottom: 20px; */
+  object-fit: cover;
+  border-radius: 10px;
+  border: 2px solid black;
+  opacity: 1;
+}
+
+.wrapper-card {
+  transition: all 0.5s;
+
+  width: 100%;
+  z-index: 1;
+  border-radius: 10px;
+}
+
+.card:hover .wrapper-card {
+  transform: perspective(900px) translateY(-5%) rotateX(25deg) translateZ(0);
+  box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
+  opacity: 1;
+}
+
+.title {
+  width: 100%;
+  transition: transform 0.5s;
+}
+.card:hover .title {
+  transform: translate3d(0%, -50px, 100px);
+}
+
+.character {
+  width: 100%;
+  opacity: 0;
+  transition: all 0.5s;
+  position: absolute;
+  z-index: -1;
+  border-radius: 10%;
+}
+
+.card:hover .character {
+  opacity: 0.9;
+  transform: translate3d(0%, -70%, 100px);
+}

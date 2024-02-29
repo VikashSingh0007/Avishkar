@@ -1,0 +1,25 @@
+create team : {
+    name : (team name lagao),
+    size : (size dedo int main) 
+}
+jo call karega vo by default leader ban jayega
+
+delete team : {
+    teamId : (team id dedo)
+}
+sirf leader hi call kar sakta hain
+
+update team : {
+    teamId : (team id dedo),
+    name : (name dedo jo rakhna hain),
+}
+
+sendTeamInvitation : {
+    teamId : (konsi team main bulaoge),
+    username : (jis user ko bula rahe ho uska username)
+}
+
+acceptOrRejectInvitation : {
+    teamId : (konsi team ka invite hain),
+    status : (kya delete karna hain)
+}

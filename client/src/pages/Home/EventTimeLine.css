@@ -1,0 +1,156 @@
+@import url("https://fonts.googleapis.com/css2?family=Libre+Bodoni&family=Oswald:wght@700&display=swap");
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+/* html {
+  font-family: "Libre Bodoni", serif;
+  background: black;
+  color: white;
+  font-size: 21px;
+} */
+
+/* html,
+body {
+  margin: 0;
+} */
+
+/* Timeline */
+
+.timeline {
+  /* ----------
+   * Variables:
+   * Try playing around with these values!
+   * ----------
+  */
+  --size: 3rem;
+  --style: solid;
+  --color: #0a9396;
+  --thickness: 8px;
+  --spacing-vertical: 40px;
+  --spacing-horizontal: 10px;
+
+  display: flex;
+  flex-flow: column;
+  gap: var(--spacing-vertical);
+
+  padding-left: var(--size);
+  position: relative;
+
+  margin: 10px;
+
+  counter-reset: timeline;
+
+  overflow-x: hidden;
+  font-family: "Libre Bodoni", serif;
+}
+
+.timeline:before {
+  display: block;
+  width: 100%;
+  height: 100%;
+
+  content: "";
+
+  border-left: var(--thickness) var(--style) var(--color);
+
+  position: absolute;
+  top: 0;
+  left: calc(var(--size) / 2 - var(--thickness) / 2);
+  font-family: "Libre Bodoni", serif;
+}
+
+.timeline h5 {
+  margin: 0;
+  padding: 0;
+  font-weight: 700;
+  font-size: x-large;
+  padding-left: var(--spacing-horizontal);
+
+  position: relative;
+  counter-increment: timeline;
+}
+
+.timeline h5:before {
+  width: var(--size);
+  height: var(--size);
+
+  content: counter(timeline, decimal-leading-zero);
+  font-size: calc(var(--size) - 1rem);
+  overflow: hidden;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  position: absolute;
+  top: 0;
+  left: calc(-1 * var(--size));
+
+  background: var(--color);
+  border-radius: 50%;
+
+  font-weight: bolder;
+  font-size: xx-large;
+  font-family: "Oswald", sans-serif;
+}
+
+@media (min-width: 640px) {
+  .timeline {
+    padding-left: 0;
+  }
+
+  .timeline:before {
+    left: calc(50% - var(--thickness) / 2);
+  }
+
+  .timeline h5 {
+    padding-left: 0;
+  }
+
+  .timeline h5:nth-child(odd) {
+    margin-left: calc(50% + var(--size) / 2 + var(--spacing-horizontal));
+  }
+
+  .timeline h5:nth-child(even) {
+    margin-right: calc(50% + var(--size) / 2 + var(--spacing-horizontal));
+  }
+
+  .timeline h5:nth-child(odd):before {
+    left: calc(-1 * var(--size) - var(--spacing-horizontal));
+  }
+
+  .timeline h5:nth-child(even):before {
+    left: calc(100% + var(--spacing-horizontal));
+  }
+}
+
+/* Scrollbar */
+
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #111;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  background-color: #fff;
+}
+
+::-webkit-scrollbar-thumb {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #0a9396;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #005f73;
+}
+
+::-webkit-scrollbar-thumb:active {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #004755;
+}

@@ -1,0 +1,128 @@
+@font-face {
+  font-family: "shiv";
+  src: url("./shivansh.ttf") format("truetype");
+}
+
+* {
+  box-sizing: border-box;
+}
+
+#dial-outer {
+  /* position: absolute; */
+  /* justify-content: space-evenly; */
+
+  transform: translate(-0%, -0%);
+  /* width: (32%); */
+  /* height: 45%; */
+  border: 1px solid rgb(0, 0, 0);
+
+  border-radius: 50%;
+  /* box-shadow: 2px 2px 3px #3a231f, inset 2px 2px 3px #3a231f,
+    inset -2px -2px 3px #3a231f, inset 2px -2px 3px #3a231f,
+    inset -2px 2px 3px #3a231f, -2px -2px 3px #3a231f, 2px -2px 3px #3a231f,
+    -2px 2px 3px #3a231f; */
+  z-index: 1;
+}
+/* #dial-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 280px;
+  height: 280px;
+  padding-top: 40px;
+  background-color: #ffd;
+  border-radius: 50%;
+  box-shadow: -2px -2px 3px #888, 2px 2px 3px #888, -2px 2px 3px #888,
+    2px -2px 3px #888;
+  overflow: hidden;
+  text-align: center;
+  z-index: 3;
+} */
+
+#center-bottom {
+  position: absolute;
+  bottom: 0%;
+  left: 50%;
+  transform: translatex(-50%);
+  width: 280px;
+  height: 85px;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-top: 1px solid #777;
+  z-index: 4;
+}
+#stop {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(50px, 123px) rotate(-27.5deg);
+  width: 70px;
+  height: 130px;
+  border-bottom: 6px solid rgba(0, 0, 0, 1);
+  border-bottom-left-radius: 15%;
+  border-bottom-right-radius: 15%;
+  z-index: 6;
+}
+svg {
+  margin-left: -10px;
+}
+.btn {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  width: 13%;
+  height: 14%;
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  background-color: #edd698;
+  border: 2px solid #edd698;
+  border-radius: 50%;
+  font-size: 24px;
+  line-height: 45px;
+  text-align: center;
+  transition-timing-function: linear;
+  cursor: pointer;
+  z-index: 999;
+}
+#btn0 {
+  transform: translate(40%, 143%);
+  transition-duration: 0.5s;
+  z-index: 999;
+}
+#btn1 {
+  transform: translate(-115%, 149%);
+  z-index: 999;
+}
+#btn2 {
+  transform: translate(-259%, 92%);
+  z-index: 999;
+}
+#btn3 {
+  transform: translate(-349%, -29%);
+  z-index: 999;
+}
+#btn4 {
+  transform: translate(-365%, -170%);
+  z-index: 999;
+}
+#btn5 {
+  transform: translate(-305%, -305%);
+  z-index: 999;
+}
+#btn6 {
+  transform: translate(-181%, -390%);
+  z-index: 999;
+}
+#btn7 {
+  transform: translate(-24%, -407%);
+  z-index: 999;
+}
+#btn8 {
+  transform: translate(155px, 35px);
+  z-index: 999;
+}
+#btn9 {
+  transform: translate(120px, 95px);
+  z-index: 999;
+}
