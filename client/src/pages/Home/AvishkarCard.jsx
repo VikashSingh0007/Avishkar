@@ -10,22 +10,6 @@ import WoodenBar from "./culrav/assets/wooden111.png";
 const FixedDivsComponent = () => {
   return (
     <div className="columns-2xs flex flex-col  sm:flex-row gap-8 p-0 relative">
-      {/* Cloud 1 */}
-      {/* <div className="absolute top-[-19%] left-0 w-full">
-        <img src={Clouds1} className="absolute top-0 left-0 w-[300px]" />
-        <img src={Clouds2} className="absolute top-0 left-1/3 w-[300px]" />
-        <img src={Clouds3} className="absolute top-0 right-0 w-[300px]" />
-        <img src={Clouds1} className="absolute bottom-0 right-1/4 w-[300px]" />
-      </div> */}
-      {/* <div className="absolute top-[0%] left-0 right-0 transform -translate-x-1/2 w-full animate-waving">
-        <img
-          src={WoodenBar}
-          className="block mx-auto lg:w-[20%] md:w-[10%] sm:w-[10%]"
-        />
-        <h1 className="text-white text-4xl font-bold text-center mx-auto md:mt-[-140px] sm:mt-[-140px]">
-          Events
-        </h1>
-      </div> */}
       <div className="absolute top-[-10%] sm:top-[-20%] left-0 right-0 transform -translate-x-1/2 w-full animate-waving">
         <img
           src={WoodenBar}

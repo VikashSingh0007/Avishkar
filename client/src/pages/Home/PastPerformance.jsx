@@ -72,7 +72,7 @@ const Carousel = () => {
   return (
     <div>
       <h2
-        className="text-3xl text-white font-bold mb-4 flex justify-center mt-20"
+        className="text-3xl text-black font-bold mb-4 flex justify-center mt-[0%]"
         style={{
           fontSize: "xx-large",
           fontWeight: "bolder",
@@ -83,7 +83,7 @@ const Carousel = () => {
         Our Past Performers
       </h2>
       <div
-        className="scrollerPastPerformance"
+        className="scrollerPastPerformance mt-[10%]"
         data-direction="right"
         data-speed="slow"
       >

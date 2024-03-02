@@ -31,7 +31,7 @@ app.use(express.static(path.join(__dirname, "./client/dist")));
 app.get("*", (req, res) => {
   res.sendFile(path.join(__dirname, "./client/dist/index.html"));
 });
-const PORT = 8080;
+const PORT = 8000;
 app.listen(PORT, () => {
   console.log(`Server is running http://localhost:${PORT}`);
 });

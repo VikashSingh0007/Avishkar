@@ -7,18 +7,17 @@
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
+}
+.scroller__innerPastPerformance .photo-container {
+  height: 300px; /* Set the desired height */
+  width: 300px; /* Set the desired width */
+  margin-bottom: 20px; /* Add some space between photos */
+}
 
-  .photo-container {
-    height: 300px; /* Set the desired height */
-    width: 300px; /* Set the desired width */
-    margin-bottom: 20px; /* Add some space between photos */
-  }
-
-  .photo-container img {
-    width: 100%; /* Ensure the image fills the container */
-    height: 100%; /* Ensure the image fills the container */
-    object-fit: cover; /* Maintain aspect ratio while covering the container */
-  }
+.scroller__innerPastPerformance .photo-container img {
+  width: 100%; /* Ensure the image fills the container */
+  height: 100%; /* Ensure the image fills the container */
+  object-fit: cover; /* Maintain aspect ratio while covering the container */
 }
 
 .scrollerPastPerformance[data-animated="true"] {

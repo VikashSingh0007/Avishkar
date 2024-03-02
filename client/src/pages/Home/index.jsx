@@ -8,7 +8,7 @@ import Sponsors from "./Sponsors.jsx";
 import AvishkarCard from "./AvishkarCard.jsx";
 import EventTimeLine from "./EventTimeline.jsx";
 import Footer from "./Footer.jsx";
-
+import Gallery from "./Gallery.jsx";
 const App = () => {
   return (
     <>
@@ -28,8 +28,10 @@ const App = () => {
         </div>
 
         <EventTimeLine />
+
         <div className={`bg-primary ${styles.paddingX} ${styles.flexCenter}`}>
           <div className={`${styles.boxWidth}`}>
+            <Gallery />
             <PastPerformance />
             <Sponsors />
           </div>

@@ -24,7 +24,7 @@ const AboutUs = () => {
 
         <div className={layout.sectionInfo}>
           <h2
-            className="text-3xl text-black font-bold mb-4 flex justify-center mt-20"
+            className="text-3xl text-black font-bold mb-4 flex justify-center "
             style={{
               fontSize: "xx-large",
               fontWeight: "bolder",

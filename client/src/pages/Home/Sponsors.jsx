@@ -70,7 +70,7 @@ const Carousel = () => {
   return (
     <div>
       <h2
-        className="text-3xl text-white font-bold mb-4 flex justify-center mt-20"
+        className="text-3xl text-black font-bold mb-4 flex justify-center mt-[10%]"
         style={{
           fontSize: "xx-large",
           fontWeight: "bolder",
@@ -80,7 +80,11 @@ const Carousel = () => {
       >
         Our Past Sponsor
       </h2>
-      <div className="scroller" data-direction="left" data-speed="slow">
+      <div
+        className="scroller mt-[10%] "
+        data-direction="left"
+        data-speed="slow"
+      >
         <div className="scroller__inner">
           {Data.map((item, index) => (
             <div key={index} className="photo-container">
