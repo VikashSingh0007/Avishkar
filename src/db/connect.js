@@ -1,5 +1,5 @@
 const mongoose =require('mongoose');
-const pool=mongoose.connect("mongodb+srv://kumarvivek7282827749:vivekkumar@cluster0.qjxcqgc.mongodb.net/Culrav_Avishkar?retryWrites=true&w=majority",{
+const pool=mongoose.connect(process.env.DATABASE_URL,{
     connectTimeoutMS: 10000
 })
 .then(function(db){
