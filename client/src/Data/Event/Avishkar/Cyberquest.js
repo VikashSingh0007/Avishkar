@@ -24,12 +24,12 @@ export const Cyberquest = [
         disc: "Get ready to test your programming skills! This exciting event simulates the real-world software recruitment process for undergraduates. Brace yourself for written tests, coding challenges, andinterview rounds to assess your technical knowledge, problem-solvingabilities, and confidence. Take advantage of this chance to gain valuableexperience and insights into the world of software recruitment!",
         rule: [
           {
-            rule_1: "❖ Team-Size: 1",
-            rule_2: "❖ Rounds: 3        ",
-            rule_3: "❖ Round1: OA(Online Assessment)",
-            rule_4: "❖ Round2: Technical Interview        ",
-            rule_5: "❖ Round3: Project round",
-            rule_6: "❖ Team-Eligibility: Must be from CSE",
+            rule_1: "Team-Size: 1",
+            rule_2: "Rounds: 3 ",
+            rule_3: "Round1: OA(Online Assessment)",
+            rule_4: "Round2: Technical Interview        ",
+            rule_5: "Round3: Project round",
+            rule_6: "Team-Eligibility: Must be from CSE",
           },
         ],
         TeamSize: "",

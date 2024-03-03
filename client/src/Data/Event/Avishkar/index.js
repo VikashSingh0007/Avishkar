@@ -3,31 +3,31 @@ import { Genesis } from "./Genesis";
 import { Gnosiomania } from "./Gnosiomania";
 
 import { Mechrocosm } from "./Mechrocosm";
-import { Nirman } from "./Nirman";
+import { Nirmaan } from "./Nirmaan";
 import { Aerodynamix } from "./Aerodynamix";
 import { Cyberquest } from "./Cyberquest";
 import { Kreedomania } from "./Kreedomania";
 import { Monopoly } from "./Monopoly";
 import { Oligopoly } from "./Oligopoly";
 import { PowerSurge } from "./PowerSurge";
-import { Rasayan } from "./Rasayan";
+import { Rasayans } from "./Rasayans";
 import { Robomania } from "./Robomania";
 import { CosmoCon } from "./CosmoCon";
 const eventData = [
-  { event: "Electromania", info: Electromania },
-  { event: "Genesis", info: Genesis },
   { event: "Gnosiomania", info: Gnosiomania },
-  { event: "Mechrocosm", info: Mechrocosm },
-  { event: "Nirman", info: Nirman },
-  { event: "Aerodynamix", info: Aerodynamix },
   { event: "Cyberquest", info: Cyberquest },
-  { event: "Kreedomania", info: Kreedomania },
+  { event: "Electromania", info: Electromania },
+  { event: "PowerSurge", info: PowerSurge },
+  { event: "Mechrocosm", info: Mechrocosm },
+  { event: "Nirmaan", info: Nirmaan },
+  { event: "Rasayans", info: Rasayans },
+  { event: "Genesis", info: Genesis },
   { event: "Monopoly", info: Monopoly },
   { event: "Oligopoly", info: Oligopoly },
-  { event: "PowerSurge", info: PowerSurge },
-  { event: "Rasayan", info: Rasayan },
   { event: "Robomania", info: Robomania },
+  { event: "Aerodynamix", info: Aerodynamix },
   { event: "CosmoCon", info: CosmoCon },
+  { event: "Kreedomania", info: Kreedomania },
 ];
 
 export default eventData;

@@ -6,7 +6,7 @@ const ParallaxGallery = () => {
   return (
     <div className="external1 mt-0 mb-[0%]">
       <h2
-        className="text-3xl text-black font-bold mb-4 flex justify-center mt-[-0%]"
+        className="text-3xl text-black font-bold mb-4 flex justify-center mt-[10%]"
         style={{
           fontSize: "xx-large",
           fontWeight: "bolder",
@@ -16,7 +16,7 @@ const ParallaxGallery = () => {
       >
         Gallery
       </h2>
-      <div className="horizontal-scroll-wrapper1 mt-[-10%]">
+      <div className="horizontal-scroll-wrapper1 sm:mt-[-30%] md:mt-[-20%] lg:mt-[-10%]">
         {/* Image wrappers */}
         <div className="img-wrapper1 slower">
           <img

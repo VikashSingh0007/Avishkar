@@ -28,14 +28,14 @@ const App = () => {
         </div>
 
         <EventTimeLine />
-
         <div className={`bg-primary ${styles.paddingX} ${styles.flexCenter}`}>
           <div className={`${styles.boxWidth}`}>
+            {" "}
             <Gallery />
-            <PastPerformance />
-            <Sponsors />
           </div>
         </div>
+        <PastPerformance />
+        <Sponsors />
       </HomePageLayout>
     </>
   );

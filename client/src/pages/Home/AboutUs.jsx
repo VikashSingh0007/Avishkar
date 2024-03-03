@@ -1,6 +1,5 @@
 import styles, { layout } from "../../style";
-import BackGroundImage from "../../assets/bachgroundImage2.gif";
-import BackGroundImage1 from "../../assets/vintage15.svg";
+
 import { useNavigate } from "react-router-dom";
 import "./AboutUs.css";
 const AboutUs = () => {
@@ -34,7 +33,7 @@ const AboutUs = () => {
           >
             About Us
           </h2>
-          <h5 className="protest-revolution-regular text-xl">
+          <h5 className="protest-revolution-regular text-xl justify">
             MOTILAL NEHRU NATIONAL INSTITUTE OF TECHNOLOGY ALLAHABAD, PRAYAGRAJ
             an Institute of National Importance (by GOI), MNNIT ranks 3rd among
             the 30 NITs in India, as per QS Universities Rankings 2017. It was

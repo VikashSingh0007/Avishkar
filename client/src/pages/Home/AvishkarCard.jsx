@@ -1,6 +1,6 @@
 import React from "react";
 import "./AvishkarCard.css";
-import Avishkar from "./culrav/assets/avishkar.png";
+import Avishkar from "./culrav/assets/avishkarlogo.png";
 import Culrav from "./culrav/assets/CULRAV.png";
 import { Link } from "react-router-dom";
 import Clouds1 from "./culrav/assets/clouds11.png";

@@ -22,21 +22,21 @@ export const Kreedomania = [
         PsLink: "",
         coordinators: [
           {
-            name: "divyansh gangwar",
-            phone: "7017646069",
+            name: "Divyansh Gangwar",
+            phone: "9758987445",
           },
           {
-            name: "nikhil chaurasia",
+            name: "Nikhil Chaurasia",
             phone: "9335183583",
           },
           {
-            name: "shaurya raj srivastav",
+            name: "Shaurya Raj Srivastav",
             phone: "8299760453",
           },
         ],
       },
       {
-        name: "csgo 2.0",
+        name: "CSGO 2.0",
         disc: "",
         rule: [
           {
@@ -52,22 +52,22 @@ export const Kreedomania = [
         PsLink: "",
         coordinators: [
           {
-            name: "divyansh gangwar",
-            phone: "7017646069",
+            name: "Divyansh Gangwar",
+            phone: "9758987445",
           },
           {
-            name: "nikhil chaurasia",
+            name: "Nikhil Chaurasia",
             phone: "9335183583",
           },
           {
-            name: "shaurya raj srivastav",
+            name: "Shaurya Raj Srivastav",
             phone: "8299760453",
           },
         ],
       },
 
       {
-        name: "fifa’23",
+        name: "FIFA’23",
         disc: "",
         rule: [
           {
@@ -80,26 +80,26 @@ export const Kreedomania = [
         PsLink: "",
         coordinators: [
           {
-            name: "divyansh gangwar",
-            phone: "7017646069",
+            name: "Divyansh Gangwar",
+            phone: "9758987445",
           },
           {
-            name: "nikhil chaurasia",
+            name: "Nikhil Chaurasia",
             phone: "9335183583",
           },
           {
-            name: "shaurya raj srivastav",
+            name: "Shaurya Raj Srivastav",
             phone: "8299760453",
           },
           {
-            name: "utkarsh chauhan",
+            name: "Utkarsh Chauhan",
             phone: "9119391227",
           },
         ],
       },
 
       {
-        name: "mortal kombat",
+        name: "MORTAL KOMBAT",
         disc: "",
         rule: [
           {
@@ -112,26 +112,26 @@ export const Kreedomania = [
         PsLink: "",
         coordinators: [
           {
-            name: "divyansh gangwar",
-            phone: "7017646069",
+            name: "Divyansh Gangwar",
+            phone: "9758987445",
           },
           {
-            name: "nikhil chaurasia",
+            name: "Nikhil Chaurasia",
             phone: "9335183583",
           },
           {
-            name: "shaurya raj srivastav",
+            name: "Shaurya Raj Srivastav",
             phone: "8299760453",
           },
           {
-            name: "utkarsh chauhan",
+            name: "Utkarsh Chauhan",
             phone: "9119391227",
           },
         ],
       },
 
       {
-        name: "mini militia",
+        name: "MINI MILITIA",
         disc: "",
         rule: [
           {
@@ -147,22 +147,26 @@ export const Kreedomania = [
         PsLink: "",
         coordinators: [
           {
-            name: "divyansh gangwar",
-            phone: "7017646069",
+            name: "Divyansh Gangwar",
+            phone: "9758987445",
           },
           {
-            name: "nikhil chaurasia",
+            name: "Nikhil Chaurasia",
             phone: "9335183583",
           },
           {
-            name: "shaurya raj srivastav",
+            name: "Shaurya Raj Srivastav",
             phone: "8299760453",
+          },
+          {
+            name: "Utkarsh Chauhan",
+            phone: "9119391227",
           },
         ],
       },
 
       {
-        name: "bgmi mobile",
+        name: "BGMI MOBILE",
         disc: "",
         rule: [
           {
@@ -178,21 +182,25 @@ export const Kreedomania = [
         PsLink: "",
         coordinators: [
           {
-            name: "divyansh gangwar",
-            phone: "7017646069",
+            name: "Divyansh Gangwar",
+            phone: "9758987445",
           },
           {
-            name: "nikhil chaurasia",
+            name: "Nikhil Chaurasia",
             phone: "9335183583",
           },
           {
-            name: "shaurya raj srivastav",
+            name: "Shaurya Raj Srivastav",
             phone: "8299760453",
+          },
+          {
+            name: "Utkarsh Chauhan",
+            phone: "9119391227",
           },
         ],
       },
       {
-        name: "cod mobile",
+        name: "COD MOBILE",
         disc: "",
         rule: [
           {
@@ -208,21 +216,25 @@ export const Kreedomania = [
         PsLink: "",
         coordinators: [
           {
-            name: "divyansh gangwar",
-            phone: "7017646069",
+            name: "Divyansh Gangwar",
+            phone: "9758987445",
           },
           {
-            name: "nikhil chaurasia",
+            name: "Nikhil Chaurasia",
             phone: "9335183583",
           },
           {
-            name: "shaurya raj srivastav",
+            name: "Shaurya Raj Srivastav",
             phone: "8299760453",
+          },
+          {
+            name: "Utkarsh Chauhan",
+            phone: "9119391227",
           },
         ],
       },
       {
-        name: "scribble",
+        name: "SCRIBBLE",
         disc: "",
         rule: [
           {
@@ -236,21 +248,25 @@ export const Kreedomania = [
         PsLink: "",
         coordinators: [
           {
-            name: "divyansh gangwar",
-            phone: "7017646069",
+            name: "Divyansh Gangwar",
+            phone: "9758987445",
           },
           {
-            name: "nikhil chaurasia",
+            name: "Nikhil Chaurasia",
             phone: "9335183583",
           },
           {
-            name: "shaurya raj srivastav",
+            name: "Shaurya Raj Srivastav",
             phone: "8299760453",
+          },
+          {
+            name: "Utkarsh Chauhan",
+            phone: "9119391227",
           },
         ],
       },
       {
-        name: "rocket league",
+        name: "ROCKET LEAGUE",
         disc: "",
         rule: [
           {
@@ -266,16 +282,20 @@ export const Kreedomania = [
         PsLink: "",
         coordinators: [
           {
-            name: "divyansh gangwar",
-            phone: "7017646069",
+            name: "Divyansh Gangwar",
+            phone: "9758987445",
           },
           {
-            name: "nikhil chaurasia",
+            name: "Nikhil Chaurasia",
             phone: "9335183583",
           },
           {
-            name: "shaurya raj srivastav",
+            name: "Shaurya Raj Srivastav",
             phone: "8299760453",
+          },
+          {
+            name: "Utkarsh Chauhan",
+            phone: "9119391227",
           },
         ],
       },

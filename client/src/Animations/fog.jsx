@@ -1,4 +1,4 @@
-import "./fog.css"
+import "./fog.css";
 
 const Fog = () => {
   return (

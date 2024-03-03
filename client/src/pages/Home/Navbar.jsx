@@ -11,7 +11,7 @@ const Navbar = () => {
   const navLinks = [
     {
       id: "team",
-      title: "OurTeam",
+      title: "Our Team",
     },
 
     {

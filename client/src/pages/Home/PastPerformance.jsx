@@ -44,14 +44,7 @@ const Carousel = () => {
       name: "Mame Khan",
       img: MameKhan,
     },
-    {
-      name: "DJ Jessica",
-      img: jessica,
-    },
-    {
-      name: "Anurag Halder",
-      img: halder,
-    },
+
     {
       name: "Fahran Akhtar",
       img: fahran,
@@ -72,7 +65,7 @@ const Carousel = () => {
   return (
     <div>
       <h2
-        className="text-3xl text-black font-bold mb-4 flex justify-center mt-[0%]"
+        className="text-3xl text-black font-bold mb-4 flex justify-center mt-[10%]"
         style={{
           fontSize: "xx-large",
           fontWeight: "bolder",
@@ -90,8 +83,15 @@ const Carousel = () => {
         <div className="scroller__innerPastPerformance">
           {Data.map((item, index) => (
             <div key={index} className="photo-container">
-              <img src={item.img} alt={item.name} />
-              <h6>{item.name}</h6>
+              <img
+                src={item.img}
+                alt={item.name}
+                style={{ borderRadius: "20px" }}
+              />
+
+              <h6 style={{ textAlign: "center", color: "#fff" }}>
+                {item.name}
+              </h6>
             </div>
           ))}
         </div>

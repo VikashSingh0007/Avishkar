@@ -14,10 +14,18 @@
   margin-bottom: 20px; /* Add some space between photos */
 }
 
+/*  */
 .scroller__innerPastPerformance .photo-container img {
-  width: 100%; /* Ensure the image fills the container */
-  height: 100%; /* Ensure the image fills the container */
-  object-fit: cover; /* Maintain aspect ratio while covering the container */
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@media screen and (max-width: 768px) {
+  .scroller__innerPastPerformance .photo-container img {
+    width: 70%;
+    height: 70%;
+  }
 }
 
 .scrollerPastPerformance[data-animated="true"] {

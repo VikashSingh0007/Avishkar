@@ -1,5 +1,5 @@
 import styles from "../../style.js";
-import BackGroundImage from "../../assets/vintage14.png";
+
 import Navbar from "./HomepageNav.jsx";
 import Footer from "./Footer.jsx";
 import "./HomePageLatout.css";

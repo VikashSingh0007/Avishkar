@@ -59,7 +59,7 @@ const Page = () => {
                             <li key={index}>
                               {Object.entries(ruleObj).map(([key, value]) => (
                                 <div key={key}>
-                                  {key} {" - "}
+                                  {"❖ "}
                                   {value}
                                 </div>
                               ))}

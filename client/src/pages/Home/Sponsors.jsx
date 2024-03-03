@@ -18,10 +18,7 @@ const Carousel = () => {
       name: "SBI",
       img: SBI,
     },
-    {
-      name: "ICICI",
-      img: icici,
-    },
+
     {
       name: "BBQ",
       img: bbq,
@@ -92,7 +89,7 @@ const Carousel = () => {
                 src={item.img}
                 height="50"
                 width="50"
-                className="rounded-full lg:h-300 lg:w-300"
+                className="rounded-full lg:h-300 lg:w-300 sm:h-50 sm:w-50"
                 alt={item.name}
               />
             </div>

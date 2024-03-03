@@ -1,8 +1,8 @@
 import React, { useEffect, useRef } from "react";
 import "./CulravOpening.css";
 // import computerScreen from "./components/images/computer_screen.jpg";
-import Tv from "./assets/television1.png";
-import video from "../../../assets/culrav.mp4";
+// import Tv from "./assets/television1.png";
+// import video from "../../../assets/culrav.mp4";
 import { Link } from "react-router-dom";
 // import video from "./../../../../../assets/Final.mp4";
 const CulravLanding = () => {

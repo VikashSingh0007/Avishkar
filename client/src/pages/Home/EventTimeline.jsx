@@ -15,38 +15,14 @@ const HorizontalTimeline = () => {
       </h1>
       <section className="timeline mb-30 mt-30">
         <div>
-          <h5>Losit officia!</h5>
+          <h5>gnoTalks</h5>
         </div>
-        <h5>
-          Provident ducimus vel mollitia voluptatibus iure eligendi maiores
-          explicabo. Dolor accusamus, corporis praesentium repellat eligendi
-          iste in, inventore asperiores odio blanditiis quibusdam veniam dolores
-          laborum, illum quod expedita earum facere?
-        </h5>
-        <h5>
-          Provident ducimus vel mollitia voluptatibus iure eligendi maiores
-          explicabo. Dolor accusamus, corporis praesentium repellat eligendi
-          iste in, inventore asperiores odio blanditiis quibusdam veniam dolores
-          laborum, illum quod expedita earum facere?
-        </h5>
-        <h5>
-          Provident ducimus vel mollitia voluptatibus iure eligendi maiores
-          explicabo. Dolor accusamus, corporis praesentium repellat eligendi
-          iste in, inventore asperiores odio blanditiis quibusdam veniam dolores
-          laborum, illum quod expedita earum facere?
-        </h5>
-        <h5>
-          Provident ducimus vel mollitia voluptatibus iure eligendi maiores
-          explicabo. Dolor accusamus, corporis praesentium repellat eligendi
-          iste in, inventore asperiores odio blanditiis quibusdam veniam dolores
-          laborum, illum quod expedita earum facere?
-        </h5>
-        <h5>
-          Provident ducimus vel mollitia voluptatibus iure eligendi maiores
-          explicabo. Dolor accusamus, corporis praesentium repellat eligendi
-          iste in, inventore asperiores odio blanditiis quibusdam veniam dolores
-          laborum, illum quod expedita earum facere?
-        </h5>
+        <h5>gnoTalks</h5>
+        <h5>Special Performance</h5>
+        <h5>Kavyasandhya</h5>
+        <h5>EDM Night</h5>
+        <h5>Band Performance</h5>
+        <h5>Celebrity Night</h5>
       </section>
     </>
   );
