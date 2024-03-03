@@ -37,7 +37,7 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className="w-full flex py-0 justify-between items-center navbar">
+    <nav className="w-auto flex py-0 justify-between items-center navbar">
       <Link to="/">
         <img
           src={logo}
@@ -46,7 +46,7 @@ const Navbar = () => {
         />
       </Link>
 
-      <ul className="list-none sm:flex hidden justify-end items-center flex-1 mr-4">
+      <ul className="list-none sm:flex hidden justify-end items-center flex-1">
         {navLinks.map((nav, index) => (
           <li
             key={nav.id}
@@ -77,7 +77,7 @@ const Navbar = () => {
         <div
           className={`${
             !toggle ? "hidden" : "flex"
-          } p-6 bg-gray-100 absolute top-20 right-0 mx-4 my-2 min-w-[140px] rounded-xl sidebar`}
+          } p-6 bg-gray-100 absolute z-[15] top-20 right-0 mx-4 my-2 min-w-[140px] rounded-xl sidebar`}
         >
           <ul className="list-none flex justify-end items-start flex-1 flex-col">
             {navLinks.map((nav, index) => (

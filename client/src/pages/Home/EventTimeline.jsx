@@ -17,6 +17,7 @@ const HorizontalTimeline = () => {
         <div>
           <h5>gnoTalks</h5>
         </div>
+
         <h5>gnoTalks</h5>
         <h5>Special Performance</h5>
         <h5>Kavyasandhya</h5>

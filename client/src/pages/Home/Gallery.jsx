@@ -16,7 +16,7 @@ const ParallaxGallery = () => {
       >
         Gallery
       </h2>
-      <div className="horizontal-scroll-wrapper1 sm:mt-[-30%] md:mt-[-20%] lg:mt-[-10%]">
+      <div className="horizontal-scroll-wrapper1 mt-[-60%] md:mt-[-20%] lg:mt-[-10%]">
         {/* Image wrappers */}
         <div className="img-wrapper1 slower">
           <img

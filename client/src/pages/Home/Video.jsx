@@ -36,7 +36,7 @@ const App = () => {
               style={{ width: "100%", height: "100%", objectFit: "cover" }}
             />
             {window.innerWidth > 768 && (
-              <div className="absolute bottom-[-13%] left-0 w-full">
+              <div className="absolute bottom-[-13%] left-0 w-full hidden md:block">
                 <img
                   src={Clouds2}
                   className="absolute bottom-0 left-[-10%] lg:w-[450px]  md:w-[0] sm:w-[0] animate-clouds"

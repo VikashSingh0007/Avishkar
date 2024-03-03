@@ -205,12 +205,18 @@ const EventsComputer = ({ data }) => {
                   {eventName}
                 </span>
                 <div className="absolute top-0 z-[0]">
+                  {/* <Link
+                    href={`/AvishkarEvent/${encodeURIComponent(
+                      JSON.stringify(data)
+                    )}`}
+                  > */}
                   <img
                     className=""
                     hidden={!(powerState && isCentralUnitClicked)}
                     src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/125707/sidebar-bg.png"
                     alt="Event Cover"
                   />
+                  {/* </Link> */}
                 </div>
               </div>
             </div>
@@ -272,7 +278,7 @@ const EventsComputer = ({ data }) => {
           ></div>
         </div>
       </div>
-     
+
       <Link
         to={`/AvishkarEvent/${encodeURIComponent(JSON.stringify(data))}`}
         className="flex items-center justify-center cursor-pointer"
