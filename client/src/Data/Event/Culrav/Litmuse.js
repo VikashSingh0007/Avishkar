@@ -1,160 +1,142 @@
-//import Genesis from '../Images/genesis.jpg'
-import Palladin from "../../Images/palladin.jpg";
-import CenrtalDogma from "../../Images/CentralDogma.jpg";
 import BgImg from "../../Images/Litmuse.png";
+import Litmuse1 from "../../Images/Litmuse1.png";
+
+import Litmuse2 from "../../Images/Litmuse2.png";
+import Litmuse3 from "../../Images/Litmuse3.png";
+import Litmuse4 from "../../Images/Litmuse4.png";
 export const Litmuse = [
   {
-    title: "Genesis3",
-    tagline: "Treasure Trails and Biotech Tales",
+    title: "Litmuse",
+    tagline: "",
     BgImageLink: BgImg,
-    instagramLink: "https://www.facebook.com/genesis.avishkar.mnnit",
+    instagramLink: "",
     events: [
       {
-        name: "Palladin",
-        disc: "Join us for an exciting placement-oriented event offering opportunities in the diverse areas: Core, Consultancy and Software. This event promises to connect you with potential career pathways tailored to your interest and skills.",
+        name: "Kavyanjali",
+        disc: "Poem should be written in Hindi and should be of maximum 8 mins. Poem should be an original piece of content. Participants are allowed to present more than one poem in bound time.",
         rule: [
           {
-            rule_1: "No. of rounds – 2",
-            rule_2: "Round 1 – Written paper (Aptitude + Area of Interest)",
-            rule_3: "Round 2 – GD, JAM, Interview",
-            rule_4: "Compulsory for all Biotechnology students.",
+            rule_1:
+              "Poem should be written in Hindi and should be of maximum 8 mins.",
+            rule_2: "Poem should be an original piece of content.",
+            rule_3:
+              "Participants are allowed to present more than one poem in bound time.",
           },
         ],
-        TeamSize: "1-1",
-        BGImageLink: Palladin,
+        TeamSize: "",
+        BGImageLink: Litmuse1,
         PsLink: "",
         coordinators: [
           {
-            name: "Shruti Mokhashi",
-            phone: " 9353201039",
+            name: "Rishabh Tripathi",
+            phone: "7525885744",
           },
           {
-            name: "Hardik Chandu Patil ",
-            phone: "8669661632 ",
-          },
-          {
-            name: "Saurabh Yadav ",
-            phone: "8112638458",
+            name: "Shambhavi Shukla",
+            phone: "7007159003",
           },
         ],
       },
       {
-        name: "Central Dogma",
-        disc: "Welcome to Central Dogma, the quintessential biotech event that delves deep into the core principles of the field. Join us for an experience that will engage your intellect with captivating visuals, puzzles, anagrams and more, all intricately linked to the event’s theme and the fascinating world of biotechnology.",
+        name: "Poetry Slam",
+        disc: "The English poetry slam competition will comprise of 3 rounds. The poetry should contain the usage of the mentioned literary device, at least once but is not restricted to it. The poem will be judged on the basis of creativity, idea, thought process and development, style and structure of writing, knowledge of literary devices and their proper usage as well as on the overall representation.",
         rule: [
           {
-            rule_1: "No. of rounds – 3 ",
+            rule_1:
+              "The English poetry slam competition will comprise of 3 rounds.",
             rule_2:
-              "Round 2 – Live round, based on pictures, puzzles, anagrams, etc. related to the theme and BT.",
+              " The online Elimination round: Contestants will have to submit their entries online based on which the best entries will be chosen.",
             rule_3:
-              "Round 3 – Final round. Out of the three members, at least one must be from BT.",
-          },
-        ],
-        TeamSize: "2-3 ",
-        BGImageLink: CenrtalDogma,
-        PsLink: "",
-        coordinators: [
-          {
-            name: "Ishika Agrawal",
-            phone: "6394041898",
-          },
-          {
-            name: "Shivendra Singh Gond",
-            phone: "7049072054",
-          },
-          {
-            name: "Mahendra Pratap Singh",
-            phone: "9149007550",
-          },
-        ],
-      },
-      {
-        name: "Clue Quest",
-        disc: "Get ready for Clue Quest, the ultimate adventure!! Prepare to immerse yourself in a whirlwind of excitement where mystery, puzzles and thrills await around every corner. With each challenge, you’ll dive deeper into a world of entertainment, inspired from memes, anime, web series, movies and more, all while testing your knowledge and teamwork skills to the fullest. But the ultimate thrill awaits in the final round – a captivating treasure hunt set amidst the familiar grounds of your campus. Don’t miss out on the ride of a lifetime. ",
-        rule: [
-          {
-            rule_1: "Fun event ",
-            rule_2: "Open to All branches and years.",
-            rule_3:
-              "No. of rounds – 3 or 4 ( Final round will be Treasure Hunt )",
+              "  You'll be given a phrase or a sentence or an idea along with a specific literary device, using which you'll have to write an original piece of poetry, impromptu within the time frame of 30 mins.",
             rule_4:
-              "All rounds will be based on puzzles, TV series, memes, anime, etc.",
-            rule_5: "Objective: Have Fun !! ",
+              "The piece of paper provided to write, will be taken after the completion of above-mentioned time and during the recitation rounds, the poets will have to read only from the paper, which will be later submitted.",
+            rule_5:
+              "The length of the composition isn't constrained but the content shouldn't be explicit or vulgar.",
+            rule_6:
+              "Final Round: The poet will be given the liberty to recite any original work of his or hers which he or she feels is the best in front of the judges.",
+            rule_7:
+              "The poetry should contain the usage of the mentioned literary device, at least once but is not restricted to it.",
+            rule_8:
+              "The poem will be judged on the basis of creativity, idea, thought process and development, style and structure of writing, knowledge of literary devices and their proper usage as well as on the overall representation.",
           },
         ],
-        TeamSize: "3-5 ",
-        BGImageLink: "",
+        TeamSize: "",
+        BGImageLink: Litmuse2,
         PsLink: "",
         coordinators: [
           {
-            name: "Shivangi Singh Chauhan",
-            phone: "7235813787",
+            name: "Arghyadeep Ambar Chakrabarti",
+            phone: "9167388137",
           },
           {
-            name: "Lovekush Kushwaha",
-            phone: "8449104464",
-          },
-          {
-            name: "Shruti Mokhashi",
-            phone: "9353201039",
-          },
-          {
-            name: "Hardik Chandu Patil",
-            phone: " 8669661632",
+            name: "Ishita Agrawal",
+            phone: "6307476517",
           },
         ],
       },
       {
-        name: "",
-        disc: "",
+        name: "Spell-bee",
+        disc: "It would be a 2 round event. It would be a team event with a maximum of 2 members a team. Events would be conducted for the English language only.",
         rule: [
           {
-            rule_1: "",
-            rule_2: "",
-            rule_3: "",
+            rule_1: "It would be a 2 round event.",
+            rule_2:
+              "It would be a team event with a maximum of 2 members a team.",
+            rule_3: "Events would be conducted for the English language only.",
+            rule_4:
+              "Panel would pronounce words with some star marked words as tie-breakers.",
+            rule_5:
+              "Participants are required to write spellings on a sheet of paper.",
+            rule_6:
+              "A specific number of teams would qualify for the Final Round on the basis of the previous round evaluation.",
+            rule_7: "Words would be pronounced by the panel.",
+            rule_8:
+              "Teams have to press the buzzer and based on the order of buzzing they would be asked to spell the word right away",
+            rule_9: "Team with the most correct answers would win the round.",
           },
         ],
         TeamSize: "",
-        BGImageLink: "",
+        BGImageLink: Litmuse3,
         PsLink: "",
         coordinators: [
           {
-            name: "",
-            phone: "",
+            name: "Neha Nanda",
+            phone: "9490404500",
           },
           {
-            name: "",
-            phone: "",
+            name: "Shashank Saxena",
+            phone: "7007712375",
           },
         ],
       },
       {
-        name: "",
-        disc: "",
+        name: "Laccuzzi",
+        disc: "It is a two-round event with eliminations in each one. It consists of 2 rounds. Written Round: The written quiz with questions from TV Series: Friends, Big Bang Theory, Sherlock, etc. And a choice between: Comic series: DC and Marvel Universe. Diamond, Raj Comics.... OR Anime-Manga: Pokémon, DBZ, Naruto, Death Note, etc. Final Round: It will be a gnosis styled quiz to be held during Culrav which will consist of questions ranging from all topics.",
         rule: [
           {
-            rule_1: "",
-            rule_2: "",
-            rule_3: "",
+            rule_1: "It is a two-round event with eliminations in each one.",
+            rule_2: "It consists of 2 rounds.",
+            rule_3:
+              "Written Round: The written quiz with questions from TV Series: Friends, Big Bang Theory, Sherlock, etc. And a choice between: Comic series: DC and Marvel Universe. Diamond, Raj Comics.... OR Anime-Manga: Pokémon, DBZ, Naruto, Death Note, etc.",
+            rule_4:
+              "Final Round: It will be a gnosis styled quiz to be held during Culrav which will consist of questions ranging from all topics.",
           },
         ],
         TeamSize: "",
-        BGImageLink: "",
+        BGImageLink: Litmuse4,
         PsLink: "",
         coordinators: [
           {
-            name: "",
-            phone: "",
+            name: "Anubhav Shrivastava",
+            phone: "9098981959",
           },
           {
-            name: "",
-            phone: "",
+            name: "Piyush Patel",
+            phone: "7543095920",
           },
         ],
       },
-      {},
     ],
   },
 ];
-
 export default Litmuse;

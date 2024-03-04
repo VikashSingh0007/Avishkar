@@ -5,7 +5,7 @@ import { useParams } from "react-router-dom";
 // import data from "../../../../Data/Event/Culrav/Department";
 import Rang from "../assets/Rang.png";
 const EventCard = ({ data }) => {
-  // console.log(data.info[0]);
+  console.log(data.info[0]);
   const { index } = useParams();
   return (
     <div className="EventCard">
