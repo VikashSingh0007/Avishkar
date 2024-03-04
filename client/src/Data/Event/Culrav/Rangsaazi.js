@@ -4,155 +4,290 @@ import CenrtalDogma from "../../Images/CentralDogma.jpg";
 import BgImg from "../../Images/Rangsazzi.png";
 export const Rangsaazi = [
   {
-    title: "Genesis2",
-    tagline: "Treasure Trails and Biotech Tales",
+    title: "Rangsaazi",
+    tagline: "",
     BgImageLink: BgImg,
-    instagramLink: "https://www.facebook.com/genesis.avishkar.mnnit",
+    instagramLink: "",
     events: [
       {
-        name: "Palladin",
-        disc: "Join us for an exciting placement-oriented event offering opportunities in the diverse areas: Core, Consultancy and Software. This event promises to connect you with potential career pathways tailored to your interest and skills.",
+        name: "PAINT THE WAY",
+        disc: "The world is your canvas, paint it without inhibitions.",
         rule: [
           {
-            rule_1: "No. of rounds – 2",
-            rule_2: "Round 1 – Written paper (Aptitude + Area of Interest)",
-            rule_3: "Round 2 – GD, JAM, Interview",
-            rule_4: "Compulsory for all Biotechnology students.",
-          },
-        ],
-        TeamSize: "1-1",
-        BGImageLink: Palladin,
-        PsLink: "",
-        coordinators: [
-          {
-            name: "Shruti Mokhashi",
-            phone: " 9353201039",
-          },
-          {
-            name: "Hardik Chandu Patil ",
-            phone: "8669661632 ",
-          },
-          {
-            name: "Saurabh Yadav ",
-            phone: "8112638458",
-          },
-        ],
-      },
-      {
-        name: "Central Dogma",
-        disc: "Welcome to Central Dogma, the quintessential biotech event that delves deep into the core principles of the field. Join us for an experience that will engage your intellect with captivating visuals, puzzles, anagrams and more, all intricately linked to the event’s theme and the fascinating world of biotechnology.",
-        rule: [
-          {
-            rule_1: "No. of rounds – 3 ",
-            rule_2:
-              "Round 2 – Live round, based on pictures, puzzles, anagrams, etc. related to the theme and BT.",
+            rule_1:
+              "This is a team event with a minimum size of 4 and a maximum size of 5.",
+            rule_2: "Time limit is 3 hrs.",
             rule_3:
-              "Round 3 – Final round. Out of the three members, at least one must be from BT.",
-          },
-        ],
-        TeamSize: "2-3 ",
-        BGImageLink: CenrtalDogma,
-        PsLink: "",
-        coordinators: [
-          {
-            name: "Ishika Agrawal",
-            phone: "6394041898",
-          },
-          {
-            name: "Shivendra Singh Gond",
-            phone: "7049072054",
-          },
-          {
-            name: "Mahendra Pratap Singh",
-            phone: "9149007550",
-          },
-        ],
-      },
-      {
-        name: "Clue Quest",
-        disc: "Get ready for Clue Quest, the ultimate adventure!! Prepare to immerse yourself in a whirlwind of excitement where mystery, puzzles and thrills await around every corner. With each challenge, you’ll dive deeper into a world of entertainment, inspired from memes, anime, web series, movies and more, all while testing your knowledge and teamwork skills to the fullest. But the ultimate thrill awaits in the final round – a captivating treasure hunt set amidst the familiar grounds of your campus. Don’t miss out on the ride of a lifetime. ",
-        rule: [
-          {
-            rule_1: "Fun event ",
-            rule_2: "Open to All branches and years.",
-            rule_3:
-              "No. of rounds – 3 or 4 ( Final round will be Treasure Hunt )",
+              "There will be an elimination round based on sketching and ideas. Entries have to be verified beforehand on the spot for participation in further rounds.",
             rule_4:
-              "All rounds will be based on puzzles, TV series, memes, anime, etc.",
-            rule_5: "Objective: Have Fun !! ",
+              "Necessary items for road painting such as brushes, paints, chalks, etc. will be provided on the spot.",
+            rule_5:
+              "Restrict the size of your painting within the block of the road assigned to you.",
+            rule_6: "Further details will be shared on the spot.",
+            rule_7:
+              "The evaluation will be based on the judges' discretion and interpretation of the painting, with marks based on the portrayal of the theme, creativity, and overall presentation.",
+            rule_8:
+              "The coordinators have the authority to change the rule of the event as per need.",
           },
         ],
-        TeamSize: "3-5 ",
+        teamSize: "",
         BGImageLink: "",
         PsLink: "",
         coordinators: [
           {
-            name: "Shivangi Singh Chauhan",
-            phone: "7235813787",
+            name: "Divyanshu Kushwaha",
+            phone: "6206528668",
           },
           {
-            name: "Lovekush Kushwaha",
-            phone: "8449104464",
+            name: "Silkie Agarwal",
+            phone: "7905467593",
           },
           {
-            name: "Shruti Mokhashi",
-            phone: "9353201039",
+            name: "Sarah Nasim",
+            phone: "8545035405",
           },
           {
-            name: "Hardik Chandu Patil",
-            phone: " 8669661632",
+            name: "Anushka Chauhan",
+            phone: "9174257941",
           },
         ],
       },
       {
-        name: "",
-        disc: "",
+        name: "LET’S FACE IT",
+        disc: "Brushing on smiles, one face at a time.",
         rule: [
           {
-            rule_1: "",
-            rule_2: "",
-            rule_3: "",
+            rule_1: "A team of 2 members will be allowed.",
+            rule_2: "Time limit is 2 hours.",
+            rule_3:
+              "The face of a participant is to be painted with watercolors, sketches, and the materials provided during the event.",
+            rule_4:
+              "The painting must represent the theme given at the time of the event.",
+            rule_5:
+              "The evaluation will be based on the judges' discretion and interpretation of the painting, with marks based on the portrayal of the theme, creativity, and overall presentation.",
+            rule_6:
+              "The coordinators have the authority to change the rule of the event as per need.",
           },
         ],
-        TeamSize: "",
+        teamSize: "",
         BGImageLink: "",
         PsLink: "",
         coordinators: [
           {
-            name: "",
-            phone: "",
+            name: "Anushka Chauhan",
+            phone: "9174257941",
           },
           {
-            name: "",
+            name: "Priya Pachauri",
             phone: "",
           },
         ],
       },
       {
-        name: "",
-        disc: "",
+        name: "SWADDLE",
+        disc: "From paper to runway, creativity unfolds.",
         rule: [
           {
-            rule_1: "",
-            rule_2: "",
-            rule_3: "",
+            rule_1:
+              "This is a team event with a minimum size of 2 and a maximum size of 4. One team member will act as the model, while another will be tasked with designing the outfit.",
+            rule_2: "Time limit is 3 hours.",
+            rule_3:
+              "Participating teams need to make a dress from the logistics provided to them on the spot.",
+            rule_4:
+              "Newspapers, staplers, pins, and cello tape will be given to each team. No additional logistics, apart from the ones provided, can be used.",
+            rule_5:
+              "Each team will have to give a presentation before the judges after the dress designing is over.",
+            rule_6:
+              "The evaluation will be based on the judges' discretion and interpretation of the outfit, with marks based on the portrayal of the theme (if any), creativity, and overall presentation.",
+            rule_7:
+              "The coordinators have the authority to change the rule of the event as per need.",
           },
         ],
-        TeamSize: "",
+        teamSize: "",
         BGImageLink: "",
         PsLink: "",
         coordinators: [
           {
-            name: "",
-            phone: "",
+            name: "Divyanshu Kushwaha",
+            phone: "6206528668",
           },
           {
-            name: "",
+            name: "Silkie Agarwal",
+            phone: "7905467593",
+          },
+          {
+            name: "Sarah Nasim",
+            phone: "8545035405",
+          },
+        ],
+      },
+      {
+        name: "Stroke Shuffle",
+        disc: "Hand to hand, brush to brush, weaving dreams on a canvas shared.",
+        rule: [
+          {
+            rule_1: "A team of 3 members will be allowed.",
+            rule_2: "Time limit is 1.5 hours.",
+            rule_3: "Theme shall be announced on the spot.",
+            rule_4:
+              "Each team will be provided 3 canvases initially. The canvases will be circulated among team members in a specific order every 15 minutes, ensuring that each member works on a different canvas. The goal is to complete the painting on each canvas within the allocated time frame.",
+            rule_5:
+              "All logistics shall be provided on the spot. Participants can bring their own stationery if they wish (depending on the coordinators' approval).",
+            rule_6:
+              "The evaluation will be based on the judges' discretion and interpretation of the artwork with marks based on the portrayal of the theme (if any), creativity, and overall presentation.",
+            rule_7:
+              "The coordinators have the authority to change the rule of the event as per need.",
+          },
+        ],
+        teamSize: "",
+        BGImageLink: "",
+        PsLink: "",
+        coordinators: [
+          {
+            name: "Divyanshu Kushwaha",
+            phone: "6206528668",
+          },
+          {
+            name: "Aliya Sabir",
             phone: "",
           },
         ],
       },
-      {},
+      {
+        name: "Blind Art",
+        disc: "Art transcends sight, born from the heart.",
+        rule: [
+          {
+            rule_1: "A team of 2 members will be allowed.",
+            rule_2: "Time limit is 1.5 hours.",
+            rule_3:
+              "Only one of the two members will be allowed to sketch/color.",
+            rule_4:
+              "The one drawing will be blindfolded. The teammate (if any) will only be allowed to instruct/help the person in the drawing orally.",
+            rule_5:
+              "Only the blindfolded person is allowed to touch the drawing sheet.",
+            rule_6: "Only the provided stationaries should be used.",
+            rule_7:
+              "Discussing or cheating with other teams will immediately lead to disqualification.",
+            rule_8:
+              "The evaluation will be based on the judges' discretion and interpretation of the artwork, with marks based on the portrayal of the theme (if any), creativity, and overall presentation.",
+            rule_9:
+              "The coordinators have the authority to change the rule of the event as per need.",
+          },
+        ],
+        teamSize: "",
+        BGImageLink: "",
+        PsLink: "",
+        coordinators: [
+          {
+            name: "Sarah Nasim",
+            phone: "8545035405",
+          },
+          {
+            name: "Insha Rahman",
+            phone: "",
+          },
+        ],
+      },
+      {
+        name: "Momento Vinci",
+        disc: "Sketching moments, etching memories.",
+        rule: [
+          {
+            rule_1: "This is a solo event.",
+            rule_2: "Time limit is 2 hours.",
+            rule_3:
+              "Participants are needed to make a sketch based on a theme given to them on the spot.",
+            rule_4:
+              "All logistics shall be provided on the spot. You won't be able to use additional logistics apart from those provided initially.",
+            rule_5:
+              "The evaluation will be based on the judges' discretion and interpretation of the artwork with marks based on the portrayal of the theme (if any), creativity, and overall presentation.",
+            rule_6:
+              "The coordinators have the authority to change the rule of the event as per need.",
+          },
+        ],
+        teamSize: "",
+        BGImageLink: "",
+        PsLink: "",
+        coordinators: [
+          {
+            name: "Divyanshu Kushwaha",
+            phone: "6206528668",
+          },
+          {
+            name: "Arush Kumar",
+            phone: "8825223389",
+          },
+        ],
+      },
+      {
+        name: "Junk Art",
+        disc: "From trash to treasure, art finds its way.",
+        rule: [
+          {
+            rule_1: "A team of 2 members will be allowed.",
+            rule_2: "Time limit is 2 hrs.",
+            rule_3: "Theme (if any) shall be announced on the spot.",
+            rule_4:
+              "All types of scrap materials can be used (use only discarded materials).",
+            rule_5:
+              "Judging Criteria: Artistic Creativity, Originality, Theme communication.",
+            rule_6: "Materials required will be provided on the spot.",
+            rule_7:
+              "The coordinators have the authority to change the rule of the event as per need.",
+          },
+        ],
+        teamSize: "",
+        BGImageLink: "",
+        PsLink: "",
+        coordinators: [
+          {
+            name: "Sarah Nasim",
+            phone: "8545035405",
+          },
+          {
+            name: "Neha Goyal",
+            phone: "",
+          },
+          {
+            name: "Asma Masroor",
+            phone: "",
+          },
+        ],
+      },
+      {
+        name: "Finger Print",
+        disc: "Canvas of imagination, painted by touch.",
+        rule: [
+          {
+            rule_1: "This is a solo event.",
+            rule_2: "Time limit is 2 hours.",
+            rule_3:
+              "Participants are needed to make a painting with their fingerprints only, based on a theme given to them on the spot.",
+            rule_4:
+              "Participants are strictly prohibited to use brushes or anything in place of fingers to paint. All logistics shall be provided on the spot. NO additional logistics apart from those provided in the beginning can be used.",
+            rule_5:
+              "Judging Criteria: Artistic Creativity, Originality, Theme communication.",
+            rule_6:
+              "Use of any outside aids is strictly prohibited and may lead to disqualification.",
+            rule_7:
+              "The coordinators have the authority to change the rule of the event as per need.",
+          },
+        ],
+        teamSize: "",
+        BGImageLink: "",
+        PsLink: "",
+        coordinators: [
+          {
+            name: "Silkie Agarwal",
+            phone: "7905467593",
+          },
+          {
+            name: "Kartikey Gupta",
+            phone: "9120548870",
+          },
+        ],
+      },
     ],
   },
 ];

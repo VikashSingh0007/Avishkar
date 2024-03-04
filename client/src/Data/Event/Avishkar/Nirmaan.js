@@ -24,7 +24,7 @@ export const Nirmaan = [
           },
         ],
         TeamSize: "1-1",
-        BGImageLink: Nirman1,
+        BGImageLink: "",
         PsLink: "",
         coordinators: [
           {
@@ -57,7 +57,7 @@ export const Nirmaan = [
           },
         ],
         TeamSize: "1-1",
-        BGImageLink: Nirman1,
+        BGImageLink: "",
         PsLink: "",
         coordinators: [
           {
@@ -89,7 +89,7 @@ export const Nirmaan = [
           },
         ],
         TeamSize: "1-1",
-        BGImageLink: Nirman1,
+        BGImageLink: "",
         PsLink: "",
         coordinators: [
           {
@@ -123,27 +123,37 @@ export const Nirmaan = [
           },
         ],
         TeamSize: "3-4",
-        BGImageLink: Nirman1,
-        PsLink: "",
+        BGImageLink: "",
+        PsLink: "http://tinyurl.com/Ziggurare2024",
         coordinators: [
           {
-            name: "",
-            phone: "",
+            name: "Rishabh Gupta",
+            phone: "8299824770",
           },
           {
-            name: "",
-            phone: "",
+            name: "Ishaan Pachauri",
+            phone: "9897921686",
+          },
+          {
+            name: "Himanshu Shankar Lodha",
+            phone: "8955356993",
           },
         ],
       },
       {
-        name: "",
-        disc: "",
+        name: "Linkidge",
+        disc: "Calling all future engineers and creative minds! The College Technical Event is thrilled to announce the Bridge Making Competition Named Linkidge , a thrilling test of ingenuity and teamwork. Put your knowledge of materials, design, and construction to the test as you build a bridge that will impress the judges and leave the audience awestruck.",
         rule: [
           {
-            rule_1: "",
-            rule_2: "",
-            rule_3: "",
+            rule_1: "All years are allowed.",
+            rule_2:
+              "One student of the team should be compulsory from the Civil Engineering branch.",
+            rule_3:
+              "No inter year teams are allowed to participate in the Event.",
+            rule_4: "Teams of 3-4 students[2nd and 3rd year] and 4[1st year]",
+            rule_5: "Average CPI of the group should be less than 8.",
+            rule_6:
+              "3 round that will be conducted in event are- a)-Abstract submission based on design approach (Elimination Round).b)-Interview Round. c)-Testing of the Bridge for load bearing capacity",
           },
         ],
         TeamSize: "",
@@ -151,23 +161,34 @@ export const Nirmaan = [
         PsLink: "",
         coordinators: [
           {
-            name: "",
-            phone: "",
+            name: "Shubhranshu Pandey ",
+            phone: "9519378409",
           },
           {
-            name: "",
-            phone: "",
+            name: "Adarsh Tripathi ",
+            phone: "(7080901949)",
+          },
+          {
+            name: "Ravi Kumar Meena ",
+            phone: "(8799716048)",
           },
         ],
       },
       {
-        name: "",
-        disc: "",
+        name: "Terraquiz",
+        disc: "Quizzing event of Nirmaan with questions testing your aptitude and general knowledge! This is an opportunity to enjoy solving amazing PuZZleS, solving TecHniCaL and AptiTuDe questions and a final round of QuiZ!!! This is an event where YOU can both learn and enjoy. Here you can showcase your CrEaTiVitY as much as possible (Bonus marks for creativity). We DON'T expect participants to have prior quizzing experience, YOU are most welcome, even if you haven't done quizzing in your entire LiFe.",
         rule: [
           {
-            rule_1: "",
-            rule_2: "",
-            rule_3: "",
+            rule_1: "Team Size: 3 ",
+            rule_2: "Open for all branch",
+            rule_3: "Years Participating: B.Tech – I,II,III MCA - I,II MBA- I",
+            rule_4: "No cross-year team",
+            rule_5: "3-round event",
+            rule_6:
+              "Round 1: Brain teasers & riddles on movies, music, trending memes, sports and what not!",
+            rule_7:
+              "Round 2: Live and on-the-spot general quiz to test your general awareness!",
+            rule_8: "Round 3: Bujho to jane!!",
           },
         ],
         TeamSize: "",
@@ -175,36 +196,55 @@ export const Nirmaan = [
         PsLink: "",
         coordinators: [
           {
-            name: "",
-            phone: "",
+            name: "Mehul Krishna ",
+            phone: "(8340280785)",
           },
           {
-            name: "",
-            phone: "",
+            name: "Khushi Verma ",
+            phone: "(vermakhushi520@gmail.com)",
+          },
+          {
+            name: "Mayank Kumar Dass",
+            phone: "(8957219415)",
           },
         ],
       },
       {
-        name: "",
-        disc: "",
+        name: "Constrengtho",
+        disc: "Are you fascinated by the skyscrapers, scenic city skylines and magnificent bridges ? The basic building block of all these is concrete, the backbone of modern construction, . So put your mix designing and laboratory skills at work to create the strongest block among all while achieving efficiency..",
         rule: [
           {
-            rule_1: "",
-            rule_2: "",
-            rule_3: "",
+            rule_1: "Only 2nd and 3rd years are allowed.",
+            rule_2: "Team size - 3",
+            rule_3: "No cross year teams are allowed.",
+            rule_4:
+              "At Least one student should be from the civil engineering branch",
+            rule_5: "Average CPI of the group should be less than 8.",
+            rule_6: "Three rounds would be conducted:",
+
+            rule_7:
+              "Round:1- Test to assess your knowledge of structural engineering.",
+            rule_8:
+              "Abstract submission of the concrete mix design.[Elimination Round]",
+            rile_9:
+              "Casting and Laboratory Testing followed by a questionnaire.",
           },
         ],
         TeamSize: "",
         BGImageLink: "",
-        PsLink: "",
+        PsLink: "http://tinyurl.com/Constrengtho2024",
         coordinators: [
           {
-            name: "",
-            phone: "",
+            name: "Gulshan Kumar Rai ",
+            phone: "8529750334",
           },
           {
-            name: "",
-            phone: "",
+            name: "Himanshu Shankar Lodha ",
+            phone: "8955356993",
+          },
+          {
+            name: "Rishabh Gupta ",
+            phone: "8299824770",
           },
         ],
       },
