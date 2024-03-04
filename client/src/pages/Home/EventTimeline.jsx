@@ -88,12 +88,12 @@ const timelineData = [
 ];
 
 const TimelineItem = ({ data }) => (
-  <div className="timeline-item protest-revolution-regular">
+  <div className="timeline-item protest-revolution-regular ">
     <div className="timeline-item-content protest-revolution-regular">
       <span className="tag " style={{ background: data.category.color }}>
         {data.category.tag}
       </span>
-      <time style={{ color: "black", fontSize: "16px" }}>{data.date}</time>
+      <time style={{ color: "black", fontSize: "20px" }}>{data.date}</time>
 
       <p className="protest-revolution-regular text-black">{data.text}</p>
       {data.link && (
@@ -126,12 +126,18 @@ const Timeline = () =>
         Event Timeline
       </h2>
       <div
-        className="timeline-container protest-revolution-regular"
+        className="timeline-container "
+        id="timelineContainer"
         style={{ overflowY: "auto", maxHeight: "400px" }}
       >
-        {timelineData.map((data, idx) => (
-          <TimelineItem data={data} key={idx} />
-        ))}
+        <div
+          className="timeline-container protest-revolution-regular"
+          style={{ overflowY: "auto", maxHeight: "400px" }}
+        >
+          {timelineData.map((data, idx) => (
+            <TimelineItem data={data} key={idx} />
+          ))}
+        </div>
       </div>
     </>
   );

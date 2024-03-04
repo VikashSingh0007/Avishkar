@@ -25,7 +25,7 @@ h1 {
   /* font-family: "Kode Mono", monospace; */
   font-family: "Libre Bodoni", serif;
   font-optical-sizing: auto;
-  font-weight: 800;
+  font-weight: 900;
   font-style: normal;
 }
 
@@ -39,21 +39,26 @@ h1 {
   flex-direction: column;
   position: relative;
   margin: 40px 0;
+  height: 1100px; /* Example height for the scrollable container */
+  overflow-y: auto; /* Enable vertical scrolling */
 }
 
 .timeline-container::after {
-  background-color: #e17b77;
+  background-color: #f96d68;
   content: "";
   position: absolute;
   left: calc(50% - 2px);
+  top: 0; /* Align to the top of the container */
+  bottom: 0; /* Stretch to the bottom of the container */
   width: 4px;
-  height: 1100px; /* Set the height to 100% to match the height of the timeline container */
+  height: 100%; /* Stretch the line to match the height of the container */
 }
 
 .timeline-item {
   display: flex;
   justify-content: flex-end;
   padding-right: 30px;
+ 
   position: relative;
   margin: 10px 0;
   width: 50%;
@@ -129,7 +134,7 @@ h1 {
 }
 
 .timeline-item-content p {
-  font-size: 16px;
+  font-size: 24px;
   line-height: 24px;
   margin: 15px 0;
   max-width: 250px;

@@ -7,8 +7,9 @@ import EventCardCulrav from "./EventPageCulrav";
 import Navbar from "../../Navbar";
 const Carousel = ({}) => {
   const { data } = useParams();
+  // console.log(data);
   const Data = JSON.parse(decodeURIComponent(data));
-  console.log(Data.info[0]);
+
   return (
     <div
       className="h-screen overflow-y-scroll mb-10"

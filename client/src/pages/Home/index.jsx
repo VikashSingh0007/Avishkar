@@ -26,13 +26,11 @@ const App = () => {
             <About />
           </div>
         </div>
+
         <EventTimeLine />
+
         <div className={`bg-primary ${styles.paddingX} ${styles.flexCenter}`}>
-          <div className={`${styles.boxWidth}`}>
-            {" "}
-           
-            <Gallery />
-          </div>
+          <div className={`${styles.boxWidth}`}> {/* <Gallery /> */}</div>
         </div>
         <PastPerformance />
         <Sponsors />

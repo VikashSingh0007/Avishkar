@@ -4,50 +4,64 @@
 import BgImg from "../../Images/Rangmanch.png";
 export const Rangmanch = [
   {
-    title: "Genesis",
-    tagline: "Treasure Trails and Biotech Tales",
+    title: "Razzmatazz",
+    tagline: "",
     BgImageLink: BgImg,
-    instagramLink: "https://www.facebook.com/genesis.avishkar.mnnit",
+    instagramLink: "",
     events: [
       {
         name: "Palladin",
-        disc: "Join us for an exciting placement-oriented event offering opportunities in the diverse areas: Core, Consultancy and Software. This event promises to connect you with potential career pathways tailored to your interest and skills.",
+        disc: "Folklore Group Dance Competition\nDANCE – Defeat All Negativity (via) Creative Expression. The spirited dance moves of cultural dance charge with your energy, so as the harmonious melodies handed down precisely through ages reverberate through the air, brace yourself to live through this shared experience of humanity and a celebration of diverse cultures. Get in the groove, bring out your best moves, and set the stage of DESI SYNC on fire.",
         rule: [
           {
-            rule_1: "No. of rounds – 2",
-            rule_2: "Round 1 – Written paper (Aptitude + Area of Interest)",
-            rule_3: "Round 2 – GD, JAM, Interview",
-            rule_4: "Compulsory for all Biotechnology students.",
+            rule_1: "First year, Second year, and third year can participate.",
+            rule_2:
+              "The time limit of the performance will be 8-11+1 minute. (1 minute is for clear and set up the stage)",
+
+            rule_3: "Props can be used for performance.",
+            rule_4:
+              "Team must have a minimum of 4 active members and maximum stage limit will be 25. (Team size – unlimited)",
+            rule_5: "Props can be used for performance.",
+            rule_6: "Props can be used for performance.",
+            rule_7: "Props can be used for performance.",
+            rule_8:
+              "Final year students can perform but won’t be a part of the competition.",
+            rule_9:
+              "The performance should be in cohesion with the integrity of the fest. The song selected must not contain any vulgarity.",
+            rule_10:
+              "Apart from judgment, Dance coordinators can alter rules where it is required.",
           },
         ],
-        TeamSize: "1-1",
+        TeamSize: "unlimited",
         BGImageLink: BgImg,
         PsLink: "",
         coordinators: [
           {
-            name: "Shruti Mokhashi",
-            phone: " 9353201039",
+            name: "Ritesh Bhujbal",
+            phone: "7796757417",
           },
           {
-            name: "Hardik Chandu Patil ",
-            phone: "8669661632 ",
+            name: "Siddhant Goel",
+            phone: "6392279453",
           },
           {
-            name: "Saurabh Yadav ",
-            phone: "8112638458",
+            name: "Charitha Chowdam",
+            phone: "9515567656",
           },
         ],
       },
       {
-        name: "Central Dogma",
-        disc: "Welcome to Central Dogma, the quintessential biotech event that delves deep into the core principles of the field. Join us for an experience that will engage your intellect with captivating visuals, puzzles, anagrams and more, all intricately linked to the event’s theme and the fascinating world of biotechnology.",
+        name: "The Vault of Dance",
+        disc: "Western Group Dance Competition\nEvery fall counts as a move if you own it with grace. We believe self-expression has no rules, so when you dance, it is uniquely you! If your body moves with the beats of the music as your soul syncs with the emotions, or maybe you just love to go wild and have fun, the moment is now. Get ready for the most awaited Western night of foot-stomping, toe-tapping fun as we bring the spirit of the Wild West to life with our Vault of Dance event.",
         rule: [
           {
-            rule_1: "No. of rounds – 3 ",
+            rule_1: "First year, Second year, and third year can participate.",
             rule_2:
-              "Round 2 – Live round, based on pictures, puzzles, anagrams, etc. related to the theme and BT.",
+              "On spot participation is only allowed for outside participants.",
             rule_3:
-              "Round 3 – Final round. Out of the three members, at least one must be from BT.",
+              "The time limit of the performance will be 7 to 9 +1 minutes. (1 minute is for setup and clears the stage) and minimum is 5 minutes and marks will be deducted for exceeding the time limit.",
+            rule_4:
+              "Team must have a minimum of 4  active members and maximum stage limit will be 25. (Team size – unlimited)",
           },
         ],
         TeamSize: "2-3 ",

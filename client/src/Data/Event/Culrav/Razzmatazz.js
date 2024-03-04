@@ -1,158 +1,209 @@
 //import Genesis from '../Images/genesis.jpg'
-import Palladin from "../../Images/palladin.jpg";
-import CenrtalDogma from "../../Images/CentralDogma.jpg";
+
 import BgImg from "../../Images/Razzmatazz.png";
 export const Razzmatazz = [
   {
-    title: "Genesis3",
-    tagline: "Treasure Trails and Biotech Tales",
+    title: "Razzmatazz",
+    tagline: "",
     BgImageLink: BgImg,
-    instagramLink: "https://www.facebook.com/genesis.avishkar.mnnit",
+    instagramLink: "",
     events: [
       {
-        name: "Palladin",
-        disc: "Join us for an exciting placement-oriented event offering opportunities in the diverse areas: Core, Consultancy and Software. This event promises to connect you with potential career pathways tailored to your interest and skills.",
+        name: "DESI SYNC",
+        disc: "Folklore Group Dance Competition\nDANCE – Defeat All Negativity (via) Creative Expression. The spirited dance moves of cultural dance charge with your energy, so as the harmonious melodies handed down precisely through ages reverberate through the air, brace yourself to live through this shared experience of humanity and a celebration of diverse cultures. Get in the groove, bring out your best moves, and set the stage of DESI SYNC on fire.",
         rule: [
           {
-            rule_1: "No. of rounds – 2",
-            rule_2: "Round 1 – Written paper (Aptitude + Area of Interest)",
-            rule_3: "Round 2 – GD, JAM, Interview",
-            rule_4: "Compulsory for all Biotechnology students.",
+            rule_1: "First year, Second year, and third year can participate.",
+            rule_2:
+              "The time limit of the performance will be 8-11+1 minute. (1 minute is for clear and set up the stage)",
+
+            rule_3: "Props can be used for performance.",
+            rule_4:
+              "Team must have a minimum of 4 active members and maximum stage limit will be 25. (Team size – unlimited)",
+            rule_5:
+              "Participants should get their songs/music in a pen drive. Live music is not allowed.",
+            rule_6:
+              "Decision of Judges will be supreme, everyone has to accept it.",
+            rule_7:
+              "Judging criteria: synchronization(10 percent), choreography(10 percent), energy levels(10 percent), theme(10 percent), expressions(10 percent), creativity(10 percent), costumes + props(10 percent), overall impact(10 percent).",
+            rule_8:
+              "Final year students can perform but won’t be a part of the competition.",
+            rule_9:
+              "The performance should be in cohesion with the integrity of the fest. The song selected must not contain any vulgarity.",
+            rule_10:
+              "Apart from judgment, Dance coordinators can alter rules where it is required.",
+          },
+        ],
+        TeamSize: "unlimited",
+        BGImageLink: "",
+        PsLink: "",
+        coordinators: [
+          {
+            name: "Ritesh Bhujbal",
+            phone: "7796757417",
+          },
+          {
+            name: "Siddhant Goel",
+            phone: "6392279453",
+          },
+          {
+            name: "Charitha Chowdam",
+            phone: "9515567656",
+          },
+        ],
+      },
+      {
+        name: "The Vault of Dance",
+        disc: "Western Group Dance Competition\nEvery fall counts as a move if you own it with grace. We believe self-expression has no rules, so when you dance, it is uniquely you! If your body moves with the beats of the music as your soul syncs with the emotions, or maybe you just love to go wild and have fun, the moment is now. Get ready for the most awaited Western night of foot-stomping, toe-tapping fun as we bring the spirit of the Wild West to life with our Vault of Dance event.",
+        rule: [
+          {
+            rule_1: "First year, Second year, and third year can participate.",
+            rule_2:
+              "On spot participation is only allowed for outside participants.",
+            rule_3:
+              "The time limit of the performance will be 7 to 9 +1 minutes. (1 minute is for setup and clears the stage) and minimum is 5 minutes and marks will be deducted for exceeding the time limit.",
+            rule_4:
+              "Team must have a minimum of 4 active members and maximum stage limit will be 25. (Team size – unlimited)",
+            rule_5:
+              "Participants should get their songs/music in a pen drive. Live music is not allowed.",
+            rule_6:
+              "In case of malfunctioning of any equipment provided, the team will be allowed to repeat their performance from the beginning or from the point of disruption that the team, with the consent of judges.",
+            rule_7:
+              "Judging criteria: synchronization(10 percent), choreography(10 percent), energy levels(10 percent), expressions(10 percent), creativity(10 percent), stage utilisation(10 percent), costumes(10 percent), overall impact(10 percent).",
+            rule_8:
+              "The performance should be in cohesion with the integrity of the fest. The song selected must not contain any vulgarity.",
+            rule_9:
+              "Violation of above will lead to immediate disqualification.",
+            rule_10:
+              "Apart from judgment, Dance coordinators can alter rules where it is required.",
+          },
+        ],
+        TeamSize: "unlimited",
+        BGImageLink: "",
+        PsLink: "",
+        coordinators: [
+          {
+            name: "Devesh Pant",
+            phone: "6396346926",
+          },
+          {
+            name: "Ritesh Bhujbal",
+            phone: "7796757417",
+          },
+          {
+            name: "Audhip Chaudhary",
+            phone: "6394348631",
+          },
+        ],
+      },
+      {
+        name: "REVEL",
+        disc: "Solo Duet Dance is the hidden language of the soul. Stepping into the spotlight, one beat at a time! Embracing the solo and duet dance vibes at Confluence, where your passion becomes the choreography. Each move is a celebration; each step is a story. Join us in this dance of self-expression at Revel.",
+        rule: [
+          {
+            rule_1: "A team can have at-most 2 participants.",
+            rule_2: "No on spot registrations allowed.",
+            rule_3:
+              "Participants should get their audio in pen-drive. No live music allowed.",
+            rule_4: "Time limit is 2-4 min (music on to music off).",
+            rule_5:
+              "Judging criteria: Choreography-40 percent, Expressions-35 percent, Stage utilization-15 percent, Crowd response-10 percent",
+            rule_6:
+              "If performance exceeds by 10 sec then 10 percent marks will be deducted, for further 20 sec increase in duration, the performance will be disqualified from the competition.",
+            rule_7:
+              "Accessories or costumes will be arranged by the participants.",
+            rule_8:
+              "In case of any malfunctioning in the props, costumes the participants can start their performance again with the judge's consent either from the start or from where they were disrupted.",
+            rule_9:
+              "Participants should maintain the integrity of college i.e. no foul languages and signs/symbols will be entertained and may lead to disqualification on-spot, live animals and naked flames are not allowed.",
+          },
+        ],
+        TeamSize: "2-2",
+        BGImageLink: "",
+        PsLink: "",
+        coordinators: [
+          {
+            name: "Manish Singh",
+            phone: "9555915430",
+          },
+          {
+            name: "Devesh Pant",
+            phone: "6396346926",
+          },
+          {
+            name: "Shaily Rani",
+            phone: "8937828480",
+          },
+        ],
+      },
+      {
+        name: "LEAP OF FAITH",
+        disc: "Solo Dance Battle Dancing is like dreaming with your feet",
+        rule: [
+          {
+            rule_1: "On-spot registrations are allowed.",
+            rule_2:
+              "Participants have to face random opponents, and the elimination process will take place simultaneously.",
+            rule_3:
+              "There will be 2 stages of battle: prepared dance battle and on-spot rep your style.",
+            rule_4:
+              "All the judging criteria will be decided by the judge of the competition.",
+            rule_5:
+              "Decision of the judge will be final, and any commotion against it will lead to expulsion from the competition itself.",
+            rule_6: "No naked flames and animals will be entertained as props.",
           },
         ],
         TeamSize: "1-1",
-        BGImageLink: Palladin,
+        BGImageLink: "",
         PsLink: "",
         coordinators: [
           {
-            name: "Shruti Mokhashi",
-            phone: " 9353201039",
+            name: "Ritesh Bhujbal",
+            phone: "7796757417",
           },
           {
-            name: "Hardik Chandu Patil ",
-            phone: "8669661632 ",
+            name: "Devesh Pant",
+            phone: "6396346926",
           },
           {
-            name: "Saurabh Yadav ",
-            phone: "8112638458",
+            name: "Shaily Rani",
+            phone: "8937828480",
           },
         ],
       },
       {
-        name: "Central Dogma",
-        disc: "Welcome to Central Dogma, the quintessential biotech event that delves deep into the core principles of the field. Join us for an experience that will engage your intellect with captivating visuals, puzzles, anagrams and more, all intricately linked to the event’s theme and the fascinating world of biotechnology.",
+        name: "SIZZLE AND SHAKE",
+        disc: "Group Dance Battle Dance is the joy of movement and the heart of life",
         rule: [
           {
-            rule_1: "No. of rounds – 3 ",
-            rule_2:
-              "Round 2 – Live round, based on pictures, puzzles, anagrams, etc. related to the theme and BT.",
+            rule_1: "All years can participate, and outsiders are allowed.",
+            rule_2: "Team size will be at least 4 and at most 10.",
             rule_3:
-              "Round 3 – Final round. Out of the three members, at least one must be from BT.",
-          },
-        ],
-        TeamSize: "2-3 ",
-        BGImageLink: CenrtalDogma,
-        PsLink: "",
-        coordinators: [
-          {
-            name: "Ishika Agrawal",
-            phone: "6394041898",
-          },
-          {
-            name: "Shivendra Singh Gond",
-            phone: "7049072054",
-          },
-          {
-            name: "Mahendra Pratap Singh",
-            phone: "9149007550",
-          },
-        ],
-      },
-      {
-        name: "Clue Quest",
-        disc: "Get ready for Clue Quest, the ultimate adventure!! Prepare to immerse yourself in a whirlwind of excitement where mystery, puzzles and thrills await around every corner. With each challenge, you’ll dive deeper into a world of entertainment, inspired from memes, anime, web series, movies and more, all while testing your knowledge and teamwork skills to the fullest. But the ultimate thrill awaits in the final round – a captivating treasure hunt set amidst the familiar grounds of your campus. Don’t miss out on the ride of a lifetime. ",
-        rule: [
-          {
-            rule_1: "Fun event ",
-            rule_2: "Open to All branches and years.",
-            rule_3:
-              "No. of rounds – 3 or 4 ( Final round will be Treasure Hunt )",
+              "Participants have to face random teams, and the elimination process will take place simultaneously.",
             rule_4:
-              "All rounds will be based on puzzles, TV series, memes, anime, etc.",
-            rule_5: "Objective: Have Fun !! ",
+              "There will be 2 stages. 1st stage - Teams will perform on their own performance (performance limit: 1.5 to 3 min.) and at 2nd stage - Random songs will be played, and teams have to perform according to it.",
+            rule_5:
+              "Decision of the judge will be final, and any commotion against it will lead to expulsion from the competition itself.",
           },
         ],
-        TeamSize: "3-5 ",
+        TeamSize: "4-10",
         BGImageLink: "",
         PsLink: "",
         coordinators: [
           {
-            name: "Shivangi Singh Chauhan",
-            phone: "7235813787",
+            name: "Ritesh Bhujbal",
+            phone: "7796757417",
           },
           {
-            name: "Lovekush Kushwaha",
-            phone: "8449104464",
+            name: "Devesh Pant",
+            phone: "6396346926",
           },
           {
-            name: "Shruti Mokhashi",
-            phone: "9353201039",
-          },
-          {
-            name: "Hardik Chandu Patil",
-            phone: " 8669661632",
+            name: "Shaily Rani",
+            phone: "8937828480",
           },
         ],
       },
-      {
-        name: "",
-        disc: "",
-        rule: [
-          {
-            rule_1: "",
-            rule_2: "",
-            rule_3: "",
-          },
-        ],
-        TeamSize: "",
-        BGImageLink: "",
-        PsLink: "",
-        coordinators: [
-          {
-            name: "",
-            phone: "",
-          },
-          {
-            name: "",
-            phone: "",
-          },
-        ],
-      },
-      {
-        name: "",
-        disc: "",
-        rule: [
-          {
-            rule_1: "",
-            rule_2: "",
-            rule_3: "",
-          },
-        ],
-        TeamSize: "",
-        BGImageLink: "",
-        PsLink: "",
-        coordinators: [
-          {
-            name: "",
-            phone: "",
-          },
-          {
-            name: "",
-            phone: "",
-          },
-        ],
-      },
-      {},
     ],
   },
 ];

@@ -1,6 +1,7 @@
 import Axios from "./Axios.js";
+// console.log(`${import.meta.env.VITE_API_BACKEND_URL}`);
 import { Cookies } from "react-cookie";
-const BaseUrl = "http://localhost:5000/api";
+
 const signUp = async (data) => {
   try {
     const messageData = {
@@ -13,7 +14,7 @@ const signUp = async (data) => {
       resumeLink: data.resumeLink,
     };
     const res = await Axios.post(
-      "http://localhost:8000/api/auth/signup",
+      `${process.env.REACT_APP_BACKEND_URL}/auth/signup`,
       messageData
     );
     if (res.data) {

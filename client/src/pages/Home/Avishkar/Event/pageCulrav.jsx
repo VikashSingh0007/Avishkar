@@ -1,7 +1,8 @@
+import React, { useState } from "react";
+import Navbar from "../../../Home/Navbar";
 import "./page.css";
 import { useParams } from "react-router-dom";
 import background from "./img.jpg";
-import { useState } from "react";
 
 const PageCulrav = () => {
   const { data } = useParams();
@@ -21,6 +22,9 @@ const PageCulrav = () => {
         }}
         // style={{ backgroundImage: `url(${background})` }}
       >
+        {/* <div>
+          <Navbar />
+        </div> */}
         <div className="absolute inset-0 bg-black opacity-0"></div>
         <div className="absolute inset-0 overflow-y-auto">
           {/* Your other content goes here */}
@@ -46,20 +50,22 @@ const PageCulrav = () => {
                       <div className="flex justify-center text-4xl py-4 text-4xl font-semibold protest-revolution-regular1">
                         Description
                       </div>
-                      <div className="flex justify-center text-2xl py-4 protest-revolution-regular11">
-                        {decodedData.disc}
+                      <div className="flex justify-center py-4 protest-revolution-regular11">
+                        <h4 className="text-sm sm:text-xl text-justify">
+                          {decodedData.disc}
+                        </h4>
                       </div>
 
                       <div className="flex justify-center py-4 text-4xl font-semibold">
                         Rules
                       </div>
-                      <div className="flex text-2xl justify-center py-4 protest-revolution-regular1">
+                      <div className="flex text-sm sm:text-xl justify-center py-4 protest-revolution-regular1 text-justify">
                         <ol>
                           {decodedData.rule.map((ruleObj, index) => (
                             <li key={index}>
                               {Object.entries(ruleObj).map(([key, value]) => (
                                 <div key={key}>
-                                  {key} {" - "}
+                                  {"❖ "}
                                   {value}
                                 </div>
                               ))}
@@ -67,11 +73,12 @@ const PageCulrav = () => {
                           ))}
                         </ol>
                       </div>
+
                       <div className="flex justify-center py-4 text-4xl font-semibold">
                         Coordinators
                       </div>
                       <div className="flex text-2xl justify-center py-4">
-                        <ol className="flex space-x-4">
+                        <ol className="flex flex-col lg:flex-row space-x-4">
                           {decodedData.coordinators.map(
                             (coordinator, index) => (
                               <li
@@ -87,14 +94,14 @@ const PageCulrav = () => {
                       </div>
                     </div>
                   </div>
+                  <button
+                    className="btn2 mb-5"
+                    style={{ display: "block", margin: "0 auto" }}
+                  >
+                    Register
+                  </button>
                 </div>
               </div>
-              <button
-                className="btn2 mb-5"
-                style={{ display: "block", margin: "0 auto" }}
-              >
-                Register
-              </button>
             </div>
           </div>{" "}
         </div>

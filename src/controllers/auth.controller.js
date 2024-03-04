@@ -140,6 +140,7 @@ const userSignup = async (req, res, next) => {
           isFeePaid: false,
           resumeLink,
         });
+        // console.log(newUser);
 
         const token = await generateVerificationToken({
           _id: newUser._id,
