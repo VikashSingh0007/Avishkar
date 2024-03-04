@@ -1,16 +1,29 @@
 import "./login.css"; // Import your CSS file
 import { useState } from "react";
 import bg from "./loginbg1.jpeg";
+import { userLogin } from "../../services/authService";
+import { useNavigate } from "react-router-dom";
 const Lo = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-
+  const navigate = useNavigate();
   const handleSubmit = async (e) => {
     e.preventDefault();
     const data = {
       email: email,
       password: password,
     };
+    const response = await userLogin(data);
+    if (!response) {
+      return;
+    } else {
+      localStorage.setItem("userToken", response.token);
+      navigate("/");
+      return;
+    }
+    // if(response.data){
+
+    // }
     // await axios.post("http://localhost:5000/api/auth/resetpassword", data);
   };
   return (

@@ -222,10 +222,7 @@ const userLogin = async (req, res, next) => {
       res.statusCode = 401;
       return res.json({
         error: "authentication error",
-        message:
-          user.password === null
-            ? "please verify yourself and try again!"
-            : "email/username and password don't match!",
+        message: "email or password don't match!",
         success: false,
       });
     }

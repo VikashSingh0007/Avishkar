@@ -108,3 +108,21 @@ export const verifyUser = async (token) => {
     return false;
   }
 };
+export const userLogin = async (data) => {
+  try {
+    const response = await Axios.post(
+      `${import.meta.env.VITE_API_BACKEND_URL}/auth/login`,
+      data
+    );
+    if (response.data.success) {
+      return response.data;
+    } else {
+      toast.error(response.data.message);
+      return false;
+    }
+  } catch (error) {
+    console.log(error);
+    toast.error(error.data.response.message);
+    return false;
+  }
+};
