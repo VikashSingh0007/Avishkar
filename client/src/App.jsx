@@ -21,7 +21,7 @@ import Rules from "./pages/Home/culrav/Rules.jsx";
 import AwishkarRules from "./pages/Home/Avishkar/AwishkarRules.jsx";
 import AvishkarLanding from "./pages/Home/Avishkar/AvishkarLanding.jsx";
 import AvishkarIndex from "./pages/Home/Avishkar/AvishkarIndex.jsx";
-
+import VerifyUser from "./pages/Credentials/VerifyUser.jsx";
 const App = () => {
   return (
     <>
@@ -49,6 +49,7 @@ const App = () => {
           <Route path="/rules" element={<Rules />} />
           <Route path="/AvishkarRules" element={<AwishkarRules />} />
           <Route path="/avishkar" element={<AvishkarIndex />} />
+          <Route path="/verify/:id" element={<VerifyUser />} />
         </Routes>
       </BrowserRouter>
     </>

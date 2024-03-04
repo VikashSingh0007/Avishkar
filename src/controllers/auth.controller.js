@@ -181,7 +181,7 @@ const userSignup = async (req, res, next) => {
   }
 };
 
-const userSignin = async (req, res, next) => {
+const userLogin = async (req, res, next) => {
   const { email } = req.body;
   let { password } = req.body;
   if (!email || !password) {
@@ -380,6 +380,11 @@ const verifyUser = async (req, res) => {
         });
         return;
       }
+      if (user.isVerified)
+        return res.status(403).json({
+          success: false,
+          message: "User is Already Verified",
+        });
       user.isVerified = true;
       user.expireAt = new Date("12-12-9999");
       await user.save();
@@ -388,7 +393,7 @@ const verifyUser = async (req, res) => {
         success: true,
         message: "verified the user sucessfully",
       });
-      return true;
+      return;
     } else {
       res.statusCode = 402;
       res.json({
@@ -411,7 +416,7 @@ const verifyUser = async (req, res) => {
 
 module.exports = {
   userResetPassword,
-  userSignin,
+  userLogin,
   userSignup,
   userForgotPassword,
   verifyUser,

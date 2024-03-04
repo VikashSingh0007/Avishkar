@@ -9,6 +9,7 @@ import AvishkarCard from "./AvishkarCard.jsx";
 import EventTimeLine from "./EventTimeline.jsx";
 import Footer from "./Footer.jsx";
 import Gallery from "./Gallery.jsx";
+import { toast } from "react-toastify";
 const App = () => {
   return (
     <>

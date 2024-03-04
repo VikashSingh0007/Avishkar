@@ -1,7 +1,7 @@
 import Axios from "./Axios.js";
 // console.log(`${import.meta.env.VITE_API_BACKEND_URL}`);
 import { Cookies } from "react-cookie";
-
+import { toast } from "react-toastify";
 const signUp = async (data) => {
   try {
     const messageData = {
@@ -14,7 +14,7 @@ const signUp = async (data) => {
       resumeLink: data.resumeLink,
     };
     const res = await Axios.post(
-      `${process.env.REACT_APP_BACKEND_URL}/auth/signup`,
+      `${import.meta.env.VITE_API_BACKEND_URL}/auth/signup`,
       messageData
     );
     if (res.data) {
@@ -23,7 +23,8 @@ const signUp = async (data) => {
       return false;
     }
   } catch (error) {
-    console.log(error.message);
+    console.log(error);
+    toast.error(error.response.data.message);
     return false;
   }
 };
@@ -83,6 +84,27 @@ export const resetPassword = async (data) => {
     }
   } catch (e) {
     console.log(e.message);
+    return false;
+  }
+};
+export const verifyUser = async (token) => {
+  try {
+    const response = await Axios.post(
+      `${import.meta.env.VITE_API_BACKEND_URL}/auth/verifyuser`,
+      {
+        token,
+      }
+    );
+    if (response.data.success) {
+      toast.success("User Verified Successfully");
+      return true;
+    } else {
+      toast.error(response.data.message);
+      return false;
+    }
+  } catch (error) {
+    console.log(error);
+    toast.error(error.response.data.message);
     return false;
   }
 };
