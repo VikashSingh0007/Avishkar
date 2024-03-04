@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import "./Sponsors.css"; // Replace with the actual CSS file path
-
+import Navbar from "../../Navbar";
 const Sponsors = () => {
   useEffect(() => {
     const gallery = document.querySelector("#gallery");
@@ -184,27 +184,13 @@ const Sponsors = () => {
 
   return (
     <>
-      {/* 
-  Swaying photo gallery - scroll event
-  Created on AUGUST 29, 2023
-  Copyright (c) 2023 by Wakana Y.K. (https://codepen.io/wakana-k/pen/WNLrWMm)
-  */}
-      {/* 
-  Related works : 
-  Portforio design @wakana-k - https://codepen.io/wakana-k/pen/BaxKKvE
-  Swaying photo gallery - hover event @wakana-k - https://codepen.io/wakana-k/pen/oNJxbPw
-  */}
       <main
-        // style={{
-        //   backgroundImage: `url('https://img.freepik.com/free-photo/painting-mountain-lake-with-mountain-background_188544-9126.jpg?size=626&ext=jpg')`,
-        //   backgroundSize: "cover", // You can customize other background properties here
-        //   // Add any other styles you need
-        // }}
         style={{
           background:
             "linear-gradient(to bottom, #d95f3b, #f0984a, #fcd6a5, #7aa9a3, #338f9a, #1c4c70)",
         }}
       >
+        <Navbar />
         <div
           // style={{ fontFamily: "ram" }}
           className="flex text-white justify-center text-[5vw] protest-revolution-regular6"

@@ -75,7 +75,7 @@ const Carousel = () => {
           fontFamily: "Libre Bodoni, serif",
         }}
       >
-        Our Past Sponsor
+        Our Past Sponsors
       </h2>
       <div
         className="scroller mt-[10%] "

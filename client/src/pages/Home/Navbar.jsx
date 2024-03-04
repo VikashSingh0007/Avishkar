@@ -50,8 +50,8 @@ const Navbar = () => {
         {navLinks.map((nav, index) => (
           <li
             key={nav.id}
-            className={`font-poppins mr-16 font-medium cursor-pointer text-xl ${
-              active === nav.title ? "text-black font-bold" : "text-gray-600"
+            className={`font-poppins mr-16 font-meduim cursor-pointer text-l ${
+              active === nav.title ? "text-black font-medium" : "text-gray-900"
             } ${index === navLinks.length - 1 ? "mr-0" : "mr-10"}`}
             onClick={() => setActive(nav.title)}
             style={{

@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import "./team.css"; // Replace with the actual CSS file path
-
+import Navbar from "../Home/Navbar";
 const Team = () => {
   useEffect(() => {
     const gallery = document.querySelector("#gallery");
@@ -158,6 +158,7 @@ const Team = () => {
         //   // Add any other styles you need
         // }}
       >
+        <Navbar />
         <div
           // style={{ fontFamily: "ram" }}
           className="flex text-white justify-center text-[5vw] protest-revolution-regular7"

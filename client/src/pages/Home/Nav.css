@@ -8,9 +8,9 @@
 
 .nav-links li {
   font-family: "Yeseva One", serif;
-  font-weight: 900;
+  font-weight: 700;
   font-style: normal;
-  font-size: x-large;
+  font-size: large;
   display: block;
   margin: 4px auto; /* Add margin between list items and center them horizontally */
   background-color: rgba(
