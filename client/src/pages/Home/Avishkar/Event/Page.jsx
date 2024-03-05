@@ -43,19 +43,19 @@ const Page = () => {
                     // className={blurproperty}
                   >
                     <div>
-                      <div className="flex justify-center text-4xl font-semibold py-8 protest-revolution-regular2">
+                      <div className="flex justify-center text-8xl font-semibold py-8 protest-revolution-regular2 rumoura-font">
                         {decodedData.name}
                       </div>
-                      <div className="flex justify-center text-4xl py-4 text-4xl font-semibold protest-revolution-regular1">
+                      <div className="flex justify-center text-2xl py-4 text-4xl font-semibold rumoura-font">
                         Description
                       </div>
                       <div className="flex justify-center py-4 protest-revolution-regular11">
-                        <h4 className="text-sm sm:text-xl text-justify">
+                        <h4 className="text-sm sm:text-xl text-justify ">
                           {decodedData.disc}
                         </h4>
                       </div>
 
-                      <div className="flex justify-center py-4 text-4xl font-semibold">
+                      <div className="flex justify-center py-4 text-4xl font-semibold rumoura-font">
                         Rules
                       </div>
                       <div className="flex text-sm sm:text-xl justify-center py-4 protest-revolution-regular1 text-justify">
@@ -73,7 +73,7 @@ const Page = () => {
                         </ol>
                       </div>
 
-                      <div className="flex justify-center py-4 text-4xl font-semibold">
+                      <div className="flex justify-center py-4 text-4xl font-semibold rumoura-font">
                         Coordinators
                       </div>
                       <div className="flex text-2xl justify-center py-4">

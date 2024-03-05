@@ -1,11 +1,10 @@
-/* @font-face {
-  font-family: 'ram';
-  src: url('./fn.ttf') format('truetype');
-} */
+@import url("https://db.onlinewebfonts.com/c/6b63cc27b0fdfa2ee93c6eaf0f7572d9?family=Rumoura+TexturesPERSONAL+USE");
 
-/* .content {
-  font-family: "ram", sans-serif;
-} */
+.rumoura-font {
+  font-family: "Rumoura TexturesPERSONAL USE";
+  font-weight: 900;
+  font-style: normal;
+}
 .btn2 {
   padding: 1.1em 2em;
   background: none;

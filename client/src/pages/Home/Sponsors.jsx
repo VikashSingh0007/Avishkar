@@ -7,18 +7,18 @@ import icici from "./culrav/assets/icici.png";
 import bbq from "./culrav/assets/BBQ.png";
 import beardo from "./culrav/assets/beardo.png";
 import varun from "./culrav/assets/V3.jpg";
-import dhyeya from "./culrav/assets/dhyeya.jpg"
-import RedBull from "./culrav/assets/Red Bull.jpeg"
-import Pizzahut from "./culrav/assets/Pizzahut.png"
-import Pepsi from "./culrav/assets/Pepsi.png"
-import Ola from "./culrav/assets/Ola.jpg"
-import Bob from "./culrav/assets/Bob.jpg"
-import Dell from "./culrav/assets/Dell.png"
-import Godrej from "./culrav/assets/Godrej.png"
-import Codechef from "./culrav/assets/Codechef.png"
-import Gfg from "./culrav/assets/Gfg.png"
-import Github from "./culrav/assets/Github.jpg"
-import Groww from "./culrav/assets/Groww.png"
+import dhyeya from "./culrav/assets/dhyeya.jpg";
+import RedBull from "./culrav/assets/Red Bull.jpeg";
+import Pizzahut from "./culrav/assets/Pizzahut.png";
+import Pepsi from "./culrav/assets/Pepsi.png";
+import Ola from "./culrav/assets/Ola.jpg";
+import Bob from "./culrav/assets/Bob.jpg";
+import Dell from "./culrav/assets/Dell.png";
+import Godrej from "./culrav/assets/Godrej.png";
+import Codechef from "./culrav/assets/Codechef.png";
+import Gfg from "./culrav/assets/Gfg.png";
+import Github from "./culrav/assets/Github.jpg";
+import Groww from "./culrav/assets/Groww.png";
 const Carousel = () => {
   const Data = [
     {
@@ -89,8 +89,7 @@ const Carousel = () => {
     {
       name: "Groww",
       img: Groww,
-    }
-    
+    },
   ];
   useEffect(() => {
     const scrollers = document.querySelectorAll(".scroller");
@@ -123,12 +122,12 @@ const Carousel = () => {
   return (
     <div>
       <h2
-        className="text-3xl text-black font-bold mb-2 flex justify-center mt-[10%]"
+        className="text-3xl text-black font-bold mb-2 flex justify-center mt-[10%] rumoura-font"
         style={{
           fontSize: "xx-large",
           fontWeight: "bolder",
           textAlign: "center",
-          fontFamily: "Libre Bodoni, serif",
+          // fontFamily: "Libre Bodoni, serif",
         }}
       >
         Our Past Sponsors

@@ -1,11 +1,12 @@
 // import styles from "../../style";
 import { Link } from "react-router-dom";
 import { CiMail } from "react-icons/ci";
+import "./Nav.css";
 const Footer = () => (
   <section className="bg-transparent mt-[10%]">
     <div className="max-w-screen-xl px-4 py-2 mx-auto space-y-8 overflow-hidden sm:px-6 lg:px-8">
       <div className="flex flex-wrap justify-center -mx-5 -my-2 text-xl font-bold">
-        <h3 className="flex flex-wrap justify-center  text-center text-xl font-bold ">
+        <h3 className="flex flex-wrap justify-center  text-center text-xl font-bold rumoura-font">
           {" "}
           MNNIT Allahabad, Teliyarganj, Prayagraj , India
         </h3>
@@ -14,7 +15,7 @@ const Footer = () => (
       {/* Avishkar */}
       <div className="flex flex-col lg:flex-row">
         <div className="flex-grow lg:w-1/2">
-          <h3 className="flex flex-wrap justify-center -mx-5 my-2 text-xl font-bold underline">
+          <h3 className="flex flex-wrap justify-center -mx-5 my-2 text-xl font-bold underline rumoura-font">
             {" "}
             Avishkar Links
           </h3>
@@ -55,7 +56,7 @@ const Footer = () => (
         </div>
         <div className="flex-grow lg:w-1/2 ">
           {/* Culrav */}
-          <h3 className="flex flex-wrap justify-center -mx-5 my-2 text-xl font-bold underline">
+          <h3 className="flex flex-wrap justify-center -mx-5 my-2 text-xl font-bold underline rumoura-font">
             {" "}
             Culrav Links
           </h3>
@@ -95,7 +96,7 @@ const Footer = () => (
           </div>
         </div>
       </div>
-      <h6 className="mt-8 text-base leading-6 text-center text-gray-400">
+      <h6 className="mt-8 text-base leading-6 text-center text-black rumoura-font">
         Copyright Ⓒ 2024 MNNIT. All Rights Reserved.
       </h6>
     </div>

@@ -1,3 +1,12 @@
+
+@import url("https://db.onlinewebfonts.com/c/6b63cc27b0fdfa2ee93c6eaf0f7572d9?family=Rumoura+TexturesPERSONAL+USE");
+
+.rumoura-font {
+  font-family: "Rumoura TexturesPERSONAL USE";
+  font-weight: 900;
+  font-style: normal;
+}
+
 .scrollerPastPerformance {
   max-width: 1600px;
 }

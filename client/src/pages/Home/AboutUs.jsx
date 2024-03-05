@@ -34,14 +34,14 @@ const AboutUs = () => {
           >
             About Us
           </h2>
-          <h5 className="protest-revolution-regular text-xl text-justify rumoura-font">
+          <h6 className="protest-revolution-regular text-xl text-justify rumoura-font">
             MOTILAL NEHRU NATIONAL INSTITUTE OF TECHNOLOGY ALLAHABAD, PRAYAGRAJ
             an Institute of National Importance (by GOI), MNNIT ranks 3rd among
             the 30 NITs in India, as per QS Universities Rankings 2017. It was
             established as one of the seventeen Regional Engineering Colleges
             (RECs) of India in 1961 as a joint enterprise of the Government of
             India and the Government of Uttar Pradesh.
-          </h5>
+          </h6>
 
           {/* <div className="flex flex-row flex-wrap sm:mt-10 mt-6">
         <img src={apple} alt="google_play" className="w-[128.86px] h-[42.05px] object-contain mr-5 cursor-pointer" />

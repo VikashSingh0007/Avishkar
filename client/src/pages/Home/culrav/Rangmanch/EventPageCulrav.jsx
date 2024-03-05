@@ -49,7 +49,9 @@ const EventCard = ({ data }) => {
                     to={`/page/${encodeURIComponent(JSON.stringify(data))}`}
                     className="flex items-center justify-center cursor-pointer"
                   >
-                    <h4 className="text-3xl w-full mt-2">Explore!</h4>
+                    <h4 className="text-3xl w-full mt-2 rumoura-font">
+                      Explore !
+                    </h4>
                   </Link>
                 </div>
               </span>

@@ -12,7 +12,7 @@ import Pm from "./culrav/assets/PiyushMishra2022.jpg";
 import YD from "./culrav/assets/YellowDiary.jpeg";
 import Pame from "./culrav/assets/armstrong-pame-ias-upsc-rank.jpeg";
 import RK from "./culrav/assets/rajat-kapoor-3.jpeg";
-import Chetan from "./culrav/assets/chetanbhagat.jpg"
+import Chetan from "./culrav/assets/chetanbhagat.jpg";
 import SA from "./culrav/assets/sameer-anjaan.jpg";
 import Amish from "./culrav/assets/amish.jpg";
 const Carousel = () => {
@@ -83,7 +83,7 @@ const Carousel = () => {
     },
     {
       name: "Rajat Kapoor",
-      img: RK ,
+      img: RK,
     },
     {
       name: "Armstrong Pame",
@@ -105,12 +105,11 @@ const Carousel = () => {
   return (
     <div>
       <h2
-        className="text-3xl text-black font-bold mb-4 flex justify-center mt-[10%]"
+        className="text-3xl text-black font-bold mb-4 flex justify-center mt-[10%] rumoura-font"
         style={{
           fontSize: "xx-large",
           fontWeight: "bolder",
           textAlign: "center",
-          fontFamily: "Libre Bodoni, serif",
         }}
       >
         Our Past Performers
