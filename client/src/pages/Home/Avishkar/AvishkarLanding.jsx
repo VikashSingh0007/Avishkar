@@ -28,25 +28,23 @@ const AvishkarLanding = () => {
             The Technical Fest of MNNIT , Allahabad
             <span>Avishkar</span>
           </p>
-        </div>
+        </div>className="flex text-black justify-center pt-24 text-4xl font-bold rumoura-font"
       </div> */}
-      <div className=" w-full h-full flex flex-wrap p-4 pt-20">
-        <h1
-          className="w-full text-3xl font-bold mb-10 mt-5 text-center font-serif"
-          style={{ fontFamily: "Libre Bodoni, serif" }}
-        >
+
+      <div>
+        <h1 className="w-full text-4xl font-bold mb-10 pt-24  text-center  rumoura-font">
           Events
         </h1>
+      </div>
 
-        <div className="relative flex flex-wrap justify-evenly w-full">
-          {avishkarData.map((data) => {
-            return (
-              <div className="mb-8 mr-6 ml-6 relative">
-                <EventsComputer data={data} />
-              </div>
-            );
-          })}
-        </div>
+      <div className="relative flex flex-wrap justify-evenly w-full">
+        {avishkarData.map((data) => {
+          return (
+            <div className="mb-8 mr-6 ml-6 relative">
+              <EventsComputer data={data} />
+            </div>
+          );
+        })}
       </div>
     </div>
   );
