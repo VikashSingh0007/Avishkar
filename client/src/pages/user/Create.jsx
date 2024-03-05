@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { createTeam } from "../../services/teamService";
 
 const Create = () => {
@@ -59,13 +59,23 @@ const Create = () => {
               <select
                 onChange={handleChange}
                 name="teamSize"
-                className="w-full h-[7vh] bg-gray-600 bg-opacity-20 focus:bg-transparent focus:ring-2 focus:ring-green-900 rounded border border-gray-600 focus:border-green-500  outline-none text-gray-800 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out text-4xl mt-4"
+                className="w-full h-[7vh] bg-gray-600 text-white bg-opacity-20 focus:bg-transparent focus:ring-2 focus:ring-green-900 rounded border border-gray-600 focus:border-green-500  outline-none text-gray-800 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out text-4xl mt-4"
               >
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
+                <option className="text-black" value="1">
+                  1
+                </option>
+                <option className="text-black" value="2">
+                  2
+                </option>
+                <option className="text-black" value="3">
+                  3
+                </option>
+                <option className="text-black" value="4">
+                  4
+                </option>
+                <option className="text-black" value="5">
+                  5
+                </option>
               </select>
             </div>
             <button

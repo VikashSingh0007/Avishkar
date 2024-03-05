@@ -52,7 +52,7 @@ const Invitations = () => {
                 </div>
                 <div className="flex justify-center lg:w-4/5 sm:mx-auto sm:mb-2 -mx-2">
                   <div className="p-2 sm:w-1/4 w-full">
-                    <div className="bg-gray-800 hover:bg-green-800 rounded flex p-4 h-full items-center">
+                    <div className="bg-gray-800 hover:bg-green-800 rounded flex p-4 h-full items-center cursor-pointer">
                       <svg
                         fill="none"
                         stroke="currentColor"
@@ -74,7 +74,7 @@ const Invitations = () => {
                     </div>
                   </div>
                   <div className="p-2 sm:w-1/4 w-full">
-                    <div className="bg-gray-800 hover:bg-red-500 rounded flex p-4 h-full items-center">
+                    <div className="bg-gray-800 hover:bg-red-500 rounded flex p-4 h-full items-center cursor-pointer">
                       <svg
                         fill="none"
                         stroke="currentColor"
