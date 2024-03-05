@@ -1,16 +1,25 @@
 import React, { useState } from "react";
 
 const Create = () => {
-    const [data,setData]=useState({})
-    function handleChange(e){
-    setData((old)=>{
-        return({
-            ...old,
-            [e.target.name]:e.target.value
-        })
-    })
-    console.log(data)
-    }
+  const [data, setData] = useState({});
+
+  const handleSubmit = () => {
+    console.log(data);
+    const messageData = {
+      teamName: data.teamName,
+      teamSize: data.teamSize,
+    };
+    console.log(messageData);
+  };
+  function handleChange(e) {
+    setData((old) => {
+      return {
+        ...old,
+        [e.target.name]: e.target.value,
+      };
+    });
+    console.log(data);
+  }
   return (
     <div>
       <section className="text-gray-400 bg-gray-900 body-font">
@@ -52,11 +61,14 @@ const Create = () => {
                 <option value="1">1</option>
                 <option value="2">2</option>
                 <option value="3">3</option>
-                <option value="3">4</option>
-                <option value="3">5</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
               </select>
             </div>
-            <button className="text-white text-4xl bg-green-500 border-0 py-2 px-8 focus:outline-none hover:bg-green-600 rounded ">
+            <button
+              className="text-white text-4xl bg-green-500 border-0 py-2 px-8 focus:outline-none hover:bg-green-600 rounded "
+              onClick={handleSubmit}
+            >
               Create
             </button>
           </div>
