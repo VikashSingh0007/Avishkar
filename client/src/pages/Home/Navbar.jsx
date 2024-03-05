@@ -2,7 +2,6 @@ import { useState } from "react";
 import close from "./culrav/assets/close.svg";
 import menu from "./culrav/assets/menu.svg";
 import logo from "./culrav/assets/culravAviskarLogo.png";
-// import { navLinks } from "../../constants/Home";
 import "./Nav.css";
 import { Link } from "react-router-dom";
 
@@ -12,9 +11,8 @@ const Navbar = () => {
   const navLinks = [
     {
       id: "team",
-      title: "Team",
+      title: "Our Team",
     },
-
     {
       id: "sponsors",
       title: "Sponsors",
@@ -38,69 +36,52 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className="w-full fixed top-0    shadow-md">
-      <div className="flex justify-between items-center px-4 ">
+    <nav className="w-full fixed top-0  z-10 ">
+      <div className="flex justify-between items-center px-4 py-2">
         <Link to="/">
-          <img
-            src={logo}
-            alt="AvishkarCulrav"
-            className="ml-2 w-10 ml-10 lg:w-20 "
-          />
+          <img src={logo} alt="AvishkarCulrav" className="w-10 lg:w-20" />
         </Link>
 
         <ul className="list-none sm:flex hidden justify-end items-center flex-1 bungee-shade-regular">
-          {navLinks.map((nav, index) => (
+          {navLinks.map((nav) => (
             <li
               key={nav.id}
               className={`font-poppins mr-16 font-meduim cursor-pointer text-l ${
-                active === nav.title
-                  ? "text-black font-medium"
-                  : "text-gray-900"
-              } ${index === navLinks.length - 1 ? "mr-0" : "mr-10"}`}
+                active === nav.title ? "text-black" : "text-gray-900"
+              }`}
               onClick={() => setActive(nav.title)}
-              // style={{
-              //   backgroundColor: "rgba(255, 255, 255, 0.5)", // Adjust opacity as needed
-              //   backdropFilter: "blur(10px)", // Apply the blur effect
-              //   borderRadius: "10px", // Add rounded corners for a glassy effect
-              //   padding: "8px", // Add padding to the list items
-              // }}
             >
               <Link to={`/${nav.id}`}>{nav.title}</Link>
             </li>
           ))}
         </ul>
 
-        <div className="sm:hidden flex flex-1 justify-end items-center">
-          <img
-            src={toggle ? close : menu}
-            alt="menu"
-            className="w-[28px] h-[28px] mr-[10%] object-contain"
-            onClick={() => setToggle(!toggle)}
-          />
-
-          <div
-            className={`${
-              !toggle ? "hidden" : "flex"
-            } p-6 bg-gray-100 absolute z-[15] top-20 right-0 mx-4 my-2 min-w-[140px] rounded-xl sidebar`}
-          >
-            <ul className="list-none flex justify-end items-start flex-1 flex-col">
-              {navLinks.map((nav, index) => (
-                <li
-                  key={nav.id}
-                  className={`font-poppins font-medium cursor-pointer text-[16px] ${
-                    active === nav.title
-                      ? "text-black font-bold"
-                      : "text-gray-600"
-                  } ${index === navLinks.length - 1 ? "mb-0" : "mb-4"}`}
-                  onClick={() => setActive(nav.title)}
-                >
-                  <Link to={`/${nav.id}`}>{nav.title}</Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </div>
+        <img
+          src={toggle ? close : menu}
+          alt="menu"
+          className="block sm:hidden w-6 h-6"
+          onClick={() => setToggle(!toggle)}
+        />
       </div>
+
+      {toggle && (
+        // <div className="sm:hidden bg-gray-100 p-4">
+        <div className="sm:hidden p-6 bg-gray-100 absolute z-[20] top-20 right-0 mx-4 my-2 min-w-[140px] rounded-xl sidebar">
+          <ul className="flex flex-col space-y-2">
+            {navLinks.map((nav) => (
+              <li
+                key={nav.id}
+                className={`font-poppins font-medium cursor-pointer ${
+                  active === nav.title ? "text-black" : "text-gray-600"
+                }`}
+                onClick={() => setActive(nav.title)}
+              >
+                <Link to={`/${nav.id}`}>{nav.title}</Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
     </nav>
   );
 };
