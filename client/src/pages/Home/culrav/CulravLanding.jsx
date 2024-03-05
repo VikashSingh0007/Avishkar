@@ -17,7 +17,7 @@ const CulravLanding = () => {
       <Navbar style={{ zIndex: -4 }} />
       {/* <div className=" w-full h-full flex flex-wrap p-4"> */}
       <div>
-        <h1 className="w-full  text-5xl font-bold mb-10mt-5 pt-20 text-center font-serif rumoura-font">
+        <h1 className="w-full text-5xl md:text-4xl font-bold mb-10mt-5 pt-20 text-center font-serif rumoura-font">
           Events
         </h1>
       </div>
@@ -26,7 +26,7 @@ const CulravLanding = () => {
           {/* <div className="flex flex-wrap gap-20"> */}
           {Data.map((data) => {
             return (
-              <div className="mb-5 mr-4 ml-4 relative bg-rose-500">
+              <div className="mb-5 mr-4 ml-4 relative ">
                 <EventCard data={data} style={{ zIndex: 2 }} />
               </div>
             );
