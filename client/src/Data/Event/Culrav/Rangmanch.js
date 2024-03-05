@@ -2,6 +2,11 @@
 // import Palladin from "../Images/palladin.jpg";
 // import CenrtalDogma from "../Images/CentralDogma.jpg";
 import BgImg from "../../Images/Rangmanch.png";
+import Rangmanch1 from "../../Images/Rangmanch1.png";
+import Rangmanch2 from "../../Images/Rangmanch2.png";
+import Rangmanch3 from "../../Images/Rangmanch3.png";
+import Rangmanch4 from "../../Images/Rangmanch4.png";
+import Rangmanch5 from "../../Images/Rangmanch5.png";
 export const Rangmanch = [
   {
     title: "Rangmanch",
@@ -15,7 +20,7 @@ export const Rangmanch = [
         disc: "We invite you all to take part in the most popular form of theatre, Stage Play. Rangmanch brings you Natyamanch, Stage Play. So get up and get ready to mesmerize the world with your theatrics.",
         tagline:
           "All the world's a stage, and all men and women merely players",
-        BgImageLink: "",
+
         instagramLink: "",
         rule: [
           {
@@ -40,7 +45,7 @@ export const Rangmanch = [
           },
         ],
         TeamSize: "",
-        BGImageLink: "",
+        BGImageLink: Rangmanch1,
         PsLink: "",
         coordinators: [
           {
@@ -58,7 +63,7 @@ export const Rangmanch = [
         disc: "Laughter is the best way to create influence on the people. Unleash your thoughts showcase your best satires and prove that humor too can be serious stuff. Rangmanch invites you all to put on your comic mask and help us laugh out loud.",
         tagline:
           '“Laughter and tears are both responses to frustration and exhaustion. I myself prefer to laugh since there is less cleaning to do afterwards." — Kurt Vonnegut',
-        BgImageLink: "",
+
         instagramLink: "",
         rule: [
           {
@@ -86,7 +91,7 @@ export const Rangmanch = [
           },
         ],
         TeamSize: "",
-        BGImageLink: "",
+        BGImageLink: Rangmanch2,
         PsLink: "",
         coordinators: [
           {
@@ -137,7 +142,7 @@ export const Rangmanch = [
           },
         ],
         TeamSize: "",
-        BGImageLink: "",
+        BGImageLink: Rangmanch3,
         PsLink: "",
         coordinators: [
           {
@@ -186,7 +191,7 @@ export const Rangmanch = [
           },
         ],
         TeamSize: "",
-        BGImageLink: "",
+        BGImageLink: Rangmanch4,
         PsLink: "",
         coordinators: [
           {
@@ -241,7 +246,7 @@ export const Rangmanch = [
           },
         ],
         TeamSize: "",
-        BGImageLink: "",
+        BGImageLink: Rangmanch5,
         PsLink: "",
         coordinators: [
           {
