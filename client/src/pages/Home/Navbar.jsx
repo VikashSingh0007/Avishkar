@@ -9,7 +9,6 @@ const Navbar = () => {
   const [active, setActive] = useState("Home");
   const [toggle, setToggle] = useState(false);
 
-  
   const navLinks = [
     {
       id: "team",
@@ -19,14 +18,14 @@ const Navbar = () => {
       id: "sponsors",
       title: "Sponsors",
     },
-    {
-      id: "culravLanding",
-      title: "Culrav",
-    },
-    {
-      id: "avishkar-landing",
-      title: "Avishkar",
-    },
+    // {
+    //   id: "culravLanding",
+    //   title: "Culrav",
+    // },
+    // {
+    //   id: "avishkar-landing",
+    //   title: "Avishkar",
+    // },
     {
       id: "accommodation",
       title: "Accommodation",
@@ -38,6 +37,10 @@ const Navbar = () => {
     {
       id: "login",
       title: "Login",
+    },
+    {
+      id: "user",
+      title: "Profile",
     },
   ];
 

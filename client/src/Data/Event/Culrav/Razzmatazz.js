@@ -1,4 +1,9 @@
 //import Genesis from '../Images/genesis.jpg'
+import Razzammatz1 from "../../Images/Razzammatz1.png";
+import Razzammatz2 from "../../Images/Razzammatz2.png";
+import Razzammatz3 from "../../Images/Razzammatz3.png";
+
+import Razzammatz4 from "../../Images/Razzammatz4.png";
 
 import BgImg from "../../Images/Razzmatazz.png";
 export const Razzmatazz = [
@@ -35,7 +40,7 @@ export const Razzmatazz = [
           },
         ],
         TeamSize: "unlimited",
-        BGImageLink: "",
+        BGImageLink: Razzammatz1,
         PsLink: "",
         coordinators: [
           {
@@ -79,7 +84,7 @@ export const Razzmatazz = [
           },
         ],
         TeamSize: "unlimited",
-        BGImageLink: "",
+        BGImageLink: Razzammatz2,
         PsLink: "",
         coordinators: [
           {
@@ -154,7 +159,7 @@ export const Razzmatazz = [
           },
         ],
         TeamSize: "1-1",
-        BGImageLink: "",
+        BGImageLink: Razzammatz3,
         PsLink: "",
         coordinators: [
           {
@@ -187,7 +192,7 @@ export const Razzmatazz = [
           },
         ],
         TeamSize: "4-10",
-        BGImageLink: "",
+        BGImageLink: Razzammatz4,
         PsLink: "",
         coordinators: [
           {
