@@ -1,4 +1,5 @@
-import React from "react";
+import { useEffect } from "react";
+import { getAllParticipating } from "../../services/teamService";
 const data = [
   {
     teamName: "Team A",
@@ -53,6 +54,19 @@ const data = [
   },
 ];
 const Team = () => {
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const data = await getAllParticipating();
+        console.log("gotted from loki ", data);
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      }
+    };
+
+    fetchData();
+  }, []);
+
   return (
     <div>
       <section className="text-gray-400 bg-gray-900 body-font">
@@ -88,8 +102,6 @@ const Team = () => {
                         </>
                       );
                     })}
-
-                   
                   </div>
                 </div>
               </div>
