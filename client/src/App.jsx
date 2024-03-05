@@ -22,6 +22,7 @@ import AwishkarRules from "./pages/Home/Avishkar/AwishkarRules.jsx";
 import AvishkarLanding from "./pages/Home/Avishkar/AvishkarLanding.jsx";
 import AvishkarIndex from "./pages/Home/Avishkar/AvishkarIndex.jsx";
 import VerifyUser from "./pages/Credentials/VerifyUser.jsx";
+import Accomodation from "./pages/Home/Accomodation.jsx";
 const App = () => {
   return (
     <>
@@ -38,7 +39,6 @@ const App = () => {
           <Route path="/resetpassword/:token" element={<ResetPassword />} />
           <Route path="/AvishkarEvent/:data" element={<Carousel2 />} />
           <Route path="/page/:data" element={<Page />} />
-          
           <Route path="/culravEvent/:data" element={<CulravCarousel />} />
           <Route path="/culravOpening" element={<CulravOpening />} />
           <Route path="/culravLanding" element={<CulravLanding />} />
@@ -50,6 +50,7 @@ const App = () => {
           <Route path="/AvishkarRules" element={<AwishkarRules />} />
           <Route path="/avishkar" element={<AvishkarIndex />} />
           <Route path="/verify/:id" element={<VerifyUser />} />
+          <Route path="/accomodation" element={<Accomodation />} />
         </Routes>
       </BrowserRouter>
     </>

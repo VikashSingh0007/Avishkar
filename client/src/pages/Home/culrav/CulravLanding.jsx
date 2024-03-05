@@ -17,15 +17,17 @@ const CulravLanding = () => {
     >
       <Navbar style={{ zIndex: -4 }} />
       {/* <div className=" w-full h-full flex flex-wrap p-4"> */}
-      <h1 className="w-full text-3xl font-bold mb-10 mt-5 pt-20 text-center font-serif rumoura-font">
-        Events
-      </h1>
-
-      <div className="flex justify-center align-middle mt-[90%]  xsm:mt-[70%] sm:mt-[30%] md:mt-[45%] lg:mt-[40%] xl:mt-[15%] h-full ">
-        <div className="grid grid-cols-1 flex justify-center mb-10 sm:grid-cols-1 md:grid-cols-2 xl:grid-cols-3  gap-y-[400px]  gap-x-[350px] md:gap-x-[350px] md:gap-y-[550px]  lg:gap-x-[500px]  lg:gap-y-[600px] xl:gap-y-[600px] xl:gap-x-[500px]       ">
+      <div>
+        <h1 className="w-full text-3xl font-bold mb-10mt-5 pt-20 text-center font-serif rumoura-font">
+          Events
+        </h1>
+      </div>
+      <div className="flex justify-center align-middle mt-[90%]  xsm:mt-[60%] sm:mt-[35%] md:mt-[35%] lg:mt-[20%] xl:mt-[15%] h-full ">
+        <div className="grid grid-cols-1 justify-center mb-10 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-2  gap-y-[60%]  gap-x-[350px] md:gap-x-[350px] md:gap-y-[60%]  lg:gap-x-[500px]  lg:gap-y-[400px] xl:gap-y-[600px] xl:gap-x-[500px]       ">
+          {/* <div className="flex flex-wrap gap-20"> */}
           {Data.map((data) => {
             return (
-              <div className="mb-5 mr-4 ml-4 relative">
+              <div className="mb-5 mr-4 ml-4 relative bg-rose-500">
                 <EventCard data={data} style={{ zIndex: 2 }} />
               </div>
             );

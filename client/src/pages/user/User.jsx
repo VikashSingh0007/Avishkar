@@ -196,7 +196,6 @@ const User = () => {
             </div>
           </aside>
         )}
-        <div></div>
       </div>
       {choice === "view" && <View />}
       {choice === "team" && <Team />}

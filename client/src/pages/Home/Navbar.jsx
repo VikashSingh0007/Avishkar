@@ -50,7 +50,7 @@ const Navbar = () => {
           {navLinks.map((nav) => (
             <li
               key={nav.id}
-              className={`font-poppins text-xxl  md:mr-12 md:font-medium md:text-xl font-medium cursor-pointer rumoura-font ${
+              className={`font-poppins text-xxl mr-8  md:mr-12 md:font-medium md:text-xl font-medium cursor-pointer rumoura-font ${
                 active === nav.title ? "text-black" : "text-gray-900"
               }`}
               onClick={() => setActive(nav.title)}
