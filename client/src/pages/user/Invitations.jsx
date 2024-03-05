@@ -1,19 +1,33 @@
-import React from "react";
+import { useState } from "react";
+
 const data = [
   {
+    id: 1,
     team_name: "Marketing Team",
     set_by: "John Doe",
   },
   {
+    id: 2,
     team_name: "Engineering Team",
     set_by: "Jane Smith",
   },
   {
+    id: 3,
     team_name: "Sales Team",
     set_by: "Alex Johnson",
   },
 ];
 const Invitations = () => {
+  const [selectedteamId, setSelectedTeamId] = useState(null);
+
+  const handleClick = (teamId, status) => {
+    console.log(teamId, status);
+    const teamdata = {
+      teamId: teamId,
+      status: status,
+    };
+    console.log("teamData", teamdata);
+  };
   return (
     <div>
       <section className="text-gray-400 bg-gray-900 body-font">
@@ -27,7 +41,6 @@ const Invitations = () => {
                 <div className="flex justify-center text-center mb-4">
                   <div className="m-2 w-1/2">
                     <div className="h-full flex   items-center border-gray-800 border p-4 rounded-lg">
-                     
                       <div className="flex-grow">
                         <h2 className="text-white title-font font-medium">
                           {team1.team_name}
@@ -52,7 +65,10 @@ const Invitations = () => {
                         <path d="M22 11.08V12a10 10 0 11-5.93-9.14" />
                         <path d="M22 4L12 14.01l-3-3" />
                       </svg>
-                      <span className="title-font font-medium text-white">
+                      <span
+                        className="title-font font-medium text-white"
+                        onClick={() => handleClick(team1.id, true)}
+                      >
                         ACCEPT
                       </span>
                     </div>
@@ -71,7 +87,10 @@ const Invitations = () => {
                         <path d="M22 11.08V12a10 10 0 11-5.93-9.14" />
                         <path d="M22 4L12 14.01l-3-3" />
                       </svg>
-                      <span className="title-font font-medium text-white">
+                      <span
+                        className="title-font font-medium text-white"
+                        onClick={() => handleClick(team1.id, false)}
+                      >
                         Reject
                       </span>
                     </div>
@@ -80,8 +99,6 @@ const Invitations = () => {
               </>
             );
           })}
-
-          
         </div>
       </section>
     </div>

@@ -71,12 +71,12 @@ export const respondTeam = async (data) => {
     } 
 }
 
-export const getAllParticipating = async (data) => {
-    const messageData = {
-        teamId : data.teamId,
-    }
+export const getAllParticipating = async () => {
+    // const messageData = {
+    //     teamId : data.teamId,
+    // }
     const res = await Axios.get('/team/getparticipating',{
-        params : messageData
+        // params : messageData
     });
     if(res.data){
         return {
