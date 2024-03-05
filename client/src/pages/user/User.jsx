@@ -8,6 +8,7 @@ import Resume from "./Resume";
 const User = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const sidebarRef = useRef(null);
+  const [choice, setChoice] = useState("view");
 
   // Function to handle click outside of the sidebar
   const handleClickOutside = (event) => {
@@ -83,7 +84,12 @@ const User = () => {
                       strokeLinejoin="round"
                     />
                   </svg>
-                  <span className="mx-4 font-medium">View Profile</span>
+                  <span
+                    className="mx-4 font-medium"
+                    onClick={() => setChoice("view")}
+                  >
+                    View Profile
+                  </span>
                 </a>
                 <a
                   className="flex items-center px-4 py-2 my-8 text-gray-700 bg-gray-100 rounded-md dark:bg-gray-800 dark:text-gray-200"
@@ -103,7 +109,12 @@ const User = () => {
                       strokeLinejoin="round"
                     />
                   </svg>
-                  <span className="mx-4 font-medium">Upload Resume</span>
+                  <span
+                    className="mx-4 font-medium"
+                    onClick={() => setChoice("resume")}
+                  >
+                    Upload Resume
+                  </span>
                 </a>{" "}
                 <a
                   className="flex items-center px-4 py-2 my-8 text-gray-700 bg-gray-100 rounded-md dark:bg-gray-800 dark:text-gray-200"
@@ -123,7 +134,12 @@ const User = () => {
                       strokeLinejoin="round"
                     />
                   </svg>
-                  <span className="mx-4 font-medium">My Teams</span>
+                  <span
+                    className="mx-4 font-medium"
+                    onClick={() => setChoice("team")}
+                  >
+                    My Teams
+                  </span>
                 </a>{" "}
                 <a
                   className="flex items-center px-4 py-2 my-8 text-gray-700 bg-gray-100 rounded-md dark:bg-gray-800 dark:text-gray-200"
@@ -143,7 +159,12 @@ const User = () => {
                       strokeLinejoin="round"
                     />
                   </svg>
-                  <span className="mx-4 font-medium">Create Team</span>
+                  <span
+                    className="mx-4 font-medium"
+                    onClick={() => setChoice("create")}
+                  >
+                    Create Team
+                  </span>
                 </a>{" "}
                 <a
                   className="flex items-center px-4 py-2 my-8 text-gray-700 bg-gray-100 rounded-md dark:bg-gray-800 dark:text-gray-200"
@@ -163,7 +184,12 @@ const User = () => {
                       strokeLinejoin="round"
                     />
                   </svg>
-                  <span className="mx-4 font-medium">View Invitation</span>
+                  <span
+                    className="mx-4 font-medium"
+                    onClick={() => setChoice("invitation")}
+                  >
+                    View Invitation
+                  </span>
                 </a>
                 {/* Other navigation links */}
               </nav>
@@ -172,11 +198,11 @@ const User = () => {
         )}
         <div></div>
       </div>
-      <View />
-      <Team />
-      <Invitations />
-      {<Create />}
-      <Resume />
+      {choice === "view" && <View />}
+      {choice === "team" && <Team />}
+      {choice === "invitation" && <Invitations />}
+      {choice === "create" && <Create />}
+      {choice === "resume" && <Resume />}
     </div>
   );
 };
