@@ -58,11 +58,11 @@ const Team = () => {
                         <>
                           <div key={member._id} className="m-2">
                             <div className="h-full flex   items-center border-gray-800 border p-4 rounded-lg">
-                              <img
+                              {/* <img
                                 alt="team"
                                 className="w-[10vw] h-[17vh] bg-gray-100 object-cover object-center flex-shrink-0 rounded-full mr-4"
                                 src="https://dummyimage.com/80x80"
-                              />
+                              /> */}
                               <div className="flex-grow text-wrap">
                                 <p className="text-white title-font font-medium ">
                                   {member.username}
