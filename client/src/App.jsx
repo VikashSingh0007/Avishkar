@@ -38,7 +38,6 @@ const App = () => {
           <Route path="/resetpassword/:token" element={<ResetPassword />} />
           <Route path="/AvishkarEvent/:data" element={<Carousel2 />} />
           <Route path="/page/:data" element={<Page />} />
-          
           <Route path="/culravEvent/:data" element={<CulravCarousel />} />
           <Route path="/culravOpening" element={<CulravOpening />} />
           <Route path="/culravLanding" element={<CulravLanding />} />
