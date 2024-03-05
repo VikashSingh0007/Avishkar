@@ -5,9 +5,20 @@ import Dristi from "./culrav/assets/dristi.png";
 import SBI from "./culrav/assets/SBi.png";
 import icici from "./culrav/assets/icici.png";
 import bbq from "./culrav/assets/BBQ.png";
-import redBull from "./culrav/assets/redBull.png";
 import beardo from "./culrav/assets/beardo.png";
-import varun from "./culrav/assets/varun.png";
+import varun from "./culrav/assets/V3.jpg";
+import dhyeya from "./culrav/assets/dhyeya.jpg"
+import RedBull from "./culrav/assets/Red Bull.jpeg"
+import Pizzahut from "./culrav/assets/Pizzahut.png"
+import Pepsi from "./culrav/assets/Pepsi.png"
+import Ola from "./culrav/assets/Ola.jpg"
+import Bob from "./culrav/assets/Bob.jpg"
+import Dell from "./culrav/assets/Dell.png"
+import Godrej from "./culrav/assets/Godrej.png"
+import Codechef from "./culrav/assets/Codechef.png"
+import Gfg from "./culrav/assets/Gfg.png"
+import Github from "./culrav/assets/Github.jpg"
+import Groww from "./culrav/assets/Groww.png"
 const Carousel = () => {
   const Data = [
     {
@@ -25,7 +36,7 @@ const Carousel = () => {
     },
     {
       name: "redBull",
-      img: redBull,
+      img: RedBull,
     },
     {
       name: "Beardo",
@@ -35,6 +46,51 @@ const Carousel = () => {
       name: "varun",
       img: varun,
     },
+    {
+      name: "dhyeya",
+      img: dhyeya,
+    },
+    {
+      name: "Pizzahut",
+      img: Pizzahut,
+    },
+    {
+      name: "Pepsi",
+      img: Pepsi,
+    },
+    {
+      name: "Ola",
+      img: Ola,
+    },
+    {
+      name: "Bob",
+      img: Bob,
+    },
+    {
+      name: "Dell",
+      img: Dell,
+    },
+    {
+      name: "Godrej",
+      img: Godrej,
+    },
+    {
+      name: "Codechef",
+      img: Codechef,
+    },
+    {
+      name: "Gfg",
+      img: Gfg,
+    },
+    {
+      name: "Github",
+      img: Github,
+    },
+    {
+      name: "Groww",
+      img: Groww,
+    }
+    
   ];
   useEffect(() => {
     const scrollers = document.querySelectorAll(".scroller");
@@ -87,8 +143,8 @@ const Carousel = () => {
             <div key={index} className="photo-container">
               <img
                 src={item.img}
-                height="40"
-                width="40"
+                height="20"
+                width="20"
                 className="rounded-full lg:h-300 lg:w-300 sm:h-50 sm:w-50"
                 alt={item.name}
               />
