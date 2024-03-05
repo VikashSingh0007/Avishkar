@@ -27,7 +27,7 @@ const CulravLanding = () => {
           {/* <div className="flex flex-wrap gap-20"> */}
           {Data.map((data) => {
             return (
-              <div className="mb-5 mr-4 ml-4 relative bg-rose-500">
+              <div className="mb-5 mr-4 ml-4 relative ">
                 <EventCard data={data} style={{ zIndex: 2 }} />
               </div>
             );
