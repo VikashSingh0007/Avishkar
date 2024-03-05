@@ -43,7 +43,7 @@
 .scrollerPastPerformance[data-animated="true"] .scroller__innerPastPerformance {
   width: max-content;
   flex-wrap: nowrap;
-  animation: scroll var(--_animation-duration, 90s)
+  animation: scroll var(--_animation-duration, 60s)
     var(--_animation-direction, forwards) linear infinite;
 }
 
@@ -56,11 +56,11 @@
 }
 
 .scrollerPastPerformance[data-speed="fast"] {
-  --_animation-duration: 90s;
+  --_animation-duration: 60s;
 }
 
 .scrollerPastPerformance[data-speed="slow"] {
-  --_animation-duration: 90s;
+  --_animation-duration: 60s;
 }
 
 @keyframes scroll {

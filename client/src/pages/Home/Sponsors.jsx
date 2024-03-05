@@ -87,8 +87,8 @@ const Carousel = () => {
             <div key={index} className="photo-container">
               <img
                 src={item.img}
-                height="50"
-                width="50"
+                height="40"
+                width="40"
                 className="rounded-full lg:h-300 lg:w-300 sm:h-50 sm:w-50"
                 alt={item.name}
               />

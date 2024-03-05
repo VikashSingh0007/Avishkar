@@ -18,7 +18,7 @@
 .scroller__inner .photo-container img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: fill;
 }
 
 @media screen and (max-width: 768px) {
@@ -43,7 +43,7 @@
 .scroller[data-animated="true"] .scroller__inner {
   width: max-content;
   flex-wrap: nowrap;
-  animation: scroll var(--_animation-duration, 90s)
+  animation: scroll var(--_animation-duration, 60s)
     var(--_animation-direction, forwards) linear infinite;
 }
 
@@ -56,11 +56,11 @@
 }
 
 .scroller[data-speed="fast"] {
-  --_animation-duration: 90s;
+  --_animation-duration: 60s;
 }
 
 .scroller[data-speed="slow"] {
-  --_animation-duration: 90s;
+  --_animation-duration: 60s;
 }
 
 @keyframes scroll {

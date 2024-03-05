@@ -58,7 +58,7 @@ const Carousel = () => {
       img: Rahat,
     },
     {
-      name: "Shreley Setia",
+      name: "Shirley Setia",
       img: sherley,
     },
   ];

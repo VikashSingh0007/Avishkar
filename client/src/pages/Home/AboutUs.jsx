@@ -1,5 +1,5 @@
 import styles, { layout } from "../../style";
-
+import logo from "./culrav/assets/culravAviskarLogo.png";
 import { useNavigate } from "react-router-dom";
 import "./AboutUs.css";
 const AboutUs = () => {
@@ -14,7 +14,9 @@ const AboutUs = () => {
         <div className={layout.sectionImgReverse}>
           {/* <img src={BackGroundImage1} alt="Background Image" /> */}
           <div className="record">
-            <span>Avishkar Culrav</span>
+            <span>
+              <img src="logo.png" alt="Logo" />
+            </span>
           </div>
           <div className="absolute z-[3] -left-1/2 top-0 w-[50%] h-[50%] rounded-full white__gradient" />
           <div className="absolute z-[0] w-[50%] h-[50%] -left-1/2 bottom-0 rounded-full pink__gradient" />
