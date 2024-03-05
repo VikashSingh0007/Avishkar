@@ -26,7 +26,7 @@ const EventCard = ({ data }) => {
               <span className="flex text-center mx-auto text-3xl text-amber-100 font-custom hover:opacity-70 transition-opacity duration-300 ">
                 <div className="flex-col">
                   <Link
-                    to={`/rangmanch/${encodeURIComponent(
+                    to={`/culravEvent/${encodeURIComponent(
                       JSON.stringify(data)
                     )}`}
                     className="flex items-center justify-center cursor-pointer"
