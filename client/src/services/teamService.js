@@ -189,3 +189,42 @@ export const getAllInvite = async () => {
         }
     }
 }
+
+
+export const getProfile = async () => {
+    const res = await Axios.get('/team/getuser');
+    if(res.data){
+        return {
+            profile : res.data,
+            success : true
+        }
+    }
+    else{
+        return {
+            success : false,
+        }
+    }
+}
+
+export const registerEvent = async (data) => {
+    try{
+        const messageData = {
+            teamId : data.teamId,
+            eventName : data.eventName
+        }
+        const res = await Axios.post('/event/join' , messageData);
+        if(res.data){
+            toast.success(res.data.message);
+            return res.data.success;
+        }
+        else{
+            toast.error(res.data.message);
+            return false;
+        }
+    }
+    catch(error){
+        console.log(error);
+        toast.error(error.response.data.message);
+        return false;
+    }
+}

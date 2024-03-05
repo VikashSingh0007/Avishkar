@@ -1,13 +1,39 @@
-const data = {
-  name: "NAME",
-  username: "USERNAME",
-  email: "EMAIL@NCNNC.COM",
-  resumeLink: "HTTP://XNSBCNBCNX.COM",
-  mobileNo: "735764765",
-  gender: "MALE",
-  collegeName: "MNNIT",
-};
+import { useEffect, useState } from "react";
+import { useNavigate } from 'react-router-dom';
+
+import { getProfile } from "../../services/teamService";
+
 const View = () => {
+  const [ fetchedData , setFetchedData ] = useState({
+    name: "NAME",
+    username: "USERNAME",
+    email: "EMAIL@NCNNC.COM",
+    resumeLink: "HTTP://XNSBCNBCNX.COM",
+    mobileNo: "735764765",
+    gender: "MALE",
+     collegeName: "MNNIT",
+  });
+  const history = useNavigate();
+  
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const d = await getProfile();
+        console.log(d.success);
+        if(d.success){
+          
+          setFetchedData(d.profile.data);
+        }
+        
+      } catch (error) {
+        history('/login');
+        console.error("Error fetching data:", error);
+      }
+    };
+
+    fetchData();
+  },[])
+
   return (
     <>
       <section className="text-gray-400 h-[100vh] bg-gray-900 body-font">
@@ -22,17 +48,17 @@ const View = () => {
                 />
                 <div className="flex-grow  sm:pl-8">
                   <h2 className="title-font font-medium p-4 text-2xl ">
-                    Name : {data.name}
+                    Name : {fetchedData.name}
                   </h2>
                   <h3 className="text-gray-500 p-4 text-2xl mb-3">
-                    Username : {data.username}
+                    Username : {fetchedData.username}
                   </h3>
 
                   <h2 className="title-font p-4 font-medium text-2xl ">
-                    Email : {data.email}
+                    Email : {fetchedData.email}
                   </h2>
                   <h2 className="title-font p-4 font-medium text-2xl ">
-                    M. NO. : {data.mobileNo}
+                    M. NO. : {fetchedData.mobileNo}
                   </h2>
                 </div>
               </div>
