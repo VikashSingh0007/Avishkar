@@ -59,6 +59,7 @@ const Team = () => {
       try {
         const data = await getAllParticipating();
         console.log("gotted from loki ", data);
+        console.log(data.teams)
       } catch (error) {
         console.error("Error fetching data:", error);
       }
