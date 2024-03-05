@@ -3,6 +3,65 @@ const teamModel = require('../models/team.model');
 const Team =  require('../models/team.model')
 const User = require('../models/user.model')
 
+const updateResume = async (req,res,next) => {
+    const id = req.user._id;
+    const { resumeLink }= req.body
+    try{
+        if(!id){
+            res.statusCode = 400;
+            res.json({
+                success : false,
+                message : "user not logged in!!",
+                error : "user not loggerd in!!"
+            })
+            return;
+        }
+        if(!resumeLink){
+            res.statusCode = 403;
+            res.json({
+                success : false,
+                message : "No Link Provided",
+                error : "No Resume Link was Provided",
+            })
+            return;
+        }
+        const user = await User.findOne({_id : id});
+        if(!user){
+            res.statusCode = 404;
+            res.json(
+                {
+                    success : false,
+                    error : "something went wrong",
+                    message : "something went wrong"
+                }
+            )
+            return;
+        }
+        console.log(resumeLink)
+        user.resumeLink = resumeLink;
+        console.log(user);
+        await user.save();
+
+        res.statusCode = 200;
+        res.json({
+            success : true,
+            message : "Resume Successfuly Updated",
+            error : "SuccessFully Updated the User's Resume",
+        })
+        return;
+    }
+    catch(e){
+        console.log(e);
+        res.statusCode = 401;
+        res.json({
+            success : false,
+            message : "something went wrong",
+        })
+        return;
+    }
+    
+}
+
 const createTeam = async (req, res, next) => {
     const email = req.user.email; // get credentials
     const user = await User.findOne({email}); // get user
@@ -20,7 +79,7 @@ const createTeam = async (req, res, next) => {
     const name = req.body.teamName;
     var size = req.body.teamSize;
     if(!name){
-        res.statusCode = 400;
+        res.statusCode = 401;
         res.json({
             error : "Name is Missing",
             success : false,
@@ -30,7 +89,7 @@ const createTeam = async (req, res, next) => {
     }
     const team = await Team.findOne({name : name});
     if(team){
-        res.statusCode = 400;
+        res.statusCode = 402;
         res.json(
             {
                 error : "Team Already Exists",
@@ -47,7 +106,7 @@ const createTeam = async (req, res, next) => {
    
     // user can only create/join team if the fee is paid
     if (!user.isFeePaid) {
-        res.statusCode = 400;
+        res.statusCode = 403;
         res.json({
             error: "fee payment issue",
             message: "cannot create team until participation fee is paid!",
@@ -375,6 +434,8 @@ const getAllTeamParticipating = async (req, res, next) => {
     try {
         // fetch the user to get the pending array of the user
         const tUser = await User.findOne({_id : id});
+
+       
         if(!tUser){
             res.statusCode = 400;
             res.json(
@@ -386,23 +447,15 @@ const getAllTeamParticipating = async (req, res, next) => {
             )
             return;
         }
-        if(tUser.participatingTeam){
-            res.statusCode = 200
-            res.json({
-                participating : [],
-                success : true,
-            })
-        }
-        const teams = await Promise.all( tUser.participatingTeam.map(async (teamId) => {
-            const partTeam = await Team.findOne({_id : teamId});
-            const leader = await User.findOne({_id : partTeam.leader});
-            return {
-                teamName : partTeam.name,
-                leader : leader.name
-            }
-        }))
+        
+        const teams = (await tUser.populate({path : 'participatingTeam' , populate : ['acceptedMembers' , 'pendingMembers']}));
+        
+        
+        console.log("this is teams")
+        
         res.statusCode = 200;
-        res.json({ participating : teams, success: true });
+        
+        res.json({ participating : teams.participatingTeam, success: true });
         return;
     } catch (error) {
         console.log("error occured in the getTeamInvite() controller!");
@@ -485,4 +538,5 @@ module.exports = {
     getAllTeamInvite,
     getAllTeamParticipating,
     getTeamMembers,
+    updateResume,
 }

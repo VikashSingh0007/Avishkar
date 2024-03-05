@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { updateResume } from "../../services/authService";
 
 const Resume = () => {
   const [data, setData] = useState();
@@ -14,6 +15,9 @@ const Resume = () => {
 
   const handleSubmit = () => {
     console.log(data);
+    updateResume(data).then((res) => {
+      console.log(res);
+    })
   };
   return (
     <div>
@@ -42,7 +46,7 @@ const Resume = () => {
             </div>
             Make Sure it is public
             <button
-              className="text-white text-4xl bg-green-500 border-0 py-2 px-8 focus:outline-none hover:bg-green-600 rounded "
+              className="text-white text-3xl bg-green-500 border-0 py-2 px-8 focus:outline-none hover:bg-green-600 rounded "
               onClick={() => handleSubmit()}
             >
               Upload Resume

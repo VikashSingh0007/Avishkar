@@ -11,14 +11,14 @@ const isUserAuthenticated =  async (req, res, next) => {
         if (tokenHeader.length !== 2) throw createError.BadRequest('Invalid Token')
         const token = tokenHeader[1];
         if (token==null) throw createError.BadRequest('Token cannot be null')
-        console.log('initiating verification process')
+        
         const data = await verifyToken(token);
         const decoded = data.message
         const flag = data.flag
         
         if (!flag) {
             //if (err.name == 'TokenExpiredError') throw createError.Unauthorized('Token Expired')
-            console.log('error in vefication')
+           
             res.status(401).json({ 
                 error:{
                     status: 401,
@@ -37,8 +37,7 @@ const isUserAuthenticated =  async (req, res, next) => {
                 });
                 return;
             }
-            console.log('successful verification');
-            console.log(decoded);
+            
             req.user = decoded;
             req.token = token;
             next();

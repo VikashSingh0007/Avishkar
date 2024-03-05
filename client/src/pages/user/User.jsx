@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef } from "react";
 import View from "./View";
 import Team from "./Team";
 import Invitations from "./Invitations";
@@ -30,7 +30,7 @@ const User = () => {
     <div className="bg-gray-900">
       {" "}
       <button className="p-4" onClick={() => setIsSidebarOpen(!isSidebarOpen)}>
-        <svg viewBox="0 0 100 80" width="40" height="40" fill="#000000">
+        <svg viewBox="0 0 100 80" width="40" height="40" fill="#FFFFFF">
           <rect width="100" height="15"></rect>
           <rect y="30" width="100" height="15"></rect>
           <rect y="60" width="100" height="15"></rect>
@@ -68,7 +68,7 @@ const User = () => {
               <nav>
                 <a
                   className="flex items-center px-4 py-2 my-8 text-gray-700 bg-gray-100 rounded-md dark:bg-gray-800 dark:text-gray-200"
-                  href=""
+                  href="#"
                 >
                   <svg
                     className="w-5 h-5"
