@@ -17,17 +17,17 @@ const FixedDivsComponent = () => {
         />
       </div> */}
 
-      <div className="flex-1 sm:w-1/2 lg:w-1/4 rounded-lg p-0 mt-0 sm:mt-0">
+      <div className="flex-1 sm:w-1/2 lg:w-1/4  rounded-lg -mt-[10%] ">
         <div className="comic-button-container">
           {/* <button className="comic-button">Events</button> */}
         </div>
 
-        <div className="flex justify-between flex-wrap">
+        <div className="flex justify-between  flex-wrap ">
           <Link
             to="/culravLanding"
-            className="p-0 ml-0 w-full sm:w-1/2 md:w-1/3 lg:w-auto"
+            className="flex justify-center ml-0 w-full sm:w-1/2  lg:w-auto"
           >
-            <div className="relative w-full h-60 md:w-60 md:h-60">
+            <div className="relative w-full h-60 md:w-64 md:h-64 lg:w-80 lg:h-80 xl:h-[400px] xl:w-[500px]">
               <img
                 src={Culrav}
                 alt="Culrav"
@@ -37,9 +37,9 @@ const FixedDivsComponent = () => {
           </Link>
           <Link
             to={window.innerWidth <= 640 ? "/avishkar-landing" : "/avishkar"}
-            className="p-0 ml-0 w-full sm:w-1/2 md:w-1/3 lg:w-auto"
+            className="p-0 flex justify-center ml-0 w-full sm:w-1/2  lg:w-auto"
           >
-            <div className="relative w-full mb-10 h-70 md:w-60 md:h-60">
+            <div className="relative w-full mb-10 h-70 md:w-64 md:h-64 lg:w-80 lg:h-80 xl:h-[400px] xl:w-[500px] ">
               <img
                 src={Avishkar}
                 alt="Avishkar"

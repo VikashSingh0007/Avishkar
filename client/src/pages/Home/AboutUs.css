@@ -44,6 +44,40 @@
     linear-gradient(50deg, #e3e3e3 50%, transparent 60%), black;
   animation: rotation 3s infinite linear;
 }
+@media (max-width: 400px) {
+  .record {
+    position: relative;
+    margin: auto;
+    width: 200px;
+    height: 200px;
+    border-radius: 300px;
+    background: radial-gradient(
+        white 2%,
+        #c00000 2%,
+        #c00000 22%,
+        black 22%,
+        black 27%,
+        transparent 27%,
+        transparent 37%,
+        black 37%,
+        black 37.5%,
+        transparent 37.5%,
+        transparent 49%,
+        black 49%,
+        black 49.5%,
+        transparent 49.5%,
+        transparent 55%,
+        black 56%,
+        black 49.5%,
+        transparent 49.5%,
+        transparent 69%,
+        black 69%
+      ),
+      linear-gradient(35deg, black 35%, transparent 68%),
+      linear-gradient(50deg, #e3e3e3 50%, transparent 60%), black;
+    animation: rotation 3s infinite linear;
+  }
+}
 
 .record span {
   display: block;
