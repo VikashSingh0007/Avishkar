@@ -50,7 +50,7 @@ const App = () => {
           <Route path="/AvishkarRules" element={<AwishkarRules />} />
           <Route path="/avishkar" element={<AvishkarIndex />} />
           <Route path="/verify/:id" element={<VerifyUser />} />
-          <Route path="/accomodation" element={<Accomodation />} />
+          <Route path="/accommodation" element={<Accomodation />} />
         </Routes>
       </BrowserRouter>
     </>

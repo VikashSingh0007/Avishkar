@@ -26,6 +26,10 @@ const Navbar = () => {
       title: "Avishkar",
     },
     {
+      id: "accommodation",
+      title: "Accommodation",
+    },
+    {
       id: "signup",
       title: "Register",
     },
