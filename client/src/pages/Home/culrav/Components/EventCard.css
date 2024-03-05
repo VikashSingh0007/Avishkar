@@ -15,7 +15,7 @@
 }
 @media screen and (max-width: 1024px) {
   :root {
-    --card-height: 50vh;
+    --card-height: 30vh;
     --card-width: calc(var(--card-height) / 0.75);
   }
 }
