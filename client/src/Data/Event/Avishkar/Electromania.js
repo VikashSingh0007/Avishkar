@@ -94,7 +94,7 @@ export const Electromania = [
         ],
       },
       {
-        name: " Impromptu",
+        name: "Impromptu",
         disc: "Common for B.Tech  2nd & 3rd Year ECE Students",
         rule: [
           {
@@ -124,7 +124,7 @@ export const Electromania = [
         ],
       },
       {
-        name: " Circuit Of The Day",
+        name: "Circuit Of The Day",
         disc: "7design questions to be uploaded, each one day. Solution has to be provided in the given time frame",
         rule: [
           {
@@ -149,7 +149,7 @@ export const Electromania = [
         ],
       },
       {
-        name: "  FPGA",
+        name: "FPGA",
         disc: "Common for both 2nd and 3rd year",
         rule: [
           {
@@ -202,7 +202,7 @@ export const Electromania = [
         ],
       },
       {
-        name: " Research Gap",
+        name: "Research Gap",
         disc: "Common for 1st, 2nd and 3rd year",
         rule: [
           {
