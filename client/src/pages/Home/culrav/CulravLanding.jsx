@@ -18,7 +18,7 @@ const CulravLanding = () => {
       <Navbar style={{ zIndex: -4 }} />
       {/* <div className=" w-full h-full flex flex-wrap p-4"> */}
       <h1
-        className="w-full text-3xl font-bold mb-10 mt-5 text-center font-serif"
+        className="w-full text-3xl font-bold mb-10 mt-5 pt-20 text-center font-serif"
         style={{ fontFamily: "Libre Bodoni, serif" }}
       >
         Events

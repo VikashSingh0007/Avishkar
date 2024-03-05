@@ -30,7 +30,7 @@ const AvishkarLanding = () => {
           </p>
         </div>
       </div> */}
-      <div className=" w-full h-full flex flex-wrap p-4">
+      <div className=" w-full h-full flex flex-wrap p-4 pt-20">
         <h1
           className="w-full text-3xl font-bold mb-10 mt-5 text-center font-serif"
           style={{ fontFamily: "Libre Bodoni, serif" }}

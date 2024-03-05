@@ -159,9 +159,10 @@ const Team = () => {
         // }}
       >
         <Navbar />
+
         <div
           // style={{ fontFamily: "ram" }}
-          className="flex text-white justify-center text-[5vw] protest-revolution-regular7"
+          className="flex text-white justify-center pt-20 text-[5vw] protest-revolution-regular7"
         >
           TEAM
         </div>

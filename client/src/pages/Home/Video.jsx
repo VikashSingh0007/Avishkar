@@ -21,12 +21,9 @@ const App = () => {
   return (
     <>
       <div className="relative">
-        <div className="absolute inset-0">
-          <Navbar /> {/* Include the navbar component here to appear on top */}
-        </div>
         <div className="flex items-center justify-center h-full w-full rounded">
           <div className="w-full relative" style={{ paddingTop: "56.25%" }}>
-            <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black opacity-75"></div>
+            <div className="  bg-gradient-to-b from-transparent to-black opacity-75"></div>
             <video
               src={video}
               autoPlay
@@ -56,10 +53,10 @@ const App = () => {
               </div>
             )}
 
-            <div className="absolute inset-0">
+            {/* <div className="absolute inset-0">
               <Navbar />{" "}
-              {/* Include the navbar component here to appear within the video */}
-            </div>
+             
+            </div> */}
           </div>
         </div>
       </div>

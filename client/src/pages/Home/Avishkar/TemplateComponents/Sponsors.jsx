@@ -184,7 +184,7 @@ const Sponsors = () => {
 
   return (
     <>
-      <main
+      <div
         style={{
           background:
             "linear-gradient(to bottom, #d95f3b, #f0984a, #fcd6a5, #7aa9a3, #338f9a, #1c4c70)",
@@ -193,7 +193,7 @@ const Sponsors = () => {
         <Navbar />
         <div
           // style={{ fontFamily: "ram" }}
-          className="flex text-white justify-center text-[5vw] protest-revolution-regular6"
+          className="flex text-white justify-center pt-20 text-[5vw] protest-revolution-regular6"
         >
           SPONSORS
         </div>
@@ -308,7 +308,7 @@ const Sponsors = () => {
             })}
           </div>
         </div>
-      </main>
+      </div>
     </>
   );
 };

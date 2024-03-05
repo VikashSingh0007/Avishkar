@@ -70,7 +70,7 @@ const AvishkarIndex = () => {
         }}
       >
         <Navbar />
-        <div className="flex justify-center h-auto mb-[3%] mt-[2%] w-full bg-transparent">
+        <div className="flex justify-center h-auto mb-[3%] pt-20 mt-[2%] w-full bg-transparent">
           <GlowText />
         </div>
         <div className="h-full flex flex-col-reverse justify-center items-center lg:flex-row w-full overflow-hidden">
