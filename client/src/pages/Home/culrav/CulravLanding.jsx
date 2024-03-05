@@ -24,7 +24,7 @@ const CulravLanding = () => {
         Events
       </h1>
 
-      <div className="flex justify-center align-middle mt-[90%]  xsm:mt-[70%] sm:mt-[30%] md:mt-[45%] lg:mt-[40%] xl:mt-[15%] h-full ">
+      <div className="relative flex flex-wrap justify-evenly w-full py-20">
         <div className="grid grid-cols-1 flex justify-center mb-10 sm:grid-cols-1 md:grid-cols-2 xl:grid-cols-3  gap-y-[400px]  gap-x-[350px] md:gap-x-[350px] md:gap-y-[550px]  lg:gap-x-[500px]  lg:gap-y-[600px] xl:gap-y-[600px] xl:gap-x-[500px]       ">
           {Data.map((data) => {
             return (

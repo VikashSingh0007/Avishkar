@@ -58,12 +58,12 @@ const Navbar = () => {
                   : "text-gray-900"
               } ${index === navLinks.length - 1 ? "mr-0" : "mr-10"}`}
               onClick={() => setActive(nav.title)}
-              style={{
-                backgroundColor: "rgba(255, 255, 255, 0.5)", // Adjust opacity as needed
-                backdropFilter: "blur(10px)", // Apply the blur effect
-                borderRadius: "10px", // Add rounded corners for a glassy effect
-                padding: "8px", // Add padding to the list items
-              }}
+              // style={{
+              //   backgroundColor: "rgba(255, 255, 255, 0.5)", // Adjust opacity as needed
+              //   backdropFilter: "blur(10px)", // Apply the blur effect
+              //   borderRadius: "10px", // Add rounded corners for a glassy effect
+              //   padding: "8px", // Add padding to the list items
+              // }}
             >
               <Link to={`/${nav.id}`}>{nav.title}</Link>
             </li>
