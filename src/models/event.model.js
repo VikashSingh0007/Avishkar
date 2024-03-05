@@ -9,7 +9,7 @@ const eventSchema = new Schema(
         },
         particpatingTeams : [mongoose.Schema.Types.ObjectId],
         conductingDate : {
-            required : true,
+            // required : true,
             type : Date,
         },
         maxTeamsize : {

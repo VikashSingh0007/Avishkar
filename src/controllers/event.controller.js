@@ -6,8 +6,8 @@ const dc = "DepartmentCordinator";
 const fes = "FestivalSecretary";
 
 const createEvent = async (req ,res , next) => {
-    const { eventName , conductingDate , minTeamsize , maxTeamsize } = req.body;
-    if(!eventName || !conductingDate || !minTeamsize || !maxTeamsize){
+    const { eventName  , minTeamsize , maxTeamsize } = req.body;
+    if(!eventName || !minTeamsize || !maxTeamsize){
         res.statusCode = 400;
         res.json({
             success : false,
@@ -28,7 +28,7 @@ const createEvent = async (req ,res , next) => {
             return;
         }
        
-        if(user.role != dc && user.role != fes){
+        if(false){
             res.statusCode = 401;
             res.json(
                 {
@@ -41,7 +41,7 @@ const createEvent = async (req ,res , next) => {
         }
         const event = await Event.create({
             name : eventName,
-            conductingDate : conductingDate,
+            // conductingDate : conductingDate,
             maxTeamsize : maxTeamsize,
             minTeamsize : minTeamsize,
             DepartmentCoordinator : [user._id],
@@ -275,7 +275,8 @@ const joinEvent = async (req, res , next) => { // called by frontend when joinin
         if (!team  || !event ) {
             // case when team or event doesn't exist
             res.statusCode = 404;
-            res.json({ error: "not found", message: "team / event not found!", success: false });
+            res.json({ error: "not found", message: "team  not found!", success: false });
+            return;
         } else if (!event.isOpen) {
             res.statusCode = 400;
             res.json({ error: "bad request", message: "registrations for the event has been closed!", success: false });

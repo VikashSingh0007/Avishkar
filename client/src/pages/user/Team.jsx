@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { getAllParticipating } from "../../services/teamService";
+import { getAllParticipating, inviteTeam } from "../../services/teamService";
 
 const Team = () => {
   const [email, setEmail] = useState("");
@@ -10,6 +10,7 @@ const Team = () => {
       email: email,
     };
     console.log(data);
+    inviteTeam(data);
   };
   useEffect(() => {
     const fetchData = async () => {
@@ -45,7 +46,7 @@ const Team = () => {
                     />
                     <button
                       className="flex justify-center px-10 py-2 border-4 w-[3vw] border-solid text-black border-black bg-slate-500 rounded-xl hover:bg-sky-700 "
-                      onClick={() => handleSubmit(team.id)}
+                      onClick={() => handleSubmit(team._id)}
                     >
                       add
                     </button>
