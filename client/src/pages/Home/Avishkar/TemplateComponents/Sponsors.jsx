@@ -193,13 +193,13 @@ const Sponsors = () => {
         <Navbar />
         <div
           // style={{ fontFamily: "ram" }}
-          className="flex text-white justify-center pt-20 text-[5vw] protest-revolution-regular6"
+          className="flex text-black justify-center pt-24 text-4xl font-bold rumoura-font"
         >
           SPONSORS
         </div>
         <div
           // style={{ fontFamily: "ram" }}
-          className="flex text-white justify-center text-[3em] protest-revolution-regular6"
+          className="flex text-black justify-center mt-5 text-[2vw]  rumoura-font"
         >
           CATEGORY 1
         </div>
@@ -228,7 +228,7 @@ const Sponsors = () => {
           </div>
           <div
             // style={{ fontFamily: "ram" }}
-            className="flex text-white justify-center text-[3em] protest-revolution-regular6 "
+            className="flex text-black justify-center mt-5 text-[2vw]  rumoura-font"
           >
             CATEGORY 2
           </div>
@@ -255,7 +255,7 @@ const Sponsors = () => {
           </div>
           <div
             // style={{ fontFamily: "ram" }}
-            className="flex text-white justify-center text-[3em] protest-revolution-regular6"
+            className="flex text-black justify-center mt-5 text-[2vw]  rumoura-font"
           >
             CATEGORY 3
           </div>
@@ -282,7 +282,7 @@ const Sponsors = () => {
           </div>
           <div
             // style={{ fontFamily: "ram" }}
-            className="flex text-white justify-center text-[3em] protest-revolution-regular6"
+            className="flex text-black justify-center mt-5 text-[2vw]  rumoura-font"
           >
             CATEGORY 4
           </div>

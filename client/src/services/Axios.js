@@ -12,7 +12,8 @@ const Axios = axios.create({
 
 Axios.interceptors.request.use(async (config) => {
   const cookie = new Cookies();
-  const accessToken = cookie.get("userid"); // get the accessToken from here
+  // const accessToken = cookie.get("userid"); // get the accessToken from here
+  const accessToken = localStorage.getItem('userToken');
   config.headers.Authorization = `Bearer ${accessToken}`;
   return config;
 });

@@ -1,15 +1,19 @@
 import { useState } from "react";
+import { createTeam } from "../../services/teamService";
 
 const Create = () => {
   const [data, setData] = useState({});
 
   const handleSubmit = () => {
-    console.log(data);
     const messageData = {
       teamName: data.teamName,
       teamSize: data.teamSize,
     };
-    console.log(messageData);
+    console.log('creating Team')
+    createTeam(messageData).then((res) => {
+      console.log(res)
+    })
+
   };
   function handleChange(e) {
     setData((old) => {
@@ -18,7 +22,6 @@ const Create = () => {
         [e.target.name]: e.target.value,
       };
     });
-    console.log(data);
   }
   return (
     <div>

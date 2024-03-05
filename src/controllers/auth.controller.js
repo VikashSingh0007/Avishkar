@@ -48,7 +48,8 @@ const userSignup = async (req, res, next) => {
     const username = generateUsername(email);
     const emailUser = await User.findOne({ email: email });
     const mobileUser = await User.findOne({ phone: phone });
-
+    console.log(emailUser);
+    console.log(mobileUser)
     if (emailUser != null || mobileUser != null) {
       console.log("user already exists");
       res.statusCode = 402;
@@ -206,7 +207,7 @@ const userLogin = async (req, res, next) => {
       });
     } else {
       if (!user.isVerified) {
-        res.statusCode = 400;
+        res.statusCode = 401;
 
         return res.json({
           error: "user not verified",
@@ -219,7 +220,7 @@ const userLogin = async (req, res, next) => {
     // case when the passwords don't match
     const result = await bcrypt.compare(password, user.password);
     if (!result) {
-      res.statusCode = 401;
+      res.statusCode = 402;
       return res.json({
         error: "authentication error",
         message: "email or password don't match!",
