@@ -34,7 +34,7 @@ const AboutUs = () => {
           >
             About Us
           </h2>
-          <h6 className="protest-revolution-regular text-xl text-justify rumoura-font">
+          <h6 className="protest-revolution-regular text-xl text-justify ">
             MOTILAL NEHRU NATIONAL INSTITUTE OF TECHNOLOGY ALLAHABAD, PRAYAGRAJ
             an Institute of National Importance (by GOI), MNNIT ranks 3rd among
             the 30 NITs in India, as per QS Universities Rankings 2017. It was
