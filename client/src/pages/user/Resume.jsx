@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { updateResume } from "../../services/authService";
 
 const Resume = () => {
   const [data, setData] = useState();
@@ -14,6 +15,9 @@ const Resume = () => {
 
   const handleSubmit = () => {
     console.log(data);
+    updateResume(data).then((res) => {
+      console.log(res);
+    })
   };
   return (
     <div>
