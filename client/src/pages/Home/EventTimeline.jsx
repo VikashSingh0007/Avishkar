@@ -5,7 +5,7 @@ const timelineData = [
     text: "Inaugural Ceremony, gnoTalks  ",
     date: "March 16 2024",
     category: {
-      tag: "Day1",
+      tag: "Day-1",
       color: "#000",
     },
     link: {
@@ -17,7 +17,7 @@ const timelineData = [
     text: "gnoTalks",
     date: "March 17 2024",
     category: {
-      tag: "Day2",
+      tag: "Day-2",
       color: "#000",
     },
     link: {
@@ -29,7 +29,7 @@ const timelineData = [
     text: "Special Performance",
     date: "March 18 2024",
     category: {
-      tag: "Day3",
+      tag: "Day-3",
       color: "#000",
     },
     link: {
@@ -41,7 +41,7 @@ const timelineData = [
     text: "Kavyasandhya",
     date: "March 19 2024",
     category: {
-      tag: "Day4",
+      tag: "Day-4",
       color: "#000",
     },
     link: {
@@ -53,7 +53,7 @@ const timelineData = [
     text: "EDM Night",
     date: "March 20 2024",
     category: {
-      tag: "Day5",
+      tag: "Day-5",
       color: "#000",
     },
     link: {
@@ -65,7 +65,7 @@ const timelineData = [
     text: "Band Performance",
     date: "March 21 2024",
     category: {
-      tag: "Day6",
+      tag: "Day-6",
       color: "#000",
     },
     link: {
@@ -77,7 +77,7 @@ const timelineData = [
     text: "Celebrity Night",
     date: "April 22 2024",
     category: {
-      tag: "Day7",
+      tag: "Day-7",
       color: "#000",
     },
     link: {
@@ -90,12 +90,15 @@ const timelineData = [
 const TimelineItem = ({ data }) => (
   <div className="timeline-item protest-revolution-regular ">
     <div className="timeline-item-content protest-revolution-regular">
-      <span className="tag " style={{ background: data.category.color }}>
+      <span
+        className="tag protest-revolution-regular"
+        style={{ background: data.category.color }}
+      >
         {data.category.tag}
       </span>
       <time style={{ color: "black", fontSize: "20px" }}>{data.date}</time>
 
-      <p className="protest-revolution-regular text-black">{data.text}</p>
+      <p className=" text-black protest-revolution-regular">{data.text}</p>
       {data.link && (
         <a
           href={data.link.url}
@@ -115,12 +118,11 @@ const Timeline = () =>
   timelineData.length > 0 && (
     <>
       <h2
-        className="text-3xl text-black font-bold mb-4 flex justify-center mt-[10%]"
+        className="text-3xl text-black font-bold mb-4 flex justify-center mt-[10%] rumoura-font"
         style={{
           fontSize: "xx-large",
           fontWeight: "bolder",
           textAlign: "center",
-          fontFamily: "Libre Bodoni, serif",
         }}
       >
         Event Timeline
@@ -131,7 +133,7 @@ const Timeline = () =>
         style={{ overflowY: "auto", maxHeight: "400px" }}
       >
         <div
-          className="timeline-container protest-revolution-regular"
+          className="timeline-container bungee-shade-regular"
           style={{ overflowY: "auto", maxHeight: "400px" }}
         >
           {timelineData.map((data, idx) => (

@@ -1,6 +1,14 @@
+@import url("https://fonts.googleapis.com/css2?family=Bungee+Shade&family=Honk&family=Protest+Strike&family=Yeseva+One&display=swap");
+
 .navbar {
   position: fixed;
   top: initial;
   z-index: 1000; /* Adjust z-index if needed */
   /* Your other navbar styles */
+}
+
+.bungee-shade-regular {
+  font-family: "Bungee Shade", sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }

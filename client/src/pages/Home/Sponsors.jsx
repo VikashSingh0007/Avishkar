@@ -67,7 +67,7 @@ const Carousel = () => {
   return (
     <div>
       <h2
-        className="text-3xl text-black font-bold mb-4 flex justify-center mt-[10%]"
+        className="text-3xl text-black font-bold mb-2 flex justify-center mt-[10%]"
         style={{
           fontSize: "xx-large",
           fontWeight: "bolder",

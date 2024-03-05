@@ -1,5 +1,5 @@
 import React from "react";
-import "./AvishkarCard.css";
+import "./AvishkarCulrav.css";
 import Avishkar from "./culrav/assets/avishkarlogo.png";
 import Culrav from "./culrav/assets/CULRAV.png";
 import { Link } from "react-router-dom";

@@ -3,6 +3,7 @@ import Footer from "./Footer.jsx";
 import Video from "./Video.jsx";
 import Navbar from "./Navbar.jsx";
 import "./HomePageLatout.css";
+
 const HomePageLayout = ({ children }) => (
   <div
     className="bg-black min-h-screen overflow-hidden containerHomePage"

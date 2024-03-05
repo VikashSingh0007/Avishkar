@@ -5,7 +5,7 @@ import PastPerformance from "./PastPerformance.jsx";
 import About from "./AboutUs.jsx";
 import Video from "./Video.jsx";
 import Sponsors from "./Sponsors.jsx";
-import AvishkarCard from "./AvishkarCard.jsx";
+import AvishkarCulrav from "./AvishkarCulrav.jsx";
 import EventTimeLine from "./EventTimeline.jsx";
 import Footer from "./Footer.jsx";
 import Gallery from "./Gallery.jsx";
@@ -26,7 +26,7 @@ const App = () => {
 
         <div className={`bg-primary ${styles.paddingX} ${styles.flexCenter}`}>
           <div className={`${styles.boxWidth}`}>
-            <AvishkarCard />
+            <AvishkarCulrav />
             <About />
           </div>
         </div>

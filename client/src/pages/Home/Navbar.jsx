@@ -38,7 +38,7 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className="w-full fixed top-0   z-10 shadow-md">
+    <nav className="w-full fixed top-0    shadow-md">
       <div className="flex justify-between items-center px-4 ">
         <Link to="/">
           <img
@@ -48,7 +48,7 @@ const Navbar = () => {
           />
         </Link>
 
-        <ul className="list-none sm:flex hidden justify-end items-center flex-1">
+        <ul className="list-none sm:flex hidden justify-end items-center flex-1 bungee-shade-regular">
           {navLinks.map((nav, index) => (
             <li
               key={nav.id}

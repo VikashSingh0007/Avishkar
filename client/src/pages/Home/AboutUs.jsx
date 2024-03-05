@@ -25,17 +25,16 @@ const AboutUs = () => {
 
         <div className={layout.sectionInfo}>
           <h2
-            className="text-3xl text-black font-bold mb-4 flex justify-center "
+            className="text-3xl text-black font-bold mb-4 flex justify-center rumoura-font "
             style={{
               fontSize: "xx-large",
               fontWeight: "bolder",
               textAlign: "center",
-              fontFamily: "Libre Bodoni, serif",
             }}
           >
             About Us
           </h2>
-          <h5 className="protest-revolution-regular text-xl text-justify">
+          <h5 className="protest-revolution-regular text-xl text-justify rumoura-font">
             MOTILAL NEHRU NATIONAL INSTITUTE OF TECHNOLOGY ALLAHABAD, PRAYAGRAJ
             an Institute of National Importance (by GOI), MNNIT ranks 3rd among
             the 30 NITs in India, as per QS Universities Rankings 2017. It was

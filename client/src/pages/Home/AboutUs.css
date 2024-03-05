@@ -7,13 +7,23 @@ body {
   display: flex;
   background: #4a7e8b;
 } */
-.protest-revolution-regular {
-  /* font-family: "Kode Mono", monospace; */
-  font-family: "Libre Bodoni", serif;
-  font-optical-sizing: auto;
-  font-weight: 800;
+/* 
+https://fonts.googleapis.com/css2?family=Bungee+Shade&family=Honk&family=Protest+Strike&family=Yeseva+One&display=swap */
+@import url("https://fonts.googleapis.com/css2?family=Bungee+Shade&family=Honk&family=Protest+Strike&family=Yeseva+One&display=swap");
+
+.bungee-shade-regular {
+  font-family: "Bungee Shade", sans-serif;
+  font-weight: 400;
   font-style: normal;
 }
+@import url("https://db.onlinewebfonts.com/c/6b63cc27b0fdfa2ee93c6eaf0f7572d9?family=Rumoura+TexturesPERSONAL+USE");
+
+.rumoura-font {
+  font-family: "Rumoura TexturesPERSONAL USE";
+  font-weight: 400;
+  font-style: normal;
+}
+
 .record {
   position: relative;
   margin: auto;
