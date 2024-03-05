@@ -7,6 +7,14 @@ import fahran from "./culrav/assets/fahran1.png";
 import Kumar from "./culrav/assets/KumarViswas.png";
 import Rahat from "./culrav/assets/RahatIndori.png";
 import sherley from "./culrav/assets/shirley.png";
+import Biswa from "./culrav/assets/biswa.jpg";
+import Pm from "./culrav/assets/PiyushMishra2022.jpg";
+import YD from "./culrav/assets/YellowDiary.jpeg";
+import Pame from "./culrav/assets/armstrong-pame-ias-upsc-rank.jpeg";
+import RK from "./culrav/assets/rajat-kapoor-3.jpeg";
+import Chetan from "./culrav/assets/chetanbhagat.jpg"
+import SA from "./culrav/assets/sameer-anjaan.jpg";
+import Amish from "./culrav/assets/amish.jpg";
 const Carousel = () => {
   useEffect(() => {
     const scrollers = document.querySelectorAll(".scrollerPastPerformance");
@@ -60,6 +68,38 @@ const Carousel = () => {
     {
       name: "Shirley Setia",
       img: sherley,
+    },
+    {
+      name: "Amish Tripathi",
+      img: Amish,
+    },
+    {
+      name: "Sameer Anjan",
+      img: SA,
+    },
+    {
+      name: "Chetan Bhagat",
+      img: Chetan,
+    },
+    {
+      name: "Rajat Kapoor",
+      img: RK ,
+    },
+    {
+      name: "Armstrong Pame",
+      img: Pame,
+    },
+    {
+      name: "Bishwa Kalyan",
+      img: Biswa,
+    },
+    {
+      name: "Yellow Diary",
+      img: YD,
+    },
+    {
+      name: "Piyush Mishra",
+      img: Pm,
     },
   ];
   return (
