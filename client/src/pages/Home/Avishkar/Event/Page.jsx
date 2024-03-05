@@ -19,9 +19,9 @@ const Page = () => {
         }}
         // style={{ backgroundImage: `url(${background})` }}
       >
-        {/* <div>
+        <div>
           <Navbar />
-        </div> */}
+        </div>
         <div className="absolute inset-0 bg-black opacity-0 "></div>
         <div className="absolute inset-0 overflow-y-auto ">
           {/* Your other content goes here */}
@@ -43,7 +43,7 @@ const Page = () => {
                     // className={blurproperty}
                   >
                     <div>
-                      <div className="flex justify-center text-8xl font-semibold py-8 protest-revolution-regular2 rumoura-font">
+                      <div className="flex justify-center text-4xl font-semibold py-8 protest-revolution-regular2 rumoura-font mt-16">
                         {decodedData.name}
                       </div>
                       <div className="flex justify-center text-2xl py-4 text-4xl font-semibold rumoura-font">
