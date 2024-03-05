@@ -98,7 +98,7 @@ const TimelineItem = ({ data }) => (
       </span>
       <time style={{ color: "black", fontSize: "20px" }}>{data.date}</time>
 
-      <p className=" text-black protest-revolution-regular">{data.text}</p>
+      <div className=" text-black break-all text-[1em] font-bold ">{data.text}</div>
       {data.link && (
         <a
           href={data.link.url}
