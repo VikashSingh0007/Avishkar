@@ -1,72 +1,9 @@
 import { useEffect, useState } from "react";
 import { getAllParticipating } from "../../services/teamService";
-const data = [
-  {
-    id: 1,
-    teamName: "Team A",
-    teamMembers: [
-      {
-        id: 1,
-        name: "John Doe",
-        role: "Software Engineer",
-      },
-      {
-        id: 2,
-        name: "Jane Smith",
-        role: "UI/UX Designer",
-      },
-      {
-        id: 3,
-        name: "Alice Johnson",
-        role: "Project Manager",
-      },
-    ],
-  },
-  {
-    id: 2,
-    teamName: "Team B",
-    teamMembers: [
-      {
-        id: 4,
-        name: "Michael Brown",
-        role: "Data Analyst",
-      },
-      {
-        id: 5,
-        name: "Sarah Clark",
-        role: "Software Developer",
-      },
-      {
-        id: 6,
-        name: "David Lee",
-        role: "Quality Assurance",
-      },
-    ],
-  },
-  {
-    id: 3,
-    teamName: "Team C",
-    teamMembers: [
-      {
-        id: 1,
-        name: "Emily Wilson",
-        role: "Product Manager",
-      },
-      {
-        id: 2,
-        name: "Ryan Martinez",
-        role: "Frontend Developer",
-      },
-      {
-        id: 3,
-        name: "Olivia Garcia",
-        role: "Backend Developer",
-      },
-    ],
-  },
-];
+
 const Team = () => {
   const [email, setEmail] = useState("");
+  const [fetchedData, setFetchedData] = useState();
   const handleSubmit = (teamId) => {
     const data = {
       teamId: teamId,
@@ -79,7 +16,8 @@ const Team = () => {
       try {
         const data = await getAllParticipating();
         console.log("gotted from loki ", data);
-        console.log(data.teams)
+        setFetchedData(data);
+        console.log(typeof data.teams);
       } catch (error) {
         console.error("Error fetching data:", error);
       }
@@ -87,17 +25,18 @@ const Team = () => {
 
     fetchData();
   }, []);
+  console.log("FetchedData", fetchedData);
 
   return (
     <div>
       <section className="text-gray-400 bg-gray-900 body-font">
-        {data.map((team, index) => {
+        {fetchedData?.teams?.participating?.map((team, index) => {
           return (
             <>
               <div className="container px-5 py-24 mx-auto sm:w-[80vw]">
                 <div className="flex flex-col text-center w-full mb-20">
                   <h1 className="sm:text-3xl text-2xl font-medium title-font mb-4 text-white">
-                    {team.teamName}
+                    {team?.name}
                   </h1>
                   <div className="flex justify-center gap-5">
                     <input
@@ -114,10 +53,10 @@ const Team = () => {
                 </div>
                 <div className="flex justify-center">
                   <div className="flex flex-col md:flex-row  text-4xl justify-center">
-                    {team.teamMembers.map((member, index) => {
+                    {team?.acceptedMembers.map((member, index) => {
                       return (
                         <>
-                          <div className="m-2">
+                          <div key={member._id} className="m-2">
                             <div className="h-full flex   items-center border-gray-800 border p-4 rounded-lg">
                               <img
                                 alt="team"
@@ -126,7 +65,7 @@ const Team = () => {
                               />
                               <div className="flex-grow text-wrap">
                                 <p className="text-white title-font font-medium ">
-                                  {member.name}
+                                  {member.username}
                                 </p>
                                 <p className="text-gray-600">{member.role}</p>
                               </div>
