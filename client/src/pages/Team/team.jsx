@@ -46,7 +46,7 @@ const Team = () => {
 
         <div
           // style={{ fontFamily: "ram" }}
-          className="flex text-black justify-center pt-20 text-[5vw] rumoura-font"
+          className="flex text-black justify-center pt-24 text-4xl font-bold rumoura-font"
         >
           TEAM
         </div>
@@ -55,7 +55,7 @@ const Team = () => {
           <div key={index}>
             <div
               // style={{ fontFamily: "ram" }}
-              className="flex text-black justify-center text-[3vw]  rumoura-font"
+              className="flex text-black justify-center mt-5 text-[2vw]  rumoura-font"
             >
               {department.department}
             </div>
