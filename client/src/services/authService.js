@@ -1,7 +1,30 @@
+
 import Axios from "./Axios.js";
 // console.log(`${import.meta.env.VITE_API_BACKEND_URL}`);
 import { Cookies } from "react-cookie";
 import { toast } from "react-toastify";
+
+export const updateResume = async (data) => {
+  try{
+    const messageData = {
+        resumeLink : data.resumeLink,
+    }
+    const res = await Axios.post('/team/updateresume' , messageData);
+    if(res.data){
+         toast.success(res.data.message);
+         return res.data.success;
+    }
+    else{
+      toast.error(res.data.message);
+        return false;
+    }
+  }
+  catch(error){
+    toast.error(error.response.data.message);
+  }
+  
+}
+
 const signUp = async (data) => {
   try {
     const messageData = {
@@ -18,12 +41,15 @@ const signUp = async (data) => {
       messageData
     );
     if (res.data) {
+      toast.success(res.data.message);
       return res.data.success;
     } else {
+      toast.error(res.data.message);
       return false;
     }
   } catch (error) {
     console.log(error);
+    
     toast.error(error.response.data.message);
     return false;
   }
@@ -41,12 +67,17 @@ export const signIn = async (data) => {
     const res = await Axios.post("/auth/signin", messageData);
     if (res.data) {
       cookie.set("userid", res.data.token);
+      toast.success(res.data.message);
       return res.data.success;
+      
     } else {
+      toast.error(res.data.message);
       return false;
     }
-  } catch (e) {
-    console.log(e);
+  } catch (error) {
+    console.log('here')
+    
+    toast.error(error.response.data.message);
     return false;
   }
 };
@@ -59,12 +90,15 @@ export const forgotPassword = async (data) => {
   try {
     const res = await Axios.post("/auth/forgotpassword", messageData);
     if (res.data) {
+      toast.success(res.data.message);
       return res.data.success;
     } else {
+      toast.error(res.data.message);
       return false;
     }
-  } catch (e) {
-    console.log(e.message);
+  } catch (error) {
+    console.log(error.message);
+    toast.error(error.response.data.message);
     return false;
   }
 };
@@ -78,12 +112,15 @@ export const resetPassword = async (data) => {
   try {
     const res = await Axios.post("/auth/resetpassword", messageData);
     if (res.data) {
+      toast.success(res.data.message);
       return res.data.success;
     } else {
+      toast.error(res.data.message);
       return false;
     }
-  } catch (e) {
-    console.log(e.message);
+  } catch (error) {
+    console.log(error.message);
+    toast.error(error.response.data.message);
     return false;
   }
 };
@@ -108,6 +145,8 @@ export const verifyUser = async (token) => {
     return false;
   }
 };
+
+
 export const userLogin = async (data) => {
   try {
     const response = await Axios.post(
@@ -117,12 +156,13 @@ export const userLogin = async (data) => {
     if (response.data.success) {
       return response.data;
     } else {
+ 
       toast.error(response.data.message);
       return false;
     }
   } catch (error) {
     console.log(error);
-    toast.error(error.data.response.message);
+    toast.error(error.response.data.message);
     return false;
   }
 };
