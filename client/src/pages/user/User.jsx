@@ -170,7 +170,6 @@ const User = () => {
             </div>
           </aside>
         )}
-        <div></div>
       </div>
       <View />
       <Team />
