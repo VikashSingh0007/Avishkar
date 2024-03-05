@@ -1,10 +1,10 @@
 import axios from "axios";
 import { toast } from "react-toastify";
 import { Cookies } from "react-cookie";
-const base = "http://localhost:8000/api";
+
 const Axios = axios.create({
   // change this url to base url if required
-  baseURL: base,
+  baseURL: `${import.meta.env.VITE_API_BACKEND_URL}`,
   headers: {
     Accept: "application/json",
   },
