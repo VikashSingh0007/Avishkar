@@ -1,4 +1,3 @@
-import React from "react";
 import "./Nav.css";
 import Navbar from "./Navbar";
 const Accomodation = () => {
@@ -12,14 +11,14 @@ const Accomodation = () => {
       }}
     >
       <Navbar />
-      <section className="text-gray-600 body-font mt-10">
-        <div className="container px-5 py-24 mx-auto ">
+      <section className="text-gray-600 body-font mt-0 ">
+        <div className="container px-0 md:px-5 py-24 mx-auto">
           <div className="text-center mb-20">
             {/* <h1 className="sm:text-6xl text-8xl font-medium title-font text-gray-900 text-center mb-4 rumoura-font"> */}
-            <h1 className="w-full text-4xl font-bold mb-10 mt-5 pt-20 text-center text-gray-900 font-serif rumoura-font">
+            <h1 className="w-full text-4xl font-bold mb-10 mt-5 pt-2 text-center text-gray-900 font-serif rumoura-font">
               Accomodation
             </h1>
-            <h6 className="text-2xl leading-relaxed xl:w-2/4 lg:w-3/4 mx-auto text-gray-500s text-black rumoura-font">
+            <h6 className="text-2xl leading-relaxed w-full lg:w-3/4 mx-auto text-gray-500s text-black rumoura-font">
               Accomodation in the college campus will be provided to the
               participants. Description - ore details
             </h6>
