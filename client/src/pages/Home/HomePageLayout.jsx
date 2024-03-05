@@ -9,7 +9,7 @@ const HomePageLayout = ({ children }) => (
     className="bg-black min-h-screen overflow-hidden containerHomePage"
     // style={{ backgroundImage: `url(${BackGroundImage})` }}
   >
-    <div className="mb-20">
+    <div className="mb-20 ">
       <Navbar />
     </div>
 
