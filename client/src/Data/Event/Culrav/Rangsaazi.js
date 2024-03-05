@@ -1,7 +1,12 @@
-//import Genesis from '../Images/genesis.jpg'
-import Palladin from "../../Images/palladin.jpg";
-import CenrtalDogma from "../../Images/CentralDogma.jpg";
 import BgImg from "../../Images/Rangsazzi.png";
+import Rangsazzi1 from "../../Images/Rangsazzi1.png";
+import Rangsazzi2 from "../../Images/Rangsazzi2.png";
+import Rangsazzi3 from "../../Images/Rangsazzi3.png";
+import Rangsazzi4 from "../../Images/Rangsazzi4.png";
+import Rangsazzi5 from "../../Images/Rangsazzi5.png";
+import Rangsazzi6 from "../../Images/Rangsazzi6.png";
+import Rangsazzi7 from "../../Images/Rangsazzi7.png";
+import Rangsazzi8 from "../../Images/Rangsazzi8.png";
 export const Rangsaazi = [
   {
     title: "Rangsaazi",
@@ -31,7 +36,7 @@ export const Rangsaazi = [
           },
         ],
         teamSize: "",
-        BGImageLink: "",
+        BGImageLink: Rangsazzi1,
         PsLink: "",
         coordinators: [
           {
@@ -70,7 +75,7 @@ export const Rangsaazi = [
           },
         ],
         teamSize: "",
-        BGImageLink: "",
+        BGImageLink: Rangsazzi2,
         PsLink: "",
         coordinators: [
           {
@@ -104,7 +109,7 @@ export const Rangsaazi = [
           },
         ],
         teamSize: "",
-        BGImageLink: "",
+        BGImageLink: Rangsazzi3,
         PsLink: "",
         coordinators: [
           {
@@ -140,7 +145,7 @@ export const Rangsaazi = [
           },
         ],
         teamSize: "",
-        BGImageLink: "",
+        BGImageLink: Rangsazzi4,
         PsLink: "",
         coordinators: [
           {
@@ -176,7 +181,7 @@ export const Rangsaazi = [
           },
         ],
         teamSize: "",
-        BGImageLink: "",
+        BGImageLink: Rangsazzi5,
         PsLink: "",
         coordinators: [
           {
@@ -207,7 +212,7 @@ export const Rangsaazi = [
           },
         ],
         teamSize: "",
-        BGImageLink: "",
+        BGImageLink: Rangsazzi6,
         PsLink: "",
         coordinators: [
           {
@@ -238,7 +243,7 @@ export const Rangsaazi = [
           },
         ],
         teamSize: "",
-        BGImageLink: "",
+        BGImageLink: Rangsazzi7,
         PsLink: "",
         coordinators: [
           {
@@ -275,7 +280,7 @@ export const Rangsaazi = [
           },
         ],
         teamSize: "",
-        BGImageLink: "",
+        BGImageLink: Rangsazzi8,
         PsLink: "",
         coordinators: [
           {
