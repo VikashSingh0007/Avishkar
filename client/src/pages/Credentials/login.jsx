@@ -74,9 +74,8 @@ const Lo = () => {
                 <a
                   onClick={handleForgot}
                   className="text-blue-900 cursor-pointer"
-                  
                 >
-                  forgot password?
+                  Forgot password?
                 </a>
               </div>
             </div>
@@ -87,7 +86,17 @@ const Lo = () => {
               Login
             </button>
             <div>
-              <div className="text-black text-md">Don't have an account yet? <span className="text-blue-900 cursor-pointer" onClick={()=>{navigate("/signup")}}>Sign Up</span></div>
+              <div className="text-black text-md">
+                Don't have an account yet?{" "}
+                <span
+                  className="text-blue-600 cursor-pointer"
+                  onClick={() => {
+                    navigate("/signup");
+                  }}
+                >
+                  Sign Up
+                </span>
+              </div>
             </div>
           </form>
         </div>

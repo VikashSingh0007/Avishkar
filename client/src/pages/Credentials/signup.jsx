@@ -186,7 +186,7 @@ const SignUp = () => {
                 <div className="text-black text-md">
                   Already have an account ?{" "}
                   <span
-                    className="text-blue-900 cursor-pointer"
+                    className="text-blue-600 cursor-pointer"
                     onClick={() => {
                       navigate("/login");
                     }}
