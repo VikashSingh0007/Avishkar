@@ -5,7 +5,7 @@ import VerifyPayment from "./VerifyPayment";
 import AddDC from "./AddDC";
 import Navbar from "../Home/Navbar";
 import { getAllEvents } from "../../services/adminService";
-
+import ViewDC from "./viewDC"
 
 const User = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -14,11 +14,11 @@ const User = () => {
   const [isModalOpen, setModalOpen] = useState(false);
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedEvent, setSelectedEvent] = useState(null);
-  const [events,setEvents] = useState([]);
+  const [events, setEvents] = useState([]);
 
-  useEffect(()=>{
+  useEffect(() => {
     //Get All events
-         const fetchEvents = async () => {
+    const fetchEvents = async () => {
       try {
         const d = await getAllEvents();
         console.log(d.success);
@@ -31,7 +31,7 @@ const User = () => {
       }
     };
     fetchEvents();
-  },[])
+  }, []);
 
   // Function to handle click outside of the sidebar
   const handleClickOutside = (event) => {
@@ -54,11 +54,9 @@ const User = () => {
   }, []);
 
   const handleChoice = (choice) => {
- 
     console.log("Choice", choice);
     setChoice(choice);
   };
-
 
   // Filter events based on search term
   const filteredEvents = events.filter((event) =>
@@ -82,7 +80,7 @@ const User = () => {
           style={{ borderRadius: "2%" }}
         >
           <div
-            className={`flex p-2 text-xl items-center  font-semibold cursor-pointer rounded-md hover:bg-orange-300 ${
+            className={`flex text-center p-2 text-xl items-center  font-semibold cursor-pointer rounded-md hover:bg-orange-300 ${
               choice === "view" ? "bg-orange-400" : ""
             }`}
             onClick={() => {
@@ -92,7 +90,7 @@ const User = () => {
             View
           </div>
           <div
-            className={`flex p-2 text-xl  items-center font-semibold cursor-pointer hover:bg-orange-300 rounded-md ${
+            className={`flex text-center p-2 text-xl  items-center font-semibold cursor-pointer hover:bg-orange-300 rounded-md ${
               choice === "viewEvent" ? "bg-orange-400" : ""
             }`}
             onClick={() => {
@@ -103,7 +101,7 @@ const User = () => {
           </div>
 
           <div
-            className={`flex p-2 text-xl  items-center  font-semibold hover:bg-orange-300 cursor-pointer rounded-md ${
+            className={`flex text-center p-2 text-xl  items-center  font-semibold hover:bg-orange-300 cursor-pointer rounded-md ${
               choice === "verifyPayment" ? "bg-orange-400" : ""
             }`}
             onClick={() => {
@@ -113,7 +111,7 @@ const User = () => {
             Verify Payment
           </div>
           <div
-            className={`flex p-2 text-xl  items-center font-semibold hover:bg-orange-300 cursor-pointer rounded-md ${
+            className={`flex text-center p-2 text-xl  items-center font-semibold hover:bg-orange-300 cursor-pointer rounded-md ${
               choice === "addDC" ? "bg-orange-400" : ""
             }`}
             onClick={() => {
@@ -121,6 +119,16 @@ const User = () => {
             }}
           >
             Department Coordinator
+          </div>
+          <div
+            className={`flex text-center p-2 text-xl  items-center font-semibold hover:bg-orange-300 cursor-pointer rounded-md ${
+              choice === "viewDC" ? "bg-orange-400" : ""
+            }`}
+            onClick={() => {
+              handleChoice("viewDC");
+            }}
+          >
+            View Departmental. Coordinators
           </div>
         </div>
         <div
@@ -131,6 +139,8 @@ const User = () => {
           {choice === "viewEvent" && <ViewEvent event={selectedEvent} />}
           {choice === "verifyPayment" && <VerifyPayment />}
           {choice === "addDC" && <AddDC />}
+          {choice === "viewDC" && <ViewDC />}
+
         </div>
       </div>
 
