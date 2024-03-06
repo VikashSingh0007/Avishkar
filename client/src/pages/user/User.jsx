@@ -87,7 +87,7 @@ const User = () => {
                 <nav>
                   <a
                     className="flex items-center px-4 py-2 my-8 text-gray-700 bg-gray-100 rounded-md dark:bg-gray-800 dark:text-gray-200"
-                    href=""
+                    href="#"
                   >
                     <svg
                       className="w-5 h-5"
@@ -116,7 +116,7 @@ const User = () => {
                   </a>
                   <a
                     className="flex items-center px-4 py-2 my-8 text-gray-700 bg-gray-100 rounded-md dark:bg-gray-800 dark:text-gray-200"
-                    href=""
+                    href="#"
                   >
                     <svg
                       className="w-5 h-5"
@@ -144,7 +144,7 @@ const User = () => {
                   </a>{" "}
                   <a
                     className="flex items-center px-4 py-2 my-8 text-gray-700 bg-gray-100 rounded-md dark:bg-gray-800 dark:text-gray-200"
-                    href=""
+                    href="#"
                   >
                     <svg
                       className="w-5 h-5"
@@ -172,7 +172,7 @@ const User = () => {
                   </a>{" "}
                   <a
                     className="flex items-center px-4 py-2 my-8 text-gray-700 bg-gray-100 rounded-md dark:bg-gray-800 dark:text-gray-200"
-                    href=""
+                    href="#"
                   >
                     <svg
                       className="w-5 h-5"
@@ -200,7 +200,7 @@ const User = () => {
                   </a>{" "}
                   <a
                     className="flex items-center px-4 py-2 my-8 text-gray-700 bg-gray-100 rounded-md dark:bg-gray-800 dark:text-gray-200"
-                    href=""
+                    href="#"
                   >
                     <svg
                       className="w-5 h-5"
@@ -257,7 +257,7 @@ const User = () => {
                   </a>}
                   <a
                     className="flex items-center px-4 py-2 my-8 text-gray-700 bg-gray-100 rounded-md dark:bg-gray-800 dark:text-gray-200"
-                    href=""
+                    href="#"
                   >
                     <svg
                       className="w-5 h-5"
