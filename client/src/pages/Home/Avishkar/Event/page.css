@@ -1,4 +1,11 @@
 @import url("https://db.onlinewebfonts.com/c/6b63cc27b0fdfa2ee93c6eaf0f7572d9?family=Rumoura+TexturesPERSONAL+USE");
+@import url("https://fonts.googleapis.com/css2?family=Bungee+Shade&family=Calistoga&family=Honk&family=Kelly+Slab&family=Protest+Strike&family=Yeseva+One&display=swap");
+.kelly-slab-regular {
+  font-family: "Kelly Slab", sans-serif;
+  font-weight: bolder;
+  font-size: large;
+  font-style: normal;
+}
 
 .rumoura-font {
   font-family: "Rumoura TexturesPERSONAL USE";
