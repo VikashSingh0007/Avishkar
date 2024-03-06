@@ -5,18 +5,20 @@ import Invitations from "./Invitations";
 import Create from "./Create";
 import Resume from "./Resume";
 import Navbar from "../Home/Navbar";
+import { useNavigate } from "react-router-dom";
 const User = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const sidebarRef = useRef(null);
   const [choice, setChoice] = useState("view");
-
+   const navigate=useNavigate()
   // Function to handle click outside of the sidebar
   const handleClickOutside = (event) => {
     if (sidebarRef.current && !sidebarRef.current.contains(event.target)) {
       setIsSidebarOpen(false);
     }
   };
-
+ const userData=JSON.parse(localStorage.getItem("userData"))
+ const userToken=localStorage.getItem("userToken")
   // Effect to add event listener when the component mounts
   useEffect(() => {
     document.addEventListener("mousedown", handleClickOutside);
@@ -85,7 +87,7 @@ const User = () => {
                 <nav>
                   <a
                     className="flex items-center px-4 py-2 my-8 text-gray-700 bg-gray-100 rounded-md dark:bg-gray-800 dark:text-gray-200"
-                    href="#"
+                    href=""
                   >
                     <svg
                       className="w-5 h-5"
@@ -114,7 +116,7 @@ const User = () => {
                   </a>
                   <a
                     className="flex items-center px-4 py-2 my-8 text-gray-700 bg-gray-100 rounded-md dark:bg-gray-800 dark:text-gray-200"
-                    href="#"
+                    href=""
                   >
                     <svg
                       className="w-5 h-5"
@@ -142,7 +144,7 @@ const User = () => {
                   </a>{" "}
                   <a
                     className="flex items-center px-4 py-2 my-8 text-gray-700 bg-gray-100 rounded-md dark:bg-gray-800 dark:text-gray-200"
-                    href="#"
+                    href=""
                   >
                     <svg
                       className="w-5 h-5"
@@ -170,7 +172,7 @@ const User = () => {
                   </a>{" "}
                   <a
                     className="flex items-center px-4 py-2 my-8 text-gray-700 bg-gray-100 rounded-md dark:bg-gray-800 dark:text-gray-200"
-                    href="#"
+                    href=""
                   >
                     <svg
                       className="w-5 h-5"
@@ -198,7 +200,7 @@ const User = () => {
                   </a>{" "}
                   <a
                     className="flex items-center px-4 py-2 my-8 text-gray-700 bg-gray-100 rounded-md dark:bg-gray-800 dark:text-gray-200"
-                    href="#"
+                    href=""
                   >
                     <svg
                       className="w-5 h-5"
@@ -222,6 +224,64 @@ const User = () => {
                       }}
                     >
                       View Invitation
+                    </span>
+                  </a>
+                 { userData&&userToken&&userData.role=="Admin"&&<a
+                    className="flex items-center px-4 py-2 my-8 text-gray-700 bg-gray-100 rounded-md dark:bg-gray-800 dark:text-gray-200"
+                    href="/admin"
+                  >
+                    <svg
+                      className="w-5 h-5"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M19 11H5M19 11C20.1046 11 21 11.8954 21 13V19C21 20.1046 20.1046 21 19 21H5C3.89543 21 3 20.1046 3 19V13C3 11.8954 3.89543 11 5 11M19 11V9C19 7.89543 18.1046 7 17 7M5 11V9C5 7.89543 5.89543 7 7 7M7 7V5C7 3.89543 7.89543 3 9 3H15C16.1046 3 17 3.89543 17 5V7M7 7H17"
+                        stroke="currentColor"
+                        strokeWidth={2}
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      />
+                    </svg>
+                    <span
+                      className="mx-4 font-medium"
+                      onClick={() => {
+                        setChoice("view");
+                        setIsSidebarOpen(!isSidebarOpen);
+                      }}
+                      // onClick={() => setIsSidebarOpen(!isSidebarOpen)}
+                    >
+                      Admin Portal
+                    </span>
+                  </a>}
+                  <a
+                    className="flex items-center px-4 py-2 my-8 text-gray-700 bg-gray-100 rounded-md dark:bg-gray-800 dark:text-gray-200"
+                    href=""
+                  >
+                    <svg
+                      className="w-5 h-5"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M19 11H5M19 11C20.1046 11 21 11.8954 21 13V19C21 20.1046 20.1046 21 19 21H5C3.89543 21 3 20.1046 3 19V13C3 11.8954 3.89543 11 5 11M19 11V9C19 7.89543 18.1046 7 17 7M5 11V9C5 7.89543 5.89543 7 7 7M7 7V5C7 3.89543 7.89543 3 9 3H15C16.1046 3 17 3.89543 17 5V7M7 7H17"
+                        stroke="currentColor"
+                        strokeWidth={2}
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      />
+                    </svg>
+                    <span
+                      className="mx-4 font-medium"
+                      onClick={() => {
+                        localStorage.removeItem("userData");
+                        localStorage.removeItem("userToken")
+                        return navigate('/')
+                      }}
+                    >
+                      Logout
                     </span>
                   </a>
                   {/* Other navigation links */}
