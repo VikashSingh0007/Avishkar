@@ -29,7 +29,7 @@ const userSignup = async (req, res, next) => {
       })
       return;
     }
-    if (!name || !email || !college || !gender || !phone || !password || !paymentLink) {
+    if (!name || !email || !college || !gender || !phone || !password ) {
       // check if all field are filled
 
       console.log("data missing");
@@ -236,16 +236,25 @@ const userLogin = async (req, res, next) => {
         success: false,
       });
     }
-
+var department
+if(user.department){
+  department=user.department
+}
     const token = await generateVerificationToken({
       _id: user._id,
       email: user.email,
       username: user.username,
+      role:user.role,
+      department
     }); // generate token
     // this generated Token Will be stored in backend
-
+     const userData={
+      email: user.email,
+      username: user.username,
+      role:user.role
+    }
     res.statusCode = 200;
-    res.json({ message: "user login successful!", token, success: true });
+    res.json({ message: "user login successful!", token,userData, success: true });
   } catch (error) {
     console.log("error occured in the userSignin() controller!");
     next(error);

@@ -5,7 +5,7 @@ import VerifyPayment from "./VerifyPayment";
 import AddDC from "./AddDC";
 import Navbar from "../Home/Navbar";
 import { getAllEvents } from "../../services/adminService";
-
+import  { useNavigate } from 'react-router-dom'
 
 const User = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -15,18 +15,18 @@ const User = () => {
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedEvent, setSelectedEvent] = useState(null);
   const [events,setEvents] = useState([]);
-
+  const userData=JSON.parse(localStorage.getItem("userData"));
   useEffect(()=>{
     //Get All events
          const fetchEvents = async () => {
       try {
         const d = await getAllEvents();
-        console.log(d.success);
+        console.log(d.data)
         if (d.success) {
-          setEvents(d.events.data);
+          setEvents(d.data);
         }
       } catch (error) {
-        history("/login");
+        
         console.error("Error fetching data:", error);
       }
     };
@@ -62,7 +62,7 @@ const User = () => {
 
   // Filter events based on search term
   const filteredEvents = events.filter((event) =>
-    event.toLowerCase().includes(searchTerm.toLowerCase())
+    event.name.toLowerCase().includes(searchTerm.toLowerCase())
   );
 
   return (
@@ -102,7 +102,7 @@ const User = () => {
             Events
           </div>
 
-          <div
+          {userData.role=="Admin"&&<div
             className={`flex p-2 text-xl  items-center  font-semibold hover:bg-orange-300 cursor-pointer rounded-md ${
               choice === "verifyPayment" ? "bg-orange-400" : ""
             }`}
@@ -111,8 +111,8 @@ const User = () => {
             }}
           >
             Verify Payment
-          </div>
-          <div
+          </div>}
+          {userData.role=="Admin" &&<div
             className={`flex p-2 text-xl  items-center font-semibold hover:bg-orange-300 cursor-pointer rounded-md ${
               choice === "addDC" ? "bg-orange-400" : ""
             }`}
@@ -121,7 +121,7 @@ const User = () => {
             }}
           >
             Department Coordinator
-          </div>
+          </div>}
         </div>
         <div
           className="md:w-[80%] md:h-auto h-[100%]  m-2 flex flex-col p-2  items-center bg-gray-200 bg-opacity-20 rounded shadow-lg backdrop-filter backdrop-blur-md"
@@ -160,11 +160,11 @@ const User = () => {
                   className="bg-orange-200 p-3 rounded mb-2 cursor-pointer hover:bg-orange-300"
                   onClick={() => {
                     closeModal();
-                    setSelectedEvent(event);
+                    setSelectedEvent(event.name);
                     handleChoice("viewEvent");
                   }}
                 >
-                  {event}
+                  {event.name}
                 </div>
               ))}
             </div>

@@ -23,6 +23,7 @@ const Lo = () => {
       return;
     } else {
       localStorage.setItem("userToken", response.token);
+      localStorage.setItem("userData",JSON.stringify(response.userData))
       navigate("/");
       return;
     }

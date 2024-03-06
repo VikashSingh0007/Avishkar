@@ -4,8 +4,8 @@ import {toast} from "react-toastify"
 
 const Create = () => {
 
-  const [fetchedData , setFetchedData ] = useState(null);
-  console.log(fetchedData)
+  const [fetchedData , setFetchedData ] = useState([]);
+  // console.log(fetchedData)
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -55,9 +55,10 @@ const Create = () => {
 
 
   
-  return (
-    <div className="bg-orange-200 mt-4 rounded-xl p-4">
-      {fetchedData?.map((item, index) => (
+  return (<>
+   <div className="bg-orange-200 mt-4 rounded-xl p-4">
+    {fetchedData.length==0&&<><h1>No User has registered</h1></>}
+      {fetchedData.length>0&&fetchedData.map((item, index) => (
         <div key={index} style={{ marginBottom: "16px" }}>
             <div
               key={index}
@@ -102,7 +103,7 @@ const Create = () => {
                     Accept
                   </button>
                   <button
-                    onClick={()=>{{ handleResponse(item.email,true) }}}
+                    onClick={()=>{{ handleResponse(item.email,false) }}}
                     className="bg-red-600 m-2"
                     style={{
                       padding: "5px 10px",
@@ -121,6 +122,8 @@ const Create = () => {
         </div>
       ))}  
     </div>
+  </>
+   
   );
 };
 

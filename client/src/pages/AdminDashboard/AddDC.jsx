@@ -1,20 +1,23 @@
 import React, { useState } from "react";
 
 import { makeDc } from "../../services/adminService";
+import { toast } from "react-toastify";
 
 const Resume = () => {
   const [data, setData] = useState({ email: "" });
-
+   const departments=["Cyberquest","Electromania","Powersurge","Mechrocosm","Rasayans","Nirmaan","Genesis","Oligopoly","Monopoly","Gnosiomania","Robomania","Cosmocon","Aerodynamix","Rungmunch","Annunaad","Litmuse","Darkroom","Rangsazzi","Razzmatazz","Footprints"]
   const handleChange = (e) => {
     setData((prevData) => ({
       ...prevData,
       email: e.target.value,
     }));
   };
-
-  const handleSubmit = () => {
+const [selectDepartment,handleDepartment]=useState(null)
+  const handleSubmit = async () => {
     console.log(data);
-    makeDc(data);
+    
+    setData({...data,"department":selectDepartment})
+    await makeDc(data);
   };
 
   return (
@@ -25,12 +28,30 @@ const Resume = () => {
       <div className="mb-4">
         <input
           type="email"
-          placeholder="Email of DC"
+          placeholder="Enter E-mail of Departmental Coordinator"
           className="w-full p-2 rounded bg-white text-gray-800 placeholder-gray-500 focus:outline-none focus:ring focus:border-blue-300"
           value={data.email}
           onChange={handleChange}
         />
       </div>
+      <select
+        value={selectDepartment}
+        onChange={(e) => handleDepartment(e.target.value)}
+        style={{
+          padding: '5px',
+          borderRadius: '4px',
+          border: '1px solid #ccc',
+        }}
+      >
+        <option value="">Select Department</option>
+        {departments.map((option, index) => (
+          <option key={index} value={option}>
+            {option}
+          </option>
+        ))}
+      </select>
+      <br />
+      <br />
       <button
         className="bg-white text-orange-500 px-4 py-2 rounded hover:bg-orange-500 hover:text-white transition duration-300"
         onClick={handleSubmit}

@@ -7,7 +7,7 @@ const eventSchema = new Schema(
             type : String,
             unique : true,
         },
-        particpatingTeams : [mongoose.Schema.Types.ObjectId],
+        particpatingTeams : [{type:mongoose.Schema.Types.ObjectId,ref:"Team"}],
         conductingDate : {
             // required : true,
             type : Date,
@@ -24,9 +24,16 @@ const eventSchema = new Schema(
             type : Boolean,
             default : true,
         },
-        DepartmentCoordinator : [
-            mongoose.Schema.Types.ObjectId
-        ]
+        DepartmentCoordinator : [{
+            type:mongoose.Schema.Types.ObjectId,
+            ref:"User"
+        },
+       
+        ],
+        department : {
+            type : String,
+            required : true
+        }
 
     },{timestamps:true}
 )
