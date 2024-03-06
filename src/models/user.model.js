@@ -65,6 +65,9 @@ const userSchema = new Schema(
       type: [mongoose.Schema.Types.ObjectId],
       ref: "Team",
     },
+    paymentLink : {
+      type : String,
+    }
     // participatingEvent : {
     //   type : [mongoose.Schema.Types.ObjectId],
     //   ref : "Event"
