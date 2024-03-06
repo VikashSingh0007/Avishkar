@@ -98,7 +98,7 @@ const userSignup = async (req, res, next) => {
             username,
             college: college,
             isVerified: false,
-            isFeePaid: false,
+            isFeePaid: true,
             resumeLink,
           });
 

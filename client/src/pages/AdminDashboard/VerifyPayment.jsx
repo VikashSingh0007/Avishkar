@@ -1,34 +1,57 @@
-import React, { useState } from "react";
-import { createTeam } from "../../services/teamService";
+import React, { useEffect, useState } from "react";
+import {getFeeNotPaid, verifyPayment} from "../../services/adminService"
+import {toast} from "react-toastify"
 
 const Create = () => {
-  const dummyPayment = [
-    {
-      request: [
-        {
-          name: "Dummy1",
-          paymentLink: "Url",
-          college: "nvcbzxvbzx",
-          contactNumber: "6348764378347dhsjgd",
-          email: "hsdvjsnbvcbbnvcz",
-        },
-        {
-          name: "Dummy2",
-          paymentLink: "Url",
-          college: "",
-          contactNumber: "",
-          email: "",
-        },
-        {
-          name: "Dummy3",
-          paymentLink: "Url",
-          college: "",
-          contactNumber: "",
-          email: "",
-        },
-      ],
-    },
-  ];
+  const [fetchedData , setFetchedData ] = useState(null);
+  console.log(fetchedData)
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const res = await getFeeNotPaid();
+        console.log("gotted from loki ", res);
+        setFetchedData(res.data);
+        
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      }
+    };
+
+    fetchData();
+  }, []);
+
+  const handleResponse = async (email , status) => {
+     try{
+      const fetchData = async () => {
+        try {
+          const response = await getFeeNotPaid();
+          
+          setFetchedData(response.data);
+          
+        } catch (error) {
+          console.error("Error fetching data:", error);
+        }
+      };
+  
+     
+        const messageData = {
+          email : email,
+          status : status
+        }
+        const res = await verifyPayment(messageData);
+        
+        if(res){
+          fetchData();
+        }
+        else{
+          toast.error("could not delete");
+        }
+     }
+     catch(error){
+      console.error("Error fetching data:", error);
+     }
+  }
+  
   return (
     <div>
       <div>
@@ -48,38 +71,37 @@ const Create = () => {
             </tr>
           </thead>
           <tbody>
-            {dummyPayment.map((item, index) => (
+            {fetchedData?.map((item, index) => (
               <React.Fragment key={index}>
-                {item.request.map((req, reqIndex) => (
                   <tr
-                    key={reqIndex}
+                    key={item._id}
                     style={{ borderBottom: "1px solid black" }}
                   >
                     <td style={{ padding: "8px", textAlign: "left" }}>
-                      {req.name}
+                      {item.name}
                     </td>
                     <td style={{ padding: "8px", textAlign: "left" }}>
-                      {req.college}
+                      {item.college}
                     </td>
                     <td style={{ padding: "8px", textAlign: "left" }}>
-                      {req.contactNumber}
+                      {item.phone}
                     </td>
                     <td style={{ padding: "8px", textAlign: "left" }}>
                       <a
-                        href={req.paymentLink}
+                        href={item.paymentLink}
                         target="_blank"
                         rel="noopener noreferrer"
                       >
-                        {req.paymentLink}
+                        {item.paymentLink}
                       </a>
                     </td>
 
                     <td style={{ padding: "8px", textAlign: "left" }}>
-                      {req.email}
+                      {item.email}
                     </td>
                     <td style={{ padding: "8px", textAlign: "left" }}>
                       <button
-                        onClick={() => window.open(req.paymentLink, "_blank")}
+                        onClick={() => { handleResponse(item.email,true) }}
                         style={{
                           padding: "5px 10px",
                           borderRadius: "5px",
@@ -92,7 +114,7 @@ const Create = () => {
                         Accept
                       </button>
                       <button
-                        onClick={() => console.log("Reject")}
+                        onClick={() => { handleResponse(item.email,false) }}
                         style={{
                           padding: "5px 10px",
                           borderRadius: "5px",
@@ -105,7 +127,6 @@ const Create = () => {
                       </button>
                     </td>
                   </tr>
-                ))}
               </React.Fragment>
             ))}
           </tbody>
