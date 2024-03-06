@@ -48,7 +48,6 @@ const User = () => {
             <rect y="60" width="100" height="15"></rect>
           </svg>
         </button>
-
         <div className="flex ">
           {isSidebarOpen && (
             <aside
@@ -161,7 +160,7 @@ const User = () => {
           )}
         </div>
         {choice === "view" && <View />}
-        {choice === "viewEvent" && <ViewEvent />}
+        {choice === "viewEvent" && <ViewEvent />} {}
         {choice === "create" && <VerifyPayment />}
         {choice === "resume" && <AddDC />}
       </div>
