@@ -125,7 +125,7 @@ const Carousel = () => {
               <img
                 src={item.img}
                 alt={item.name}
-                style={{ borderRadius: "20px" }}
+                style={{ borderRadius: "20px", alignContent: "center" }}
               />
 
               <h6
