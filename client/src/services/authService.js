@@ -110,6 +110,7 @@ export const resetPassword = async (data) => {
     password: data.password,
   };
   try {
+    console.log("reseting")
     const res = await Axios.post("/auth/resetpassword", messageData);
     if (res.data) {
       toast.success(res.data.message);
@@ -166,3 +167,5 @@ export const userLogin = async (data) => {
     return false;
   }
 };
+
+

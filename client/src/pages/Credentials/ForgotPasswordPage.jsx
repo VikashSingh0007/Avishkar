@@ -1,10 +1,14 @@
 import { useState } from "react";
 import "./ForgotPassword.css";
+import { forgotPassword } from "../../services/authService";
+
+import { useNavigate } from "react-router-dom";
 export default function ForgotPassword() {
   const [email, setEmail] = useState("");
   const handleEmailChange = (e) => {
     setEmail(e.target.value);
   };
+  const navigate = useNavigate();
   const validateEmail = (email) => {
     if (email == "") {
       return false;
@@ -24,6 +28,13 @@ export default function ForgotPassword() {
     } else {
       // perform action here
       // call backend here
+      forgotPassword({email : email}).then((res) => {
+        if(res){
+          setTimeout(500,()=>{
+            navigate('/login')
+          })
+        }
+      })
     }
   };
   return (

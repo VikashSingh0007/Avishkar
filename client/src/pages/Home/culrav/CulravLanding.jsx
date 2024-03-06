@@ -1,5 +1,4 @@
-import "./CulravLanding.css";
-
+import "./CulravLanding.css"
 import EventCard from "./Components/EventCard";
 import Data from "../../../Data/Event/Culrav";
 import Navbar from "../Navbar";
