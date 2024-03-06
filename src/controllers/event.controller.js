@@ -114,6 +114,10 @@ const joinEvent = async (req, res , next) => { // called by frontend when joinin
             res.json({ error: "bad request", message: "registrations for the event has been closed!", success: false });
             return;
         } else if (leaderId !== userId) {
+            console.log("in unauthorized block")
+            console.log("leaderId is " ,leaderId);
+            console.log("userId is " , userId);
+            console.log("teamId is " , teamId);
             // check if the request was made by person other than the leader
             res.statusCode = 401;
             res.json({ error: "unauthorized", message: "only team leader can add participation!", success: false });
