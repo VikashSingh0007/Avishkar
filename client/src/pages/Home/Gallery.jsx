@@ -88,7 +88,7 @@ const Timeline = () => {
   }, []);
 
   return (
-    <div className="custom-boy-css rootGallary">
+    <div className="custom-boy-css rootGallary  flex justify-center">
       <h2
         className="text-3xl text-black font-bold flex justify-center mt-[10%] rumoura-font underline"
         style={{
@@ -102,7 +102,6 @@ const Timeline = () => {
       <motion.section // Wrap section with motion component
         ref={timelineRef}
         className="timeline mb-[-10%] overflow-x-hidden sm:overflow-x-scroll"
-        initial={{ scrollLeft: 0 }} // Initial position set to the start
       >
         {data.map((item, index) => (
           <motion.article // Wrap article with motion component

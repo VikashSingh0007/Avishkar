@@ -5,84 +5,84 @@ const timelineData = [
     text: "Inaugural Ceremony, gnoTalks  ",
     date: "March 16 2024",
     category: {
-      tag: "Day1",
+      tag: "Day-1",
       color: "#000",
     },
     link: {
       url: "",
-      text: "Get Schedule of Day 1",
+      text: "Get Schedule of Day1",
     },
   },
   {
     text: "gnoTalks",
     date: "March 17 2024",
     category: {
-      tag: "Day2",
+      tag: "Day-2",
       color: "#000",
     },
     link: {
       url: "",
-      text: "Get Schedule of Day 2",
+      text: "Get Schedule of Day2",
     },
   },
   {
     text: "Special Performance",
     date: "March 18 2024",
     category: {
-      tag: "Day3",
+      tag: "Day-3",
       color: "#000",
     },
     link: {
       url: "",
-      text: "Get Schedule of Day 3",
+      text: "Get Schedule of Day3",
     },
   },
   {
     text: "KavyasAndhya",
     date: "March 19 2024",
     category: {
-      tag: "Day4",
+      tag: "Day-4",
       color: "#000",
     },
     link: {
       url: "",
-      text: "Get Schedule of Day 4",
+      text: "Get Schedule of Day4",
     },
   },
   {
     text: "EDM Night",
     date: "March 20 2024",
     category: {
-      tag: "Day5",
+      tag: "Day-5",
       color: "#000",
     },
     link: {
       url: "",
-      text: "Get Schedule of Day 5",
+      text: "Get Schedule of Day5",
     },
   },
   {
     text: "BAnd Performance",
     date: "March 21 2024",
     category: {
-      tag: "Day 6",
+      tag: "Day-6",
       color: "#000",
     },
     link: {
       url: "",
-      text: "Get Schedule of Day 6",
+      text: "Get Schedule of Day6",
     },
   },
   {
     text: "Celebrity Night",
     date: "April 22 2024",
     category: {
-      tag: "Day7",
+      tag: "Day-7",
       color: "#000",
     },
     link: {
       url: "",
-      text: "Get Schedule of Day 7",
+      text: "Get Schedule of Day7",
     },
   },
 ];
@@ -91,19 +91,10 @@ const TimelineItem = ({ data }) => (
   <div className="timeline-item protest-revolution-regular rumoura-font ">
     <div className="timeline-item-content protest-revolution-regular rumoura-font">
       <span
-        className="tag rumoura-font"
-        style={{
-          background: data.category.color,
-          display: "inline-flex",
-          flexDirection: "column",
-          fontSize: "15px",
-        }}
+        className="tag protest-revolution-regular rumoura-font"
+        style={{ background: data.category.color }}
       >
-        {data.category.tag.split("").map((char, index) => (
-          <span key={index} style={{}}>
-            {char}
-          </span>
-        ))}
+        {data.category.tag}
       </span>
       <time style={{ color: "black", fontSize: "20px" }}>{data.date}</time>
 
