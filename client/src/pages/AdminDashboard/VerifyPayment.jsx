@@ -57,7 +57,7 @@ const Create = () => {
   
   return (
     <div className="bg-orange-200 mt-4 rounded-xl p-4">
-      {fetchedData.map((item, index) => (
+      {fetchedData?.map((item, index) => (
         <div key={index} style={{ marginBottom: "16px" }}>
             <div
               key={index}

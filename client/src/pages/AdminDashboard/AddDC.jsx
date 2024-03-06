@@ -1,5 +1,6 @@
-import { useState } from "react";
-import { updateResume } from "../../services/authService";
+import React, { useState } from "react";
+
+import { makeDc } from "../../services/adminService";
 
 const Resume = () => {
   const [data, setData] = useState({ email: "" });
@@ -13,11 +14,7 @@ const Resume = () => {
 
   const handleSubmit = () => {
     console.log(data);
-    // Assuming the updateResume function returns a Promise
-    updateResume(data).then((res) => {
-      console.log(res);
-      // Add any additional logic or feedback based on the response if needed
-    });
+    makeDc(data);
   };
 
   return (

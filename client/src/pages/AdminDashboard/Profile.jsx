@@ -15,22 +15,22 @@ const View = () => {
   });
   const history = useNavigate();
 
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const d = await getProfile();
-        console.log(d.success);
-        if (d.success) {
-          setFetchedData(d.profile.data);
-        }
-      } catch (error) {
-        history("/login");
-        console.error("Error fetching data:", error);
-      }
-    };
+  // useEffect(() => {
+  //   const fetchData = async () => {
+  //     try {
+  //       const d = await getProfile();
+  //       console.log(d.success);
+  //       if (d.success) {
+  //         setFetchedData(d.profile.data);
+  //       }
+  //     } catch (error) {
+  //       history("/login");
+  //       console.error("Error fetching data:", error);
+  //     }
+  //   };
 
-    fetchData();
-  }, []);
+  //   fetchData();
+  // }, []);
 
   return (
     <>

@@ -1,6 +1,7 @@
 import { toast } from 'react-toastify';
 import Axios from './Axios.js'
-import { getAllEvents } from '../../../src/controllers/event.controller.js';
+
+
 export const makeDc = async (data) => {
     try{
         const messageData = {
@@ -83,7 +84,7 @@ export const getTeamParticipatingInEvent = async (data) => {
 export const getAllEvents = async (data) => {
     try{
        
-        const res = await Axios.get('/admin/getallevent' , messageData);
+        const res = await Axios.get('/admin/getallevent' );
         if(res.data){
              toast.success(res.data.message);
              return res.data.data;
