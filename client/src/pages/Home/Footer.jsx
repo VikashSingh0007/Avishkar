@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { CiMail } from "react-icons/ci";
 import "./Nav.css";
 const Footer = () => (
-  <section className="bg-transparent mt-[10%]">
+  <section className="bg-transparent mt-[10%] relative bottom-0">
     <div className="max-w-screen-xl px-4 py-2 mx-auto space-y-8 overflow-hidden sm:px-6 lg:px-8">
       <div className="flex flex-wrap justify-center -mx-5 -my-2 text-xl font-bold">
         <h3 className="flex flex-wrap justify-center  text-center text-xl font-bold rumoura-font">

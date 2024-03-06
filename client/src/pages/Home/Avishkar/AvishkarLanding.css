@@ -1,11 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=VT323&display=swap");
-@import url("https://db.onlinewebfonts.com/c/6b63cc27b0fdfa2ee93c6eaf0f7572d9?family=Rumoura+TexturesPERSONAL+USE");
-
-.rumoura-font {
-  font-family: "Rumoura TexturesPERSONAL USE";
-  font-weight: 900;
-  font-style: normal;
-}
 
 /* Define custom properties */
 :root {
