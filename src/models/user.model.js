@@ -67,11 +67,11 @@ const userSchema = new Schema(
     },
     paymentLink : {
       type : String,
+    },
+    participatingEvent : {
+      type : [mongoose.Schema.Types.ObjectId],
+      ref : "Event"
     }
-    // participatingEvent : {
-    //   type : [mongoose.Schema.Types.ObjectId],
-    //   ref : "Event"
-    // }
   },
   { timestamps: true }
 );

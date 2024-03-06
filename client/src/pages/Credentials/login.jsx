@@ -8,6 +8,10 @@ const Lo = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
+  const handleForgot = (e) => {
+    e.preventDefault();
+    navigate('/forgotpassword');
+  }
   const handleSubmit = async (e) => {
     e.preventDefault();
     const data = {
@@ -73,6 +77,9 @@ const Lo = () => {
               Login
             </button>
           </form>
+          <a onClick={handleForgot}>
+            forgot password??
+          </a>
         </div>
         <svg className="lofilter">
           <filter id="wavy2">

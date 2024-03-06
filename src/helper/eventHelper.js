@@ -18,8 +18,22 @@ const findUserInDepartment = (array , id) => {
     }
     return false;
 }
+const checkIfJoined = (user , event) => {
+    // console.log("in CheckIfJoined()")
+    for(let i = 0 ; i < user.participatingEvent.length ; i++){
+        let id1  = JSON.stringify(user.participatingEvent[i]) 
+        let id2 = JSON.stringify(event._id)
+        // console.log("check in ",id1 === id2)
+        if(id1 === id2){
+            return true;
+        }
+    }
+    return false
+}
+
 module.exports = {
     addUserToDepartment,
-    findUserInDepartment
+    findUserInDepartment,
+    checkIfJoined
 }
 
