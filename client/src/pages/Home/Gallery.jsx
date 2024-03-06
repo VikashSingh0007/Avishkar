@@ -1,7 +1,6 @@
-// Timeline.js
-
-import React from "react";
+import React, { useRef, useEffect } from "react";
 import "./Gallery.css"; // Make sure to adjust the path
+import { motion } from "framer-motion"; // Importing motion from framer-motion
 import MameKhan from "../Home/assets/MameKhan.jpeg";
 import Spandan from "../Home/assets/Spandan.png";
 import Song from "../Home/assets/Song.png";
@@ -9,6 +8,7 @@ import Performance1 from "../Home/assets/performance.png";
 import Performance2 from "../Home/assets/Performance2.png";
 import Performance3 from "../Home/assets/Performance3.png";
 import Performance4 from "../Home/assets/Performance4.png";
+
 const timelineData = [
   {
     imgSrc: MameKhan,
@@ -55,10 +55,24 @@ const timelineData = [
 ];
 
 const Timeline = () => {
+  const timelineRef = useRef(null);
+
+  useEffect(() => {
+    const handleAutoSwipe = () => {
+      if (window.innerWidth <= 800 && timelineRef.current) {
+        timelineRef.current.scrollLeft += timelineRef.current.offsetWidth;
+      }
+    };
+
+    const intervalId = setInterval(handleAutoSwipe, 4000);
+
+    return () => clearInterval(intervalId);
+  }, []);
+
   return (
     <div className="custom-boy-css rootGallary">
       <h2
-        className="text-3xl text-black font-bold  flex justify-center mt-[10%] rumoura-font underline"
+        className="text-3xl text-black font-bold flex justify-center mt-[10%] rumoura-font underline"
         style={{
           fontSize: "xx-large",
           fontWeight: "bolder",
@@ -67,18 +81,28 @@ const Timeline = () => {
       >
         Gallery
       </h2>
-      <section className="timeline mb-[-10%]">
+      <motion.section // Wrap section with motion component
+        ref={timelineRef}
+        className="timeline mb-[-10%]"
+        style={{ overflowX: "scroll" }}
+      >
         {timelineData.map((item, index) => (
-          <article key={index}>
+          <motion.article // Wrap article with motion component
+            key={index}
+            animate={{ opacity: 1 }} // Animation to fade in
+            initial={{ opacity: 0 }} // Initial opacity
+            transition={{ duration: 1 }} // Duration of animation
+            className="transition-opacity ease-in-out duration-1000" // Tailwind CSS classes for smooth transition
+          >
             <img
-              className="imgGallery "
+              className="imgGallery"
               src={item.imgSrc}
               alt=""
               style={{ width: "350px", height: "400px", borderRadius: "20px" }}
             />
-          </article>
+          </motion.article>
         ))}
-      </section>
+      </motion.section>
     </div>
   );
 };
