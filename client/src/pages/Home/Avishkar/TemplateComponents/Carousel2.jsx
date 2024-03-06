@@ -20,10 +20,7 @@ const Carousel = ({}) => {
     >
       <Navbar style={{ zIndex: -4 }} />
       {/* <div className=" w-full h-full flex flex-wrap p-4"> */}
-      <h1
-        className="w-full text-5xl md:text-4xl  font-bold mb-10 mt-5 pt-20 text-center font-serif"
-        style={{ fontFamily: "Libre Bodoni, serif" }}
-      >
+      <h1 className="w-full text-5xl md:text-4xl  font-bold mb-10 mt-5 pt-20 text-center rumoura-font">
         Events
       </h1>
 

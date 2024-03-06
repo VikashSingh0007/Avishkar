@@ -30,7 +30,13 @@ const Team = () => {
 
   return (
     <div>
-      <section className="text-gray-400 bg-gray-900 body-font">
+      <section
+        className="text-gray-400 h-[100vh] bg-gray-900 body-font"
+        style={{
+          background:
+            "linear-gradient(to bottom, #d95f3b, #f0984a, #fcd6a5, #7aa9a3, #338f9a, #1c4c70)",
+        }}
+      >
         {fetchedData?.teams?.participating?.map((team, index) => {
           return (
             <>

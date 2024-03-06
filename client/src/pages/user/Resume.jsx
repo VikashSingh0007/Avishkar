@@ -17,15 +17,21 @@ const Resume = () => {
     console.log(data);
     updateResume(data).then((res) => {
       console.log(res);
-    })
+    });
   };
   return (
     <div>
-      <section className="text-gray-400 bg-gray-900 body-font">
+      <section
+        className="text-gray-400 h-[100vh] bg-gray-900 body-font"
+        style={{
+          background:
+            "linear-gradient(to bottom, #d95f3b, #f0984a, #fcd6a5, #7aa9a3, #338f9a, #1c4c70)",
+        }}
+      >
         <div className=" px-5 py-24  flex justify-center ">
           <div className=" md:w-1/4 flex  flex-col justify-center h-[70vh] bg-gray-800 bg-opacity-50 rounded-lg p-8  w-full mt-10 md:mt-0">
             <h2 className="text-white text-4xl flex justify-center font-medium title-font mb-5">
-              Resume Team
+              Upload Resume
             </h2>
             <div className="relative  mb-4">
               <label

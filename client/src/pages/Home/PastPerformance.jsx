@@ -128,7 +128,10 @@ const Carousel = () => {
                 style={{ borderRadius: "20px" }}
               />
 
-              <h6 style={{ textAlign: "center", color: "#fff" }}>
+              <h6
+                style={{ textAlign: "center", color: "#000000" }}
+                className="rumoura-font"
+              >
                 {item.name}
               </h6>
             </div>

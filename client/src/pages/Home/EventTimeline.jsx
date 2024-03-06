@@ -88,17 +88,19 @@ const timelineData = [
 ];
 
 const TimelineItem = ({ data }) => (
-  <div className="timeline-item protest-revolution-regular ">
-    <div className="timeline-item-content protest-revolution-regular">
+  <div className="timeline-item protest-revolution-regular rumoura-font ">
+    <div className="timeline-item-content protest-revolution-regular rumoura-font">
       <span
-        className="tag protest-revolution-regular"
+        className="tag protest-revolution-regular rumoura-font"
         style={{ background: data.category.color }}
       >
         {data.category.tag}
       </span>
       <time style={{ color: "black", fontSize: "20px" }}>{data.date}</time>
 
-      <div className=" text-black break-all text-[1em] font-bold ">{data.text}</div>
+      <div className=" text-black break-all text-[1em] font-bold rumoura-font">
+        {data.text}
+      </div>
       {data.link && (
         <a
           href={data.link.url}
@@ -133,7 +135,7 @@ const Timeline = () =>
         style={{ overflowY: "auto", maxHeight: "400px" }}
       >
         <div
-          className="timeline-container bungee-shade-regular"
+          className="timeline-container bungee-shade-regular rumoura-font"
           style={{ overflowY: "auto", maxHeight: "400px" }}
         >
           {timelineData.map((data, idx) => (
