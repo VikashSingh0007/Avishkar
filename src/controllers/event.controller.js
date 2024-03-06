@@ -1,7 +1,7 @@
 const User = require('../models/user.model');
 const Team = require('../models/team.model');
 const Event = require('../models/event.model')
-const { addUserToDepartment, findUserInDepartment } = require('../helper/eventHelper');
+const { addUserToDepartment, findUserInDepartment , checkIfJoined} = require('../helper/eventHelper');
 const dc = "DepartmentCordinator";
 const fes = "FestivalSecretary";
 
@@ -99,29 +99,44 @@ const joinEvent = async (req, res , next) => { // called by frontend when joinin
         return;
     }
     try {
-        const team = await Team.findOne({_id : teamId})
-        const event = await Event.findOne({name : eventName})
+        var team = await Team.findOne({_id : teamId}).populate('acceptedMembers')
+        var event = await Event.findOne({name : eventName})
         if (!team  || !event ) {
             // case when team or event doesn't exist
             res.statusCode = 404;
-            res.json({ error: "not found", message: "team  not found!", success: false });
+            res.json({ error: "not found", message: "team or event not found!", success: false });
             return;
         } else if (!event.isOpen) {
             res.statusCode = 400;
             res.json({ error: "bad request", message: "registrations for the event has been closed!", success: false });
+            return;
         } else if (team.leader != id) {
             // check if the request was made by person other than the leader
             res.statusCode = 401;
             res.json({ error: "unauthorized", message: "only team leader can add participation!", success: false });
+            return;
         } else if (team.size > event.maxTeamsize || team.size < event.minTeamsize) {
             // checking the appropriate size of the team
             res.statusCode = 400;
             res.json({ error: "bad request", message: "team size constraints don't match with the participating team!", success: false });
+            return;
+        }
+        if( team.pendingMembers.length > 0 ){
+            res.statusCode = 410;
+            res.json({
+                error : "Some Member's Have Not Accepted Invite Yet!!",
+                message : "Some Member's Have Not Accepted Invite Yet!!",
+                success : false
+            })
+            return;
         } else {
             // we simply add the team Id to the id of the participant
             var flag = false;
+            // console.log(event)
             for(let i = 0 ; i < event.particpatingTeams.length ; i++){
                 if(event.particpatingTeams[i] == teamId){
+                    // console.log(i);
+                    // console.log(event.particpatingTeams[i])
                     flag = true;
                 }
             }
@@ -137,18 +152,37 @@ const joinEvent = async (req, res , next) => { // called by frontend when joinin
                 )
                 return;
             }
+          
+            for(let i = 0; i < team.acceptedMembers.length ; i++){
+                if(checkIfJoined(team.acceptedMembers[i] , event)){
+                    res.statusCode = 410
+                    res.json({
+                        success : false,
+                        message : "Some Member has Already Joined The Event in Other Team",
+                        error : "Some Member has Already Joined The Event in Other Team",
+                    })
+                    return
+                }
+
+            }
             event.particpatingTeams = event.particpatingTeams.filter((id) => {
                 return id != teamId
             })
 
             event.particpatingTeams = [...event.particpatingTeams , teamId];
-            console.log(event);
+            var members = team.acceptedMembers;
+            console.log(members.length)
+            for(let i = 0; i < members.length ; i++){
+                console.log("in loop member" , members[i])
+                members[i].participatingEvent = [...members[i].participatingEvent , event._id]
+                await members[i].save();
+            }
             await event.save();
             res.statusCode = 200;
             res.json({ message: "team participation done!", success: true });
         }
     } catch (error) {
-        console.log("error occured in the eventParticipate() controller!");
+        console.log("error occured in the eventParticipate() controller!",error.message);
         next(error);
     }
 };
@@ -204,5 +238,4 @@ module.exports = {
     joinEvent,
     leaveEvent,
     createEvent,
-    
 }

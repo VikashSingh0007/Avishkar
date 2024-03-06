@@ -1,6 +1,9 @@
 import { useState } from "react";
 import { useParams } from "react-router-dom";
+import { toast } from "react-toastify";
 import "./ForgotPassword.css";
+
+import { resetPassword } from "../../services/authService";
 function checkIfSame(a,b){
     return a!==b;
 }
@@ -9,24 +12,29 @@ export default function ResetPassword(){
     const [confirmPassword , setConfirmPassword] = useState('');
     const params =  useParams(); //use this to get the token for calling
     const showError = () => {
-        document.querySelector('#error').innerHTML = "Passwords Don't Match";
-        setTimeout(()=>{
-            document.querySelector('#error').innerHTML = '';
-        },3000)
+        toast.error("Password Don't Match")
     }
     const handleSubmit = (e) => {
         e.preventDefault();
-        if(!password||!confirmPassword){
-            document.querySelector('#error').innerHTML = "Enter Password";
-        setTimeout(()=>{
-            document.querySelector('#error').innerHTML = '';
-        },3000)
+        if(!password){
+            toast.error("Password Field Cannot Be Empty")
+      
+        }
+        if(!confirmPassword){
+            toast.error("Confirm Password Field Cannot Be Empty") 
         }
         if(checkIfSame(password,confirmPassword)){
             showError();
         }
         else{
-
+           
+            const  token  = params.token;
+            console.log(token)
+            const messageData = {
+              token : token,
+              password : password
+            }
+            resetPassword(messageData)
             // write procceding logic here
 
         }
@@ -49,7 +57,7 @@ export default function ResetPassword(){
               id="password"
               name="password"
               placeholder="Enter your password"
-              onChange={(e) => setEmail(e.target.value)}
+              onChange={handlePasswordChange}
             />
   
             <label htmlFor="password">Confirm Password:</label>
@@ -58,7 +66,7 @@ export default function ResetPassword(){
               id="password"
               name="password"
               placeholder="Enter your password"
-              onChange={(e) => setPassword(e.target.value)}
+              onChange={handleConfirmChange}
             />
           </div>
           <button className="text-[1.3em] mb-12" onClick={(e) => handleSubmit(e)}>
