@@ -125,12 +125,18 @@ const Carousel = () => {
               <img
                 src={item.img}
                 alt={item.name}
-                style={{ borderRadius: "20px", alignContent: "center" }}
+                style={{
+                  borderRadius: "20px",
+                  objectFit: "cover",
+                  width: "100%",
+                  height: "100%",
+                }}
+                className="object-fit"
               />
 
               <h6
                 style={{ textAlign: "center", color: "#000000" }}
-                className="rumoura-font"
+                className="rumoura-font text-xl"
               >
                 {item.name}
               </h6>
