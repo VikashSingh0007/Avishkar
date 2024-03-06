@@ -3,11 +3,11 @@ import styles from "../../style.js";
 import HomePageLayout from "./HomePageLayout.jsx";
 import PastPerformance from "./PastPerformance.jsx";
 import About from "./AboutUs.jsx";
-import Video from "./Video.jsx";
+import AboutAvishkarCulrav from "./AboutAvishkarCulrav.jsx";
 import Sponsors from "./Sponsors.jsx";
 import AvishkarCulrav from "./AvishkarCulrav.jsx";
 import EventTimeLine from "./EventTimeline.jsx";
-import Footer from "./Footer.jsx";
+
 import Gallery from "./Gallery.jsx";
 import { toast } from "react-toastify";
 
@@ -28,11 +28,12 @@ const App = () => {
           <div className={`${styles.boxWidth}`}>
             <AvishkarCulrav />
             <About />
+            <AboutAvishkarCulrav />
           </div>
         </div>
 
         <EventTimeLine />
-         <Gallery /> 
+        <Gallery />
         <div className={`bg-primary ${styles.paddingX} ${styles.flexCenter}`}>
           <div className={`${styles.boxWidth}`}> {/* <Gallery /> */}</div>
         </div>
