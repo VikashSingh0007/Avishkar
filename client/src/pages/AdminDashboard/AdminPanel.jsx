@@ -6,7 +6,7 @@ import AddDC from "./AddDC";
 import Navbar from "../Home/Navbar";
 import { getAllEvents } from "../../services/adminService";
 import ViewDC from "./viewDC"
-
+import { useNavigate } from "react-router-dom";
 const User = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const sidebarRef = useRef(null);
@@ -15,23 +15,29 @@ const User = () => {
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedEvent, setSelectedEvent] = useState(null);
   const [events, setEvents] = useState([]);
+  // var filteredEvents=[]
+  const navigate=useNavigate();
+   const user=JSON.parse(localStorage.getItem("userData"))
+   useState(()=>{
+  const response=localStorage.getItem("userData");
+  if(!response||response.role!="Coordie"||response.role!="Admin") return navigate('/');
+   },[])
+   console.log(user);
+      useEffect(() => {
+        //Get All events
+        const fetchEvents = async () => {
+          try {
+            const {data} = await getAllEvents();
 
-  useEffect(() => {
-    //Get All events
-    const fetchEvents = async () => {
-      try {
-        const d = await getAllEvents();
-        console.log(d.success);
-        if (d.success) {
-          setEvents(d.events.data);
-        }
-      } catch (error) {
-        history("/login");
-        console.error("Error fetching data:", error);
-      }
-    };
-    fetchEvents();
-  }, []);
+            setEvents(data);
+            //  filteredEvents=data;
+          } catch (error) {
+            
+            console.error("Error fetching data at events:", error);
+          }
+        };
+        fetchEvents();
+      }, []);
 
   // Function to handle click outside of the sidebar
   const handleClickOutside = (event) => {
@@ -59,8 +65,8 @@ const User = () => {
   };
 
   // Filter events based on search term
-  const filteredEvents = events.filter((event) =>
-    event.toLowerCase().includes(searchTerm.toLowerCase())
+  var filteredEvents = events.filter((event) =>
+    event.name.toLowerCase().includes(searchTerm.toLowerCase())
   );
 
   return (
@@ -100,7 +106,7 @@ const User = () => {
             Events
           </div>
 
-          <div
+          {user.role=="Admin"&&<div
             className={`flex text-center p-2 text-xl  items-center  font-semibold hover:bg-orange-300 cursor-pointer rounded-md ${
               choice === "verifyPayment" ? "bg-orange-400" : ""
             }`}
@@ -109,8 +115,8 @@ const User = () => {
             }}
           >
             Verify Payment
-          </div>
-          <div
+          </div>}
+        { user.role=="Admin"&& <div
             className={`flex text-center p-2 text-xl  items-center font-semibold hover:bg-orange-300 cursor-pointer rounded-md ${
               choice === "addDC" ? "bg-orange-400" : ""
             }`}
@@ -118,9 +124,9 @@ const User = () => {
               handleChoice("addDC");
             }}
           >
-            Department Coordinator
-          </div>
-          <div
+            Add Departmental Coordinator
+          </div>}
+          {user.role=="Admin"&& <div
             className={`flex text-center p-2 text-xl  items-center font-semibold hover:bg-orange-300 cursor-pointer rounded-md ${
               choice === "viewDC" ? "bg-orange-400" : ""
             }`}
@@ -128,8 +134,8 @@ const User = () => {
               handleChoice("viewDC");
             }}
           >
-            View Departmental. Coordinators
-          </div>
+            View Departmental Coordinators
+          </div>}
         </div>
         <div
           className="md:w-[80%] md:h-auto h-[100%]  m-2 flex flex-col p-2  items-center bg-gray-200 bg-opacity-20 rounded shadow-lg backdrop-filter backdrop-blur-md"
@@ -170,11 +176,11 @@ const User = () => {
                   className="bg-orange-200 p-3 rounded mb-2 cursor-pointer hover:bg-orange-300"
                   onClick={() => {
                     closeModal();
-                    setSelectedEvent(event);
+                    setSelectedEvent(event.name);
                     handleChoice("viewEvent");
                   }}
                 >
-                  {event}
+                  {event.name}
                 </div>
               ))}
             </div>

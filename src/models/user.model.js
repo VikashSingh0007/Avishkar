@@ -71,6 +71,9 @@ const userSchema = new Schema(
     participatingEvent : {
       type : [mongoose.Schema.Types.ObjectId],
       ref : "Event"
+    },
+    department : {
+      type:String
     }
   },
   { timestamps: true }

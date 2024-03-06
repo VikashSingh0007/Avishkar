@@ -1,5 +1,5 @@
 import "./SignUp.css"; // Import your CSS file
-import { useState } from "react";
+import { useState,useEffect } from "react";
 import qr from "../../assets/Qr.jpg";
 import bg from "./loginbg1.jpeg";
 import axios from "axios";
@@ -19,7 +19,11 @@ const SignUp = () => {
   const [isRotated, setIsRotated] = useState(false); // New state for rotation
   const [showQr, setShowQr] = useState(false);
 
-  const navigate = useNavigate()
+  const navigate=useNavigate()
+  useEffect(()=>{
+    const response=localStorage.getItem("userData");
+    if(response||localStorage.getItem("userToken")) return navigate('/');
+  },[])
 
   const handleCollege = (value) => {
     if (value === "other") setShowOther(true);

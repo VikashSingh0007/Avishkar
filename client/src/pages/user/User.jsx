@@ -59,7 +59,7 @@ const User = () => {
                   "linear-gradient(to bottom,  #f0984a, #fcd6a5, #7aa9a3, #338f9a)",
               }}
             >
-              <div className="relative mt-6">
+              {/* <div className="relative mt-6">
                 <span className="absolute inset-y-0 left-0 flex items-center pl-3">
                   <svg
                     className="w-5 h-5 text-gray-400"
@@ -80,7 +80,7 @@ const User = () => {
                   className="w-full py-2 pl-10 pr-4 text-gray-700 bg-white border rounded-md dark:bg-gray-900 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 dark:focus:border-blue-300 focus:ring-blue-300 focus:ring-opacity-40 focus:outline-none focus:ring"
                   placeholder="Search"
                 />
-              </div>
+              </div> */}
               <div className="flex flex-col justify-between flex-1 mt-6">
                 <nav>
                   <a

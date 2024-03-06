@@ -6,8 +6,8 @@ const dc = "DepartmentCordinator";
 const fes = "FestivalSecretary";
 
 const createEvent = async (req ,res , next) => {
-    const { eventName  , minTeamsize , maxTeamsize } = req.body;
-    if(!eventName || !minTeamsize || !maxTeamsize){
+    const { eventName  , minTeamsize , maxTeamsize,department } = req.body;
+    if(!eventName || !minTeamsize || !maxTeamsize||!department){
         res.statusCode = 400;
         res.json({
             success : false,
@@ -44,7 +44,7 @@ const createEvent = async (req ,res , next) => {
             // conductingDate : conductingDate,
             maxTeamsize : maxTeamsize,
             minTeamsize : minTeamsize,
-            DepartmentCoordinator : [user._id],
+            department:department
         })
         if(!event){
             res.statusCode = 401;
@@ -60,7 +60,7 @@ const createEvent = async (req ,res , next) => {
             res.json(
                 {
                     success : true,
-                    message : "Event Has Been Created!! You are a Department Cordinator",
+                    message : "Event Has Been Created",
                 }
             )
             return;
@@ -240,21 +240,25 @@ const leaveEvent = async (req, res, next) => {
 
 const getAllEvents = async (req , res , next ) => {
     try{
+        const {department}=req.user;
+        console.log(req.user);
         const event = await Event.find({} , {name : 1 });
+        console.log(event);
         res.statusCode = 200;
-        res.json({
+        return res.json({
             success : true,
             data : event,
         })
     }
     catch(error){
-        res.statusCode = 400;
-        res.json({
-            success : false,
-            error : "Something Went Wrong",
-            message : "Something Went Wrong",
-        })
-        console.log("error occured in the getAllEvents() controller!");
+        // res.statusCode = 400;
+        // res.json({
+        //     success : false,
+        //     error : "Something Went Wrong",
+        //     message : "Something Went Wrong",
+        // })
+        // console.log("error occured in the getAllEvents() controller!");
+        console.log(error.message);
         next(error);
     }
 }
