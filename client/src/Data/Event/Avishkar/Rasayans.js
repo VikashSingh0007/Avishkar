@@ -5,7 +5,7 @@ import CODEINDROME from "../../Images/CODEINDROME.png";
 import CHEMETHLON from "../../Images/CHEMETHLON.png";
 
 import SCAVENGERHUNT from "../../Images/SCAVENGERHUNT.png";
-export const Rasayans= [
+export const Rasayans = [
   {
     title: "Rasayans",
     tagline: "",
@@ -97,11 +97,11 @@ export const Rasayans= [
         PsLink: "",
         coordinators: [
           {
-            name: ". Arghyadeep Ambar Chakrabarti ",
+            name: "Arghyadeep Ambar Chakrabarti",
             phone: "(9167388137)",
           },
           {
-            name: " Vedant Goyal",
+            name: "Vedant Goyal",
             phone: " (7725972190)",
           },
           {
@@ -147,7 +147,7 @@ export const Rasayans= [
             phone: "6386216334",
           },
           {
-            name: "Shivani Kumar",
+            name: "Shivani Kumari",
             phone: "6207231730",
           },
 
@@ -163,7 +163,7 @@ export const Rasayans= [
         ],
       },
       {
-        name: "",
+        name: "CHEMETHLON",
         disc: "Tensed about your placement and internship? Team Rasayans brings our event Chemethlon whichhelps you in facing real time placement and internships Compulsory event for all Chemical Engineers.",
         rule: [
           {
@@ -225,7 +225,7 @@ export const Rasayans= [
             phone: "6386216334",
           },
           {
-            name: "Shivani Kumar",
+            name: "Shivani Kumari",
             phone: "6207231730",
           },
           {
@@ -243,6 +243,42 @@ export const Rasayans= [
           {
             name: "Vishwajeet Kumar",
             phone: "8829807456",
+          },
+        ],
+      },
+      {
+        name: "MARKETING-NEXUS",
+        disc: "Sell me this pen! If you recognize this line, you’re at the right place. Get ready to unleash your creativity and charm as you turn ordinary products into something extraordinary with your marketin magic. Teams will get to devise a marketing strategy for an utterly peculiar combination of product and brand. Keeping all its inherent characteristics intact, launching it in the market with a completely modified marketing mix.",
+        rule: [
+          {
+            rule_1: "Team Size: 2-4 members",
+            rule_2: "All branches and years are allowed",
+            rule_3:"Cross-year teams allowed",
+          },
+        ],
+        TeamSize: "",
+        BGImageLink: SCAVENGERHUNT,
+        PsLink: "",
+        coordinators: [
+          {
+            name: "Sakshi Pathak",
+            phone: "6398328989",
+          },
+          {
+            name: "Shraddha Kedia",
+            phone: "6392825100",
+          },
+          {
+            name: "Shivani Kumari",
+            phone: "6207231730",
+          },
+          {
+            name: " Rishabh Pate",
+            phone: "9793555208",
+          },
+          {
+            name: "Ishika Jain",
+            phone: " 7078399517",
           },
         ],
       },
