@@ -76,6 +76,21 @@ const Create = () => {
                   <option className="text-black" value="5">
                     5
                   </option>
+                  <option className="text-black" value="5">
+                    6
+                  </option>
+                  <option className="text-black" value="5">
+                    7
+                  </option>
+                  <option className="text-black" value="5">
+                    8
+                  </option>
+                  <option className="text-black" value="5">
+                    9
+                  </option>
+                  <option className="text-black" value="5">
+                    10
+                  </option>
                 </select>
               </div>
               <button
