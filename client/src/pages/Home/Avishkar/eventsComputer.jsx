@@ -200,7 +200,7 @@ const EventsComputer = ({ data }) => {
               >
                 <span
                   hidden={!powerState}
-                  className="absolute left-0 w-full font-custom text-2xl opacity-100 top-4 z-[1] "
+                  className="absolute left-0 w-full  text-2xl opacity-100 top-4 z-[1] rumoura-font "
                 >
                   {eventName}
                 </span>

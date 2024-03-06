@@ -66,7 +66,6 @@ const createTeam = async (req, res, next) => {
     const email = req.user.email; // get credentials
     const user = await User.findOne({email}); // get user
     
-    console.log(user.email);
     if(!user){ //validate user
         res.statusCode = 400;
         res.json({
@@ -140,11 +139,10 @@ const createTeam = async (req, res, next) => {
 
 // this endpoint needs to be tested thoroughly inorder to ensure security
 const deleteTeam = async (req, res, next) => {
-    console.log('initating delte Team');
+   
     const { teamId } = req.body; 
     const id = req.user._id;
-    console.log(teamId);
-    console.log(id);
+    
     if(!teamId){
         res.statusCode = 400;
         res.json(
@@ -304,16 +302,9 @@ const acceptOrRejectInvite = async (req , res , next) => {
         return;
     }
     try {
-        // const user = await User.findOne({_id : id});
+     
         const teamuser = await User.findOne({_id : id});
-        // if(!user){ // if the inviting user does not exist
-        //     res.statusCode = 400;
-        //     res.json({
-        //         error : 'inviting user does not exist',
-        //         message : 'inviting user does not existing'
-        //     })
-        //     return;
-        // }
+       
         if(!teamuser){ // if the user to be invited does not exist
             res.statusCode = 400;
             res.json({
@@ -342,6 +333,7 @@ const acceptOrRejectInvite = async (req , res , next) => {
                 } else {
                     if (status) {
                         //remove event from pending of user
+                        console.log('user is accepting invite');
                         teamuser.pendingTeam = teamuser.pendingTeam.filter((participateTeamId) => {
                             return participateTeamId != teamId
                         })
@@ -360,6 +352,7 @@ const acceptOrRejectInvite = async (req , res , next) => {
                         await team.save();
                         
                     } else {
+                        console.log('user is rejecting invite');
                         //remove event from pending of user
                         teamuser.pendingTeam = teamuser.pendingTeam.filter((participateTeamId) => {
                             return participateTeamId != teamId
@@ -373,6 +366,7 @@ const acceptOrRejectInvite = async (req , res , next) => {
                         await teamuser.save();
                         await team.save();
                     }
+                    console.log("success at responding")
                     res.statusCode = 200;
                     res.json({ message: "invite response registered!", success: true });
                     return;
@@ -408,16 +402,8 @@ const getAllTeamInvite = async (req, res, next) => {
             return;
         }
         
-        const invites = await Promise.all( tUser.pendingTeam.map(async (teamId) => {
-            const tTeam = await Team.findOne({_id : teamId});
-            const leader = await User.findOne({_id : tTeam.leader});
+        const invites = (await tUser.populate({path : 'pendingTeam' })).pendingTeam;
 
-            const data =  {
-                leader : leader.name,
-                teamName : tTeam.name,
-            }
-            return data;
-        }));
         console.log(invites)
         res.statusCode = 200;
         res.json({ invites : invites, success: true });
@@ -527,7 +513,32 @@ const getTeamMembers = async (req, res, next) => {
         next(error);
     }
 };
+const userProfile = async (req,res,next) => {
+    try{
+        const id = req.user._id;
+        const user = await User.findOne({_id : id});
+        if(!user){
+            res.statusCode = 400
+            res.json({
+                message : "User Does Not Exist",
+                error : "User Does Not Exist",
+                success : false
+            })
+            return;
+        }
 
+        res.statusCode = 200
+        res.json({
+            data : user,
+            success : true,
+        })
+        return;
+    }
+    catch(error){
+        console.log("error in userProfile()");
+        next(error);
+    }
+}
 
 module.exports = {
     createTeam,
@@ -539,4 +550,5 @@ module.exports = {
     getAllTeamParticipating,
     getTeamMembers,
     updateResume,
+    userProfile,
 }

@@ -1,57 +1,52 @@
-import { useState, useEffect } from "react";
+import { useEffect, useState } from "react";
+import { getAllInvite, respondTeam } from "../../services/teamService";
 
-const invitation = [
-  {
-    id: 1,
-    teamName: "Marketing Team",
-    leader: "John Doe",
-  },
-  {
-    id: 2,
-    teamName: "Engineering Team",
-    leader: "Jane Smith",
-  },
-  {
-    id: 3,
-    teamName: "Sales Team",
-    leader: "Alex Johnson",
-  },
-];
 const Invitations = () => {
   const [selectedteamId, setSelectedTeamId] = useState(null);
-  const [fetchedData, setFetchedData] = useState();
+  const [invitation, setInvitation] = useState([]);
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const d = await getAllInvite();
+        setInvitation(d.teams?.invites);
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      }
+    };
+
+    fetchData();
+  }, []);
 
   const handleClick = (teamId, status) => {
-    console.log(teamId, status);
-    const teamdata = {
-      teamId: teamId,
-      status: status,
-    };
-    console.log("teamData", teamdata);
+    try {
+      const teamdata = {
+        teamId: teamId,
+        status: status,
+      };
+      const res = respondTeam(teamdata).then((res) => {
+        getAllInvite().then((d) => {
+          setInvitation(d.teams?.invites);
+        });
+      });
+    } catch (error) {
+      console.error("Error fetching data:", error);
+    }
   };
-
-  useEffect(() => {
-    // const fetchData = async () => {
-    //   try {
-    //     const data = await getAllParticipating();
-    //     console.log("gotted from loki ", data);
-    //     setFetchedData(data);
-    //     console.log(typeof data.teams);
-    //   } catch (error) {
-    //     console.error("Error fetching data:", error);
-    //   }
-    // };
-    // fetchData();
-  }, []);
 
   return (
     <div>
-      <section className="text-gray-400 bg-gray-900 body-font">
+      <section
+        className="text-gray-400 h-[100vh]  body-font"
+        // style={{
+        //   background:
+        //     "linear-gradient(to bottom, #d95f3b, #f0984a, #fcd6a5, #7aa9a3, #338f9a, #1c4c70)",
+        // }}
+      >
         <div className="container px-5 py-24 mx-auto">
           <h1 className="sm:text-3xl text-2xl font-medium text-center title-font text-white mb-4">
             Team Invitations
           </h1>
-          {invitation.map((team, index) => {
+          {invitation?.map((team, index) => {
             return (
               <>
                 <div className="flex justify-center text-center mb-4">
@@ -59,9 +54,8 @@ const Invitations = () => {
                     <div className="h-full flex   items-center border-gray-800 border p-4 rounded-lg">
                       <div className="flex-grow">
                         <h2 className="text-white title-font font-medium">
-                          {team.teamName}
+                          {team.name}
                         </h2>
-                        <p className="text-gray-600">{team.leader}</p>
                       </div>
                     </div>
                   </div>
@@ -83,7 +77,7 @@ const Invitations = () => {
                       </svg>
                       <span
                         className="title-font font-medium text-white"
-                        onClick={() => handleClick(team.id, true)}
+                        onClick={() => handleClick(team._id, true)}
                       >
                         ACCEPT
                       </span>
@@ -105,7 +99,7 @@ const Invitations = () => {
                       </svg>
                       <span
                         className="title-font font-medium text-white"
-                        onClick={() => handleClick(team.id, false)}
+                        onClick={() => handleClick(team._id, false)}
                       >
                         Reject
                       </span>
