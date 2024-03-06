@@ -28,7 +28,7 @@ const EventCard = ({ data }) => {
                 />
                 <span className="flex text-center mx-auto text-3xl text-amber-100 font-custom hover:opacity-70 transition-opacity duration-300 ">
                   <div className="flex-col">
-                    <p className="text-3xl w-full mt-2 rumoura-font">
+                    <p className="text-3xl w-full mt-2 text-black rumoura-font">
                       Explore !
                     </p>
                   </div>

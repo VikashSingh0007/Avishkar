@@ -1,11 +1,9 @@
 import { useEffect, useState } from "react";
 import { getAllInvite, respondTeam } from "../../services/teamService";
 
-
-
 const Invitations = () => {
   const [selectedteamId, setSelectedTeamId] = useState(null);
-  const [invitation , setInvitation] = useState([]);
+  const [invitation, setInvitation] = useState([]);
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -20,31 +18,30 @@ const Invitations = () => {
   }, []);
 
   const handleClick = (teamId, status) => {
-    
-    try{
-        const teamdata = {
-          teamId: teamId,
-          status: status,
-        };
-        const res = respondTeam(teamdata).then(
-          (res) => {
-            getAllInvite().then(d => {
-              setInvitation(d.teams?.invites);
-            })
-          }
-        )
-        
-        
-    }
-    catch(error){
+    try {
+      const teamdata = {
+        teamId: teamId,
+        status: status,
+      };
+      const res = respondTeam(teamdata).then((res) => {
+        getAllInvite().then((d) => {
+          setInvitation(d.teams?.invites);
+        });
+      });
+    } catch (error) {
       console.error("Error fetching data:", error);
     }
   };
 
-
   return (
     <div>
-      <section className="text-gray-400 bg-gray-900 body-font">
+      <section
+        className="text-gray-400 h-[100vh]  body-font"
+        // style={{
+        //   background:
+        //     "linear-gradient(to bottom, #d95f3b, #f0984a, #fcd6a5, #7aa9a3, #338f9a, #1c4c70)",
+        // }}
+      >
         <div className="container px-5 py-24 mx-auto">
           <h1 className="sm:text-3xl text-2xl font-medium text-center title-font text-white mb-4">
             Team Invitations
@@ -59,7 +56,6 @@ const Invitations = () => {
                         <h2 className="text-white title-font font-medium">
                           {team.name}
                         </h2>
-                        
                       </div>
                     </div>
                   </div>
