@@ -8,7 +8,7 @@ import Navbar from "../Navbar";
 const AvishkarLanding = () => {
   return (
     <div
-      className="absolute top-0 bottom-0 left-0 h-full overflow-scroll  w-full bg-opacity-90 flex flex-col"
+      className="absolute top-0 bottom-0 left-0  overflow-scroll  w-full h-full bg-opacity-90 flex flex-col"
       // style={{ backgroundColor: "#090D00" }}
       // style={{
       //   backgroundImage: "linear-gradient(to bottom, #0099ff, #66ccff)",

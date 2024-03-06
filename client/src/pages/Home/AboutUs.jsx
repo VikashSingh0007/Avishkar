@@ -6,10 +6,7 @@ const AboutUs = () => {
   const navigate = useNavigate();
 
   return (
-    <div
-    // className="bg-black w-full "
-    // style={{ backgroundImage: `url(${BackGroundImage})` }}
-    >
+    <div>
       <section id="product" className={layout.sectionReverse}>
         <div className={layout.sectionImgReverse}>
           {/* <img src={BackGroundImage1} alt="Background Image" /> */}
