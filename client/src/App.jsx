@@ -23,6 +23,7 @@ import AvishkarLanding from "./pages/Home/Avishkar/AvishkarLanding.jsx";
 import AvishkarIndex from "./pages/Home/Avishkar/AvishkarIndex.jsx";
 import VerifyUser from "./pages/Credentials/VerifyUser.jsx";
 import Accomodation from "./pages/Home/Accomodation.jsx";
+
 const App = () => {
   return (
     <>
