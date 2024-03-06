@@ -103,7 +103,7 @@ export const Oligopoly = [
         ],
       },
       {
-        name: " Solo Lobo",
+        name: "Solo Lobo",
         disc: " Solo Lobo is about unleashing the true potential to be the best managers, while undergoing various assessments. It tests individuals who can excel on personal as well as team level. It comprises the HR recruitment process and tests an individual’s instant perspicacity to assimilate information by proposing the best solutions to strategize and manage the corporate risks. ",
         rule: [
           {

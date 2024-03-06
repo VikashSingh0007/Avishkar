@@ -19,6 +19,10 @@ import Codechef from "./culrav/assets/Codechef.png";
 import Gfg from "./culrav/assets/Gfg.png";
 import Github from "./culrav/assets/Github.jpg";
 import Groww from "./culrav/assets/Groww.png";
+import cocacola from "./culrav/assets/cocacola.png";
+import Ultratech from "./culrav/assets/Ultratech.png";
+import Amul from "./culrav/assets/Amul.png";
+
 const Carousel = () => {
   const Data = [
     {
@@ -46,10 +50,10 @@ const Carousel = () => {
       name: "varun",
       img: varun,
     },
-    {
-      name: "dhyeya",
-      img: dhyeya,
-    },
+    // {
+    //   name: "dhyeya",
+    //   img: dhyeya,
+    // },
     {
       name: "Pizzahut",
       img: Pizzahut,
@@ -58,10 +62,10 @@ const Carousel = () => {
       name: "Pepsi",
       img: Pepsi,
     },
-    {
-      name: "Ola",
-      img: Ola,
-    },
+    // {
+    //   name: "Ola",
+    //   img: Ola,
+    // },
     {
       name: "Bob",
       img: Bob,
@@ -70,10 +74,10 @@ const Carousel = () => {
       name: "Dell",
       img: Dell,
     },
-    {
-      name: "Godrej",
-      img: Godrej,
-    },
+    // {
+    //   name: "Godrej",
+    //   img: Godrej,
+    // },
     {
       name: "Codechef",
       img: Codechef,
@@ -89,6 +93,18 @@ const Carousel = () => {
     {
       name: "Groww",
       img: Groww,
+    },
+    {
+      name: "Coca-Cola",
+      img: cocacola,
+    },
+    {
+      name: "Ultratech",
+      img: Ultratech,
+    },
+    {
+      name: "Amul",
+      img: Amul,
     },
   ];
   useEffect(() => {
