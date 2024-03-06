@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./AvishkarLanding.css";
+import Avishkar from "../culrav/assets/avishkarlogo.png";
 import $ from "jquery"; // Import jQuery if not already imported
 import { Link } from "react-router-dom";
 const EventsComputer = ({ data }) => {
@@ -10,8 +11,7 @@ const EventsComputer = ({ data }) => {
   const [centralUnitButtonClass, setCentralUnitButtonClass] = useState(
     "computerButton computerButtonOff"
   );
-  const [isCentralUnitClicked, setIsCentralUnitClicked] = useState(true);
-  const [powerState, setPowerState] = useState(true);
+
   useEffect(() => {
     let initialized = false;
 
@@ -190,16 +190,10 @@ const EventsComputer = ({ data }) => {
             <div className="screenBox3 flex text-center items-center">
               <div
                 className="screen relative"
-                style={{
-                  backgroundColor: isCentralUnitClicked
-                    ? powerState
-                      ? "transparent"
-                      : "gray"
-                    : "black",
-                }}
+               
               >
                 <span
-                  hidden={!powerState}
+                 
                   className="absolute left-0 w-full  text-2xl opacity-100 top-4 z-[1] rumoura-font "
                 >
                   {eventName}
@@ -210,12 +204,13 @@ const EventsComputer = ({ data }) => {
                       JSON.stringify(data)
                     )}`}
                   > */}
-                  <img
+                  <Link to={`/AvishkarEvent/${encodeURIComponent(JSON.stringify(data))}`}><img 
                     className=""
-                    hidden={!(powerState && isCentralUnitClicked)}
+                   
                     src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/125707/sidebar-bg.png"
                     alt="Event Cover"
-                  />
+                  /></Link>
+                  
                   {/* </Link> */}
                 </div>
               </div>
@@ -223,20 +218,20 @@ const EventsComputer = ({ data }) => {
           </div>
           <div
             className="bottomFrame"
-            onClick={() => setPowerState(!powerState)}
+            
           >
             <div className="fan"></div>
             <img
-              className="logo"
-              src="http://www.icone-png.com/png/52/51692.png"
-              alt="logo"
-            />
+                src={Avishkar}
+                alt="Avishkar"
+                className="logo -mt-[18.5px] -ml-[6px] w-14 h-14 object-cover rounded-lg hover:scale-150 transition duration-300 ease-in-out"
+              />
             <div className="powerButton">
               <div className="powerIcon"></div>
             </div>
             <div
               className={`powerLight ${
-                screenState === "on" ? "lightOff" : "lightOn"
+                screenState === "on" ? "lightOn" : "lightOn"
               }`}
             ></div>
           </div>
@@ -261,12 +256,9 @@ const EventsComputer = ({ data }) => {
           <div className="screw4"></div>
           <div className="screw5"></div>
           <div className="powerButton">
-            <div className="buttonSlide">
+            <div className="">
               <div
-                onClick={() => {
-                  setIsCentralUnitClicked(!isCentralUnitClicked);
-                  setPowerState(!powerState);
-                }}
+               
                 className={centralUnitButtonClass}
               ></div>
             </div>
@@ -274,7 +266,7 @@ const EventsComputer = ({ data }) => {
             <div className="onIndicator"></div>
           </div>
           <div
-            className={`powerLight ${isCentralUnitOn ? "lightOn" : "lightOff"}`}
+            className={`powerLight ${isCentralUnitOn ? "lightOn" : "lightOn"}`}
           ></div>
         </div>
       </div>
