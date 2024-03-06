@@ -38,7 +38,7 @@ const timelineData = [
     },
   },
   {
-    text: "Kavyasandhya",
+    text: "KavyasAndhya",
     date: "March 19 2024",
     category: {
       tag: "Day-4",
@@ -62,7 +62,7 @@ const timelineData = [
     },
   },
   {
-    text: "Band Performance",
+    text: "BAnd Performance",
     date: "March 21 2024",
     category: {
       tag: "Day-6",
