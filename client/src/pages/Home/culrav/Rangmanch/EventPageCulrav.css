@@ -6,7 +6,6 @@
   font-style: normal;
 }
 
-
 :root {
   --card-height: 40vh;
   --card-width: calc(var(--card-height) / 1.1);
@@ -16,7 +15,7 @@
 }
 @media screen and (max-width: 1024px) {
   :root {
-    --card-height: 20vh;
+    --card-height: 30vh;
     --card-width: calc(var(--card-height) / 0.75);
   }
 }

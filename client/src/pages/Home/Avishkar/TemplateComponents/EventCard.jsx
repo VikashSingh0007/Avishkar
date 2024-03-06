@@ -49,7 +49,7 @@ const EventCard = ({ data }) => {
                 )}
                 <span className="flex text-center mx-auto text-3xl text-amber-100 font-custom hover:opacity-70 transition-opacity duration-300 ">
                   <div className="flex-col">
-                    <h4 className="text-3xl w-full mt-2">Explore!</h4>
+                    <h4 className="text-3xl text-black w-full mt-2 rumoura-font">Explore !</h4>
                   </div>
                 </span>
               </div>

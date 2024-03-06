@@ -9,7 +9,6 @@ const Navbar = () => {
   const [active, setActive] = useState("Home");
   const [toggle, setToggle] = useState(false);
 
-  
   const navLinks = [
     {
       id: "team",
@@ -38,6 +37,10 @@ const Navbar = () => {
     {
       id: "login",
       title: "Login",
+    },
+    {
+      id: "user",
+      title: "Profile",
     },
   ];
 

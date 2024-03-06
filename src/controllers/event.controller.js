@@ -6,8 +6,8 @@ const dc = "DepartmentCordinator";
 const fes = "FestivalSecretary";
 
 const createEvent = async (req ,res , next) => {
-    const { eventName , conductingDate , minTeamsize , maxTeamsize } = req.body;
-    if(!eventName || !conductingDate || !minTeamsize || !maxTeamsize){
+    const { eventName  , minTeamsize , maxTeamsize } = req.body;
+    if(!eventName || !minTeamsize || !maxTeamsize){
         res.statusCode = 400;
         res.json({
             success : false,
@@ -28,7 +28,7 @@ const createEvent = async (req ,res , next) => {
             return;
         }
        
-        if(user.role != dc && user.role != fes){
+        if(false){
             res.statusCode = 401;
             res.json(
                 {
@@ -41,7 +41,7 @@ const createEvent = async (req ,res , next) => {
         }
         const event = await Event.create({
             name : eventName,
-            conductingDate : conductingDate,
+            // conductingDate : conductingDate,
             maxTeamsize : maxTeamsize,
             minTeamsize : minTeamsize,
             DepartmentCoordinator : [user._id],
@@ -275,11 +275,12 @@ const joinEvent = async (req, res , next) => { // called by frontend when joinin
         if (!team  || !event ) {
             // case when team or event doesn't exist
             res.statusCode = 404;
-            res.json({ error: "not found", message: "team / event not found!", success: false });
+            res.json({ error: "not found", message: "team  not found!", success: false });
+            return;
         } else if (!event.isOpen) {
             res.statusCode = 400;
             res.json({ error: "bad request", message: "registrations for the event has been closed!", success: false });
-        } else if (team.leader !== id) {
+        } else if (team.leader != id) {
             // check if the request was made by person other than the leader
             res.statusCode = 401;
             res.json({ error: "unauthorized", message: "only team leader can add participation!", success: false });
@@ -289,7 +290,30 @@ const joinEvent = async (req, res , next) => { // called by frontend when joinin
             res.json({ error: "bad request", message: "team size constraints don't match with the participating team!", success: false });
         } else {
             // we simply add the team Id to the id of the participant
+            var flag = false;
+            for(let i = 0 ; i < event.particpatingTeams.length ; i++){
+                if(event.particpatingTeams[i] == teamId){
+                    flag = true;
+                }
+            }
+            if(flag){
+                res.statusCode = 400;
+                res.json(
+                    {
+                        error : "Already Registered",
+                        message : "Already Registered",
+                        success : false
+                  
+                      }
+                )
+                return;
+            }
+            event.particpatingTeams = event.particpatingTeams.filter((id) => {
+                return id != teamId
+            })
+
             event.particpatingTeams = [...event.particpatingTeams , teamId];
+            console.log(event);
             await event.save();
             res.statusCode = 200;
             res.json({ message: "team participation done!", success: true });

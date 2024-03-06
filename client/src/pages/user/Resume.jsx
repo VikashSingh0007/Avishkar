@@ -17,36 +17,33 @@ const Resume = () => {
     console.log(data);
     updateResume(data).then((res) => {
       console.log(res);
-    })
+    });
   };
   return (
     <div>
-      <section className="text-gray-400 bg-gray-900 body-font">
-        <div className=" px-5 py-24  flex justify-center ">
-          <div className=" md:w-1/4 flex  flex-col justify-center h-[70vh] bg-gray-800 bg-opacity-50 rounded-lg p-8  w-full mt-10 md:mt-0">
-            <h2 className="text-white text-4xl flex justify-center font-medium title-font mb-5">
-              Resume Team
+      <section className="text-gray-400 body-font">
+        <div className="flex justify-center">
+          <div className="rounded-lg mt-20 w-full md:w-[40vw] xs:h-[30vh] sm:h-[30vh] bg-white shadow-md p-8">
+            <h2 className="text-gray-800 text-4xl font-medium text-center mb-8">
+              Upload Resume
             </h2>
-            <div className="relative  mb-4">
-              <label
-                htmlFor="full-name"
-                className="leading-7   text-2xl text-gray-400"
-              >
+            <div className="relative mb-2">
+              <label htmlFor="resume-link" className="text-gray-600 text-2xl">
                 Resume Drive Link
               </label>
               <input
                 onChange={handleChange}
                 type="text"
-                id="full-name"
+                id="resume-link"
                 name="resumeLink"
-                className="w-full h-[7vh]
-                text-4xl bg-gray-600 bg-opacity-20 focus:bg-transparent focus:ring-2 focus:ring-green-900 rounded border border-gray-600 focus:border-green-500  outline-none text-gray-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out
-                "
+                className="w-full h-12 bg-gray-100 focus:bg-white focus:ring-2 focus:ring-green-900 rounded border border-gray-300 focus:border-green-500 outline-none text-gray-800 py-2 px-4 leading-8 transition-colors duration-200 ease-in-out"
               />
             </div>
-            Make Sure it is public
+            <h6 className="text-gray-600 mb-8 text-lg">
+              Make sure it is public
+            </h6>
             <button
-              className="text-white text-4xl bg-green-500 border-0 py-2 px-8 focus:outline-none hover:bg-green-600 rounded "
+              className="text-white text-3xl bg-green-500 border-0 py-2 px-8 focus:outline-none hover:bg-green-600 rounded w-full"
               onClick={() => handleSubmit()}
             >
               Upload Resume

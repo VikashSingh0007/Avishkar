@@ -29,7 +29,6 @@ const App = () => {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Index />} />
-
           <Route path="/admin" element={<AdminIndex />} />
           <Route path="/user" element={<User />} />
           <Route path="/CulravEvent" element={<CulravEvent />} />
