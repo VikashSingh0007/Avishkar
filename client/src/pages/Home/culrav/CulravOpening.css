@@ -446,7 +446,7 @@
 }
 
 .vinyl:after {
-  content: "";
+  content: "CULRAV \A \2234 \2235 \2234 \2235 \00a0 \00a0 \00a0 \00a0 \00a0 \00a0 \00a0 \00a0 \00a0 \00a0 \00a0 \00a0 \00a0 \00a0 \00a0 \00a0 \00a0 \00a0 \00a0 \00a0 \00a0 \25a6 \2592 \25a6 \Annual Cultural Fest";
   position: absolute;
   top: calc(50% - 1.25vmin);
   left: calc(50% - 0.65vmin);
@@ -458,7 +458,7 @@
 
 .name:before,
 .name:after {
-  content: "DEEP PURPLE \A \2234 \2235 \2234 \2235 \00a0 \00a0 \00a0 \00a0 \00a0 \00a0 \00a0 \00a0 \00a0 \00a0 \00a0 \00a0 \00a0 \00a0 \00a0 \00a0 \00a0 \00a0 \00a0 \00a0 \00a0 \25a6 \2592 \25a6 \A MADE IN JAPAN";
+  content: "CULRAV \A \2234 \2235 \2234 \2235 \00a0 \00a0 \00a0 \00a0 \00a0 \00a0 \00a0 \00a0 \00a0 \00a0 \00a0 \00a0 \00a0 \00a0 \00a0 \00a0 \00a0 \00a0 \00a0 \00a0 \00a0 \25a6 \2592 \25a6 \Annual Cultural Fest";
   background: #f000;
   width: 8vmin;
   height: 12vmin;

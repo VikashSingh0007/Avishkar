@@ -9,7 +9,8 @@ const Navbar = () => {
   const [active, setActive] = useState("Home");
   const [toggle, setToggle] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-
+  const userData=localStorage.getItem("userData");
+  const userToken=localStorage.getItem("userToken");
   useEffect(() => {
     const handleScroll = () => {
       const isScrolled = window.scrollY > 0;
@@ -61,17 +62,59 @@ const Navbar = () => {
         </div>
         <div className="w-[90%] ">
           <ul className="list-none  ml-[20%] md:flex hidden justify-end items-center flex-1 text-xl rumoura-font ">
-            {navLinks.map((nav) => (
-              <li
-                key={nav.id}
-                className={`font-poppins text-xxl mr-8  md:mr-12 md:font-medium md:text-sm lg:text-xl font-medium cursor-pointer rumoura-font ${
-                  active === nav.title ? "text-black" : "text-gray-900"
-                }`}
-                onClick={() => setActive(nav.title)}
-              >
-                <Link to={`/${nav.id}`}>{nav.title}</Link>
-              </li>
-            ))}
+            
+               
+          <li
+               key={"culravLanding"}
+               className={`font-poppins text-xxl mr-8  md:mr-12 md:font-medium md:text-sm lg:text-xl font-medium cursor-pointer rumoura-font ${
+                 active === "Culrav" ? "text-black" : "text-gray-900"
+               }`}
+               onClick={() => setActive("Culrav")}
+             >
+               {<Link to={'/culravLanding'}>Culrav</Link>}
+               
+             </li>
+             <li
+               key={"avishkar-landing"}
+               className={`font-poppins text-xxl mr-8  md:mr-12 md:font-medium md:text-sm lg:text-xl font-medium cursor-pointer rumoura-font ${
+                 active === "Avishkar" ? "text-black" : "text-gray-900"
+               }`}
+               onClick={() => setActive("Avishkar")}
+             >
+               {<Link to={'/avishkar-landing'}>Avishkar</Link>}
+               
+             </li>
+             <li
+               key={"accommodation"}
+               className={`font-poppins text-xxl mr-8  md:mr-12 md:font-medium md:text-sm lg:text-xl font-medium cursor-pointer rumoura-font ${
+                 active === "Accommodation" ? "text-black" : "text-gray-900"
+               }`}
+               onClick={() => setActive("Accommodation")}
+             >
+               {<Link to={'/accommodation'}>Accommodation</Link>}
+               
+             </li>
+             <li
+               key={"team"}
+               className={`font-poppins text-xxl mr-8  md:mr-12 md:font-medium md:text-sm lg:text-xl font-medium cursor-pointer rumoura-font ${
+                 active === "Team" ? "text-black" : "text-gray-900"
+               }`}
+               onClick={() => setActive("Team")}
+             >
+               {<Link to={'/proteamfile'}>Team</Link>}
+               
+             </li>
+             <li
+               key={"login"}
+               className={`font-poppins text-xxl mr-8  md:mr-12 md:font-medium md:text-sm lg:text-xl font-medium cursor-pointer rumoura-font ${
+                 active === "Login" ? "text-black" : "text-gray-900"
+               }`}
+               onClick={() => setActive("Login")}
+             >
+               {(!userData || !userToken) && <Link to={'/login'}>Login</Link>}
+               {userData && userToken && <Link to={'/profile'}>Profile</Link>}
+             </li>
+             
           </ul>
         </div>
 

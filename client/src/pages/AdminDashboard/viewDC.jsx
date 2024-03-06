@@ -1,27 +1,35 @@
 import React, { useEffect, useState } from "react";
-
 import { toast } from "react-toastify";
-
+import {getDepartmentalCoordies,removeDC} from "../../services/adminService"
 const ViewDC = () => {
-  const fetchedData = [
-    {
-      name: "NAME",
-      phone: "Phone",
-      email: "Email",
-      department: "Department",
-    },
-    {
-      name: "NAME",
-      phone: "Phone",
-      email: "Email",
-      department: "Department",
-    },
-  ];
-
-  const removeResponse = () => {};
+  
+  const [data,setData]=useState([]);
+  const [check,setCheck]=useState(false);
+useEffect(()=>{
+  const fetchTeams = async () => {
+    try {
+      const response = await getDepartmentalCoordies();
+      setData(response)
+    } catch (error) {
+      console.error("Error fetching data:", error);
+    }
+  };
+  fetchTeams();
+},[check])
+  const removeDepartmentalCoordie = async (email) => {
+    try {
+      const response=await removeDC(email);
+      console.log("rahul response",response);
+      if(response) setCheck(!check)
+    } catch (error) {
+  
+      console.log(error.message);
+    }
+  };
   return (
     <div className="bg-orange-200 mt-4 rounded-xl p-4">
-      {fetchedData?.map((item, index) => (
+      {data.length==0&&<><h1>No Departmental Coordinator Present</h1></>}
+      {data.length>0&&data?.map((item, index) => (
         <div key={index} style={{ marginBottom: "16px" }}>
           <div
             key={index}
@@ -45,7 +53,7 @@ const ViewDC = () => {
                 <button
                   onClick={() => {
                     {
-                      removeResponse(item.email, true);
+                      removeDepartmentalCoordie(item.email);
                     }
                   }}
                   className="bg-red-600 m-2"

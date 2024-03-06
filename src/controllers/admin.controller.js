@@ -1,18 +1,23 @@
 const User = require('../models/user.model');
 const Team = require('../models/team.model');
 const Event = require('../models/event.model')
+const createError=require('http-errors')
 const { addUserToDepartment, findUserInDepartment } = require('../helper/eventHelper');
-const dc = "DepartmentCordinator";
-const fes = "FestivalSecretary";
+const dc = "Coordie";
+const fes = "Admin";
 
+const XLSX = require('xlsx');
+const fs = require('fs');
+const { error } = require('console');
 
 const makeDepartmentalSecretary = async (req,res,next) => {
-    const { email  } = req.body;
-    if(!email){
+    const { email,department  } = req.body;
+    console.log(req.body);
+    if(!email||!department){
         res.statusCode = 400;
         res.json({
             error : "Email is Missing",
-            message : "Email is Not Present",
+            message : "Email/Department is Not Present",
             success : false,
         })
         return;
@@ -30,6 +35,7 @@ const makeDepartmentalSecretary = async (req,res,next) => {
             })
             return;
         }
+        if(!tuser.isVerified) throw createError.BadRequest("User is not E-mail Verified")
         const user = await User.findOne({_id : id});
         if(!user){
             res.statusCode = 400;
@@ -40,16 +46,9 @@ const makeDepartmentalSecretary = async (req,res,next) => {
             })
             return;
         }
-        if(user.role != fes){
-            res.statusCode = 400;
-            res.json({
-                error : "User Does Not Have Permission",
-                message : "User Does Not Have Permission",
-                success : false,
-            })
-            return;
-        }
+        
         tuser.role = dc;
+        tuser.department=department;
         await tuser.save();
         res.statusCode = 200;
         res.json({
@@ -59,16 +58,7 @@ const makeDepartmentalSecretary = async (req,res,next) => {
         return;
     }
     catch(e){
-        console.log(e);
-        res.statusCode = 400;
-        res.json(
-            {
-                error : "Something Went Wrong",
-                message : "Something Went Wrong",
-                success : false,
-            }
-        )
-        return;
+       next(e)
     }
 }
 
@@ -186,6 +176,7 @@ const getAllTeamsParticipatingInEvent = async (req, res, next) => {
     // for a user with userId returns the team which is participating in the event with eventId
     // this is publicc API NO security needed on this point
     const eventName = req.body.eventName;
+    console.log(req.body);
     if(!eventName){
         res.statusCode = 400;
         res.json({
@@ -197,7 +188,8 @@ const getAllTeamsParticipatingInEvent = async (req, res, next) => {
     }
     try {
         
-        const event = await Event.findOne({eventName : eventName});
+        const event = await Event.findOne({name : eventName}).populate({path : 'particpatingTeams' , populate : ['acceptedMembers']} );
+        console.log(event);
         if(!event){
             res.statusCode = 400;
             res.json({
@@ -207,13 +199,8 @@ const getAllTeamsParticipatingInEvent = async (req, res, next) => {
             })
             return;
         }
-        const participatingTeam = await Promise.all(event.particpatingTeams(async (participantteamId) => {
-            const parTeam = await Team.findOne({_id : participantteamId});
-            return {
-                name : parTeam.name,
-                leader : parTeam.leader,
-            }
-        }));
+        const participatingTeam = event.particpatingTeams
+        console.log("running" +participatingTeam);
         res.statusCode = 200;
         res.json({ participatingTeam : participatingTeam, success: true });
         return;
@@ -373,9 +360,98 @@ const getAllNotFeePaid = async (req,res) => {
     }
 }
 
+const downloadExcelEvent = async (req,res,next) => {
+    try{
+        const eventName = req.body.eventName;
+        console.log(req.body)
+        const event = await Event.findOne({name : eventName}).populate({path : 'particpatingTeams' , populate : ['acceptedMembers']} );
+        console.log(event.particpatingTeams)
+
+        if(!event){
+            res.statusCode = 400;
+            res.json({
+                success : false,
+                error : "No Event",
+                message : "No Team Has Participated"
+            })
+            return
+        }
+        
+        const jsonData = event.particpatingTeams
+        let count = 1;
+        const sendThisToFront = jsonData.map((data) => {
+            var singleEntry = {
+                teamName : data.name,
+                teamSize : data.size,
+            }
+            for(let i = 0; i < data.acceptedMembers.length ; i++){
+                singleEntry = {
+                    [`name ${i+1}`] : data.acceptedMembers[i].name,
+                    [`email ${i+1}`] : data.acceptedMembers[i].email,
+                    [`mobile ${i+1}`] : data.acceptedMembers[i].phone,
+                    ...singleEntry
+                }
+                
+            }
+            return singleEntry
+        })
+        console.log(sendThisToFront);
+        res.statusCode = 200;
+        res.json({
+            success : true,
+            data : sendThisToFront
+        })
+        return;
+    }
+    catch(error){
+        console.log(error.message);
+        res.statusCode = 400;
+        res.json({
+            success : false,
+            error : error.message,
+            message : "Something Went Wrong",
+        })
+        return;
+    }
+}
+
+const getDepartmentCoordies=async(req,res,next)=>{
+try {
+    const response=await User.find({role:"Coordie"});
+    console.log(response);
+    return res.status(200).json({
+        success:true,
+        data:response
+    });
+} catch (error) {
+    next(error)
+}
+}
+const deleteDepartmentCoordie=async (req,res,next)=>{
+    try {
+        const {email}=req.body;
+        if(!email) throw createError.BadRequest("Email is required");
+        console.log(email);
+        const user=await User.findOne({email:email});
+        console.log(email);
+        if(!user) throw createError.NotFound("Departmental Coordinator donot exist");
+         user.role="User";
+         user.department=null;
+         await user.save();
+         return res.status(200).json({
+            message:`${user.name} has been removed from departmental coordinator`,
+            success:true
+         })
+    } catch (error) {
+        next(error)
+    }
+}
 module.exports = {
     getAllNotFeePaid,
     getAllTeamsParticipatingInEvent,
     makeDepartmentalSecretary,
-    verifyPayment
+    verifyPayment,
+    downloadExcelEvent,
+    getDepartmentCoordies,
+    deleteDepartmentCoordie
 }

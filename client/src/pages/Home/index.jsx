@@ -38,9 +38,9 @@ const App = () => {
         <div className={`bg-primary ${styles.paddingX} ${styles.flexCenter}`}>
           <div className={`${styles.boxWidth}`}> {/* <Gallery /> */}</div>
         </div>
-        <PastPerformance /> 
+        <PastPerformance />
         <Sponsors />
-         <FAQ/>
+        {/* <FAQ/> */}
       </HomePageLayout>
     </>
   );

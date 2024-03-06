@@ -29,11 +29,17 @@ app.use("/api/auth", authRouter);
 app.use("/api/team", teamRouter);
 app.use("/api/event", eventRouter);
 app.use("/api/admin",adminRouter);
+app.use((err,req,res,next)=>{
+  return res.status(err.statusCode||500).json({
+    message:err.message,
+    success:false
+  })
+})
 // Serve your static files from the Vite build
-app.use(express.static(path.join(__dirname, "./client/dist")));
-app.get("*", (req, res) => {
-  res.sendFile(path.join(__dirname, "./client/dist/index.html"));
-});
+// app.use(express.static(path.join(__dirname, "./client/dist")));
+// app.get("*", (req, res) => {
+//   res.sendFile(path.join(__dirname, "./client/dist/index.html"));
+// });
 
 
 const PORT = process.env.PORT;
