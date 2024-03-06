@@ -37,13 +37,13 @@ const User = () => {
       <div>
         <Navbar />
       </div>
-      <div className="mt-20">
+      <div className="mt-20 min-h-screen overflow-hidden">
         <button
           className="p-4"
           onClick={() => setIsSidebarOpen(!isSidebarOpen)}
         >
           <svg viewBox="0 0 100 80" width="40" height="40" fill="#FFFFFF">
-            <rect width="100" height="15"></rect>
+            <rect width="70" height="15"></rect>
             <rect y="30" width="100" height="15"></rect>
             <rect y="60" width="100" height="15"></rect>
           </svg>
@@ -53,7 +53,11 @@ const User = () => {
           {isSidebarOpen && (
             <aside
               ref={sidebarRef}
-              className="flex z-1 absolute flex-col w-64 h-screen px-4 py-8 overflow-y-auto bg-white border-r rtl:border-r-0 rtl:border-l dark:bg-gray-900 dark:border-gray-700"
+              className="flex z-1 absolute flex-col w-64  px-4 py-8 overflow-y-auto  "
+              style={{
+                background:
+                  "linear-gradient(to bottom,  #f0984a, #fcd6a5, #7aa9a3, #338f9a)",
+              }}
             >
               <div className="relative mt-6">
                 <span className="absolute inset-y-0 left-0 flex items-center pl-3">
@@ -99,7 +103,11 @@ const User = () => {
                     </svg>
                     <span
                       className="mx-4 font-medium"
-                      onClick={() => setChoice("view")}
+                      onClick={() => {
+                        setChoice("view");
+                        setIsSidebarOpen(!isSidebarOpen);
+                      }}
+                      // onClick={() => setIsSidebarOpen(!isSidebarOpen)}
                     >
                       View Profile
                     </span>
@@ -124,7 +132,10 @@ const User = () => {
                     </svg>
                     <span
                       className="mx-4 font-medium"
-                      onClick={() => setChoice("resume")}
+                      onClick={() => {
+                        setChoice("resume");
+                        setIsSidebarOpen(!isSidebarOpen);
+                      }}
                     >
                       Upload Resume
                     </span>
@@ -149,7 +160,10 @@ const User = () => {
                     </svg>
                     <span
                       className="mx-4 font-medium"
-                      onClick={() => setChoice("team")}
+                      onClick={() => {
+                        setChoice("team");
+                        setIsSidebarOpen(!isSidebarOpen);
+                      }}
                     >
                       My Teams
                     </span>
@@ -174,7 +188,10 @@ const User = () => {
                     </svg>
                     <span
                       className="mx-4 font-medium"
-                      onClick={() => setChoice("create")}
+                      onClick={() => {
+                        setChoice("create");
+                        setIsSidebarOpen(!isSidebarOpen);
+                      }}
                     >
                       Create Team
                     </span>
@@ -199,7 +216,10 @@ const User = () => {
                     </svg>
                     <span
                       className="mx-4 font-medium"
-                      onClick={() => setChoice("invitation")}
+                      onClick={() => {
+                        setChoice("invitation");
+                        setIsSidebarOpen(!isSidebarOpen);
+                      }}
                     >
                       View Invitation
                     </span>

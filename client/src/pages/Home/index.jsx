@@ -32,7 +32,7 @@ const App = () => {
         </div>
 
         <EventTimeLine />
-        {/* <Gallery/> */}
+        {/* <Gallery /> */}
         <div className={`bg-primary ${styles.paddingX} ${styles.flexCenter}`}>
           <div className={`${styles.boxWidth}`}> {/* <Gallery /> */}</div>
         </div>
