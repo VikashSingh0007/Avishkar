@@ -1,6 +1,6 @@
 import axios from "axios";
-import { toast } from "react-toastify";
-import { Cookies } from "react-cookie";
+// import { toast } from "react-toastify";
+// import { Cookies } from "react-cookie";
 
 const Axios = axios.create({
   // change this url to base url if required
@@ -11,7 +11,7 @@ const Axios = axios.create({
 });
 
 Axios.interceptors.request.use(async (config) => {
-  const cookie = new Cookies();
+  // const cookie = new Cookies();
   // const accessToken = cookie.get("userid"); // get the accessToken from here
   const accessToken = localStorage.getItem('userToken');
   config.headers.Authorization = `Bearer ${accessToken}`;
