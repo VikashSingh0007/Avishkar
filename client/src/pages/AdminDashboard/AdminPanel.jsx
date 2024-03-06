@@ -4,6 +4,7 @@ import ViewEvent from "./ViewEvent";
 import VerifyPayment from "./VerifyPayment";
 import AddDC from "./AddDC";
 import Navbar from "../Home/Navbar";
+import { getAllEvents } from "../../services/adminService";
 
 
 const User = () => {
@@ -17,7 +18,19 @@ const User = () => {
 
   useEffect(()=>{
     //Get All events
-     
+         const fetchEvents = async () => {
+      try {
+        const d = await getAllEvents();
+        console.log(d.success);
+        if (d.success) {
+          setEvents(d.events.data);
+        }
+      } catch (error) {
+        history("/login");
+        console.error("Error fetching data:", error);
+      }
+    };
+    fetchEvents();
   },[])
 
   // Function to handle click outside of the sidebar
