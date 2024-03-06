@@ -1,6 +1,10 @@
 import { toast } from 'react-toastify';
 import Axios from './Axios.js'
+<<<<<<< Updated upstream
 
+=======
+{/*import { getAllEvents } from '../../../src/controllers/event.controller.js';.*/}
+>>>>>>> Stashed changes
 
 export const makeDc = async (data) => {
     try{
