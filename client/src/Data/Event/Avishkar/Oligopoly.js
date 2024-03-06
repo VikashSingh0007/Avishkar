@@ -38,7 +38,7 @@ export const Oligopoly = [
         ],
       },
       {
-        name: "Event-2: Trading Strategist ",
+        name: "Trading Strategist ",
         disc: " A Trading event which determines who is the big bull by using a predefined rules and criteria when making trading decisions. ",
         rule: [
           {

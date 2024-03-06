@@ -7,6 +7,7 @@ import AboutAvishkarCulrav from "./AboutAvishkarCulrav.jsx";
 import Sponsors from "./Sponsors.jsx";
 import AvishkarCulrav from "./AvishkarCulrav.jsx";
 import EventTimeLine from "./EventTimeline.jsx";
+import FAQ from "./FAQ.jsx";
 
 import Gallery from "./Gallery.jsx";
 import { toast } from "react-toastify";
@@ -39,6 +40,7 @@ const App = () => {
         </div>
         <PastPerformance />
         <Sponsors />
+        {/* <FAQ/> */}
       </HomePageLayout>
     </>
   );

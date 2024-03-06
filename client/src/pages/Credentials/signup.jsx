@@ -6,6 +6,7 @@ import axios from "axios";
 import signUp from "../../services/authService.js";
 import Navbar from "../Home/Navbar";
 import { useNavigate } from "react-router-dom";
+
 const SignUp = () => {
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
@@ -17,11 +18,13 @@ const SignUp = () => {
   const [gender, setGender] = useState("");
   const [isRotated, setIsRotated] = useState(false); // New state for rotation
   const [showQr, setShowQr] = useState(false);
+
   const navigate=useNavigate()
   useEffect(()=>{
     const response=localStorage.getItem("userData");
     if(response||localStorage.getItem("userToken")) return navigate('/');
   },[])
+
   const handleCollege = (value) => {
     if (value === "other") setShowOther(true);
     else setShowOther(false);
@@ -67,20 +70,19 @@ const SignUp = () => {
         //   backgroundRepeat: "no-repeat",
         // }}
       >
-        <div className="locard flex justify-center flex-col ">
+        <div className="locard flex justify-center flex-col p-5">
           {/* {isRotated && (
           <div> */}
           {/* {showQr === false && (
           <p className="ml-[1em] mt-[0.4em] mb-[0.5em]">Sign Up</p>
         )} */}
-          {showQr && (
-            <p className="mb-[0.5em] rotation" style={{ fontSize: "2em" }}>
-              Pay here
-            </p>
-          )}
+
           {isRotated === false ? (
-            <form className="w-full h-full gap-5 flex flex-col">
-              <div className="gap-5 flex flex-col w-[16em] font-medium overflow-auto">
+            <form
+              className="w-full h-full   gap-5 flex flex-col justify-center items-center"
+              style={showQr ? {} : { marginTop: "5%" }}
+            >
+              <div className="gap-5  flex flex-col h-[90%] font-medium overflow-y-scroll w-full pt-5 pb-3 p-2 bg-gray-200 bg-opacity-20 rounded shadow-lg backdrop-filter backdrop-blur-md">
                 <label htmlFor="email">Name:</label>
                 <input
                   className="input"
@@ -145,8 +147,12 @@ const SignUp = () => {
                 >
                   <option value="">Select your college</option>
                   <option value="mnnit">MNNIT</option>
-                  <option value="other">Other</option>
+                  <option value="other" onClick={() => setShowQr(true)}>
+                    Other
+                  </option>
                 </select>
+
+                {showQr && <p className="">Pay here</p>}
 
                 {showOther && (
                   <div>
@@ -171,12 +177,28 @@ const SignUp = () => {
                   </div>
                 )}
               </div>
-              <button
-                className=" button-33 text-[1.3em] mb-[1em]"
-                onClick={(e) => handleSubmit(e)}
-              >
-                submit
-              </button>
+              <div className="h-[10%] flex justify-center items-center  w-full">
+                <button
+                  className="  text-[1.3em]  px-4 py-2 rounded-xl hover:shadow-lg button-33"
+                  onClick={(e) => handleSubmit(e)}
+                  // style={{ backgroundColor: "rgb(248, 213, 177, 0.84)",border:"1px solid" }}
+                >
+                  Submit
+                </button>
+              </div>
+              <div>
+                <div className="text-black text-md">
+                  Already have an account ?{" "}
+                  <span
+                    className="text-blue-600 cursor-pointer"
+                    onClick={() => {
+                      navigate("/login");
+                    }}
+                  >
+                    Sign In
+                  </span>
+                </div>
+              </div>
             </form>
           ) : (
             <img src={qr} alt="qr" />
@@ -186,7 +208,7 @@ const SignUp = () => {
         )} */}
           {showQr === false && showOther && (
             <button
-              className="mb-[-3.2em] mt-[3em] font-bold"
+              className="mb-[-3.2em] mt-[3em] p-2 rounded-xl hover:shadow-xl font-bold"
               onClick={handleToggleRotation}
               style={{
                 backgroundColor: "rgb(248, 213, 177, 0.84)",

@@ -2,7 +2,7 @@
 import Razzammatz1 from "../../Images/Razzammatz1.png";
 import Razzammatz2 from "../../Images/Razzammatz2.png";
 import Razzammatz3 from "../../Images/Razzammatz3.png";
-
+import Revel from "../../Images/Revel.png";
 import Razzammatz4 from "../../Images/Razzammatz4.png";
 
 import BgImg from "../../Images/Razzmatazz.png";
@@ -124,7 +124,7 @@ export const Razzmatazz = [
           },
         ],
         TeamSize: "2-2",
-        BGImageLink: "",
+        BGImageLink: Revel,
         PsLink: "",
         coordinators: [
           {

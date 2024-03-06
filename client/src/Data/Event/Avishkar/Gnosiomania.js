@@ -50,7 +50,7 @@ export const Gnosiomania = [
         ],
       },
       {
-        name: "eneral Quiz",
+        name: "General Quiz",
         disc: "A quiz, where questions have no boundaries, no specific topics, one which constantly tease your mind, one where the better ones prevail and only the best ones excel!",
         rule: [
           {

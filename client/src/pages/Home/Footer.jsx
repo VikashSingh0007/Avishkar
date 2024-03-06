@@ -3,12 +3,16 @@ import { Link } from "react-router-dom";
 import { CiMail } from "react-icons/ci";
 import "./Nav.css";
 const Footer = () => (
-  <section className="bg-transparent mt-[10%] relative bottom-0">
+  <section className="bg-transparent mt-[10%] relative bottom-5  ">
     <div className="max-w-screen-xl px-4 py-2 mx-auto space-y-8 overflow-hidden sm:px-6 lg:px-8">
-      <div className="flex flex-wrap justify-center -mx-5 -my-2 text-xl font-bold">
+      <div className="flex flex-col justify-center -mx-5 -my-2 text-xl font-bold">
         <h3 className="flex flex-wrap justify-center  text-center text-xl font-bold rumoura-font">
           {" "}
-          MNNIT Allahabad, Teliyarganj, Prayagraj , India
+          Motilal Nehru National Institute of technology Allahabad
+        </h3>
+        <h3 className="flex flex-wrap justify-center  text-center text-xl font-bold rumoura-font">
+          {" "}
+          Prayagraj , India
         </h3>
       </div>
 
@@ -17,7 +21,7 @@ const Footer = () => (
         <div className="flex-grow lg:w-1/2">
           <h3 className="flex flex-wrap justify-center -mx-5  text-xl font-bold underline rumoura-font">
             {" "}
-            Avishkar Links
+            Avishkar
           </h3>
           <div className="flex justify-center mt-2 space-x-6">
             <Link
@@ -51,14 +55,19 @@ const Footer = () => (
             >
               <path d="m0 0h8v6h-8zm.75 .75v4.5h6.5v-4.5zM0 0l4 3 4-3v1l-4 3-4-3z" />
             </svg>
-            <h1 className="font-bold ">avishkar@mnnit.ac.in</h1>
+            <Link
+              to="mailto:avishkar@mnnit.ac.in"
+              className="hover:text-gray-400 font-bold"
+            >
+              avishkar@mnnit.ac.in
+            </Link>
           </div>
         </div>
         <div className="flex-grow lg:w-1/2 ">
           {/* Culrav */}
           <h3 className="flex flex-wrap justify-center -mx-5  text-xl font-bold underline rumoura-font">
             {" "}
-            Culrav Links
+            Culrav
           </h3>
           <div className="flex justify-center mt-2 space-x-6">
             <Link
@@ -92,7 +101,12 @@ const Footer = () => (
             >
               <path d="m0 0h8v6h-8zm.75 .75v4.5h6.5v-4.5zM0 0l4 3 4-3v1l-4 3-4-3z" />
             </svg>
-            <h1 className="font-bold">avishkar@mnnit.ac.in</h1>
+            <Link
+              to="mailto:culrav@mnnit.ac.in"
+              className="hover:text-gray-400 font-bold"
+            >
+              culrav@mnnit.ac.in
+            </Link>
           </div>
         </div>
       </div>
