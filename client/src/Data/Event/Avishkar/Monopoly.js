@@ -72,7 +72,7 @@ export const Monopoly = [
         ],
       },
       {
-        name: " Navachar ",
+        name: " char ",
         disc: "Navachar provides a platform to exhibit innovative business idea that can boost the profitability of an existing business. All you have to do is to add an innovative feature, technology, vertical, or idea to an existing business of your choice, with the consideration of financial viability. Get into the nitty gritty of the idea, present the same in an eye catchy manner.",
         rule: [
           {

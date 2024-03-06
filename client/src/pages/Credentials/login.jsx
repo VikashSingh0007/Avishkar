@@ -10,8 +10,8 @@ const Lo = () => {
   const navigate = useNavigate();
   const handleForgot = (e) => {
     e.preventDefault();
-    navigate('/forgotpassword');
-  }
+    navigate("/forgotpassword");
+  };
   const handleSubmit = async (e) => {
     e.preventDefault();
     const data = {
@@ -50,25 +50,35 @@ const Lo = () => {
         <div className="locard flex justify-center flex-col">
           <form className="w-full h-full gap-5 flex flex-col">
             <div className="gap-5 flex flex-col w-[15em] font-medium">
-              <label htmlFor="email">Email:</label>
-              <input
-                className="input"
-                type="email"
-                id="email"
-                name="email"
-                placeholder="Enter your email"
-                onChange={(e) => setEmail(e.target.value)}
-              />
-
-              <label htmlFor="password">Password:</label>
-              <input
-                className="input"
-                type="password"
-                id="password"
-                name="password"
-                placeholder="Enter your password"
-                onChange={(e) => setPassword(e.target.value)}
-              />
+              <div>
+                <label htmlFor="email">Email:</label>
+                <input
+                  className="input"
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="Enter your email"
+                  onChange={(e) => setEmail(e.target.value)}
+                />
+              </div>
+              <div>
+                <label htmlFor="password mb-2">Password:</label>
+                <input
+                  className="input"
+                  type="password"
+                  id="password"
+                  name="password"
+                  placeholder="Enter your password"
+                  onChange={(e) => setPassword(e.target.value)}
+                />
+                <a
+                  onClick={handleForgot}
+                  className="text-blue-900 cursor-pointer"
+                  
+                >
+                  forgot password?
+                </a>
+              </div>
             </div>
             <button
               className="button-33 text-[1em]"
@@ -76,10 +86,10 @@ const Lo = () => {
             >
               Login
             </button>
+            <div>
+              <p className="text-black text-md">Don't have an account yet? <span className="text-blue-900 cursor-pointer" onClick={()=>{navigate("/signup")}}>Sign Up</span></p>
+            </div>
           </form>
-          <a onClick={handleForgot}>
-            forgot password??
-          </a>
         </div>
         <svg className="lofilter">
           <filter id="wavy2">
