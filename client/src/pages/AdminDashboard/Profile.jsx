@@ -13,7 +13,7 @@ const View = () => {
     gender: "MALE",
     collegeName: "MNNIT",
   });
-  // const history = useNavigate();
+  const history = useNavigate();
 
   // useEffect(() => {
   //   const fetchData = async () => {

@@ -41,22 +41,22 @@ const View = ({ event }) => {
     setOpenTeamIndex((prevIndex) => (prevIndex === index ? null : index));
   };
 
-  useEffect(() => {
-    const getParticipants = async () => {
-      try {
-        const Token = localStorage.getItem('userToken');
-        const response = await services.getParticipationList(Token,event);
-        if (response.success) {
-          setTeam(response.participation);
-        }
-      } catch (error) {
-        console.error("Error fetching data:", error);
-        navigate("/login");
-      }
-      getParticipants();
-    };
-    getParticipants();
-  }, []);
+  // useEffect(() => {
+  //   const getParticipants = async () => {
+  //     try {
+  //       const Token = localStorage.getItem('userToken');
+  //       const response = await services.getParticipationList(Token,event);
+  //       if (response.success) {
+  //         setTeam(response.participation);
+  //       }
+  //     } catch (error) {
+  //       console.error("Error fetching data:", error);
+  //       navigate("/login");
+  //     }
+  //     getParticipants();
+  //   };
+  //   getParticipants();
+  // }, []);
 
   return (
     <div className="lg:w-[80%] w-full overflow-y-scroll">
@@ -70,7 +70,7 @@ const View = ({ event }) => {
       {teams.map((team, index) => (
         <div key={index} className="mb-4">
           <div
-            className="flex justify-between items-center bg-blue-200 p-3 rounded cursor-pointer hover:bg-blue-300"
+            className="flex justify-between items-center bg-orange-300 p-3 rounded cursor-pointer hover:bg-orange-400"
             onClick={() => toggleDropdown(index)}
           >
             <div>{team.teamName}</div>

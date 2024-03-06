@@ -9,7 +9,7 @@ const Create = () => {
           name: "Dummy1",
           paymentLink: "Url",
           college: "nvcbzxvbzx",
-          contactNumber: "6348764378347dhsjgd",
+          contactNumber: "6348764378347",
           email: "hsdvjsnbvcbbnvcz",
         },
         {
@@ -29,88 +29,76 @@ const Create = () => {
       ],
     },
   ];
-  return (
-    <div>
-      <div>
-        <table style={{ borderCollapse: "collapse", width: "100%" }}>
-          <thead>
-            <tr style={{ borderBottom: "1px solid black" }}>
-              <th style={{ padding: "8px", textAlign: "left" }}>Name</th>
-              <th style={{ padding: "8px", textAlign: "left" }}>College</th>
-              <th style={{ padding: "8px", textAlign: "left" }}>
-                Contact Number
-              </th>
-              <th style={{ padding: "8px", textAlign: "left" }}>
-                Payment Link
-              </th>
-              <th style={{ padding: "8px", textAlign: "left" }}>Email</th>
-              <th style={{ padding: "8px", textAlign: "left" }}>Action</th>
-            </tr>
-          </thead>
-          <tbody>
-            {dummyPayment.map((item, index) => (
-              <React.Fragment key={index}>
-                {item.request.map((req, reqIndex) => (
-                  <tr
-                    key={reqIndex}
-                    style={{ borderBottom: "1px solid black" }}
-                  >
-                    <td style={{ padding: "8px", textAlign: "left" }}>
-                      {req.name}
-                    </td>
-                    <td style={{ padding: "8px", textAlign: "left" }}>
-                      {req.college}
-                    </td>
-                    <td style={{ padding: "8px", textAlign: "left" }}>
-                      {req.contactNumber}
-                    </td>
-                    <td style={{ padding: "8px", textAlign: "left" }}>
-                      <a
-                        href={req.paymentLink}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        {req.paymentLink}
-                      </a>
-                    </td>
 
-                    <td style={{ padding: "8px", textAlign: "left" }}>
-                      {req.email}
-                    </td>
-                    <td style={{ padding: "8px", textAlign: "left" }}>
-                      <button
-                        onClick={() => window.open(req.paymentLink, "_blank")}
-                        style={{
-                          padding: "5px 10px",
-                          borderRadius: "5px",
-                          marginRight: "5px",
-                          backgroundColor: "green",
-                          color: "white",
-                          cursor: "pointer",
-                        }}
-                      >
-                        Accept
-                      </button>
-                      <button
-                        onClick={() => console.log("Reject")}
-                        style={{
-                          padding: "5px 10px",
-                          borderRadius: "5px",
-                          backgroundColor: "red",
-                          color: "white",
-                          cursor: "pointer",
-                        }}
-                      >
-                        Reject
-                      </button>
-                    </td>
-                  </tr>
-                ))}
-              </React.Fragment>
-            ))}
-          </tbody>
-        </table>
-      </div>
+  const handleAccept = () => {};
+  const handleReject = () => {};
+  
+  return (
+    <div className="bg-orange-200 mt-4 rounded-xl p-4">
+      {dummyPayment.map((item, index) => (
+        <div key={index} style={{ marginBottom: "16px" }}>
+          {item.request.map((req, reqIndex) => (
+            <div
+              key={reqIndex}
+              style={{ borderBottom: "1px solid black", marginBottom: "8px" }}
+            >
+              <div style={{ display: "flex", flexWrap: "wrap" }}>
+                <div style={{ flex: "1", padding: "8px", textAlign: "left" }}>
+                  <strong>Name:</strong> {req.name}
+                </div>
+                <div style={{ flex: "1", padding: "8px", textAlign: "left" }}>
+                  <strong>College:</strong> {req.college}
+                </div>
+                <div style={{ flex: "1", padding: "8px", textAlign: "left" }}>
+                  <strong>Contact Number:</strong> {req.contactNumber}
+                </div>
+                <div style={{ flex: "1", padding: "8px", textAlign: "left" }}>
+                  <strong>Payment Link:</strong>{" "}
+                  <a
+                    href={req.paymentLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    {req.paymentLink}
+                  </a>
+                </div>
+                <div style={{ flex: "1", padding: "8px", textAlign: "left" }}>
+                  <strong>Email:</strong> {req.email}
+                </div>
+                <div style={{ flex: "1", padding: "8px", textAlign: "left" }}>
+                  <button
+                    onClick={handleAccept}
+                    className="bg-green-600 m-2"
+                    style={{
+                      padding: "5px 10px",
+                      borderRadius: "5px",
+                      marginRight: "5px",
+
+                      color: "white",
+                      cursor: "pointer",
+                    }}
+                  >
+                    Accept
+                  </button>
+                  <button
+                    onClick={handleReject}
+                    className="bg-red-600 m-2"
+                    style={{
+                      padding: "5px 10px",
+                      borderRadius: "5px",
+
+                      color: "white",
+                      cursor: "pointer",
+                    }}
+                  >
+                    Reject
+                  </button>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      ))}
     </div>
   );
 };

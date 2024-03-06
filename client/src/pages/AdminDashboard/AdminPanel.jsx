@@ -34,6 +34,8 @@ const User = () => {
   }, []);
 
   const handleChoice = (choice) => {
+ 
+    console.log("Choice", choice);
     setChoice(choice);
   };
 
@@ -55,14 +57,14 @@ const User = () => {
       <div className="lg:h-[15%] h-[10%]  bg-transparent">
         <Navbar />
       </div>
-      <div className="lg:h-[85%] h-[90%] flex flex-row">
+      <div className="lg:h-[85%] h-[90%] flex flex-col md:flex-row ">
         <div
-          className="w-[20%] h-[90%] bg-orange-400 m-2 relative"
-          style={{ borderRadius: "5%" }}
+          className="md:w-[20%] items-center  flex md:h-[90%] justify-evenly md:justify-start flex-wrap sm:flex-row md:flex-col m-2  bg-gray-200 bg-opacity-20 rounded shadow-lg backdrop-filter backdrop-blur-md"
+          style={{ borderRadius: "2%" }}
         >
           <div
-            className={`flex p-2  items-center mt-5 font-semibold cursor-pointer rounded-md ${
-              choice === "view" ? "bg-blue-200" : ""
+            className={`flex p-2 text-xl items-center  font-semibold cursor-pointer rounded-md hover:bg-orange-300 ${
+              choice === "view" ? "bg-orange-400" : ""
             }`}
             onClick={() => {
               handleChoice("view");
@@ -71,8 +73,8 @@ const User = () => {
             View
           </div>
           <div
-            className={`flex p-2  items-center mt-5 font-semibold cursor-pointer rounded-md ${
-              choice === "viewEvent" ? "bg-blue-200" : ""
+            className={`flex p-2 text-xl  items-center font-semibold cursor-pointer hover:bg-orange-300 rounded-md ${
+              choice === "viewEvent" ? "bg-orange-400" : ""
             }`}
             onClick={() => {
               setModalOpen(!isModalOpen);
@@ -82,8 +84,8 @@ const User = () => {
           </div>
 
           <div
-            className={`flex p-2  items-center mt-5 font-semibold cursor-pointer rounded-md ${
-              choice === "verifyPayment" ? "bg-blue-200" : ""
+            className={`flex p-2 text-xl  items-center  font-semibold hover:bg-orange-300 cursor-pointer rounded-md ${
+              choice === "verifyPayment" ? "bg-orange-400" : ""
             }`}
             onClick={() => {
               handleChoice("verifyPayment");
@@ -92,8 +94,8 @@ const User = () => {
             Verify Payment
           </div>
           <div
-            className={`flex p-2  items-center mt-5 font-semibold cursor-pointer rounded-md ${
-              choice === "addDC" ? "bg-blue-200" : ""
+            className={`flex p-2 text-xl  items-center font-semibold hover:bg-orange-300 cursor-pointer rounded-md ${
+              choice === "addDC" ? "bg-orange-400" : ""
             }`}
             onClick={() => {
               handleChoice("addDC");
@@ -103,7 +105,7 @@ const User = () => {
           </div>
         </div>
         <div
-          className="w-[80%]  m-2 flex flex-col p-2 bg-orange-400  items-center"
+          className="md:w-[80%] md:h-auto h-[100%]  m-2 flex flex-col p-2  items-center bg-gray-200 bg-opacity-20 rounded shadow-lg backdrop-filter backdrop-blur-md"
           style={{ borderRadius: "2%" }}
         >
           {choice === "view" && <View />}
@@ -114,8 +116,8 @@ const User = () => {
       </div>
 
       {isModalOpen && (
-        <div className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-50 flex items-center justify-center">
-          <div className="bg-white p-4 rounded shadow-lg max-h-80 overflow-y-auto w-96 scrollbar-thin scrollbar-thumb-blue-500 relative">
+        <div className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-50 flex items-center justify-center ">
+          <div className="bg-white m-2 p-4 rounded shadow-lg max-h-80 overflow-y-auto w-96 scrollbar-thin scrollbar-thumb-blue-500 relative">
             <button
               className="absolute top-2 right-2 bg-red-500 text-white px-2 py-1 rounded cursor-pointer"
               onClick={closeModal}
@@ -127,7 +129,7 @@ const User = () => {
             <input
               type="text"
               placeholder="Search events..."
-              className="w-full p-2 mb-4 border rounded focus:outline-none focus:border-blue-500"
+              className="w-full p-2 mb-4 border rounded focus:outline-none focus:border-orange-300"
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
             />
@@ -136,11 +138,11 @@ const User = () => {
               {filteredEvents.map((event, index) => (
                 <div
                   key={index}
-                  className="bg-blue-200 p-3 rounded mb-2 cursor-pointer hover:bg-blue-300"
+                  className="bg-orange-200 p-3 rounded mb-2 cursor-pointer hover:bg-orange-300"
                   onClick={() => {
+                    closeModal();
                     setSelectedEvent(event);
                     handleChoice("viewEvent");
-                    closeModal();
                   }}
                 >
                   {event}
