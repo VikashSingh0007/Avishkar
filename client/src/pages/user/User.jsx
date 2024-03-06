@@ -27,9 +27,17 @@ const User = () => {
   }, []);
 
   return (
-    <div>
-      <div>{/* <Navbar /> */}</div>
+    <div
+      className="min-h-screen overflow-hidden"
+      style={{
+        background:
+          "linear-gradient(to bottom, #d95f3b, #f0984a, #fcd6a5, #7aa9a3, #338f9a, #1c4c70)",
+      }}
+    >
       <div>
+        <Navbar />
+      </div>
+      <div className="mt-20">
         <button
           className="p-4"
           onClick={() => setIsSidebarOpen(!isSidebarOpen)}

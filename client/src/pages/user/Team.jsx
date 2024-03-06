@@ -31,11 +31,11 @@ const Team = () => {
   return (
     <div>
       <section
-        className="text-gray-400 h-[100vh] bg-gray-900 body-font"
-        style={{
-          background:
-            "linear-gradient(to bottom, #d95f3b, #f0984a, #fcd6a5, #7aa9a3, #338f9a, #1c4c70)",
-        }}
+        className="text-gray-400   body-font"
+        // style={{
+        //   background:
+        //     "linear-gradient(to bottom, #d95f3b, #f0984a, #fcd6a5, #7aa9a3, #338f9a, #1c4c70)",
+        // }}
       >
         {fetchedData?.teams?.participating?.map((team, index) => {
           return (
@@ -45,42 +45,33 @@ const Team = () => {
                   <h1 className="sm:text-3xl text-2xl font-medium title-font mb-4 text-white">
                     {team?.name}
                   </h1>
-                  <div className="flex justify-center gap-5">
+                  <div className="flex flex-col items-center gap-4">
                     <input
-                      className="rounded-lg text-black p-3 w-[30vw] xs:w-[16vw] md:w-[40vw]"
+                      className="rounded-lg text-black p-3 w-[30vw] xs:w-[16vw] md:w-[40vw] border-2 border-gray-300 focus:outline-none focus:border-blue-500"
                       onChange={(e) => setEmail(e.target.value)}
+                      placeholder="Enter team member's email"
                     />
                     <button
-                      className="flex justify-center px-10 py-2 border-4 w-[3vw] border-solid text-black border-black bg-slate-500 rounded-xl hover:bg-sky-700 "
+                      className="flex justify-center px-8 py-2 border-2 border-gray-300 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition duration-300"
                       onClick={() => handleSubmit(team._id)}
                     >
-                      add
+                      Add Team Member
                     </button>
                   </div>
                 </div>
                 <div className="flex justify-center">
-                  <div className="flex flex-col md:flex-row  text-4xl justify-center">
-                    {team?.acceptedMembers.map((member, index) => {
-                      return (
-                        <>
-                          <div key={member._id} className="m-2">
-                            <div className="h-full flex   items-center border-gray-800 border p-4 rounded-lg">
-                              {/* <img
-                                alt="team"
-                                className="w-[10vw] h-[17vh] bg-gray-100 object-cover object-center flex-shrink-0 rounded-full mr-4"
-                                src="https://dummyimage.com/80x80"
-                              /> */}
-                              <div className="flex-grow text-wrap">
-                                <p className="text-white title-font font-medium ">
-                                  {member.username}
-                                </p>
-                                <p className="text-gray-600">{member.role}</p>
-                              </div>
-                            </div>
-                          </div>
-                        </>
-                      );
-                    })}
+                  <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+                    {team?.acceptedMembers.map((member, index) => (
+                      <div
+                        key={member._id}
+                        className="bg-gray-800 p-4 rounded-lg"
+                      >
+                        <p className="text-white text-xl font-medium mb-2">
+                          {member.username}
+                        </p>
+                        <p className="text-gray-400">{member.role}</p>
+                      </div>
+                    ))}
                   </div>
                 </div>
               </div>
