@@ -7,7 +7,7 @@ const fes = "FestivalSecretary";
 
 
 const makeDepartmentalSecretary = async (req,res,next) => {
-    const { email } = req.body;
+    const { email , eventName } = req.body;
     if(!email){
         res.statusCode = 400;
         res.json({
@@ -17,6 +17,17 @@ const makeDepartmentalSecretary = async (req,res,next) => {
         })
         return;
     }
+    if(!eventName){
+        res.statusCode = 400;
+        res.json(
+            {
+                error : "EventName is Missing",
+                message : "Event Name is Missing",
+                success : false
+            }
+        )
+        return;
+    } 
     try{
         const id = req.user._id;
         const tuser = await User.findOne({email : email});
@@ -229,7 +240,7 @@ const getAllTeamsParticipatingInEvent = async (req, res, next) => {
 };
 
 const verifyPayment = async (req,res) => { // to be called by DC or FS after fee payment verification
-    const { email } = req.body; // id of the user 
+    const { email , status } = req.body; // id of the user 
     // !!!!!!!!!!!!!!!!!!!!! IMPORTANT !!!!!!!!!!!!!!!!!!!!!!!!!!!
     /*
         here we need  a mechanism to identify that only DC or FS is calling
@@ -238,9 +249,18 @@ const verifyPayment = async (req,res) => { // to be called by DC or FS after fee
     if(!email){
         res.statusCode = 400;
         res.json({
-            error : "User Email cannot be empty",
+            error : "User Email cannot be NULL",
             success : false,
-            message : "User Email cannot be NULL"
+            message : "User Email cannot be Empty"
+        })
+        return;
+    }
+    if(status == null){
+        res.statusCode = 400;
+        res.json({
+            error : "Response Status Cannot Be Empty",
+            success : false,
+            message : "Response Status Cannot Be Empty"
         })
         return;
     }
@@ -281,14 +301,25 @@ const verifyPayment = async (req,res) => { // to be called by DC or FS after fee
             )
             return;
         }
-        tuser.isFeePaid = true;
-        await tuser.save();
-        res.statusCode = 200;
-        res.json({
-            success : true,
-            message : "User has Paid The Fee and Verified The Payment"
-        })
-        return;
+        if(status){
+            tuser.isFeePaid = true;
+            await tuser.save();
+            res.statusCode = 200;
+            res.json({
+                success : true,
+                message : "User has Paid The Fee and Verified The Payment"
+            })
+            return;
+        }
+        else{
+            await User.deleteOne({email : email});
+            res.statusCode = 200;
+            res.json({
+                success : true,
+                message : "User has Been Deleted From The Database"
+            })
+            return;
+        }
     }
     catch(e){
         console.log(e);
@@ -330,7 +361,7 @@ const getAllNotFeePaid = async (req,res) => {
             return;
         }
 
-        const data = await User.find({isFeePaid : false} , {email : 1 , name : 1 , mobile : 1});
+        const data = await User.find({isFeePaid : false } , {email : 1, phone : 1 , name : 1 , college : 1, paymentLink : 1} );
         res.statusCode = 200;
         res.json(
             {

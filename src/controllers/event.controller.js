@@ -238,11 +238,31 @@ const leaveEvent = async (req, res, next) => {
 };
 
 
-
+const getAllEvents = async (req , res , next ) => {
+    try{
+        const event = await Event.find({} , {name : 1 });
+        res.statusCode = 200;
+        res.json({
+            success : true,
+            data : event,
+        })
+    }
+    catch(error){
+        res.statusCode = 400;
+        res.json({
+            success : false,
+            error : "Something Went Wrong",
+            message : "Something Went Wrong",
+        })
+        console.log("error occured in the getAllEvents() controller!");
+        next(error);
+    }
+}
 
 
 module.exports = {
     joinEvent,
     leaveEvent,
     createEvent,
+    getAllEvents
 }
