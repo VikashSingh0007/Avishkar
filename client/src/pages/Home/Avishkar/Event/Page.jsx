@@ -125,7 +125,7 @@ const Page = () => {
                                   className="flex flex-col items-center kelly-slab-regular text-lg"
                                 >
                                   <div>{coordinator.name}</div>
-                                  <div>{coordinator.phone}</div>
+                                  {/* <div>{coordinator.phone}</div> */}
                                 </li>
                               )
                             )}

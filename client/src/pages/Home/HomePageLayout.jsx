@@ -12,11 +12,11 @@ const HomePageLayout = ({ children }) => (
     <div className="mb-20 hidden sm:flex">
       <Navbar />
     </div>
-    <div className="sm:hidden z-[5] absolute top-0 left-0 w-full bg-yellow-200">
+    <div className="sm:hidden z-[5] absolute top-0 left-0 w-full ">
       <Navbar />
     </div>
     <div className="">
-    <Video />
+      <Video />
     </div>
     <div className={`${styles.paddingX} ${styles.flexCenter}`}>
       <div className={`${styles.boxWidth}`}>

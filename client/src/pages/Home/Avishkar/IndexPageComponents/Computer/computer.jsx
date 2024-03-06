@@ -60,7 +60,7 @@ const Computer = () => {
 
   return (
     <div
-      className={`bg-transparent ${
+      className={` relative ${
         computerOn ? "relative sm:absolute sm:top-1/2 lg:top-5" : "relative"
       } flex flex-col justify-center w-full top-0 items-center transition-all duration-500  ${
         computerOn ? "w-[100%]" : "w-[70%]"
@@ -104,8 +104,8 @@ const Computer = () => {
                 autoPlay
                 loop
                 muted
-                className="absolute top-12 left-16"
-                style={{ width: "79%", height: "79%", objectFit: "cover" }}
+                className="absolute top-[11%] left-[11%] rounded-xl"
+                style={{ width: "77%", height: "77%", objectFit: "cover" }}
               />
             </div>
           )

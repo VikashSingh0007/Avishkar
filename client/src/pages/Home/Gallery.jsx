@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from "react";
+import React, { useRef, useEffect, useState } from "react";
 import "./Gallery.css"; // Make sure to adjust the path
 import { motion } from "framer-motion"; // Importing motion from framer-motion
 import MameKhan from "../Home/assets/MameKhan.jpeg";
@@ -56,11 +56,29 @@ const timelineData = [
 
 const Timeline = () => {
   const timelineRef = useRef(null);
+  const [data, setData] = useState(timelineData);
 
   useEffect(() => {
     const handleAutoSwipe = () => {
       if (window.innerWidth <= 800 && timelineRef.current) {
-        timelineRef.current.scrollLeft += timelineRef.current.offsetWidth;
+        // Move to the first item when reaching the end
+        // console.log(timelineRef.current);
+        // console.log(timelineRef.current.scrollLeft);
+        // console.log(
+        //   timelineRef.current.scrollWidth - timelineRef.current.offsetWidth
+        // );
+
+        if (
+          timelineRef.current.scrollLeft >=
+          timelineRef.current.scrollWidth - timelineRef.current.offsetWidth-200
+        ) {
+          timelineRef.current.scrollLeft = 0;
+          // Reload the data after reaching the end
+          setData(timelineData);
+          // console.log("Data reloaded");
+        } else {
+          timelineRef.current.scrollLeft += timelineRef.current.offsetWidth;
+        }
       }
     };
 
@@ -83,10 +101,10 @@ const Timeline = () => {
       </h2>
       <motion.section // Wrap section with motion component
         ref={timelineRef}
-        className="timeline mb-[-10%]"
-        style={{ overflowX: "scroll" }}
+        className="timeline mb-[-10%] overflow-x-hidden sm:overflow-x-scroll"
+        initial={{ scrollLeft: 0 }} // Initial position set to the start
       >
-        {timelineData.map((item, index) => (
+        {data.map((item, index) => (
           <motion.article // Wrap article with motion component
             key={index}
             animate={{ opacity: 1 }} // Animation to fade in
@@ -98,7 +116,11 @@ const Timeline = () => {
               className="imgGallery"
               src={item.imgSrc}
               alt=""
-              style={{ width: "350px", height: "400px", borderRadius: "20px" }}
+              style={{
+                width: "350px",
+                height: "400px",
+                borderRadius: "20px",
+              }}
             />
           </motion.article>
         ))}

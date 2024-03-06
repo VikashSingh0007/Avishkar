@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { CiMail } from "react-icons/ci";
 import "./Nav.css";
 const Footer = () => (
-  <section className="bg-transparent mt-[10%]">
+  <section className="bg-transparent mt-[10%] relative bottom-0">
     <div className="max-w-screen-xl px-4 py-2 mx-auto space-y-8 overflow-hidden sm:px-6 lg:px-8">
       <div className="flex flex-wrap justify-center -mx-5 -my-2 text-xl font-bold">
         <h3 className="flex flex-wrap justify-center  text-center text-xl font-bold rumoura-font">
@@ -15,11 +15,11 @@ const Footer = () => (
       {/* Avishkar */}
       <div className="flex flex-col lg:flex-row">
         <div className="flex-grow lg:w-1/2">
-          <h3 className="flex flex-wrap justify-center -mx-5 my-2 text-xl font-bold underline rumoura-font">
+          <h3 className="flex flex-wrap justify-center -mx-5  text-xl font-bold underline rumoura-font">
             {" "}
             Avishkar Links
           </h3>
-          <div className="flex justify-center mt-8 space-x-6">
+          <div className="flex justify-center mt-2 space-x-6">
             <Link
               to="https://www.instagram.com/avishkar_mnnit/"
               className="text-gray-400 hover:text-gray-500"
@@ -56,11 +56,11 @@ const Footer = () => (
         </div>
         <div className="flex-grow lg:w-1/2 ">
           {/* Culrav */}
-          <h3 className="flex flex-wrap justify-center -mx-5 my-2 text-xl font-bold underline rumoura-font">
+          <h3 className="flex flex-wrap justify-center -mx-5  text-xl font-bold underline rumoura-font">
             {" "}
             Culrav Links
           </h3>
-          <div className="flex justify-center mt-8 space-x-6">
+          <div className="flex justify-center mt-2 space-x-6">
             <Link
               to="https://www.instagram.com/culrav/?hl=en"
               className="text-gray-400 hover:text-gray-500"
@@ -96,7 +96,7 @@ const Footer = () => (
           </div>
         </div>
       </div>
-      <h6 className="mt-8 text-base leading-6 text-center text-black rumoura-font">
+      <h6 className="mt-2 text-base leading-6 text-center text-black rumoura-font">
         Copyright Ⓒ 2024 MNNIT. All Rights Reserved.
       </h6>
     </div>

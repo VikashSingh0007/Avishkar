@@ -38,7 +38,7 @@ const timelineData = [
     },
   },
   {
-    text: "Kavyasandhya",
+    text: "KavyasAndhya",
     date: "March 19 2024",
     category: {
       tag: "Day-4",
@@ -62,7 +62,7 @@ const timelineData = [
     },
   },
   {
-    text: "Band Performance",
+    text: "BAnd Performance",
     date: "March 21 2024",
     category: {
       tag: "Day-6",
@@ -119,6 +119,40 @@ const TimelineItem = ({ data }) => (
 const Timeline = () =>
   timelineData.length > 0 && (
     <>
+      {/* <div>
+        <div className="bike">
+          <ul className="wheel l-wheel">
+            {[...Array(12)].map((_, index) => (
+              <li key={index} className={`stick${index + 1}`}></li>
+            ))}
+          </ul>
+          <ul className="wheel r-wheel">
+            {[...Array(12)].map((_, index) => (
+              <li key={index} className={`stick${index + 1}`}></li>
+            ))}
+          </ul>
+          <div className="frame frame1"></div>
+          <div className="frame frame2"></div>
+          <div className="frame frame3"></div>
+          <div className="frame frame4"></div>
+          <div className="frame frame5"></div>
+          <div className="frame frame6"></div>
+          <div className="cushion"></div>
+          <div className="head">
+            <div className="handler"></div>
+          </div>
+          <div className="axle">
+            <div className="stick stick1"></div>
+            <div className="stick stick2"></div>
+            <div className="pedal pedal1"></div>
+            <div className="pedal pedal2"></div>
+          </div>
+          <div className="wheel-axle">
+            <div className="chain chain1"></div>
+            <div className="chain chain2"></div>
+          </div>
+        </div>
+      </div> */}
       <h2
         className="text-3xl text-black font-bold mb-4 flex justify-center mt-[10%] rumoura-font"
         style={{
