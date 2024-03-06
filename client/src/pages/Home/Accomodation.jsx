@@ -42,7 +42,7 @@ const Accomodation = () => {
                 <h6 className="leading-relaxed text-black text-lg rumoura-font">
                   Fee : To be announce
                 </h6>
-                <h6 className="leading-relaxed text-black text-lg rumoura-font">
+                <h6 className="leading-relaxed text-black text-lg text-justify rumoura-font">
                   Indulge in The world of technology And innovation as you
                   witness groundbreaking inventions And projects. Dive deep into
                   The realm of science, engineering, And technology, And
@@ -62,12 +62,12 @@ const Accomodation = () => {
                 <h6 className="leading-relaxed text-black text-lg rumoura-font">
                   Fee : To be announce
                 </h6>
-                <h6 className="leading-relaxed text-black text-lg rumoura-font">
+                <h6 className="leading-relaxed text-black text-lg text-justify rumoura-font">
                   Experience The essence of culture And tradition with our
                   four-day cultural fest. Immerse yourself in mesmerizing
-                  performances, colorful exhibitions, And engaging workshops
-                  that showcase The rich diversity of our heritage. Get ready to
-                  dance, sing, And celebrate with us!
+                  performances And colorful exhibitions, that showcase The rich
+                  diversity of our heritage. Get ready to dance, sing, And
+                  celebrate with us!
                 </h6>
               </div>
             </div>
@@ -76,19 +76,18 @@ const Accomodation = () => {
                 <h2 className="text-gray-900 text-xl title-font font-medium mb-3 rumoura-font">
                   Plan3 - Combined Fest Experience (7 Days)
                 </h2>
-                <h6 className="leading-relaxed text-black text-l rumoura-font">
+                <h6 className="leading-relaxed text-black text-lg rumoura-font">
                   Date : March 16th to March 22nd
                 </h6>
-                <h6 className="leading-relaxed text-black text-l rumoura-font">
+                <h6 className="leading-relaxed text-black text-lg rumoura-font">
                   Fee : To be announce
                 </h6>
-                <h6 className="leading-relaxed text-black text-l rumoura-font">
-                  Why choose when you can have it all? Enjoy The best of both
-                  worlds with our combined fest experience. Spend seven
-                  unforgettable days exploring The wonders of technology And
-                  culture. From cutting-edge innovations to traditional
-                  performances, this package offers a comprehensive journey
-                  through The heart of our fest.
+                <h6 className="leading-relaxed text-black text-lg text-justify rumoura-font">
+                  Enjoy The best of both worlds with our combined fest
+                  experience. Spend seven unforgettable days exploring The
+                  wonders of technology And culture. From cutting-edge
+                  innovations to traditional performances, this package offers a
+                  comprehensive journey through The heart of our fest.
                 </h6>
               </div>
             </div>

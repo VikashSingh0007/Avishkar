@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React, { useState, useEffect } from "react";
 import close from "./culrav/assets/close.svg";
 import menu from "./culrav/assets/menu.svg";
 import logo from "./culrav/assets/culravAviskarLogo.png";
@@ -8,16 +8,21 @@ import { Link } from "react-router-dom";
 const Navbar = () => {
   const [active, setActive] = useState("Home");
   const [toggle, setToggle] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const isScrolled = window.scrollY > 0;
+      setScrolled(isScrolled);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   const navLinks = [
-    {
-      id: "team",
-      title: "Team",
-    },
-    {
-      id: "sponsors",
-      title: "Sponsors",
-    },
     {
       id: "culravLanding",
       title: "Culrav",
@@ -31,28 +36,26 @@ const Navbar = () => {
       title: "Accommodation",
     },
     {
-      id: "signup",
-      title: "Register",
+      id: "team",
+      title: "Team",
     },
     {
       id: "login",
       title: "Login",
     },
-    {
-      id: "user",
-      title: "Profile",
-    },
   ];
 
   return (
-    <nav className="w-full fixed top-0  z-10 ">
+    <nav
+      className={`w-full fixed top-0 z-20 ${scrolled ? "bg-orange-400" : ""}`}
+    >
       <div className="flex justify-between items-center px-4 py-0">
         <div className="w-[10%]">
           <Link to="/">
             <img
               src={logo}
               alt="AvishkarCulrav"
-              className="w-14 h-16 md:w-20 md:h-20 lg:w-24 lg:h-24"
+              className="w-12 h-14 md:w-16 md:h-16 lg:w-20 lg:h-16 "
             />
           </Link>
         </div>
@@ -81,7 +84,6 @@ const Navbar = () => {
       </div>
 
       {toggle && (
-        // <div className="sm:hidden bg-gray-100 p-4">
         <div className=" md:hidden p-6 bg-gray-100 absolute z-[20] top-20 right-0 mx-4 my-2 min-w-[140px] rounded-xl sidebar">
           <ul className="flex flex-col space-y-2">
             {navLinks.map((nav) => (
