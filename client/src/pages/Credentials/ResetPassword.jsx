@@ -1,5 +1,5 @@
-import { useState } from "react";
-import { useParams } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { useNavigate, useParams } from "react-router-dom";
 import { toast } from "react-toastify";
 import "./ForgotPassword.css";
 
@@ -11,10 +11,16 @@ export default function ResetPassword(){
     const [password , setPassword] = useState('');
     const [confirmPassword , setConfirmPassword] = useState('');
     const params =  useParams(); //use this to get the token for calling
+    const navigate = useNavigate();
+    useEffect(()=>{
+      const response=localStorage.getItem("userData");
+      if(response||localStorage.getItem("userToken")) return navigate('/');
+    },[])
     const showError = () => {
         toast.error("Password Don't Match")
     }
-    const handleSubmit = (e) => {
+    
+    const handleSubmit = async (e) => {
         e.preventDefault();
         if(!password){
             toast.error("Password Field Cannot Be Empty")
@@ -34,7 +40,9 @@ export default function ResetPassword(){
               token : token,
               password : password
             }
-            resetPassword(messageData)
+           await resetPassword(messageData)
+           navigate('/login')
+           return
             // write procceding logic here
 
         }

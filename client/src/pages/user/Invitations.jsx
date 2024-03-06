@@ -4,6 +4,7 @@ import { getAllInvite, respondTeam } from "../../services/teamService";
 const Invitations = () => {
   const [selectedteamId, setSelectedTeamId] = useState(null);
   const [invitation, setInvitation] = useState([]);
+  const [check,setCheck]=useState(false);
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -15,19 +16,18 @@ const Invitations = () => {
     };
 
     fetchData();
-  }, []);
+  }, [check]);
 
-  const handleClick = (teamId, status) => {
+  const handleClick = async (teamId, status) => {
     try {
       const teamdata = {
         teamId: teamId,
         status: status,
       };
-      const res = respondTeam(teamdata).then((res) => {
-        getAllInvite().then((d) => {
-          setInvitation(d.teams?.invites);
-        });
-      });
+      const res =await respondTeam(teamdata)
+      setCheck(!check);
+      return;
+
     } catch (error) {
       console.error("Error fetching data:", error);
     }

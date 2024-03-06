@@ -101,7 +101,7 @@ const Navbar = () => {
                }`}
                onClick={() => setActive("Team")}
              >
-               {<Link to={'/proteamfile'}>Team</Link>}
+               {<Link to={'/team'}>Team</Link>}
                
              </li>
              <li
