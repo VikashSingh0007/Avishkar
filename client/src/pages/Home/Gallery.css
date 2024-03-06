@@ -8,7 +8,7 @@
     overflow-x: scroll;
     scroll-snap-type: x mandatory;
     width: 100%;
-    min-height: 100vh;
+    min-height: 80vh;
     padding-inline: calc((100vw - var(--item-size)) / 2);
 
     & article {
@@ -29,7 +29,7 @@
         background: oklab(0.2 -0.07 0.05); /* Replace with a valid color */
         margin-top: -1px;
         padding: 16px;
-        border-radius: 0 0 20px 20px;
+        border-radius: 20px 20px 20px 20px;
         animation: info linear both;
         animation-timeline: view(inline);
         z-index: -1;
@@ -41,8 +41,7 @@
   .imgGallery {
     display: block;
     line-height: 1;
-    width: 100%;
-  
+
     object-fit: cover;
     animation: imageEnter linear both;
     animation-timeline: view(inline);
@@ -66,7 +65,8 @@
 
 @layer keyframes {
   @keyframes reveal {
-    0%, 100% {
+    0%,
+    100% {
       transform: translate(0, -25%);
       scale: 0.7;
       opacity: 0.2;
@@ -79,7 +79,10 @@
   }
 
   @keyframes info {
-    0%, 40%, 60%, 100% {
+    0%,
+    40%,
+    60%,
+    100% {
       opacity: 0;
       transform: translateY(-100%);
     }
@@ -96,7 +99,8 @@
       border-radius: 0;
     }
 
-    40%, 60% {
+    40%,
+    60% {
       scale: 1;
       rotate: 0deg;
       border-radius: 20px 20px 0 0;
@@ -144,7 +148,7 @@
   .custom-boy-css {
     margin: 0;
     padding: 0;
-    min-height: 100vh;
+    min-height: 80vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -157,7 +161,6 @@
     background-position: center;
     background-blend-mode: multiply;
   }
-
 
   strong {
     font-weight: 500;
