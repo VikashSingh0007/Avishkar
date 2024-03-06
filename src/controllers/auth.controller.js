@@ -14,14 +14,22 @@ const dc = "DepartmentCordinator";
 const fes = "FestivalSecretary";
 
 const userSignup = async (req, res, next) => {
-  const { name, email, college, gender, phone, password, resumeLink } =
-    req.body;
+  const { name, email, college, gender, phone, password, resumeLink , paymentLink } = req.body;
   console.log(req.body);
   //   console.log(phone);
   // generating salt for password hash and token for user email verification
   try {
     console.log("entered try catch");
-    if (!name || !email || !college || !gender || !phone || !password) {
+    if( college != "mnnit" && !paymentLink ){
+      res.statusCode = 400;
+      res.json({
+        error : "bad request",
+        message : "no payment link provided",
+        success : false
+      })
+      return;
+    }
+    if (!name || !email || !college || !gender || !phone || !password || !paymentLink) {
       // check if all field are filled
 
       console.log("data missing");
@@ -140,6 +148,7 @@ const userSignup = async (req, res, next) => {
           isVerified: false,
           isFeePaid: false,
           resumeLink,
+          paymentLink
         });
         // console.log(newUser);
 

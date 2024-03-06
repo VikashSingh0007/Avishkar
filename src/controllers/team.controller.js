@@ -66,7 +66,6 @@ const createTeam = async (req, res, next) => {
     const email = req.user.email; // get credentials
     const user = await User.findOne({email}); // get user
     
-    console.log(user.email);
     if(!user){ //validate user
         res.statusCode = 400;
         res.json({
@@ -140,11 +139,10 @@ const createTeam = async (req, res, next) => {
 
 // this endpoint needs to be tested thoroughly inorder to ensure security
 const deleteTeam = async (req, res, next) => {
-    console.log('initating delte Team');
+   
     const { teamId } = req.body; 
     const id = req.user._id;
-    console.log(teamId);
-    console.log(id);
+    
     if(!teamId){
         res.statusCode = 400;
         res.json(
