@@ -12,21 +12,45 @@
   font-weight: 900;
   font-style: normal;
 }
-.btn2 {
-  padding: 1.1em 2em;
-  background: none;
-  border: 2px solid #fff;
-  font-size: 18px;
-
+.bn632-hover {
+  width: 160px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
   cursor: pointer;
+  margin: 20px;
+  height: 55px;
+  text-align: center;
+  border: none;
+  background-size: 300% 100%;
+  border-radius: 50px;
+  -o-transition: all 0.4s ease-in-out;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
 
-  overflow: hidden;
-  transition: all 0.3s;
-  border-radius: 12px;
-  background-color: #ecd448;
-  font-weight: bolder;
-  box-shadow: 0 2px 0 2px #000;
-  
+.bn632-hover:hover {
+  background-position: 100% 0;
+  moz-transition: all .4s ease-in-out;
+  -o-transition: all .4s ease-in-out;
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+}
+
+.bn632-hover:focus {
+  outline: none;
+}
+
+.bn632-hover.bn24 {
+  background-image: linear-gradient(
+      to right,
+      #328b98,
+      #ee9248,
+      #ee9248,
+      #328b98
+      
+    );
+  box-shadow: 0 4px 15px 0 rgba(126, 52, 161, 0.75);
 }
 .protest-revolution-regular1 {
   font-family: "Kode Mono", monospace;

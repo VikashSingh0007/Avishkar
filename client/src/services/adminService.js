@@ -1,6 +1,7 @@
 import { toast } from 'react-toastify';
 import Axios from './Axios.js'
 
+
 export const makeDc = async (data) => {
     try{
         const messageData = {
@@ -25,6 +26,7 @@ export const verifyPayment = async (data) => {
     try{
         const messageData = {
             email : data.email,
+            status : data.status
         }
         const res = await Axios.post('/admin/verifypayment' , messageData);
         if(res.data){
@@ -47,7 +49,7 @@ export const getFeeNotPaid = async () => {
         const res = await Axios.get('/admin/getallfeenotpaid');
         if(res.data){
              toast.success(res.data.message);
-             return res.data.success;
+             return res.data;
         }
         else{
           toast.error(res.data.message);
@@ -68,6 +70,24 @@ export const getTeamParticipatingInEvent = async (data) => {
         if(res.data){
              toast.success(res.data.message);
              return res.data.success;
+        }
+        else{
+          toast.error(res.data.message);
+            return false;
+        }
+    }
+    catch(error){
+        toast.error(error.response.data.message);
+    }
+}
+
+export const getAllEvents = async (data) => {
+    try{
+       
+        const res = await Axios.get('/admin/getallevent' );
+        if(res.data){
+             toast.success(res.data.message);
+             return res.data.data;
         }
         else{
           toast.error(res.data.message);

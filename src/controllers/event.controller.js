@@ -88,7 +88,7 @@ const createEvent = async (req ,res , next) => {
 const joinEvent = async (req, res , next) => { // called by frontend when joining a team to a event
     const { teamId, eventName } = req.body; 
     const id = req.user._id;
-    
+    console.log("in JoinEvent()");
     if(!teamId || !eventName){ // checking if teamId and eventName are missing
         res.statusCode = 400;
         res.json(
@@ -114,6 +114,10 @@ const joinEvent = async (req, res , next) => { // called by frontend when joinin
             res.json({ error: "bad request", message: "registrations for the event has been closed!", success: false });
             return;
         } else if (leaderId !== userId) {
+            console.log("in unauthorized block")
+            console.log("leaderId is " ,leaderId);
+            console.log("userId is " , userId);
+            console.log("teamId is " , teamId);
             // check if the request was made by person other than the leader
             res.statusCode = 401;
             res.json({ error: "unauthorized", message: "only team leader can add participation!", success: false });
@@ -234,11 +238,31 @@ const leaveEvent = async (req, res, next) => {
 };
 
 
-
+const getAllEvents = async (req , res , next ) => {
+    try{
+        const event = await Event.find({} , {name : 1 });
+        res.statusCode = 200;
+        res.json({
+            success : true,
+            data : event,
+        })
+    }
+    catch(error){
+        res.statusCode = 400;
+        res.json({
+            success : false,
+            error : "Something Went Wrong",
+            message : "Something Went Wrong",
+        })
+        console.log("error occured in the getAllEvents() controller!");
+        next(error);
+    }
+}
 
 
 module.exports = {
     joinEvent,
     leaveEvent,
     createEvent,
+    getAllEvents
 }

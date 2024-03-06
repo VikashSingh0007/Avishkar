@@ -1,5 +1,5 @@
 const express=require('express');
-const { joinEvent, leaveEvent, getAllTeamsParticipatingInEvent, createEvent, makeDepartmentalSecretary, addSecretaryToEvent, verifyPayment, getAllNotFeePaid } = require('../controllers/event.controller');
+const { joinEvent, leaveEvent, createEvent , getAllEvents } = require('../controllers/event.controller');
 const { isUserAuthenticated } = require('../middlewares/authMiddleware');
 
 
@@ -15,7 +15,7 @@ router.use(isUserAuthenticated);
 router.post('/join',joinEvent);
 router.post('/leave',leaveEvent);
 router.post('/create' , createEvent);
-
+router.get('/getallevent' , getAllEvents);
 
 
 module.exports =  router;

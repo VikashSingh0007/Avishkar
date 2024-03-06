@@ -19,10 +19,10 @@ const isUserAuthenticated =  async (req, res, next) => {
         const data = await verifyToken(token);
         const decoded = data.message
         const flag = data.flag
-        
+        console.log("entering verification")
         if (!flag) {
             //if (err.name == 'TokenExpiredError') throw createError.Unauthorized('Token Expired')
-           
+            console.log("throwing verification error")
             res.status(401).json({ 
                 error:{
                     status: 401,

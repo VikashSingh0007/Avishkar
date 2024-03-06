@@ -1,116 +1,125 @@
-import React, { useState } from "react";
-import { createTeam } from "../../services/teamService";
+import React, { useEffect, useState } from "react";
+import {getFeeNotPaid, verifyPayment} from "../../services/adminService"
+import {toast} from "react-toastify"
 
 const Create = () => {
-  const dummyPayment = [
-    {
-      request: [
-        {
-          name: "Dummy1",
-          paymentLink: "Url",
-          college: "nvcbzxvbzx",
-          contactNumber: "6348764378347dhsjgd",
-          email: "hsdvjsnbvcbbnvcz",
-        },
-        {
-          name: "Dummy2",
-          paymentLink: "Url",
-          college: "",
-          contactNumber: "",
-          email: "",
-        },
-        {
-          name: "Dummy3",
-          paymentLink: "Url",
-          college: "",
-          contactNumber: "",
-          email: "",
-        },
-      ],
-    },
-  ];
-  return (
-    <div>
-      <div>
-        <table style={{ borderCollapse: "collapse", width: "100%" }}>
-          <thead>
-            <tr style={{ borderBottom: "1px solid black" }}>
-              <th style={{ padding: "8px", textAlign: "left" }}>Name</th>
-              <th style={{ padding: "8px", textAlign: "left" }}>College</th>
-              <th style={{ padding: "8px", textAlign: "left" }}>
-                Contact Number
-              </th>
-              <th style={{ padding: "8px", textAlign: "left" }}>
-                Payment Link
-              </th>
-              <th style={{ padding: "8px", textAlign: "left" }}>Email</th>
-              <th style={{ padding: "8px", textAlign: "left" }}>Action</th>
-            </tr>
-          </thead>
-          <tbody>
-            {dummyPayment.map((item, index) => (
-              <React.Fragment key={index}>
-                {item.request.map((req, reqIndex) => (
-                  <tr
-                    key={reqIndex}
-                    style={{ borderBottom: "1px solid black" }}
-                  >
-                    <td style={{ padding: "8px", textAlign: "left" }}>
-                      {req.name}
-                    </td>
-                    <td style={{ padding: "8px", textAlign: "left" }}>
-                      {req.college}
-                    </td>
-                    <td style={{ padding: "8px", textAlign: "left" }}>
-                      {req.contactNumber}
-                    </td>
-                    <td style={{ padding: "8px", textAlign: "left" }}>
-                      <a
-                        href={req.paymentLink}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        {req.paymentLink}
-                      </a>
-                    </td>
 
-                    <td style={{ padding: "8px", textAlign: "left" }}>
-                      {req.email}
-                    </td>
-                    <td style={{ padding: "8px", textAlign: "left" }}>
-                      <button
-                        onClick={() => window.open(req.paymentLink, "_blank")}
-                        style={{
-                          padding: "5px 10px",
-                          borderRadius: "5px",
-                          marginRight: "5px",
-                          backgroundColor: "green",
-                          color: "white",
-                          cursor: "pointer",
-                        }}
-                      >
-                        Accept
-                      </button>
-                      <button
-                        onClick={() => console.log("Reject")}
-                        style={{
-                          padding: "5px 10px",
-                          borderRadius: "5px",
-                          backgroundColor: "red",
-                          color: "white",
-                          cursor: "pointer",
-                        }}
-                      >
-                        Reject
-                      </button>
-                    </td>
-                  </tr>
-                ))}
-              </React.Fragment>
-            ))}
-          </tbody>
-        </table>
-      </div>
+  const [fetchedData , setFetchedData ] = useState(null);
+  console.log(fetchedData)
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const res = await getFeeNotPaid();
+        console.log("gotted from loki ", res);
+        setFetchedData(res.data);
+        
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      }
+    };
+
+    fetchData();
+  }, []);
+
+  const handleResponse = async (email , status) => {
+     try{
+      const fetchData = async () => {
+        try {
+          const response = await getFeeNotPaid();
+          
+          setFetchedData(response.data);
+          
+        } catch (error) {
+          console.error("Error fetching data:", error);
+        }
+      };
+  
+     
+        const messageData = {
+          email : email,
+          status : status
+        }
+        const res = await verifyPayment(messageData);
+        
+        if(res){
+          fetchData();
+        }
+        else{
+          toast.error("could not delete");
+        }
+     }
+     catch(error){
+      console.error("Error fetching data:", error);
+     }
+  }
+
+
+  
+  return (
+    <div className="bg-orange-200 mt-4 rounded-xl p-4">
+      {fetchedData?.map((item, index) => (
+        <div key={index} style={{ marginBottom: "16px" }}>
+            <div
+              key={index}
+              style={{ borderBottom: "1px solid black", marginBottom: "8px" }}
+            >
+              <div style={{ display: "flex", flexWrap: "wrap" }}>
+                <div style={{ flex: "1", padding: "8px", textAlign: "left" }}>
+                  <strong>Name:</strong> {item.name}
+                </div>
+                <div style={{ flex: "1", padding: "8px", textAlign: "left" }}>
+                  <strong>College:</strong> {item.college}
+                </div>
+                <div style={{ flex: "1", padding: "8px", textAlign: "left" }}>
+                  <strong>Contact Number:</strong> {item.phone}
+                </div>
+                <div style={{ flex: "1", padding: "8px", textAlign: "left" }}>
+                  <strong>Payment Link:</strong>{" "}
+                  <a
+                    href={item.paymentLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    {item.paymentLink}
+                  </a>
+                </div>
+                <div style={{ flex: "1", padding: "8px", textAlign: "left" }}>
+                  <strong>Email:</strong> {item.email}
+                </div>
+                <div style={{ flex: "1", padding: "8px", textAlign: "left" }}>
+                  <button
+                    onClick={()=>{{ handleResponse(item.email,true) }}}
+                    className="bg-green-600 m-2"
+                    style={{
+                      padding: "5px 10px",
+                      borderRadius: "5px",
+                      marginRight: "5px",
+
+                      color: "white",
+                      cursor: "pointer",
+                    }}
+                  >
+                    Accept
+                  </button>
+                  <button
+                    onClick={()=>{{ handleResponse(item.email,true) }}}
+                    className="bg-red-600 m-2"
+                    style={{
+                      padding: "5px 10px",
+                      borderRadius: "5px",
+
+                      color: "white",
+                      cursor: "pointer",
+                    }}
+                  >
+                    Reject
+                  </button>
+                </div>
+              </div>
+            </div>
+          
+        </div>
+      ))}  
     </div>
   );
 };
