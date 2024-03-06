@@ -2,7 +2,11 @@ const jwt = require('jsonwebtoken');
 const createError = require('http-errors');
 const User = require("../models/user.model");
 const { verifyToken } = require('../helper/jwtService');
-
+const rolePriority={
+    "Admin":0,
+    "Coordie":1,
+    "User":2
+}
 const isUserAuthenticated =  async (req, res, next) => {
     try {
       
@@ -48,8 +52,27 @@ const isUserAuthenticated =  async (req, res, next) => {
         return;
     }
 }
+const isDepartmentalCoordinator=async(req,res,next)=>{
+    if(rolePriority[req.user.role]>rolePriority["Coordie"]){
+        return res.status(401).json({
+            message:"User is Not authorised for this service.Please re-login",
+            success:false
+        })
+    }
+    else next();
+}
 
+const isFestivalSecretary=async(req,res,next)=>{
+    if(rolePriority[req.user.role]>rolePriority["Admin"]){
+        return res.status(401).json({
+            message:"User is Not authorised for this service.Please re-login",
+            success:false
+        })
+    }
+    else next();
+}
 module.exports = {
-
-    isUserAuthenticated
+    isUserAuthenticated,
+    isDepartmentalCoordinator,
+    isFestivalSecretary
 }
