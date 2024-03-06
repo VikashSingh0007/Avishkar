@@ -1,73 +1,94 @@
-import React, { useState } from "react";
-import { createTeam } from "../../services/teamService";
+import React, { useEffect, useState } from "react";
+import {getFeeNotPaid, verifyPayment} from "../../services/adminService"
+import {toast} from "react-toastify"
 
 const Create = () => {
-  const dummyPayment = [
-    {
-      request: [
-        {
-          name: "Dummy1",
-          paymentLink: "Url",
-          college: "nvcbzxvbzx",
-          contactNumber: "6348764378347",
-          email: "hsdvjsnbvcbbnvcz",
-        },
-        {
-          name: "Dummy2",
-          paymentLink: "Url",
-          college: "",
-          contactNumber: "",
-          email: "",
-        },
-        {
-          name: "Dummy3",
-          paymentLink: "Url",
-          college: "",
-          contactNumber: "",
-          email: "",
-        },
-      ],
-    },
-  ];
 
-  const handleAccept = () => {};
-  const handleReject = () => {};
+  const [fetchedData , setFetchedData ] = useState(null);
+  console.log(fetchedData)
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const res = await getFeeNotPaid();
+        console.log("gotted from loki ", res);
+        setFetchedData(res.data);
+        
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      }
+    };
+
+    fetchData();
+  }, []);
+
+  const handleResponse = async (email , status) => {
+     try{
+      const fetchData = async () => {
+        try {
+          const response = await getFeeNotPaid();
+          
+          setFetchedData(response.data);
+          
+        } catch (error) {
+          console.error("Error fetching data:", error);
+        }
+      };
+  
+     
+        const messageData = {
+          email : email,
+          status : status
+        }
+        const res = await verifyPayment(messageData);
+        
+        if(res){
+          fetchData();
+        }
+        else{
+          toast.error("could not delete");
+        }
+     }
+     catch(error){
+      console.error("Error fetching data:", error);
+     }
+  }
+
+
   
   return (
     <div className="bg-orange-200 mt-4 rounded-xl p-4">
-      {dummyPayment.map((item, index) => (
+      {fetchedData.map((item, index) => (
         <div key={index} style={{ marginBottom: "16px" }}>
-          {item.request.map((req, reqIndex) => (
             <div
-              key={reqIndex}
+              key={index}
               style={{ borderBottom: "1px solid black", marginBottom: "8px" }}
             >
               <div style={{ display: "flex", flexWrap: "wrap" }}>
                 <div style={{ flex: "1", padding: "8px", textAlign: "left" }}>
-                  <strong>Name:</strong> {req.name}
+                  <strong>Name:</strong> {item.name}
                 </div>
                 <div style={{ flex: "1", padding: "8px", textAlign: "left" }}>
-                  <strong>College:</strong> {req.college}
+                  <strong>College:</strong> {item.college}
                 </div>
                 <div style={{ flex: "1", padding: "8px", textAlign: "left" }}>
-                  <strong>Contact Number:</strong> {req.contactNumber}
+                  <strong>Contact Number:</strong> {item.phone}
                 </div>
                 <div style={{ flex: "1", padding: "8px", textAlign: "left" }}>
                   <strong>Payment Link:</strong>{" "}
                   <a
-                    href={req.paymentLink}
+                    href={item.paymentLink}
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    {req.paymentLink}
+                    {item.paymentLink}
                   </a>
                 </div>
                 <div style={{ flex: "1", padding: "8px", textAlign: "left" }}>
-                  <strong>Email:</strong> {req.email}
+                  <strong>Email:</strong> {item.email}
                 </div>
                 <div style={{ flex: "1", padding: "8px", textAlign: "left" }}>
                   <button
-                    onClick={handleAccept}
+                    onClick={()=>{{ handleResponse(item.email,true) }}}
                     className="bg-green-600 m-2"
                     style={{
                       padding: "5px 10px",
@@ -81,7 +102,7 @@ const Create = () => {
                     Accept
                   </button>
                   <button
-                    onClick={handleReject}
+                    onClick={()=>{{ handleResponse(item.email,true) }}}
                     className="bg-red-600 m-2"
                     style={{
                       padding: "5px 10px",
@@ -96,9 +117,9 @@ const Create = () => {
                 </div>
               </div>
             </div>
-          ))}
+          
         </div>
-      ))}
+      ))}  
     </div>
   );
 };

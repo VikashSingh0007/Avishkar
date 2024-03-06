@@ -35,7 +35,7 @@ const View = ({ event }) => {
     },
   ]);
 
-  const navigate = useNavigate();
+
 
   const toggleDropdown = (index) => {
     setOpenTeamIndex((prevIndex) => (prevIndex === index ? null : index));
