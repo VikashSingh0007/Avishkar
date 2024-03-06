@@ -1,5 +1,5 @@
 import "./login.css"; // Import your CSS file
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import bg from "./loginbg1.jpeg";
 import { userLogin } from "../../services/authService";
 import { useNavigate } from "react-router-dom";
@@ -8,6 +8,10 @@ const Lo = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
+  useEffect(()=>{
+    const response=localStorage.getItem("userData");
+    if(response||localStorage.getItem("userToken")) return navigate('/');
+  },[])
   const handleForgot = (e) => {
     e.preventDefault();
     navigate('/forgotpassword');

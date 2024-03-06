@@ -1,10 +1,11 @@
 import "./SignUp.css"; // Import your CSS file
-import { useState } from "react";
+import { useState,useEffect } from "react";
 import qr from "../../assets/Qr.jpg";
 import bg from "./loginbg1.jpeg";
 import axios from "axios";
 import signUp from "../../services/authService.js";
 import Navbar from "../Home/Navbar";
+import { useNavigate } from "react-router-dom";
 const SignUp = () => {
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
@@ -16,7 +17,11 @@ const SignUp = () => {
   const [gender, setGender] = useState("");
   const [isRotated, setIsRotated] = useState(false); // New state for rotation
   const [showQr, setShowQr] = useState(false);
-
+  const navigate=useNavigate()
+  useEffect(()=>{
+    const response=localStorage.getItem("userData");
+    if(response||localStorage.getItem("userToken")) return navigate('/');
+  },[])
   const handleCollege = (value) => {
     if (value === "other") setShowOther(true);
     else setShowOther(false);

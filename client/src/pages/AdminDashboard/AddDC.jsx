@@ -15,9 +15,12 @@ const Resume = () => {
 const [selectDepartment,handleDepartment]=useState(null)
   const handleSubmit = async () => {
     console.log(data);
+    const requestData={
+      email:data.email,
+      department:selectDepartment
+    }
     
-    setData({...data,"department":selectDepartment})
-    await makeDc(data);
+    await makeDc(requestData);
   };
 
   return (

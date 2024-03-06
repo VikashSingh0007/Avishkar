@@ -13,8 +13,8 @@ const signOptions = {
 
 const generateUsername = (email) => {
     let username = email.substring(0, email.indexOf("@"));
-    const randomNumber = Math.floor(Math.random() * 9000 + 1000);
-    username = username + randomNumber.toString();
+    const randomNumber = Math.floor(Math.random() * 90000 + 10000);
+    username = "CA_" + randomNumber.toString();
     return username;
 }
 

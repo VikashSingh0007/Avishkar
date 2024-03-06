@@ -251,7 +251,8 @@ if(user.department){
      const userData={
       email: user.email,
       username: user.username,
-      role:user.role
+      role:user.role,
+      department
     }
     res.statusCode = 200;
     res.json({ message: "user login successful!", token,userData, success: true });

@@ -418,16 +418,13 @@ const downloadExcelEvent = async (req,res,next) => {
 const getDepartmentCoordies=async(req,res,next)=>{
 try {
     const response=await User.find({role:"Coordie"});
+    console.log(response);
     return res.status(200).json({
         success:true,
         data:response
     });
 } catch (error) {
-    return res.status(400).json({
-        success:false,
-        error:error.message,
-        message:"Something went wrong"
-    })
+    next(error)
 }
 }
 const deleteDepartmentCoordie=async (req,res,next)=>{
@@ -442,7 +439,8 @@ const deleteDepartmentCoordie=async (req,res,next)=>{
          user.department=null;
          await user.save();
          return res.status(200).json({
-            message:`${user.name} has been removed from departmental coordinator`
+            message:`${user.name} has been removed from departmental coordinator`,
+            success:true
          })
     } catch (error) {
         next(error)

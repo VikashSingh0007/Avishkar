@@ -241,21 +241,24 @@ const leaveEvent = async (req, res, next) => {
 const getAllEvents = async (req , res , next ) => {
     try{
         const {department}=req.user;
-        const event = await Event.find({department} , {name : 1 });
+        console.log(req.user);
+        const event = await Event.find({} , {name : 1 });
+        console.log(event);
         res.statusCode = 200;
-        res.json({
+        return res.json({
             success : true,
             data : event,
         })
     }
     catch(error){
-        res.statusCode = 400;
-        res.json({
-            success : false,
-            error : "Something Went Wrong",
-            message : "Something Went Wrong",
-        })
-        console.log("error occured in the getAllEvents() controller!");
+        // res.statusCode = 400;
+        // res.json({
+        //     success : false,
+        //     error : "Something Went Wrong",
+        //     message : "Something Went Wrong",
+        // })
+        // console.log("error occured in the getAllEvents() controller!");
+        console.log(error.message);
         next(error);
     }
 }

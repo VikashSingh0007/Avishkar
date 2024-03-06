@@ -87,7 +87,7 @@ export const getTeamParticipatingInEvent = async (data) => {
     }
 }
 
-export const getAllEvents = async (data) => {
+export const getAllEvents = async () => {
     try{
         
         const res = await Axios.get('/event/getallevent' );
@@ -100,16 +100,12 @@ export const getAllEvents = async (data) => {
         }
         else{
           toast.error(res.data.message);
-          return {
-            success : false
-        }
+          return []
         }
     }
     catch(error){
         toast.error(error.response.data.message);
-        return {
-            success : false
-        }
+        return []
     }
 }
 
@@ -144,5 +140,41 @@ export const downloadExcelEventFile = async (data) => {
         return {
             success : false
         }
+    }
+}
+
+export const getDepartmentalCoordies=async()=>{
+    try {
+        const response=await Axios.get('/admin/getcoordie');
+        if(response.data.success){
+            return response.data.data
+        }
+        else{
+            toast.error(response.data.message);
+            return [];
+        }
+
+    } catch (error) {
+        toast.error(error.response.data.message);
+        return []
+    }
+}
+export const removeDC=async(email)=>{
+    try {
+        const response=await Axios.post('/admin/deletecoordie',{
+            email
+        });
+        if(response.data.success){
+            toast.success(response.data.message)
+            return true
+        }
+        else{
+            toast.error(response.data.message);
+            return false
+        }
+
+    } catch (error) {
+        toast.error(error.response.data.message);
+       return false
     }
 }
