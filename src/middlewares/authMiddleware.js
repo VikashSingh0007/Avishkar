@@ -22,7 +22,7 @@ const isUserAuthenticated =  async (req, res, next) => {
         
         if (!flag) {
             //if (err.name == 'TokenExpiredError') throw createError.Unauthorized('Token Expired')
-           
+            
             res.status(401).json({ 
                 error:{
                     status: 401,

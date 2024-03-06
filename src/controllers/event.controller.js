@@ -88,7 +88,7 @@ const createEvent = async (req ,res , next) => {
 const joinEvent = async (req, res , next) => { // called by frontend when joining a team to a event
     const { teamId, eventName } = req.body; 
     const id = req.user._id;
-    
+    console.log("in JoinEvent()");
     if(!teamId || !eventName){ // checking if teamId and eventName are missing
         res.statusCode = 400;
         res.json(
