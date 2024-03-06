@@ -68,7 +68,7 @@ export const Team = [
         position: "Festival Secretary",
         department: "NA",
         photo:
-          "https://drive.google.com/file/d/1ZgGWovzSXtkY15yEC6DEZcjN3fAvOVgi/view",
+        "https://drive.google.com/file/d/1ZgGWovzSXtkY15yEC6DEZcjN3fAvOVgi/view",
         linkedin:
           "https://www.linkedin.com/in/nandini-karad-2186861b8?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
         instagram_url:
