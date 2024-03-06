@@ -65,6 +65,10 @@ const userSchema = new Schema(
       type: [mongoose.Schema.Types.ObjectId],
       ref: "Team",
     },
+    // participatingEvent : {
+    //   type : [mongoose.Schema.Types.ObjectId],
+    //   ref : "Event"
+    // }
   },
   { timestamps: true }
 );
