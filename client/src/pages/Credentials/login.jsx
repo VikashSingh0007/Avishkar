@@ -87,7 +87,7 @@ const Lo = () => {
               Login
             </button>
             <div>
-              <p className="text-black text-md">Don't have an account yet? <span className="text-blue-900 cursor-pointer" onClick={()=>{navigate("/signup")}}>Sign Up</span></p>
+              <div className="text-black text-md">Don't have an account yet? <span className="text-blue-900 cursor-pointer" onClick={()=>{navigate("/signup")}}>Sign Up</span></div>
             </div>
           </form>
         </div>

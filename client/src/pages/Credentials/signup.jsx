@@ -183,7 +183,7 @@ const SignUp = () => {
                 </button>
               </div>
               <div>
-                <p className="text-black text-md">
+                <div className="text-black text-md">
                   Already have an account ?{" "}
                   <span
                     className="text-blue-900 cursor-pointer"
@@ -193,7 +193,7 @@ const SignUp = () => {
                   >
                     Sign In
                   </span>
-                </p>
+                </div>
               </div>
             </form>
           ) : (
