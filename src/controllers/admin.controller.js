@@ -7,7 +7,7 @@ const fes = "FestivalSecretary";
 
 
 const makeDepartmentalSecretary = async (req,res,next) => {
-    const { email , eventName } = req.body;
+    const { email  } = req.body;
     if(!email){
         res.statusCode = 400;
         res.json({
@@ -17,17 +17,7 @@ const makeDepartmentalSecretary = async (req,res,next) => {
         })
         return;
     }
-    if(!eventName){
-        res.statusCode = 400;
-        res.json(
-            {
-                error : "EventName is Missing",
-                message : "Event Name is Missing",
-                success : false
-            }
-        )
-        return;
-    } 
+   
     try{
         const id = req.user._id;
         const tuser = await User.findOne({email : email});
