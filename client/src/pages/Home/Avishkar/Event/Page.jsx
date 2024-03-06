@@ -134,7 +134,7 @@ const Page = () => {
                       </div>
                     </div>
                     <button
-                      className="btn2 mb-5"
+                      className="bn632-hover bn24 mb-5"
                       style={{ display: "block", margin: "0 auto" }}
                       onClick={() => handleClick()}
                     >
