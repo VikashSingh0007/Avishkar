@@ -3,6 +3,7 @@ import {getFeeNotPaid, verifyPayment} from "../../services/adminService"
 import {toast} from "react-toastify"
 
 const Create = () => {
+
   const [fetchedData , setFetchedData ] = useState(null);
   console.log(fetchedData)
   useEffect(() => {
@@ -51,87 +52,74 @@ const Create = () => {
       console.error("Error fetching data:", error);
      }
   }
+
+
   
   return (
-    <div>
-      <div>
-        <table style={{ borderCollapse: "collapse", width: "100%" }}>
-          <thead>
-            <tr style={{ borderBottom: "1px solid black" }}>
-              <th style={{ padding: "8px", textAlign: "left" }}>Name</th>
-              <th style={{ padding: "8px", textAlign: "left" }}>College</th>
-              <th style={{ padding: "8px", textAlign: "left" }}>
-                Contact Number
-              </th>
-              <th style={{ padding: "8px", textAlign: "left" }}>
-                Payment Link
-              </th>
-              <th style={{ padding: "8px", textAlign: "left" }}>Email</th>
-              <th style={{ padding: "8px", textAlign: "left" }}>Action</th>
-            </tr>
-          </thead>
-          <tbody>
-            {fetchedData?.map((item, index) => (
-              <React.Fragment key={index}>
-                  <tr
-                    key={item._id}
-                    style={{ borderBottom: "1px solid black" }}
+    <div className="bg-orange-200 mt-4 rounded-xl p-4">
+      {fetchedData?.map((item, index) => (
+        <div key={index} style={{ marginBottom: "16px" }}>
+            <div
+              key={index}
+              style={{ borderBottom: "1px solid black", marginBottom: "8px" }}
+            >
+              <div style={{ display: "flex", flexWrap: "wrap" }}>
+                <div style={{ flex: "1", padding: "8px", textAlign: "left" }}>
+                  <strong>Name:</strong> {item.name}
+                </div>
+                <div style={{ flex: "1", padding: "8px", textAlign: "left" }}>
+                  <strong>College:</strong> {item.college}
+                </div>
+                <div style={{ flex: "1", padding: "8px", textAlign: "left" }}>
+                  <strong>Contact Number:</strong> {item.phone}
+                </div>
+                <div style={{ flex: "1", padding: "8px", textAlign: "left" }}>
+                  <strong>Payment Link:</strong>{" "}
+                  <a
+                    href={item.paymentLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
                   >
-                    <td style={{ padding: "8px", textAlign: "left" }}>
-                      {item.name}
-                    </td>
-                    <td style={{ padding: "8px", textAlign: "left" }}>
-                      {item.college}
-                    </td>
-                    <td style={{ padding: "8px", textAlign: "left" }}>
-                      {item.phone}
-                    </td>
-                    <td style={{ padding: "8px", textAlign: "left" }}>
-                      <a
-                        href={item.paymentLink}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        {item.paymentLink}
-                      </a>
-                    </td>
+                    {item.paymentLink}
+                  </a>
+                </div>
+                <div style={{ flex: "1", padding: "8px", textAlign: "left" }}>
+                  <strong>Email:</strong> {item.email}
+                </div>
+                <div style={{ flex: "1", padding: "8px", textAlign: "left" }}>
+                  <button
+                    onClick={()=>{{ handleResponse(item.email,true) }}}
+                    className="bg-green-600 m-2"
+                    style={{
+                      padding: "5px 10px",
+                      borderRadius: "5px",
+                      marginRight: "5px",
 
-                    <td style={{ padding: "8px", textAlign: "left" }}>
-                      {item.email}
-                    </td>
-                    <td style={{ padding: "8px", textAlign: "left" }}>
-                      <button
-                        onClick={() => { handleResponse(item.email,true) }}
-                        style={{
-                          padding: "5px 10px",
-                          borderRadius: "5px",
-                          marginRight: "5px",
-                          backgroundColor: "green",
-                          color: "white",
-                          cursor: "pointer",
-                        }}
-                      >
-                        Accept
-                      </button>
-                      <button
-                        onClick={() => { handleResponse(item.email,false) }}
-                        style={{
-                          padding: "5px 10px",
-                          borderRadius: "5px",
-                          backgroundColor: "red",
-                          color: "white",
-                          cursor: "pointer",
-                        }}
-                      >
-                        Reject
-                      </button>
-                    </td>
-                  </tr>
-              </React.Fragment>
-            ))}
-          </tbody>
-        </table>
-      </div>
+                      color: "white",
+                      cursor: "pointer",
+                    }}
+                  >
+                    Accept
+                  </button>
+                  <button
+                    onClick={()=>{{ handleResponse(item.email,true) }}}
+                    className="bg-red-600 m-2"
+                    style={{
+                      padding: "5px 10px",
+                      borderRadius: "5px",
+
+                      color: "white",
+                      cursor: "pointer",
+                    }}
+                  >
+                    Reject
+                  </button>
+                </div>
+              </div>
+            </div>
+          
+        </div>
+      ))}  
     </div>
   );
 };
