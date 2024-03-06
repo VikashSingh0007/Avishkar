@@ -36,11 +36,11 @@ const Invitations = () => {
   return (
     <div>
       <section
-        className="text-gray-400 h-[100vh] bg-gray-900 body-font"
-        style={{
-          background:
-            "linear-gradient(to bottom, #d95f3b, #f0984a, #fcd6a5, #7aa9a3, #338f9a, #1c4c70)",
-        }}
+        className="text-gray-400 h-[100vh]  body-font"
+        // style={{
+        //   background:
+        //     "linear-gradient(to bottom, #d95f3b, #f0984a, #fcd6a5, #7aa9a3, #338f9a, #1c4c70)",
+        // }}
       >
         <div className="container px-5 py-24 mx-auto">
           <h1 className="sm:text-3xl text-2xl font-medium text-center title-font text-white mb-4">

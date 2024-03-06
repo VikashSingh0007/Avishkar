@@ -86,19 +86,19 @@ const Page = () => {
                         <div className="flex justify-center text-4xl font-semibold py-8 protest-revolution-regular2 rumoura-font mt-16">
                           {decodedData.name}
                         </div>
-                        <div className="flex justify-center text-2xl py-4 text-4xl font-semibold rumoura-font">
+                        <div className="flex justify-center text-2xl py-4 text-4xl font-semibold rumoura-font underline">
                           Description
                         </div>
-                        <div className="flex justify-center py-4 protest-revolution-regular11">
-                          <h4 className="text-sm sm:text-xl text-justify ">
+                        <div className="flex justify-center py-4 px-6 kelly-slab-regular text-xl border border-black rounded-lg">
+                          <h4 className="text-xl sm:text-xl text-justify">
                             {decodedData.disc}
                           </h4>
                         </div>
 
-                        <div className="flex justify-center py-4 text-4xl font-semibold rumoura-font">
+                        <div className="flex justify-center py-4 text-4xl font-semibold rumoura-font underline">
                           Rules
                         </div>
-                        <div className="flex text-sm sm:text-xl justify-center py-4 protest-revolution-regular1 text-justify">
+                        <div className="flex text-xl sm:text-xl justify-center py-4 kelly-slab-regular  text-justify">
                           <ol>
                             {decodedData.rule.map((ruleObj, index) => (
                               <li key={index}>
@@ -113,7 +113,7 @@ const Page = () => {
                           </ol>
                         </div>
 
-                        <div className="flex justify-center py-4 text-4xl font-semibold rumoura-font">
+                        <div className="flex justify-center py-4 text-4xl font-semibold rumoura-font underline">
                           Coordinators
                         </div>
                         <div className="flex text-2xl justify-center py-4">
@@ -122,7 +122,7 @@ const Page = () => {
                               (coordinator, index) => (
                                 <li
                                   key={index}
-                                  className="flex flex-col items-center protest-revolution-regular1"
+                                  className="flex flex-col items-center kelly-slab-regular text-lg"
                                 >
                                   <div>{coordinator.name}</div>
                                   <div>{coordinator.phone}</div>

@@ -1,7 +1,6 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Home/index.jsx";
-import AdminIndex from "./pages/Admin/adminIndex.jsx";
-import CulravEvent from "./pages/Admin/components/culravEvent.jsx";
+
 import ForgotPassword from "./pages/Credentials/ForgotPasswordPage.jsx";
 import ResetPassword from "./pages/Credentials/ResetPassword.jsx";
 import Team from "./pages/Team/team.jsx";
@@ -11,7 +10,7 @@ import Page from "./pages/Home/Avishkar/Event/Page.jsx";
 import Carousel2 from "./pages/Home/Avishkar/TemplateComponents/Carousel2.jsx";
 import Sponsors from "./pages/Home/Avishkar/TemplateComponents/Sponsors.jsx";
 import User from "./pages/user/User.jsx";
-
+import AdminPanel from "./pages/AdminDashboard/AdminPanel.jsx";
 import SignUp from "./pages/Credentials/signup.jsx";
 import Culrav from "./pages/Home/culrav/index.jsx";
 import Login from "./pages/Credentials/login.jsx";
@@ -30,9 +29,9 @@ const App = () => {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Index />} />
-          <Route path="/admin" element={<AdminIndex />} />
+
           <Route path="/user" element={<User />} />
-          <Route path="/CulravEvent" element={<CulravEvent />} />
+          <Route path="/admin" element={<AdminPanel />} />
           <Route path="/sponsors" element={<Sponsors />} />
           <Route path="/team" element={<Team />} />
           <Route path="/forgotpassword" element={<ForgotPassword />} />
