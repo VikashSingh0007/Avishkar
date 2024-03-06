@@ -1,7 +1,6 @@
 import { toast } from 'react-toastify';
 import Axios from './Axios.js'
 import { getAllEvents } from '../../../src/controllers/event.controller.js';
-
 export const makeDc = async (data) => {
     try{
         const messageData = {

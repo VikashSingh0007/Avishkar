@@ -5,6 +5,7 @@ import VerifyPayment from "./VerifyPayment";
 import AddDC from "./AddDC";
 import Navbar from "../Home/Navbar";
 
+
 const User = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const sidebarRef = useRef(null);
@@ -12,6 +13,12 @@ const User = () => {
   const [isModalOpen, setModalOpen] = useState(false);
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedEvent, setSelectedEvent] = useState(null);
+  const [events,setEvents] = useState([]);
+
+  useEffect(()=>{
+    //Get All events
+     
+  },[])
 
   // Function to handle click outside of the sidebar
   const handleClickOutside = (event) => {
@@ -39,7 +46,6 @@ const User = () => {
     setChoice(choice);
   };
 
-  const events = Array.from({ length: 67 }, (_, index) => `Event ${index + 1}`);
 
   // Filter events based on search term
   const filteredEvents = events.filter((event) =>
