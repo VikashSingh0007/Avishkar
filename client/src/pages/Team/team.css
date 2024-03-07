@@ -127,15 +127,15 @@
   backface-visibility: hidden;
 }
 
-.figure_1.active {
+/* .figure_1.active {
   /* animation-duration: var(--duration), 1.5s;
     animation-delay: var(--delay), calc(var(--delay) + var(--duration) * var(--count));
     animation-timing-function: ease-in-out;
     animation-iteration-count: var(--count), 1;
     animation-direction: var(--direction), normal;
     animation-fill-mode: both;
-    animation-name: swing, swingEnd; */
-}
+    animation-name: swing, swingEnd; */ */
+/* } */
 
 #gallery .figure_1:after {
   position: absolute;
