@@ -21,7 +21,7 @@ const AvishkarLanding = () => {
           "linear-gradient(to bottom, #34626C, #839B97, #CFD3CE, #C6B497, #1c4c70)",
       }}
     >
-      <Navbar />
+      <Navbar page="Avishkar"/>
 
       {/* <div className="custom-class text-center justify-center">
         <div>
