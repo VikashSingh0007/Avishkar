@@ -8,18 +8,7 @@ import EventsComputer from "./eventsComputer";
 import Navbar from "../Navbar";
 const AvishkarLanding = () => {
  
-  const [scrolled, setScrolled] = useState(false);
-  useEffect(() => {
-    const handleScroll = () => {
-      const isScrolled = window.scrollY > 70;
-      setScrolled(isScrolled);
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
+ 
 
   return (
     <div
@@ -34,9 +23,9 @@ const AvishkarLanding = () => {
           "linear-gradient(to bottom, #d95f3b, #f0984a, #fcd6a5, #7aa9a3, #338f9a, #1c4c70)",
       }}
     >
-      <div className="  hidden sm:flex">
+      
       <Navbar />
-    </div>
+
       
       {/* <div className="custom-class text-center justify-center">
         <div>
