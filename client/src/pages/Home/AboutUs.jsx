@@ -22,7 +22,7 @@ const AboutUs = () => {
 
         <div className={`${layout.sectionInfo}`}>
           <h2
-            className="md:text-[2.5rem] text-[1.8rem] w-full text-center text-black font-bold mb-4 flex justify-center  "
+            className="font-Robo md:text-[2.5rem] text-[1.8rem] w-full text-center text-black font-bold mb-4 flex justify-center  "
             style={{
               fontWeight: "bolder",
               textAlign: "center",
