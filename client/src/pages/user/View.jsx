@@ -9,7 +9,7 @@ const View = () => {
     username: "USERNAME",
     email: "EMAIL@NCNNC.COM",
     resumeLink: "HTTP://XNSBCNBCNX.COM",
-    mobileNo: "735764765",
+    phone: "735764765",
     gender: "MALE",
     collegeName: "MNNIT",
   });
@@ -31,14 +31,23 @@ const View = () => {
 
     fetchData();
   }, []);
-
+  console.log(fetchedData);
   return (
     <>
       <div className="flex items-center justify-center h-auto w-[90%] ">
         <div className="  bg-gradient-to-b from-gray-600 via-gray-700 to-gray-900 rounded-lg p-8 shadow-md text-center text-white">
-          <h2 className="text-[3em] font-bold text-orange-500 mb-3">{fetchedData.name}</h2>
-          <div className="text-gray-200 mb-2 text-xl">Email: {fetchedData.email}</div>
-          <div className="text-gray-200 text-xl">Phone: {fetchedData.phone}</div>
+          <h2 className="text-[3em] font-bold text-orange-500 mb-3">
+            {fetchedData.name}
+          </h2>
+          <h2 className="text-[3em] font-bold text-orange-500 mb-3">
+            UserId - {fetchedData.username}
+          </h2>
+          <div className="text-gray-200 mb-2 text-xl">
+            Email: {fetchedData.email}
+          </div>
+          <div className="text-gray-200 text-xl">
+            Phone: {fetchedData.phone}
+          </div>
         </div>
       </div>
     </>

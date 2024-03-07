@@ -1,29 +1,25 @@
-
 import Axios from "./Axios.js";
 // console.log(`${import.meta.env.VITE_API_BACKEND_URL}`);
 import { Cookies } from "react-cookie";
 import { toast } from "react-toastify";
 
 export const updateResume = async (data) => {
-  try{
+  try {
     const messageData = {
-        resumeLink : data.resumeLink,
-    }
-    const res = await Axios.post('/team/updateresume' , messageData);
-    if(res.data){
-         toast.success(res.data.message);
-         return res.data.success;
-    }
-    else{
+      resumeLink: data.resumeLink,
+    };
+    const res = await Axios.post("/team/updateresume", messageData);
+    if (res.data) {
+      toast.success(res.data.message);
+      return res.data.success;
+    } else {
       toast.error(res.data.message);
-        return false;
+      return false;
     }
-  }
-  catch(error){
+  } catch (error) {
     toast.error(error.response.data.message);
   }
-  
-}
+};
 
 const signUp = async (data) => {
   try {
@@ -35,6 +31,7 @@ const signUp = async (data) => {
       phone: data.phone,
       password: data.password,
       resumeLink: data.resumeLink,
+      paymentLink: data.paymentLink,
     };
     const res = await Axios.post(
       `${import.meta.env.VITE_API_BACKEND_URL}/auth/signup`,
@@ -49,7 +46,7 @@ const signUp = async (data) => {
     }
   } catch (error) {
     console.log(error);
-    
+
     toast.error(error.response.data.message);
     return false;
   }
@@ -69,14 +66,13 @@ export const signIn = async (data) => {
       cookie.set("userid", res.data.token);
       toast.success(res.data.message);
       return res.data.success;
-      
     } else {
       toast.error(res.data.message);
       return false;
     }
   } catch (error) {
-    console.log('here')
-    
+    console.log("here");
+
     toast.error(error.response.data.message);
     return false;
   }
@@ -110,7 +106,7 @@ export const resetPassword = async (data) => {
     password: data.password,
   };
   try {
-    console.log("reseting")
+    console.log("reseting");
     const res = await Axios.post("/auth/resetpassword", messageData);
     if (res.data) {
       toast.success(res.data.message);
@@ -147,7 +143,6 @@ export const verifyUser = async (token) => {
   }
 };
 
-
 export const userLogin = async (data) => {
   try {
     const response = await Axios.post(
@@ -157,7 +152,6 @@ export const userLogin = async (data) => {
     if (response.data.success) {
       return response.data;
     } else {
- 
       toast.error(response.data.message);
       return false;
     }
@@ -167,5 +161,3 @@ export const userLogin = async (data) => {
     return false;
   }
 };
-
-
