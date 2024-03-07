@@ -10,7 +10,7 @@ const AboutUs = () => {
       <section id="product" className={`${layout.sectionReverse} `}>
         <div className={layout.sectionInfo}>
           <h2
-            className="md:text-[2.5rem] text-[1.8rem] text-black font-bold mb-4  justify-center rumoura-font "
+            className="font-Robo md:text-[2.5rem] text-[1.8rem] text-black font-bold mb-4  justify-center rumoura-font "
             style={{
               fontWeight: "bolder",
               textAlign: "center",
@@ -20,7 +20,7 @@ const AboutUs = () => {
             About Culrav-Avishkar 2024
           </h2>
           <h6
-            className="md:text-[1.5rem] text-[1.2rem] text-justify text-white "
+            className="font-Robo md:text-[1.5rem] text-[1.2rem] text-justify text-white "
             // style={{
             //   fontWeight: "bolder",
              
