@@ -58,8 +58,6 @@ const Timeline = () => {
   const timelineRef = useRef(null);
   const [data, setData] = useState(timelineData);
 
-  
-
   return (
     <div className="custom-boy-css rootGallary  flex justify-center">
       <div className="mb-[-10%]">
@@ -111,7 +109,7 @@ const Timeline = () => {
         </svg>
       </div>
       <h2
-        className="text-[4rem] tracking-wider text-white font-bold flex justify-center mt-[10%] rumoura-font"
+        className="text-[2rem] sm:text-[3rem] tracking-wider text-white font-bold flex justify-center mt-[10%] rumoura-font"
         style={{
           fontWeight: "bolder",
           textAlign: "center",
@@ -126,7 +124,6 @@ const Timeline = () => {
       >
         {data.map((item, index) => (
           <article // Wrap article with motion component
-           
             className="transition-opacity ease-in-out duration-1000" // Tailwind CSS classes for smooth transition
           >
             <img

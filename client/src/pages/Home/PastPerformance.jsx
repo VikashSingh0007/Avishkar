@@ -83,7 +83,7 @@ const Carousel = () => {
     },
     {
       name: "Rajat Kapoor",
-      img: RK ,
+      img: RK,
     },
     {
       name: "Armstrong Pame",
@@ -105,14 +105,14 @@ const Carousel = () => {
   return (
     <div>
       <h2
-         className="md:text-[4rem] tracking-widest text-[2.5rem] text-white font-bold mb-4 flex justify-center mt-[10%] rumoura-font"
-         style={{
-           fontWeight: "bolder",
-           textAlign: "center",
-           textShadow: "0 0 10px black", // Add white shadow with 10px blur
-         }}
+        className="text-[2rem] sm:text-[3rem] tracking-wider text-white font-bold flex justify-center mt-[10%] rumoura-font"
+        style={{
+          fontWeight: "bolder",
+          textAlign: "center",
+          textShadow: "0 0 10px black", // Add white shadow with 10px blur
+        }}
       >
-        Our Past Performers
+        Celebrity Profile
       </h2>
       <div
         className="scrollerPastPerformance mt-[10%]"
@@ -128,7 +128,14 @@ const Carousel = () => {
                 style={{ borderRadius: "20px" }}
               />
 
-              <h6 style={{ textAlign: "center", color: "#fff" }}>
+              <h6
+                className="mr-[30%] sm:mr-[0%]"
+                style={{
+                  textAlign: "center",
+                  fontWeight: "bold",
+                  color: "#fff",
+                }}
+              >
                 {item.name}
               </h6>
             </div>

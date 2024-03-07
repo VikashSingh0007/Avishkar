@@ -39,7 +39,7 @@ const timelineData = [
     },
   },
   {
-    text: "KavyasAndhya",
+    text: "Kavyasandhya",
     date: "March 19 2024",
     category: {
       tag: "Day-4",
@@ -63,7 +63,7 @@ const timelineData = [
     },
   },
   {
-    text: "BAnd Performance",
+    text: "Band Performance",
     date: "March 21 2024",
     category: {
       tag: "Day-6",
@@ -115,9 +115,13 @@ const TimelineItem = ({ data }) => (
       <div className=" w-full text-left">
         <time style={{ color: "black", fontSize: "1.5em" }}>{data.date}</time>
 
-        <div className=" text-black break-all text-[1.3em] font-bold rumoura-font">
+        <div
+          className="text-black break-all text-[.9em] sm:text-[1.3em] font-bold kelly-slab-regular"
+          style={{ textAlign: "justify" }}
+        >
           {data.text}
         </div>
+
         {data.link && (
           <a
             href={data.link.url}
@@ -138,7 +142,7 @@ const Timeline = () =>
   timelineData.length > 0 && (
     <>
       <h2
-        className="text-[3rem] tracking-wider text-white font-bold flex justify-center mt-[10%] rumoura-font"
+        className="text-[2rem] sm:text-[3rem] tracking-wider text-white font-bold flex justify-center mt-[10%] rumoura-font"
         style={{
           fontWeight: "bolder",
           textAlign: "center",
@@ -155,7 +159,7 @@ const Timeline = () =>
         style={{ overflowY: "auto", maxHeight: "400px" }}
       >
         <div
-          className="timeline-container bungee-shade-regular rumoura-font"
+          className="timeline-container  rumoura-font"
           style={{ overflowY: "auto", maxHeight: "400px" }}
         >
           {timelineData.map((data, idx) => (

@@ -22,7 +22,7 @@ const AboutUs = () => {
 
         <div className={`${layout.sectionInfo}`}>
           <h2
-            className="text-[3rem] tracking-wider text-white font-bold flex justify-center mt-[10%] rumoura-font"
+            className="text-[2rem] sm:text-[3rem] tracking-wider text-white font-bold flex justify-center mt-[10%] rumoura-font"
             style={{
               fontWeight: "bolder",
               textAlign: "center",
