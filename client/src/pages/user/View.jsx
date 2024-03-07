@@ -34,18 +34,23 @@ const View = () => {
   console.log(fetchedData);
   return (
     <>
-      <div className="flex items-center justify-center h-auto w-[90%] ">
-        <div className="  bg-gradient-to-b from-gray-600 via-gray-700 to-gray-900 rounded-lg p-8 shadow-md text-center text-white">
-          <h2 className="text-[3em] font-bold text-orange-500 mb-3">
+      <div className="flex justify-center h-auto w-[90%] ">
+        <div
+          className="  bg-gradient-to-b from-[#63462D] rounded-lg p-8 shadow-md text-center text-white"
+          style={{
+            boxShadow: "0px 10px 10px black",
+          }}
+        >
+          <h2 className="lg:text-[3em] md:text-[2em] text-[1.5em]  font-bold text-white mb-3">
             {fetchedData.name}
           </h2>
-          <h2 className="text-[3em] font-bold text-orange-500 mb-3">
+          <h2 className="lg:text-[2em] md:text-[1.5em] text-[1em] font-bold text-white mb-3">
             UserId - {fetchedData.username}
           </h2>
-          <div className="text-gray-200 mb-2 text-xl">
+          <div className="text-gray-200 mb-2 lg:text-[1.8em] md:text-[1.5em] text-[0.8em]">
             Email: {fetchedData.email}
           </div>
-          <div className="text-gray-200 text-xl">
+          <div className="text-gray-200 lg:text-[1.8em] md:text-[1.5em] text-[0.8em]">
             Phone: {fetchedData.phone}
           </div>
         </div>

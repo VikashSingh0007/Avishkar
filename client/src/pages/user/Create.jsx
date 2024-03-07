@@ -24,17 +24,22 @@ const Create = () => {
   }
   return (
     <div>
-      <section className="text-gray-900 body-font rumoura-font">
-        <div className="flex justify-center m-4">
-          <div className="rounded-2xl  mt-20 w-full w-40 lg:w-[40] md:w-[60vw] xs:h-[60vh] sm:h-[60vh] overflow-auto border-black border-2 p-5 bg-gray-100 text-gray-800">
-            <div className="h-full gap-[3rem] flex flex-col items-center sm:justify-start text-center sm:text-left">
-              <h2 className="text-black text-4xl flex justify-center font-medium title-font ">
+      <section className=" body-font text-white ">
+        <div className="flex lg:justify-center m-4  ">
+          <div
+            className="rounded-2xl bg-gradient-to-b from-[#63462D]  mt-20 w-full  lg:w-[40] md:w-[60vw] xs:h-[60vh] sm:h-[60vh] overflow-auto  p-5  text-gray-800"
+            style={{
+              boxShadow: "0px 10px 10px black",
+            }}
+          >
+            <div className="h-full gap-[3rem] flex flex-col items-center justify-start text-center sm:text-left">
+              <div className="text-white lg:text-[2.5em] md:text-[1.5em] text-[1.2em]  flex justify-center font-medium title-font ">
                 Create Team
-              </h2>
+              </div>
               <div className="relative  mb-1">
                 <label
                   htmlFor="full-name"
-                  className="leading-7   text-2xl text-gray-900"
+                  className="leading-7  lg:text-[1.8em] md:text-[1.2em] text-[1em]  text-white"
                 >
                   Team Name
                 </label>
@@ -43,15 +48,15 @@ const Create = () => {
                   type="text"
                   id="full-name"
                   name="teamName"
-                  className="w-full h-[5vh]
-                text-4xl bg-gray-600 bg-opacity-20 focus:bg-transparent focus:ring-2 focus:ring-green-900 rounded border border-gray-600 focus:border-green-500  outline-none text-gray-900 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out
+                  className="w-full h-[5vh] text-3xl
+                   text-white bg-opacity-20 focus:bg-transparent focus:ring-2  rounded border py-1 px-3 
                 "
                 />
               </div>
               <div className="mb-1">
                 <label
                   htmlFor="teamSize"
-                  className="leading-7  text-2xl text-gray-900"
+                  className="leading-7  text-2xl text-white  lg:text-[1.8em] md:text-[1.2em] text-[1em] "
                 >
                   Team Size
                 </label>
@@ -59,7 +64,7 @@ const Create = () => {
                 <select
                   onChange={handleChange}
                   name="teamSize"
-                  className="w-full h-[5vh] bg-gray-900 text-black bg-opacity-20 focus:bg-transparent focus:ring-2 focus:ring-green-300 rounded border border-gray-900 focus:border-green-500  outline-none text-gray-800 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out text-2xl mt-2"
+                  className="w-full h-[5vh] bg-gray-900  bg-opacity-20 focus:bg-transparent focus:ring-2 focus:ring-[#63462D] rounded border border-gray-900  outline-none text-gray-800 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out text-2xl mt-2"
                 >
                   <option className="text-black" value="1">
                     1
@@ -94,8 +99,11 @@ const Create = () => {
                 </select>
               </div>
               <button
-                className="text-white text-4xl bg-green-500 border-0 py-2 px-8 focus:outline-none hover:bg-green-600 rounded "
+                className="text-white text-4xl bg-[#63462D] hover:bg-[#423C31]  border-0 py-2 px-8 focus:outline-none rounded-xl "
                 onClick={handleSubmit}
+                style={{
+                  boxShadow: "0px 5px 5px black",
+                }}
               >
                 Create
               </button>

@@ -33,10 +33,15 @@ const Team = () => {
       {fetchedData?.teams?.participating?.map((team, index) => (
         <div
           key={index}
-          className="w-full mx-auto max-h-[80%] overflow-y-scroll md:w-[60%]  p-6 bg-gradient-to-b from-gray-800 via-gray-700 to-gray-900 rounded-lg shadow-md text-white"
+          className="w-full mx-auto max-h-[80%] overflow-y-scroll md:w-[60%]  p-6 bg-gradient-to-b from-[#63462D]  rounded-lg shadow-md text-white"
+          style={{
+            boxShadow: "0px 10px 10px black",
+          }}
         >
           <div className="text-center">
-            <h2 className="text-3xl font-bold mb-4 ">{team?.name}</h2>
+            <h2 className="lg:text-[3em] md:text-[2em] text-[1.5em] font-bold mb-4 ">
+              {team?.name}
+            </h2>
           </div>
           <div className="mb-4">
             <input
@@ -44,12 +49,15 @@ const Team = () => {
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               placeholder="Team Member's ID"
-              className="w-full p-2 border rounded-md bg-gray-600 bg-opacity-20 focus:bg-transparent focus:ring-2 focus:ring-orange-900 outline-none text-white"
+              className="w-full p-2 lg:text-[1.3em] md:text-[1em] text-[0.8em] border rounded-md bg-gray-600 bg-opacity-20 focus:bg-transparent focus:ring-2 focus:ring-[#423C31] outline-none text-white"
             />
           </div>
           <button
-            className="bg-orange-500 text-white px-4 py-2 rounded-md hover:bg-orange-600"
+            className="[bg-[#63462D] text-white lg:text-[1.5em] md:text-[1em] text-[0.8em] px-4 py-2 rounded-md hover:bg-[#423C31]"
             onClick={() => handleSubmit(team?._id)}
+            style={{
+              boxShadow: "0px 5px 5px black",
+            }}
           >
             Add Team Member
           </button>
@@ -69,12 +77,12 @@ const Team = () => {
               <div
                 key={index}
                 className="bg-orange-500 p-4 rounded-lg ring-2  backdrop-filter backdrop-blur-md bg-opacity-20 relative z-10"
-                style={{ boxShadow: "0 0 10px 0 rgba(255,255,255, 0.8)" }}
+                style={{ boxShadow: "0 2px 5px 0 black" }}
               >
-                <div className="text-white text-xl font-medium mb-2">
+                <div className="text-white lg:text-[1.3em] md:text-[1em] text-[0.8em] font-medium mb-2">
                   {member.username}
                 </div>
-                <div className="text-orange-400">{member.role}</div>
+                <div className="text-[#423C31] font-bold lg:text-[1em] md:text-[0.8em] text-[0.5em]">{member.role}</div>
               </div>
             ))}
           </div>
