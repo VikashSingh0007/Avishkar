@@ -1,11 +1,15 @@
 import React, { useState, useEffect } from "react";
 import "./AvishkarLanding.css";
+import { BsJoystick } from "react-icons/bs";  
 // import Nav from "./TemplateComponents/Nav";
 // import { useParams } from "react-router-dom";
 import avishkarData from "../../../Data/Event/Avishkar";
 import EventsComputer from "./eventsComputer";
 import Navbar from "../Navbar";
 const AvishkarLanding = () => {
+ 
+ 
+
   return (
     <div
       className="absolute top-0 bottom-0 left-0  overflow-scroll  w-full h-full bg-opacity-90 flex flex-col"
@@ -19,9 +23,10 @@ const AvishkarLanding = () => {
           "linear-gradient(to bottom, #d95f3b, #f0984a, #fcd6a5, #7aa9a3, #338f9a, #1c4c70)",
       }}
     >
-      <div>
-        <Navbar />
-      </div>
+      
+      <Navbar />
+
+      
       {/* <div className="custom-class text-center justify-center">
         <div>
           <p className="avishkar_title">
@@ -32,9 +37,11 @@ const AvishkarLanding = () => {
       </div> */}
 
       <div>
-        <h1 className="w-full text-4xl font-bold mb-10 pt-24  text-center  rumoura-font">
-          Events
-        </h1>
+     
+        
+        <h1 className="w-fit flex mx-auto text-4xl font-bold mb-10 mt-24  text-center  rumoura-font">
+        <BsJoystick size={32} className="hover:rotate-45 transition-all duration-300 mr-2 mt-[1.5px]" />  Events
+      </h1>
       </div>
 
       <div className="relative flex flex-wrap justify-evenly w-full">

@@ -1,5 +1,6 @@
 import React from "react";
 import "./EventTimeLine.css";
+import { BiSolidCalendar } from "react-icons/bi";
 const timelineData = [
   {
     text: "Inaugural Ceremony, gnoTalks  ",
@@ -127,8 +128,9 @@ const Timeline = () =>
           textAlign: "center",
         }}
       >
-        Event Timeline
+       <BiSolidCalendar size={28} className="mt-[3px] mr-2 hover:rotate-90 transition-all duration-300"/>  Event Timeline 
       </h2>
+     
       <div
         className="timeline-container "
         id="timelineContainer"

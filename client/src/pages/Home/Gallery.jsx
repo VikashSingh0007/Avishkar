@@ -62,28 +62,15 @@ const Timeline = () => {
     const handleAutoSwipe = () => {
       if (window.innerWidth <= 800 && timelineRef.current) {
         // Move to the first item when reaching the end
-        // console.log(timelineRef.current);
-        // console.log(timelineRef.current.scrollLeft);
-        // console.log(
-        //   timelineRef.current.scrollWidth - timelineRef.current.offsetWidth
-        // );
-
-        if (
-          timelineRef.current.scrollLeft >=
-          timelineRef.current.scrollWidth -
-            timelineRef.current.offsetWidth -
-            200
-        ) {
+        if (timelineRef.current.scrollLeft >= timelineRef.current.scrollWidth - timelineRef.current.offsetWidth) {
           timelineRef.current.scrollLeft = 0;
           // Reload the data after reaching the end
           setData(timelineData);
-          // console.log("Data reloaded");
         } else {
           timelineRef.current.scrollLeft += timelineRef.current.offsetWidth;
         }
       }
     };
-
     const intervalId = setInterval(handleAutoSwipe, 4000);
 
     return () => clearInterval(intervalId);
