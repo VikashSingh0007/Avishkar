@@ -11,7 +11,7 @@ const Accomodation = () => {
         backgroundAttachment: "fixed",
       }}
     >
-      <Navbar />
+      <Navbar page="Accomodation"/>
       <section className="text-gray-600 body-font mt-0 ">
         <div className="container px-0 md:px-5 py-24 mx-auto">
           <div className="text-center mb-20">

@@ -14,7 +14,7 @@ const Team = () => {
             "linear-gradient(to bottom, #d95f3b, #f0984a, #fcd6a5, #7aa9a3, #338f9a, #1c4c70)",
         }}
       >
-        <Navbar />
+        <Navbar page="Team"/>
   
         <div
           className="flex text-black justify-center pt-24 text-4xl font-bold rumoura-font"
