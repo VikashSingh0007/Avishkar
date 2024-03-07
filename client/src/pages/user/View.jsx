@@ -39,11 +39,15 @@ const View = () => {
           <h2 className="text-[3em] font-bold text-orange-500 mb-3">
             {fetchedData.name}
           </h2>
-          <div className="text-gray-200 mb-2 text-xl">
+          <h2 className="text-[3em] font-bold text-orange-500 mb-3">
             UserId - {fetchedData.username}
+          </h2>
+          <div className="text-gray-200 mb-2 text-xl">
+            Email: {fetchedData.email}
           </div>
-          <div className="text-gray-200 mb-2 text-xl">{fetchedData.email}</div>
-          <div className="text-gray-200 text-xl">{fetchedData.phone}</div>
+          <div className="text-gray-200 text-xl">
+            Phone: {fetchedData.phone}
+          </div>
         </div>
       </div>
     </>

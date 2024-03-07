@@ -29,66 +29,58 @@ const Team = () => {
   console.log("FetchedData", fetchedData);
 
   return (
-    <div>
-      <section
-        className="text-gray-400   body-font"
-        // style={{
-        //   background:
-        //     "linear-gradient(to bottom, #d95f3b, #f0984a, #fcd6a5, #7aa9a3, #338f9a, #1c4c70)",
-        // }}
-      >
-        {fetchedData?.teams?.participating?.map((team, index) => {
-          return (
-            <>
-              <div className="container px-5 py-24 mx-auto sm:w-[80vw]">
-                <div className="flex flex-col text-center w-full mb-20">
-                  <h1 className="sm:text-3xl text-2xl font-medium title-font mb-4 text-white">
-                    {team?.name}
-                  </h1>
-                  <div className="flex flex-col items-center gap-4">
-                    <input
-                      className="rounded-lg text-black p-3 w-[30vw] xs:w-[16vw] md:w-[40vw] border-2 border-gray-300 focus:outline-none focus:border-blue-500"
-                      onChange={(e) => setEmail(e.target.value)}
-                      placeholder="Enter team member's email"
-                    />
-                    <button
-                      className="flex justify-center px-8 py-2 border-2 border-gray-300 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition duration-300"
-                      onClick={() => handleSubmit(team._id)}
-                    >
-                      Add Team Member
-                    </button>
-                  </div>
+    <>
+      {fetchedData?.teams?.participating?.map((team, index) => (
+        <div
+          key={index}
+          className="w-full mx-auto max-h-[80%] overflow-y-scroll md:w-[60%]  p-6 bg-gradient-to-b from-gray-800 via-gray-700 to-gray-900 rounded-lg shadow-md text-white"
+        >
+          <div className="text-center">
+            <h2 className="text-3xl font-bold mb-4 ">{team?.name}</h2>
+          </div>
+          <div className="mb-4">
+            <input
+              type="text"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              placeholder="Team Member's ID"
+              className="w-full p-2 border rounded-md bg-gray-600 bg-opacity-20 focus:bg-transparent focus:ring-2 focus:ring-orange-900 outline-none text-white"
+            />
+          </div>
+          <button
+            className="bg-orange-500 text-white px-4 py-2 rounded-md hover:bg-orange-600"
+            onClick={() => handleSubmit(team?._id)}
+          >
+            Add Team Member
+          </button>
+          <div className="mt-10 flex flex-wrap gap-4">
+            <h6 className="text-white rounded-lg p-2 text-xl font-medium mb-2 bg-orange-900 bg-opacity-20 shadow-lg backdrop-filter backdrop-blur-md">
+              Team Size : {team?.size}
+            </h6>
+            <h6 className="text-white rounded-lg p-2 text-xl font-medium mb-2 bg-orange-900 bg-opacity-20 shadow-lg backdrop-filter backdrop-blur-md">
+              Accepted Members : {team?.acceptedMembers?.length}
+            </h6>
+            <h6 className="text-white rounded-lg p-2 text-xl font-medium mb-2 bg-orange-900 bg-opacity-20 shadow-lg backdrop-filter backdrop-blur-md">
+              Pending Invites : {team?.pendingMembers?.length}
+            </h6>
+          </div>
+          <div className="mt-10 flex flex-wrap gap-4">
+            {team?.acceptedMembers.map((member, index) => (
+              <div
+                key={index}
+                className="bg-orange-500 p-4 rounded-lg ring-2  backdrop-filter backdrop-blur-md bg-opacity-20 relative z-10"
+                style={{ boxShadow: "0 0 10px 0 rgba(255,255,255, 0.8)" }}
+              >
+                <div className="text-white text-xl font-medium mb-2">
+                  {member.username}
                 </div>
-                <div className="flex justify-center">
-                <h6 className="text-white text-xl font-medium mb-2">
-                        Team Size : {team?.size}
-                </h6>
-                <p className="text-white text-xl font-medium mb-2">
-                        Accepted Members : {team?.acceptedMembers?.length}
-                </p>
-                <p className="text-white text-xl font-medium mb-2">
-                        Pending Invites : {team?.pendingMembers?.length}
-                </p>
-                  <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-                    {team?.acceptedMembers.map((member, index) => (
-                      <div
-                        key={member._id}
-                        className="bg-gray-800 p-4 rounded-lg"
-                      >
-                        <p className="text-white text-xl font-medium mb-2">
-                          {member.username}
-                        </p>
-                        <p className="text-gray-400">{member.role}</p>
-                      </div>
-                    ))}
-                  </div>
-                </div>
+                <div className="text-orange-400">{member.role}</div>
               </div>
-            </>
-          );
-        })}
-      </section>
-    </div>
+            ))}
+          </div>
+        </div>
+      ))}
+    </>
   );
 };
 
