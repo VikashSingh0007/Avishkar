@@ -21,7 +21,7 @@ const App = () => {
       <div className="absolute top-0 left-0 w-full h-full flex justify-center items-center">
         <div className="fixed left-0 w-full h-full flex justify-center items-center">
           {/* <div className="absolute  transform -translate-x-1/2 -translate-y-1/2"> */}
-          <img src={Clock} alt="mnnitImg" className=" object-cover w-full" />
+          <img src={Clock} alt="mnnitImg" className=" object-cover w-full h-full" />
           {/* </div> */}
         </div>
 
