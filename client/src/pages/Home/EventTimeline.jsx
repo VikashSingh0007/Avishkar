@@ -138,14 +138,14 @@ const Timeline = () =>
   timelineData.length > 0 && (
     <>
       <h2
-        className="md:text-[4rem] text-[2.5rem] text-white font-bold mb-4 flex justify-center mt-[10%] rumoura-font"
+        className="md:text-[4rem] tracking-widest font-Robo text-[2.5rem] text-white font-bold mb-4 flex justify-center mt-[10%] rumoura-font"
         style={{
           fontWeight: "bolder",
           textAlign: "center",
-          textShadow: "0 0 10px white", // Add white shadow with 10px blur
+          textShadow: "0 0 10px black", // Add white shadow with 10px blur
         }}
       >
-       <BiSolidCalendar size={28} className="mt-[3px] mr-2 hover:rotate-90 transition-all duration-300"/>  Event Timeline 
+       <BiSolidCalendar  className="mt-[22px] hidden lg:inline  md:w-12 md:h-12  mr-2 hover:rotate-90 transition-all duration-300  "/>  Event Timeline 
       </h2>
      
       <div

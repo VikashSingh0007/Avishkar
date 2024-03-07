@@ -138,11 +138,11 @@ const Carousel = () => {
   return (
     <div>
       <h2
-        className="md:text-[4rem] text-[2.5rem] text-white font-bold mb-2 flex justify-center mt-[10%] rumoura-font "
+        className="md:text-[4rem] tracking-widest text-[2.5rem] text-white font-bold mb-2 flex justify-center mt-[10%] rumoura-font "
         style={{
           fontWeight: "bolder",
           textAlign: "center",
-          textShadow: "0 0 10px white", // Add white shadow with 10px blur
+          textShadow: "0 0 10px black", // Add white shadow with 10px blur
         }}
       >
         Our Past Sponsors

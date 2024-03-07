@@ -1,4 +1,4 @@
-:root {
+/* :root {
   --bs1: #4d4d4d;
   --bs2: #3d3d3d;
   --arm: #dedede;
@@ -6,7 +6,7 @@
   --bg4: #00b91f;
   --bg1: #a27dc2;
   --bg3: #2a92bf;
-}
+} */
 
 /* body {
   margin: 0;
@@ -22,6 +22,16 @@
     radial-gradient(farthest-side at top left, var(--bg2), #fff0),
     radial-gradient(farthest-corner at bottom right, var(--bg3), #fff0),
     radial-gradient(farthest-corner at top right, var(--bg4), #fff0);
+} */
+/* .culravOpening {
+  background-image: linear-gradient(
+    to bottom,
+    rgba(178, 145, 101, 0.8),
+    rgba(37, 36, 28, 0.8),
+    rgba(58, 52, 22, 0.8),
+    rgba(178, 145, 101, 0.8),
+    rgba(0, 0, 0, 1.8)
+  );
 } */
 
 .content {

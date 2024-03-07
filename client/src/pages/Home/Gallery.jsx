@@ -58,26 +58,7 @@ const Timeline = () => {
   const timelineRef = useRef(null);
   const [data, setData] = useState(timelineData);
 
-  useEffect(() => {
-    const handleAutoSwipe = () => {
-      if (window.innerWidth <= 800 && timelineRef.current) {
-        // Move to the first item when reaching the end
-        if (
-          timelineRef.current.scrollLeft >=
-          timelineRef.current.scrollWidth - timelineRef.current.offsetWidth
-        ) {
-          timelineRef.current.scrollLeft = 0;
-          // Reload the data after reaching the end
-          setData(timelineData);
-        } else {
-          timelineRef.current.scrollLeft += timelineRef.current.offsetWidth;
-        }
-      }
-    };
-    const intervalId = setInterval(handleAutoSwipe, 4000);
-
-    return () => clearInterval(intervalId);
-  }, []);
+  
 
   return (
     <div className="custom-boy-css rootGallary  flex justify-center">
@@ -130,25 +111,22 @@ const Timeline = () => {
         </svg>
       </div>
       <h2
-        className="text-[4rem] text-white font-bold flex justify-center mt-[10%] rumoura-font"
+        className="text-[4rem] tracking-wider text-white font-bold flex justify-center mt-[10%] rumoura-font"
         style={{
           fontWeight: "bolder",
           textAlign: "center",
-          textShadow: "0 0 10px white", // Add white shadow with 10px blur
+          textShadow: "0 0 10px black", // Add white shadow with 10px blur
         }}
       >
         Gallery
       </h2>
-      <motion.section // Wrap section with motion component
+      <section // Wrap section with motion component
         ref={timelineRef}
         className="timeline mb-[-10%] overflow-x-hidden sm:overflow-x-scroll"
       >
         {data.map((item, index) => (
-          <motion.article // Wrap article with motion component
-            key={index}
-            animate={{ opacity: 1 }} // Animation to fade in
-            initial={{ opacity: 0 }} // Initial opacity
-            transition={{ duration: 1 }} // Duration of animation
+          <article // Wrap article with motion component
+           
             className="transition-opacity ease-in-out duration-1000" // Tailwind CSS classes for smooth transition
           >
             <img
@@ -161,9 +139,9 @@ const Timeline = () => {
                 borderRadius: "20px",
               }}
             />
-          </motion.article>
+          </article>
         ))}
-      </motion.section>
+      </section>
     </div>
   );
 };

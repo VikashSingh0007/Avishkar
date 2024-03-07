@@ -83,7 +83,7 @@ const Carousel = () => {
     },
     {
       name: "Rajat Kapoor",
-      img: RK,
+      img: RK ,
     },
     {
       name: "Armstrong Pame",
@@ -105,12 +105,12 @@ const Carousel = () => {
   return (
     <div>
       <h2
-        className="md:text-[4rem] text-[2.5rem] text-white font-bold mb-4 flex justify-center mt-[10%] rumoura-font"
-        style={{
-          fontWeight: "bolder",
-          textAlign: "center",
-          textShadow: "0 0 10px white", // Add white shadow with 10px blur
-        }}
+         className="md:text-[4rem] tracking-widest text-[2.5rem] text-white font-bold mb-4 flex justify-center mt-[10%] rumoura-font"
+         style={{
+           fontWeight: "bolder",
+           textAlign: "center",
+           textShadow: "0 0 10px black", // Add white shadow with 10px blur
+         }}
       >
         Our Past Performers
       </h2>
@@ -125,19 +125,10 @@ const Carousel = () => {
               <img
                 src={item.img}
                 alt={item.name}
-                style={{
-                  borderRadius: "20px",
-                  objectFit: "cover",
-                  width: "100%",
-                  height: "100%",
-                }}
-                className="object-fit"
+                style={{ borderRadius: "20px" }}
               />
 
-              <h6
-                style={{ textAlign: "center", color: "#000000" }}
-                className="rumoura-font text-xl"
-              >
+              <h6 style={{ textAlign: "center", color: "#fff" }}>
                 {item.name}
               </h6>
             </div>
