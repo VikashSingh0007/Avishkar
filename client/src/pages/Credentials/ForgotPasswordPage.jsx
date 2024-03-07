@@ -8,10 +8,10 @@ export default function ForgotPassword() {
   const handleEmailChange = (e) => {
     setEmail(e.target.value);
   };
-  useEffect(()=>{
-    const response=localStorage.getItem("userData");
-    if(response||localStorage.getItem("userToken")) return navigate('/');
-  },[])
+  useEffect(() => {
+    const response = localStorage.getItem("userData");
+    if (response && localStorage.getItem("userToken")) return navigate("/");
+  }, []);
   const navigate = useNavigate();
   const validateEmail = (email) => {
     if (email == "") {

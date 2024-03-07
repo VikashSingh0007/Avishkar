@@ -8,10 +8,10 @@ const Lo = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
-  useEffect(()=>{
-    const response=localStorage.getItem("userData");
-    if(response||localStorage.getItem("userToken")) return navigate('/');
-  },[])
+  useEffect(() => {
+    const response = localStorage.getItem("userData");
+    if (response && localStorage.getItem("userToken")) return navigate("/");
+  }, []);
   const handleForgot = (e) => {
     e.preventDefault();
     navigate("/forgotpassword");
@@ -27,7 +27,7 @@ const Lo = () => {
       return;
     } else {
       localStorage.setItem("userToken", response.token);
-      localStorage.setItem("userData",JSON.stringify(response.userData))
+      localStorage.setItem("userData", JSON.stringify(response.userData));
       navigate("/");
       return;
     }

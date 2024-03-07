@@ -5,7 +5,7 @@ import VerifyPayment from "./VerifyPayment";
 import AddDC from "./AddDC";
 import Navbar from "../Home/Navbar";
 import { getAllEvents } from "../../services/adminService";
-import ViewDC from "./viewDC"
+import ViewDC from "./viewDC";
 import { useNavigate } from "react-router-dom";
 const User = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -16,28 +16,27 @@ const User = () => {
   const [selectedEvent, setSelectedEvent] = useState(null);
   const [events, setEvents] = useState([]);
   // var filteredEvents=[]
-  const navigate=useNavigate();
-   const user=JSON.parse(localStorage.getItem("userData"))
-   useEffect(()=>{
-  const response=JSON.parse(localStorage.getItem("userData"));
-  if(!response||response.role!="Coordie"||response.role!="Admin") return navigate('/');
-   },[])
-   console.log(user);
-      useEffect(() => {
-        //Get All events
-        const fetchEvents = async () => {
-          try {
-            const {data} = await getAllEvents();
+  const navigate = useNavigate();
+  const user = JSON.parse(localStorage.getItem("userData"));
+  useEffect(() => {
+    const response = JSON.parse(localStorage.getItem("userData"));
+    if (!response || response.role == "User") return navigate("/");
+  }, []);
+  console.log(user);
+  useEffect(() => {
+    //Get All events
+    const fetchEvents = async () => {
+      try {
+        const { data } = await getAllEvents();
 
-            setEvents(data);
-            //  filteredEvents=data;
-          } catch (error) {
-            
-            console.error("Error fetching data at events:", error);
-          }
-        };
-        fetchEvents();
-      }, []);
+        setEvents(data);
+        //  filteredEvents=data;
+      } catch (error) {
+        console.error("Error fetching data at events:", error);
+      }
+    };
+    fetchEvents();
+  }, []);
 
   // Function to handle click outside of the sidebar
   const handleClickOutside = (event) => {
@@ -106,36 +105,42 @@ const User = () => {
             Events
           </div>
 
-          {user.role=="Admin"&&<div
-            className={`flex text-center p-2 text-xl  items-center  font-semibold hover:bg-orange-300 cursor-pointer rounded-md ${
-              choice === "verifyPayment" ? "bg-orange-400" : ""
-            }`}
-            onClick={() => {
-              handleChoice("verifyPayment");
-            }}
-          >
-            Verify Payment
-          </div>}
-        { user.role=="Admin"&& <div
-            className={`flex text-center p-2 text-xl  items-center font-semibold hover:bg-orange-300 cursor-pointer rounded-md ${
-              choice === "addDC" ? "bg-orange-400" : ""
-            }`}
-            onClick={() => {
-              handleChoice("addDC");
-            }}
-          >
-            Add Departmental Coordinator
-          </div>}
-          {user.role=="Admin"&& <div
-            className={`flex text-center p-2 text-xl  items-center font-semibold hover:bg-orange-300 cursor-pointer rounded-md ${
-              choice === "viewDC" ? "bg-orange-400" : ""
-            }`}
-            onClick={() => {
-              handleChoice("viewDC");
-            }}
-          >
-            View Departmental Coordinators
-          </div>}
+          {user.role == "Admin" && (
+            <div
+              className={`flex text-center p-2 text-xl  items-center  font-semibold hover:bg-orange-300 cursor-pointer rounded-md ${
+                choice === "verifyPayment" ? "bg-orange-400" : ""
+              }`}
+              onClick={() => {
+                handleChoice("verifyPayment");
+              }}
+            >
+              Verify Payment
+            </div>
+          )}
+          {user.role == "Admin" && (
+            <div
+              className={`flex text-center p-2 text-xl  items-center font-semibold hover:bg-orange-300 cursor-pointer rounded-md ${
+                choice === "addDC" ? "bg-orange-400" : ""
+              }`}
+              onClick={() => {
+                handleChoice("addDC");
+              }}
+            >
+              Add Departmental Coordinator
+            </div>
+          )}
+          {user.role == "Admin" && (
+            <div
+              className={`flex text-center p-2 text-xl  items-center font-semibold hover:bg-orange-300 cursor-pointer rounded-md ${
+                choice === "viewDC" ? "bg-orange-400" : ""
+              }`}
+              onClick={() => {
+                handleChoice("viewDC");
+              }}
+            >
+              View Departmental Coordinators
+            </div>
+          )}
         </div>
         <div
           className="md:w-[80%] md:h-auto h-[100%]  m-2 flex flex-col p-2  items-center bg-gray-200 bg-opacity-20 rounded shadow-lg backdrop-filter backdrop-blur-md"
@@ -146,7 +151,6 @@ const User = () => {
           {choice === "verifyPayment" && <VerifyPayment />}
           {choice === "addDC" && <AddDC />}
           {choice === "viewDC" && <ViewDC />}
-
         </div>
       </div>
 
