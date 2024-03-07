@@ -1,9 +1,13 @@
 import { toast } from 'react-toastify';
 import Axios from './Axios.js'
+<<<<<<< Updated upstream
 
 import * as XLSX from 'xlsx';
 import { saveAs } from 'file-saver';
 
+=======
+{/*import { getAllEvents } from '../../../src/controllers/event.controller.js';.*/}
+>>>>>>> Stashed changes
 
 export const makeDc = async (data) => {
     try{
