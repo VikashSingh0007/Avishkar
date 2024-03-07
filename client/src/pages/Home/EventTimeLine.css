@@ -1,4 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=Lato");
+@import url("https://fonts.googleapis.com/css2?family=Anton&family=Bungee+Shade&family=Calistoga&family=Croissant+One&family=Honk&family=Kelly+Slab&family=Protest+Strike&family=Work+Sans:ital,wght@1,300&family=Yeseva+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bungee+Shade&family=Calistoga&family=Honk&family=Kelly+Slab&family=Protest+Strike&family=Yeseva+One&display=swap");
 /* 
 * {
   box-sizing: border-box;
@@ -48,7 +50,7 @@ h1 {
 }
 
 .timeline-container::after {
-  background-color:     rgba(58, 52, 22, 0.8);
+  background-color: rgba(58, 52, 22, 0.8);
   content: "";
   position: absolute;
   left: calc(50% - 2px);
