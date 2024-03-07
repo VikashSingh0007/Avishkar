@@ -7,12 +7,12 @@ const AboutUs = () => {
 
   return (
     <div>
-      <section id="product" className={layout.sectionReverse}>
+      <section id="product" className={`${layout.section} text-center`} >
         <div className={layout.sectionImgReverse}>
           {/* <img src={BackGroundImage1} alt="Background Image" /> */}
-          <div className="record">
+          <div className="record mb-5">
             <span>
-              <img src={logo} alt="Logo" />
+              <img src={logo} alt="Logo"/>
             </span>
           </div>
           <div className="absolute z-[3] -left-1/2 top-0 w-[50%] h-[50%] rounded-full white__gradient" />
@@ -20,18 +20,18 @@ const AboutUs = () => {
           {/* gradient end */}
         </div>
 
-        <div className={layout.sectionInfo}>
+        <div className={`${layout.sectionInfo}`}>
           <h2
-            className="text-3xl text-black font-bold mb-4 flex justify-center rumoura-font "
+            className="md:text-[2.5rem] text-[1.8rem] w-full text-center text-black font-bold mb-4 flex justify-center  "
             style={{
-              fontSize: "xx-large",
               fontWeight: "bolder",
               textAlign: "center",
+              textShadow: "0 0 10px white",
             }}
           >
             About Us
           </h2>
-          <h6 className="protest-revolution-regular text-xl text-justify rumoura-font">
+          <h6 className="protest-revolution-regular md:text-[1.5rem] text-[1.2rem] text-white text-justify">
             MOTILAL NEHRU NATIONAL INSTITUTE OF TECHNOLOGY ALLAHABAD, PRAYAGRAJ
             an Institute of National Importance (by GOI), MNNIT ranks 3rd among
             The 30 NITs in India, as per QS Universities Rankings 2017. It was

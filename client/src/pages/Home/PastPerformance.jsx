@@ -105,11 +105,11 @@ const Carousel = () => {
   return (
     <div>
       <h2
-        className="text-3xl text-black font-bold mb-4 flex justify-center mt-[10%] rumoura-font underline"
+        className="md:text-[4rem] text-[2.5rem] text-white font-bold mb-4 flex justify-center mt-[10%] rumoura-font"
         style={{
-          fontSize: "xx-large",
           fontWeight: "bolder",
           textAlign: "center",
+          textShadow: "0 0 10px white", // Add white shadow with 10px blur
         }}
       >
         Our Past Performers

@@ -1,12 +1,10 @@
 .containerHomePage {
   background-image: linear-gradient(
     to bottom,
-    #d95f3b,
-    #d4833d,
-    #fcd6a5,
-    #7aa9a3,
-    #338f9a,
-    #1c4c70 /* #a16b56,
-    #e0a370 */
+    rgba(178, 145, 101, 0.8),
+    rgba(37, 36, 28, 0.8),
+     rgba(58, 52, 22, 0.8),
+    rgba(178, 145, 101, 0.8),
+    rgba(0, 0, 0, 1.8)
   );
 }

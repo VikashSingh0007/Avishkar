@@ -170,9 +170,10 @@
 #camera-body,
 #reel-1,
 #reel-2 {
-  fill: #130e0e;
+  fill: white;
   fill-opacity: 0.95;
   stroke: none;
+  filter: drop-shadow(5px 5px 5px black);
 }
 
 /* body {

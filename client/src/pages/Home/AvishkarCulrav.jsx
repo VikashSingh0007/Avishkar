@@ -7,16 +7,11 @@ import Clouds1 from "./culrav/assets/clouds11.png";
 import Clouds2 from "./culrav/assets/clouds2.png";
 import Clouds3 from "./culrav/assets/clouds3.png";
 import WoodenBar from "./culrav/assets/wooden111.png";
+
+
 const FixedDivsComponent = () => {
   return (
-    <div className="columns-2xs flex flex-col  sm:flex-row gap-8 p-0 relative">
-      {/* <div className="absolute top-[-10%] sm:top-[-20%] left-0 right-0 transform -translate-x-1/2 w-full animate-waving">
-        <img
-          src={WoodenBar}
-          className="block mx-auto  lg:w-200px md:w-200px sm:w-200px"
-        />
-      </div> */}
-
+    <div className="columns-2xs flex flex-col  sm:flex-row gap-8 p-0 relative z-[0] opacity-2 relative">
       <div className="flex-1 sm:w-1/2 lg:w-1/4  rounded-lg -mt-[10%] ">
         <div className="comic-button-container">
           {/* <button className="comic-button">Events</button> */}

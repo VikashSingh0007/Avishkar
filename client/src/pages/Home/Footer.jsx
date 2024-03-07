@@ -3,14 +3,19 @@ import { Link } from "react-router-dom";
 import { CiMail } from "react-icons/ci";
 import "./Nav.css";
 const Footer = () => (
-  <section className="bg-transparent mt-[10%] relative bottom-5  ">
+  <section
+    className="mt-[10%] relative  w-full p-5"
+    // style={{
+    //   boxShadow: "0 -20px 10px -10px black, 0 10px 10px -10px white",
+    // }}
+  >
     <div className="max-w-screen-xl px-4 py-2 mx-auto space-y-8 overflow-hidden sm:px-6 lg:px-8">
       <div className="flex flex-col justify-center -mx-5 -my-2 text-xl font-bold">
-        <h3 className="flex flex-wrap justify-center  text-center text-xl font-bold rumoura-font">
+        <h3 className="flex flex-wrap justify-center  text-center text-[1.6rem] text-white font-bold rumoura-font">
           {" "}
           Motilal Nehru National Institute of technology Allahabad
         </h3>
-        <h3 className="flex flex-wrap justify-center  text-center text-xl font-bold rumoura-font">
+        <h3 className="flex flex-wrap justify-center text- text-center text-xl font-bold rumoura-font text-white">
           {" "}
           Prayagraj , India
         </h3>
@@ -19,14 +24,14 @@ const Footer = () => (
       {/* Avishkar */}
       <div className="flex flex-col lg:flex-row">
         <div className="flex-grow lg:w-1/2">
-          <h3 className="flex flex-wrap justify-center -mx-5  text-xl font-bold underline rumoura-font">
+          <h3 className="flex flex-wrap text-white justify-center mx-5  text-[1.5rem] font-bold rumoura-font">
             {" "}
             Avishkar
           </h3>
           <div className="flex justify-center mt-2 space-x-6">
             <Link
               to="https://www.instagram.com/avishkar_mnnit/"
-              className="text-gray-400 hover:text-gray-500"
+              className=" hover:text-gray-500 text-white"
               target="_blank" // Opens the link in a new tab
               rel="noopener noreferrer" // Recommended for security and performance reasons
             >
@@ -57,7 +62,7 @@ const Footer = () => (
             </svg>
             <Link
               to="mailto:avishkar@mnnit.ac.in"
-              className="hover:text-gray-400 font-bold"
+              className="hover:text-gray-400 text-[1.2rem] text-white font-bold"
             >
               avishkar@mnnit.ac.in
             </Link>
@@ -65,18 +70,18 @@ const Footer = () => (
         </div>
         <div className="flex-grow lg:w-1/2 ">
           {/* Culrav */}
-          <h3 className="flex flex-wrap justify-center -mx-5  text-xl font-bold underline rumoura-font">
+          <h3 className="flex flex-wrap justify-center text-white mx-5  text-[1.5rem] font-bold  rumoura-font">
             {" "}
             Culrav
           </h3>
           <div className="flex justify-center mt-2 space-x-6">
             <Link
               to="https://www.instagram.com/culrav/?hl=en"
-              className="text-gray-400 hover:text-gray-500"
+              className="text-white hover:text-gray-500"
               target="_blank" // Opens the link in a new tab
               rel="noopener noreferrer" // Recommended for security and performance reasons
             >
-              <span className="sr-only">Instagram</span>
+              <span className="sr-only text-[1.3rem]">Instagram</span>
               <svg
                 className="w-6 h-6"
                 aria-hidden="true"
@@ -103,14 +108,14 @@ const Footer = () => (
             </svg>
             <Link
               to="mailto:culrav@mnnit.ac.in"
-              className="hover:text-gray-400 font-bold"
+              className="hover:text-gray-400 text-white text-[1.2rem] font-bold"
             >
               culrav@mnnit.ac.in
             </Link>
           </div>
         </div>
       </div>
-      <h6 className="mt-2 text-base leading-6 text-center text-black rumoura-font">
+      <h6 className="mt-2 text-base leading-6 text-center text-white text-[1.2rem] rumoura-font">
         Copyright Ⓒ 2024 MNNIT. All Rights Reserved.
       </h6>
     </div>

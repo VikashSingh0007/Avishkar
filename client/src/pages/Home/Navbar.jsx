@@ -48,8 +48,11 @@ const Navbar = () => {
 
   return (
     <nav
-    className={`w-full fixed top-0 z-20 ${scrolled ? "bg-orange-600  border-black border-t-[5px] rounded-b-[30px] border-b-1 border-l-[5px] border-r-[5px]   bg-opacity-75" : "border-[4px]  bg-orange-700  border-opacity-80 bg-opacity-90 border-t-[12px] -mt-2 border-black "}`}
-
+      className={`w-full fixed top-0 z-20 ${
+        scrolled
+          ? "bg-[#3A3416CC]  border-black border-t-[5px] rounded-b-[30px] border-b-1 border-l-[5px] border-r-[5px]   bg-opacity-75"
+          : "border-[4px]  bg-[#63462D]  border-opacity-80 bg-opacity-90 border-t-[12px] -mt-2 border-black "
+      }`}
     >
       <div className="flex justify-between items-center px-4 py-0">
         <div className="w-[10%]">
@@ -79,7 +82,7 @@ const Navbar = () => {
               }`}
               onClick={() => setActive("Avishkar")}
             >
-              {<Link  to={"/avishkar-landing"}>Avishkar</Link>}
+              {<Link to={"/avishkar-landing"}>Avishkar</Link>}
             </li>
             <li
               key={"accommodation"}
