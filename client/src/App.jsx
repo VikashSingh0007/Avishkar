@@ -6,6 +6,7 @@ import ResetPassword from "./pages/Credentials/ResetPassword.jsx";
 import Team from "./pages/Team/team.jsx";
 import CulravCarousel from "./pages/Home/culrav/Rangmanch/rangmanchCarousel.jsx";
 import Page from "./pages/Home/Avishkar/Event/Page.jsx";
+import AvishkarPage from "./pages/Home/Avishkar/Event/AvishkarPage.jsx";
 
 import Carousel2 from "./pages/Home/Avishkar/TemplateComponents/Carousel2.jsx";
 import Sponsors from "./pages/Home/Avishkar/TemplateComponents/Sponsors.jsx";
@@ -37,6 +38,7 @@ const App = () => {
           <Route path="/resetpassword/:token" element={<ResetPassword />} />
           <Route path="/AvishkarEvent/:data" element={<Carousel2 />} />
           <Route path="/page/:data" element={<Page />} />
+          <Route path="/avishkarpage/:data" element={<AvishkarPage />} />
           <Route path="/culravEvent/:data" element={<CulravCarousel />} />
           <Route path="/culravOpening" element={<CulravOpening />} />
           <Route path="/culravLanding" element={<CulravLanding />} />

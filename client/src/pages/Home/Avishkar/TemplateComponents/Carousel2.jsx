@@ -14,7 +14,8 @@ const Carousel = ({}) => {
       className="h-screen overflow-y-scroll mb-10"
       style={{
         backgroundImage:
-          "linear-gradient(to bottom, #d95f3b, #f0984a, #fcd6a5, #7aa9a3, #338f9a, #1c4c70)",
+          // "linear-gradient(to bottom, #d95f3b, #f0984a, #fcd6a5, #7aa9a3, #338f9a, #1c4c70)",
+          "linear-gradient(to bottom, #34626C, #839B97, #CFD3CE, #C6B497, #1c4c70)",
         backgroundAttachment: "fixed",
       }}
     >

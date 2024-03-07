@@ -15,7 +15,7 @@ const EventCard = ({ data }) => {
       {/* Wrap the card with Link */}
       <div className="card">
         <Link
-          to={`/page/${encodeURIComponent(JSON.stringify(data))}`}
+          to={`/avishkarpage/${encodeURIComponent(JSON.stringify(data))}`}
           className="flex items-center justify-center cursor-pointer"
         >
           <div className="wrapper-card">
@@ -49,7 +49,9 @@ const EventCard = ({ data }) => {
                 )}
                 <span className="flex text-center mx-auto text-3xl text-amber-100 font-custom hover:opacity-70 transition-opacity duration-300 ">
                   <div className="flex-col">
-                    <h4 className="text-3xl text-black w-full mt-2 rumoura-font">Explore !</h4>
+                    <h4 className="text-3xl text-black w-full mt-2 rumoura-font">
+                      Explore !
+                    </h4>
                   </div>
                 </span>
               </div>
