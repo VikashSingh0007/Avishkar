@@ -9,7 +9,7 @@ const CulravLanding = () => {
       className="h-screen overflow-y-scroll mb-10 "
       style={{
         backgroundImage:
-          // "linear-gradient(to bottom, #d95f3b, #f0984a, #fcd6a5, #7aa9a3, #338f9a, #1c4c70)",
+          // "linear-gradient(to bottom, #d95f3b, #f0984a, #fcd6a5, #338f9a, #1c4c70)",
           "linear-gradient(to bottom, #d95f3b, #f0984a)",
         backgroundAttachment: "fixed",
       }}

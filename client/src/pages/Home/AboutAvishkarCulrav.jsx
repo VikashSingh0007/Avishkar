@@ -10,11 +10,11 @@ const AboutUs = () => {
       <section id="product" className={`${layout.sectionReverse} `}>
         <div className={layout.sectionInfo}>
           <h2
-            className="font-Robo md:text-[2.5rem] text-[1.8rem] text-black font-bold mb-4  justify-center rumoura-font "
+            className="text-[3rem] tracking-wider text-white font-bold flex justify-center mt-[10%] rumoura-font"
             style={{
               fontWeight: "bolder",
               textAlign: "center",
-              textShadow: "0 0 10px white",
+              textShadow: "0 0 10px black", // Add white shadow with 10px blur
             }}
           >
             About Culrav-Avishkar 2024
@@ -23,7 +23,7 @@ const AboutUs = () => {
             className="font-Robo md:text-[1.5rem] text-[1.2rem] text-justify text-white "
             // style={{
             //   fontWeight: "bolder",
-             
+
             //   textShadow: "0 0 5px white",
             // }}
           >

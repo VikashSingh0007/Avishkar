@@ -1,5 +1,12 @@
 @import url("https://db.onlinewebfonts.com/c/6b63cc27b0fdfa2ee93c6eaf0f7572d9?family=Rumoura+TexturesPERSONAL+USE");
 @import url("https://fonts.googleapis.com/css2?family=Bungee+Shade&family=Calistoga&family=Honk&family=Kelly+Slab&family=Protest+Strike&family=Yeseva+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Anton&family=Bungee+Shade&family=Calistoga&family=Croissant+One&family=Honk&family=Kelly+Slab&family=Protest+Strike&family=Work+Sans:ital,wght@1,300&family=Yeseva+One&display=swap");
+.work-sansItalic {
+  font-family: "Work Sans", sans-serif;
+  /* font-optical-sizing: auto; */
+  font-weight: 900;
+  font-style: italic;
+}
 .kelly-slab-regular {
   font-family: "Kelly Slab", sans-serif;
   font-weight: bolder;
@@ -31,10 +38,10 @@
 
 .bn632-hover:hover {
   background-position: 100% 0;
-  moz-transition: all .4s ease-in-out;
-  -o-transition: all .4s ease-in-out;
-  -webkit-transition: all .4s ease-in-out;
-  transition: all .4s ease-in-out;
+  moz-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
 }
 
 .bn632-hover:focus {
@@ -43,13 +50,12 @@
 
 .bn632-hover.bn24 {
   background-image: linear-gradient(
-      to right,
-      #328b98,
-      #ee9248,
-      #ee9248,
-      #328b98
-      
-    );
+    to right,
+    #328b98,
+    #ee9248,
+    #ee9248,
+    #328b98
+  );
   box-shadow: 0 4px 15px 0 rgba(126, 52, 161, 0.75);
 }
 .protest-revolution-regular1 {
@@ -255,5 +261,3 @@ a {
 .icon-button:focus {
   background-color: #dfdad7;
 } */
-
-

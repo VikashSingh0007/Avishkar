@@ -18,10 +18,10 @@ const Page = () => {
   const handleClick = async () => {
     const userData = localStorage.getItem("userData");
     const userToken = localStorage.getItem("userToken");
-    if(!userToken || !userData){
-      toast.info("Login First To Register")
-      navigate('/login')
-     
+    if (!userToken || !userData) {
+      toast.info("Login First To Register");
+      navigate("/login");
+
       return;
     }
     const fetchData = async () => {
@@ -36,10 +36,9 @@ const Page = () => {
     };
     setShowModal(true);
     fetchData();
-    
   };
   // useEffect(, []);
-  
+
   const blurproperty = `flex text-gray-300 justify-center bg-opacity-15  backdrop-blur-sm p-8 rounded-md shadow-md`;
   return (
     <>
@@ -48,7 +47,8 @@ const Page = () => {
           className="flex justify-center items-center h-[100vh]"
           style={{
             backgroundImage:
-              "linear-gradient(to bottom, #d95f3b, #f0984a, #fcd6a5, #7aa9a3, #338f9a, #1c4c70)",
+              // "linear-gradient(to bottom, #d95f3b, #f0984a, #fcd6a5, #7aa9a3, #338f9a, #1c4c70)",
+              "linear-gradient(to bottom, #d95f3b, #f0984a)",
           }}
         >
           <Modal
@@ -63,7 +63,8 @@ const Page = () => {
           className="h-[100vh]"
           style={{
             backgroundImage:
-              "linear-gradient(to bottom, #d95f3b, #f0984a, #fcd6a5, #7aa9a3, #338f9a, #1c4c70)",
+              // "linear-gradient(to bottom, #d95f3b, #f0984a, #fcd6a5, #7aa9a3, #338f9a, #1c4c70)",
+              "linear-gradient(to bottom, #d95f3b, #f0984a)",
           }}
           // style={{ backgroundImage: `url(${background})` }}
         >

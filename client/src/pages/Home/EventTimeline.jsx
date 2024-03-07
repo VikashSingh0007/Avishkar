@@ -11,7 +11,7 @@ const timelineData = [
     },
     link: {
       url: "",
-      text: "Get Schedule of Day1",
+      text: "Get Schedule of Day 1",
     },
   },
   {
@@ -23,7 +23,7 @@ const timelineData = [
     },
     link: {
       url: "",
-      text: "Get Schedule of Day2",
+      text: "Get Schedule of Day 2",
     },
   },
   {
@@ -35,7 +35,7 @@ const timelineData = [
     },
     link: {
       url: "",
-      text: "Get Schedule of Day3",
+      text: "Get Schedule of Day 3",
     },
   },
   {
@@ -47,7 +47,7 @@ const timelineData = [
     },
     link: {
       url: "",
-      text: "Get Schedule of Day4",
+      text: "Get Schedule of Day 4",
     },
   },
   {
@@ -59,7 +59,7 @@ const timelineData = [
     },
     link: {
       url: "",
-      text: "Get Schedule of Day5",
+      text: "Get Schedule of Day 5",
     },
   },
   {
@@ -71,7 +71,7 @@ const timelineData = [
     },
     link: {
       url: "",
-      text: "Get Schedule of Day6",
+      text: "Get Schedule of Day 6",
     },
   },
   {
@@ -83,7 +83,7 @@ const timelineData = [
     },
     link: {
       url: "",
-      text: "Get Schedule of Day7",
+      text: "Get Schedule of Day 7",
     },
   },
 ];
@@ -138,16 +138,17 @@ const Timeline = () =>
   timelineData.length > 0 && (
     <>
       <h2
-        className="md:text-[4rem] tracking-widest font-Robo text-[2.5rem] text-white font-bold mb-4 flex justify-center mt-[10%] rumoura-font"
+        className="text-[3rem] tracking-wider text-white font-bold flex justify-center mt-[10%] rumoura-font"
         style={{
           fontWeight: "bolder",
           textAlign: "center",
           textShadow: "0 0 10px black", // Add white shadow with 10px blur
         }}
       >
-       <BiSolidCalendar  className="mt-[22px] hidden lg:inline  md:w-12 md:h-12  mr-2 hover:rotate-90 transition-all duration-300  "/>  Event Timeline 
+        {/* <BiSolidCalendar className="mt-[22px] hidden lg:inline  md:w-12 md:h-12  mr-2 hover:rotate-90 transition-all duration-300  " />{" "} */}
+        Event Timeline
       </h2>
-     
+
       <div
         className="timeline-container "
         id="timelineContainer"
