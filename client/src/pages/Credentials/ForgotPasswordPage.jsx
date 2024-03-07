@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "./ForgotPassword.css";
 import { forgotPassword } from "../../services/authService";
 
@@ -8,6 +8,10 @@ export default function ForgotPassword() {
   const handleEmailChange = (e) => {
     setEmail(e.target.value);
   };
+  useEffect(()=>{
+    const response=localStorage.getItem("userData");
+    if(response||localStorage.getItem("userToken")) return navigate('/');
+  },[])
   const navigate = useNavigate();
   const validateEmail = (email) => {
     if (email == "") {

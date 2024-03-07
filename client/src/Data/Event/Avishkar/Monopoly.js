@@ -72,7 +72,7 @@ export const Monopoly = [
         ],
       },
       {
-        name: " char ",
+        name: "Navachar",
         disc: "Navachar provides a platform to exhibit innovative business idea that can boost the profitability of an existing business. All you have to do is to add an innovative feature, technology, vertical, or idea to an existing business of your choice, with the consideration of financial viability. Get into the nitty gritty of the idea, present the same in an eye catchy manner.",
         rule: [
           {
@@ -104,7 +104,7 @@ export const Monopoly = [
         ],
       },
       {
-        name: "Stall Mart ",
+        name: "Stall Mart",
         disc: " Do you wish to stun others around with your ideas? Would like to display your artistic abilities? Ok then, we've got your back. We offer you the perfect opportunity to demonstrate your amazing talents, so embrace it! Contestants in the competition will be required to set up stalls. Items that can be sold at the stalls include sellable artistic creations, games that explore the psychological ideas, food etc.",
         rule: [
           {

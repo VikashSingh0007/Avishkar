@@ -105,7 +105,7 @@ export const PowerSurge = [
         ],
       },
       {
-        name: " Dev or Die",
+        name: "Dev or Die",
         disc: " It is a team based development event where teams have to develop a product based on the topic selected from the problem statement provided to them.",
         rule: [
           {
@@ -137,7 +137,7 @@ export const PowerSurge = [
         ],
       },
       {
-        name: " Codesparks",
+        name: "Codesparks",
         disc: "This is an event designed for individual participation, focusing on competitive programming.",
         rule: [
           {

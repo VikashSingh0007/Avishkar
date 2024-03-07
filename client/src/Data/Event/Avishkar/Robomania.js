@@ -108,7 +108,7 @@ export const Robomania = [
       },
 
       {
-        name: " HACK-QUEST",
+        name: "HACK-QUEST",
         disc: "Embark on an electrifying journey with HACK-QUEST, a dynamic platform designed to tackle real-world challenges head-on, unleashing the power of your creativity and expertise in AI and ML. Elevate your skills as you craft innovative solutions, pushing the boundaries to create the most optimized and groundbreaking answers. Join the adventure, explore intricacies, and showcase your inventive models in the exciting landscape of HACK-QUEST.",
         rule: [
           {

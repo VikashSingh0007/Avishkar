@@ -122,12 +122,8 @@ const joinEvent = async (req, res , next) => { // called by frontend when joinin
             res.statusCode = 401;
             res.json({ error: "unauthorized", message: "only team leader can add participation!", success: false });
             return;
-        } else if (team.acceptedMembers.length + team.pendingMembers.length > event.maxTeamsize || team.acceptedMembers.length + team.pendingMembers.length < event.minTeamsize) {
-            // checking the appropriate size of the team
-            res.statusCode = 400;
-            res.json({ error: "bad request", message: "team size constraints don't match with the participating team!", success: false });
-            return;
-        }
+        } 
+        else
         if( team.pendingMembers.length > 0 ){
             res.statusCode = 410;
             res.json({
@@ -136,29 +132,31 @@ const joinEvent = async (req, res , next) => { // called by frontend when joinin
                 success : false
             })
             return;
-        } else {
+        }else
+         if (team.acceptedMembers.length  > event.maxTeamsize || team.acceptedMembers.length  < event.minTeamsize) {
+            // checking the appropriate size of the team
+            res.statusCode = 400;
+            res.json({ error: "bad request", message: "team size constraints don't match with the participating team!", success: false });
+            return;
+        }
+         else {
             // we simply add the team Id to the id of the participant
-            var flag = false;
-            // console.log(event)
+           
             for(let i = 0 ; i < event.particpatingTeams.length ; i++){
                 if(event.particpatingTeams[i] == teamId){
-                    // console.log(i);
-                    // console.log(event.particpatingTeams[i])
-                    flag = true;
+                    res.statusCode = 400;
+                    res.json(
+                        {
+                            error : "Already Registered",
+                            message : "Already Registered",
+                            success : false
+                    
+                        }
+                    )
+                    return;
                 }
             }
-            if(flag){
-                res.statusCode = 400;
-                res.json(
-                    {
-                        error : "Already Registered",
-                        message : "Already Registered",
-                        success : false
-                  
-                      }
-                )
-                return;
-            }
+           
           
             for(let i = 0; i < team.acceptedMembers.length ; i++){
                 if(checkIfJoined(team.acceptedMembers[i] , event)){

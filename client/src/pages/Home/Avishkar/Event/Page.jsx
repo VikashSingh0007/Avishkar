@@ -1,23 +1,29 @@
 import "./page.css";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import background from "./img.jpg";
 import React, { useEffect, useState } from "react";
 import Navbar from "../../../Home/Navbar";
 import Modal from "./modal.jsx";
 import { getAllParticipating } from "../../../../services/teamService.js";
+import { toast } from "react-toastify";
 
 const Page = () => {
   const { data } = useParams();
   const decodedData = JSON.parse(decodeURIComponent(data));
   const [showModal, setShowModal] = useState(false);
   const [fetchedData, setFetchedData] = useState();
-
+  const navigate = useNavigate();
   console.log(decodedData);
 
-  const handleClick = () => {
-    setShowModal(true);
-  };
-  useEffect(() => {
+  const handleClick = async () => {
+    const userData = localStorage.getItem("userData");
+    const userToken = localStorage.getItem("userToken");
+    if(!userToken || !userData){
+      toast.info("Login First To Register")
+      navigate('/login')
+     
+      return;
+    }
     const fetchData = async () => {
       try {
         const data = await getAllParticipating();
@@ -28,10 +34,12 @@ const Page = () => {
         console.error("Error fetching data:", error);
       }
     };
-
+    setShowModal(true);
     fetchData();
-  }, []);
-
+    
+  };
+  // useEffect(, []);
+  
   const blurproperty = `flex text-gray-300 justify-center bg-opacity-15  backdrop-blur-sm p-8 rounded-md shadow-md`;
   return (
     <>

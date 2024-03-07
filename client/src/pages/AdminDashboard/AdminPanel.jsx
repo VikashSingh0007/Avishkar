@@ -18,8 +18,8 @@ const User = () => {
   // var filteredEvents=[]
   const navigate=useNavigate();
    const user=JSON.parse(localStorage.getItem("userData"))
-   useState(()=>{
-  const response=localStorage.getItem("userData");
+   useEffect(()=>{
+  const response=JSON.parse(localStorage.getItem("userData"));
   if(!response||response.role!="Coordie"||response.role!="Admin") return navigate('/');
    },[])
    console.log(user);

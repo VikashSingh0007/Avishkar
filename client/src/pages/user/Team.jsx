@@ -60,6 +60,15 @@ const Team = () => {
                   </div>
                 </div>
                 <div className="flex justify-center">
+                <h6 className="text-white text-xl font-medium mb-2">
+                        Team Size : {team?.size}
+                </h6>
+                <p className="text-white text-xl font-medium mb-2">
+                        Accepted Members : {team?.acceptedMembers?.length}
+                </p>
+                <p className="text-white text-xl font-medium mb-2">
+                        Pending Invites : {team?.pendingMembers?.length}
+                </p>
                   <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
                     {team?.acceptedMembers.map((member, index) => (
                       <div

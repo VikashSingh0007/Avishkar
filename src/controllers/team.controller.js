@@ -252,8 +252,8 @@ const sendTeamInvitation = async (req, res, next) => {
     // id is of the user inviting i.e the leader of the team
     const id = req.user._id;
     try {
-        const targetMember = await User.findOne({email : email});
-        const team = await Team.findOne({_id : teamId});
+        var targetMember = await User.findOne({email : email});
+        var team = await Team.findOne({_id : teamId});
     
         if (!team || !targetMember) {
             // case when team or user doesn't exist
@@ -272,6 +272,32 @@ const sendTeamInvitation = async (req, res, next) => {
             }
             else{
                 // add team to pending of invited member
+                for(let i=0;i < team.acceptedMembers.length ; i++){
+                    const id1 = JSON.stringify(team.acceptedMembers[i])
+                    const id2 = JSON.stringify(targetMember._id)
+                    if( id1 == id2){
+                        res.statusCode = 403;
+                        res.json({
+                            success : false,
+                            message : "User Is Already A Member Of The Team",
+                            error : "Already a Member"
+                        })
+                        return
+                    }
+                }
+                for(let i=0;i < team.pendingMembers.length ; i++){
+                    const id1 = JSON.stringify(team.pendingMembers[i])
+                    const id2 = JSON.stringify(targetMember._id)
+                    if( id1 == id2){
+                        res.statusCode = 403;
+                        res.json({
+                            success : false,
+                            message : "Invite Already Sent",
+                            error : "Already Invited"
+                        })
+                        return
+                    }
+                }
                 targetMember.pendingTeam = [...targetMember.pendingTeam , teamId];
                 // add invited team to pending member
                 team.pendingMembers = [...team.pendingMembers , targetMember._id];
@@ -292,7 +318,7 @@ const sendTeamInvitation = async (req, res, next) => {
 const acceptOrRejectInvite = async (req , res , next) => {
     const { teamId, status } = req.body;
     const id = req.user._id;
-    if(!teamId || !status){ // in case id or status are incorrectly given
+    if(!teamId || status==null){ // in case id or status are incorrectly given
         res.statusCode = 400;
         res.json({
             error : "missing teamId or status",
@@ -303,7 +329,7 @@ const acceptOrRejectInvite = async (req , res , next) => {
     }
     try {
      
-        const teamuser = await User.findOne({_id : id});
+        var teamuser = await User.findOne({_id : id});
        
         if(!teamuser){ // if the user to be invited does not exist
             res.statusCode = 400;
@@ -323,7 +349,7 @@ const acceptOrRejectInvite = async (req , res , next) => {
             });
             return;
         } else {
-                const team = await Team.findOne({ 
+                var team = await Team.findOne({ 
                     _id : teamId
                 })
                 if(!team) { // case where the team to be invited does not exist
@@ -335,7 +361,9 @@ const acceptOrRejectInvite = async (req , res , next) => {
                         //remove event from pending of user
                         console.log('user is accepting invite');
                         teamuser.pendingTeam = teamuser.pendingTeam.filter((participateTeamId) => {
-                            return participateTeamId != teamId
+                            const id1 = JSON.stringify(participateTeamId)
+                            const id2 = JSON.stringify(teamId)
+                            return id1 != id2
                         })
                         // add event to participating of user
                         teamuser.participatingTeam = addUserToDepartment(teamuser.participatingTeam , team._id);
@@ -344,7 +372,10 @@ const acceptOrRejectInvite = async (req , res , next) => {
                         team.acceptedMembers = addUserToDepartment(team.acceptedMembers , teamuser._id);
                         // remove member from team's accepted
                         team.pendingMembers = team.pendingMembers.filter((participantId) => {
-                            return participantId != teamuser._id;
+                            const id1 = JSON.stringify(participantId)
+                            const id2 = JSON.stringify(teamuser._id)
+                            return id1 != id2
+                            
                         })
 
                         // flush the changes
@@ -355,11 +386,16 @@ const acceptOrRejectInvite = async (req , res , next) => {
                         console.log('user is rejecting invite');
                         //remove event from pending of user
                         teamuser.pendingTeam = teamuser.pendingTeam.filter((participateTeamId) => {
-                            return participateTeamId != teamId
+                            const id1 = JSON.stringify(participateTeamId)
+                            const id2 = JSON.stringify(teamId)
+                            return id1 != id2
                         })
                         // remove member from team's accepted
                         team.pendingMembers = team.pendingMembers.filter((participantId) => {
-                            return participantId != teamuser._id;
+                            const id1 = JSON.stringify(participantId)
+                            const id2 = JSON.stringify(teamuser._id)
+                            return id1 != id2
+                            
                         })   
 
                         // flush the changes

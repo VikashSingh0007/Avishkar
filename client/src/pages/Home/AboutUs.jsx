@@ -12,7 +12,7 @@ const AboutUs = () => {
           {/* <img src={BackGroundImage1} alt="Background Image" /> */}
           <div className="record">
             <span>
-              <img src="logo.png" alt="Logo" />
+              <img src={logo} alt="Logo" />
             </span>
           </div>
           <div className="absolute z-[3] -left-1/2 top-0 w-[50%] h-[50%] rounded-full white__gradient" />

@@ -55,11 +55,36 @@ const Create = () => {
                   name="teamSize"
                   className="text-black w-full h-[5vh] bg-gray-900 bg-opacity-20 focus:bg-transparent focus:ring-2 focus:ring-orange-300 rounded border border-gray-900 focus:border-orange-500 outline-none  py-1 px-3 leading-8 transition-colors duration-200 ease-in-out text-2xl mt-2"
                 >
-                  <option value="1">1</option>
-                  <option value="2">2</option>
-                  <option value="3">3</option>
-                  <option value="4">4</option>
-                  <option value="5">5</option>
+                  <option className="text-black" value="1">
+                    1
+                  </option>
+                  <option className="text-black" value="2">
+                    2
+                  </option>
+                  <option className="text-black" value="3">
+                    3
+                  </option>
+                  <option className="text-black" value="4">
+                    4
+                  </option>
+                  <option className="text-black" value="5">
+                    5
+                  </option>
+                  <option className="text-black" value="5">
+                    6
+                  </option>
+                  <option className="text-black" value="5">
+                    7
+                  </option>
+                  <option className="text-black" value="5">
+                    8
+                  </option>
+                  <option className="text-black" value="5">
+                    9
+                  </option>
+                  <option className="text-black" value="5">
+                    10
+                  </option>
                 </select>
               </div>
               <button
