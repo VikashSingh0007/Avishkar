@@ -61,7 +61,9 @@ import Aniket from "../Images/Team/Aniket_Yadav9007.jpg"
 import Praveen from "../Images/Team/Praveen_Awasthi9041.jpg"
 import Rahul from "../Images/Team/Rahul_Garg8101.jpg"
 import Aman from "../Images/Team/Aman_Kumar9004.jpeg"
-
+import Sandeep from "../Images/Team/Sandeep_Oraon2072.jpg"
+import DivyanshuY from "../Images/Team/Divyanshu_Yadav0020.jpg"
+import SameerSir from "../Images/Team/SameerSir.jpeg"
 export const Team = [
   {
     department: "Director",
@@ -95,14 +97,7 @@ export const Team = [
       {
         email: "Sameer Srivastava",
         name: "Dr. Sameer Srivastava",
-        registration: 20204233,
-        branch: "",
-        position: "",
-        department: "",
-        photo: "",
-        linkedin: "",
-        instagram_url: "",
-        instagram_username: "4",
+        image:SameerSir,
         Profile_Url: "http://www.mnnit.ac.in/profile/sameers"
       },
       // Add more data for Dc's...
@@ -147,7 +142,7 @@ export const Team = [
       },
       {
         email: "anupamyadav506@gmail.com",
-        name: "Aupam Yadav",
+        name: "Anupam Yadav",
         registration: 20205038,
         mobile: 9506250974,
         branch: "Electronics and Communication Engineering",
@@ -491,15 +486,66 @@ export const Team = [
     ],
   },
 
-  // {
-  //   department: "Media Team",
-  //   data: [
-  //     {
-  //       
-  //     },
-  //     // Add more data for Dc's...
-  //   ],
-  // },
+  {
+    department: "Media Leads",
+    data: [
+      {
+        email:"divyanshu.20200020@mnnit.ac.in",
+        name:"Divyanshu Yadav ",
+        reg:"20200020",
+        image:DivyanshuY,
+        mobile:"7268874045",
+        branch:"Chemical Engineering",
+        position:"Design Lead",
+        department:"",
+        photo:"https://drive.google.com/open?id=1AZcRAaQ1HAlXXfwEhpZJFfB93BrrJRJu",
+        linkedin:"https://www.linkedin.com/in/divyanshuyadav0/",
+        instagram_url:"https://www.instagram.com/divy.anshu.yadav/",
+        instagram_username:"divy.anshu.yadav"
+      },
+      {
+        email:"sandeeporaon9459@gmail.com",
+        name:"Sandeep Oraon",
+        reg:"20202072",
+        image:Sandeep,
+        mobile:"6394049401",
+        branch:"Electrical Engineering",
+        position:"Videography Lead",
+        department:"",
+        photo:"https://drive.google.com/open?id=1jaBnqaHZPrDy-zc8IAXRD6yN5aA-_Gxo",
+        linkedin:"https://www.linkedin.com/in/sandeep-oraon-698065241/",
+        instagram_url:"https://www.instagram.com/thesandeeporaon/",
+        instagram_username:"thesandeeporaon"
+      },
+      {
+        email:"",
+        name:"",
+        reg:"",
+        mobile:"",
+        branch:"",
+        position:"",
+        department:"",
+        photo:"",
+        linkedin:"",
+        instagram_url:"",
+        instagram_username:""
+      },
+      {
+        email:"",
+        name:"",
+        reg:"",
+        mobile:"",
+        branch:"",
+        position:"",
+        department:"",
+        photo:"",
+        linkedin:"",
+        instagram_url:"",
+        instagram_username:""
+      },
+      // Add more data for Dc's...
+    ],
+  },
   {
     department: "Arts Lead",
     data: [
@@ -622,8 +668,23 @@ export const Team = [
     ],
   },
   {
-    department: "Departmental Cordinator",
+    department: "Departmental Coordinator",
     data: [
+      {
+        email: "shubham.20204197@mnnit.ac.in",
+        name: "Shubham Kashyap",
+        registration: 20204197,
+        image:ShubhamK,
+        mobile: 9504579478,
+        branch: "Computer Science and Engineering",
+        position: "Departmental Coordinator",
+        department: "Cyberquest",
+        photo:
+          "https://drive.google.com/open?id=1xURATj9Z9VjOBI1XkDdeB5KMhj2iOy8I",
+        linkedin: "https://www.linkedin.com/in/admirerr/",
+        instagram_url: "https://www.instagram.com/kashyapshubham0608/",
+        instagram_username: "kashyapshubham0608",
+      },
       {
         email: "krshivam291002@gmail.com",
         name: "Shivam Ojha",
@@ -665,28 +726,14 @@ export const Team = [
         mobile: 7754096711,
         branch: "Mechanical Engineering",
         position: "Departmental Coordinator",
-        department: "Triathlon mechanical",
+        department: "Mechrocosm",
         photo:
           "https://drive.google.com/open?id=1-fewnMsZOFwyRP2VDkv8UiGjLnDhsAGA",
         linkedin: "https://www.linkedin.com/in/arina-siddiqui-a22803232/",
         instagram_url: "https://www.instagram.com/arinasiddiquireal/?next=%2F",
         instagram_username: "arinasiddiquireal",
       },
-      {
-        email: "shubham.20204197@mnnit.ac.in",
-        name: "Shubham Kashyap",
-        registration: 20204197,
-        image:ShubhamK,
-        mobile: 9504579478,
-        branch: "Computer Science and Engineering",
-        position: "Departmental Coordinator",
-        department: "Cyberquest",
-        photo:
-          "https://drive.google.com/open?id=1xURATj9Z9VjOBI1XkDdeB5KMhj2iOy8I",
-        linkedin: "https://www.linkedin.com/in/admirerr/",
-        instagram_url: "https://www.instagram.com/kashyapshubham0608/",
-        instagram_username: "kashyapshubham0608",
-      },
+      
       {
         email: "himanshu.20201053@mnnit.ac.in",
         name: "Himanshu Shankar Lodha",
@@ -1059,7 +1106,7 @@ export const Team = [
         mobile: 6386216334,
         branch: "Chemical Engineering",
         position: "Departmental Coordinator",
-        department: "Rasayans",
+        department: "Rasayan",
         photo:
           "https://drive.google.com/open?id=11POQW9yJI6Gp95NF2JgW4KhUXEUCrJHf",
         linkedin: "https://www.linkedin.com/in/aniketyadav03",
@@ -1090,7 +1137,7 @@ export const Team = [
         mobile: 9369991647,
         branch: "Chemical Engineering",
         position: "Departmental Coordinator",
-        department: "RASAYAN",
+        department: "Rasayan",
         photo:
           "https://drive.google.com/open?id=1yUKDJVfMccXWeeN15puoLZpml_OHVaTB",
         linkedin:
