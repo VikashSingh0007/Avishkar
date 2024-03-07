@@ -43,10 +43,11 @@ const AvishkarLanding = () => {
       </div>
 
       <div className="relative flex flex-wrap justify-evenly w-full">
-        {avishkarData.map((data) => {
+        {avishkarData.map((data,index) => {
           return (
-            <div className="mb-8 mr-6 ml-6 relative">
+            <div key={index} className=" mb-8 mr-6 ml-6 relative">
               <EventsComputer data={data} />
+              
             </div>
           );
         })}

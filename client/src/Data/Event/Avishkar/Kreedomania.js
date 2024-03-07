@@ -1,8 +1,9 @@
+import image from "../../../../src/Data/Images/Logo/Kreedomania (2).png";
 export const Kreedomania = [
   {
     title: "Kreedomania",
     tagline: "LET THE GAME BEGIN",
-    BgImageLink: "",
+    BgImageLink:image,
     instagramLink: "https://www.instagram.com/kreedomania_mnnit/",
     events: [
       {

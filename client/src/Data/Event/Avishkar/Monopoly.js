@@ -2,11 +2,12 @@ import Chankyaniti from "../../Images/Chankyaniti.png";
 import Putting from "../../Images/putting.png";
 import Navachar from "../../Images/Navachar.png";
 import Stallmart from "../../Images/Stallmart.png";
+import image from "../../../../src/Data/Images/Logo/Monopoly-Logo.png"
 export const Monopoly = [
   {
     title: "Monopoly ",
     tagline: "Build your Empire, be a lone wolf",
-    BgImageLink: "",
+    BgImageLink: image,
     instagramLink:
       "https://www.facebook.com/MonopolyMNNIT?mibextid=rS40aB7S9Ucbxw6v",
     events: [

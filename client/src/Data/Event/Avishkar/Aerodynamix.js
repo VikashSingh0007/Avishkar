@@ -1,10 +1,11 @@
 import Guardian from "../../Images/Guardian.png";
 import GameofDrones from "../../Images/GameofDrones.png";
+import image from "../../../../src/Data/Images/Logo/Aerodynamics.png"
 export const Aerodynamix = [
   {
     title: "Aerodynamix",
     tagline: "",
-    BgImageLink: "",
+    BgImageLink:image,
     instagramLink: "",
     events: [
       {
