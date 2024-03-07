@@ -6,6 +6,8 @@ import Create from "./Create";
 import Resume from "./Resume";
 import Navbar from "../Home/Navbar";
 import { useNavigate } from "react-router-dom";
+import "./user.css";
+
 const User = () => {
   const [choice, setChoice] = useState("view");
   const [showMenu, setShowMenu] = useState(false);
@@ -16,21 +18,27 @@ const User = () => {
   // Effect to add event listener when the component mounts
 
   return (
-    <div
-      className="absolute top-0 left-0 w-full h-full overflow-hidden flex flex-col"
-      style={{
-        background:
-          "linear-gradient(to bottom, #d95f3b, #f0984a, #fcd6a5, #7aa9a3, #338f9a, #1c4c70) ",
-      }}
-    >
+    <div className="absolute  top-0 left-0 w-full h-full overflow-hidden flex flex-col containerHomePage">
       <div className="h-[10%] ">
         <Navbar />
       </div>
-      <div className="h-[90%]  p-2 flex flex-row ">
-        <div className="w-full hidden  overflow-y-scroll lg:flex lg:flex-col  gap-2   lg:w-[15%] rounded-lg p-4 bg-gray-800 bg-opacity-20  shadow-lg backdrop-filter backdrop-blur-md ">
+      <div className="h-[90%]  p-2 flex lg:flex-row flex-col">
+        <div
+          className="w-full hidden overflow-y-scroll lg:flex lg:flex-col gap-2 lg:w-[15%] rounded-lg p-4 bg-[#63462D] bg-opacity-40 shadow-md backdrop-filter backdrop-blur-md"
+          style={{
+            boxShadow: "0px 10px 10px black",
+          }}
+        >
           <div
-            className="flex items-center cursor-pointer hover:bg-orange-300  px-4 py-2 lg:my-8 text-gray-700 bg-gray-100 rounded-md dark:bg-gray-800 dark:text-gray-200"
-            style={choice === "view" ? { backgroundColor: "orange" } : null}
+            className="flex items-center cursor-pointer hover:bg-[#75664B]  px-4 py-2 lg:my-8 text-white bg-[#827660] rounded-md dark:bg-gray-800 dark:text-gray-200"
+            style={
+              choice === "view"
+                ? {
+                    backgroundColor: "#423C31",
+                    boxShadow: "0px 10px 10px black",
+                  }
+                : { boxShadow: "0px 5px 10px black" }
+            }
           >
             <svg
               className="w-5 h-5"
@@ -56,8 +64,17 @@ const User = () => {
             </span>
           </div>
           <div
-            className="flex items-center cursor-pointer hover:bg-orange-300  px-4 py-2 lg:my-8 text-gray-700 bg-gray-100 rounded-md dark:bg-gray-800 dark:text-gray-200"
-            style={choice === "resume" ? { backgroundColor: "orange" } : null}
+            //className="flex items-center cursor-pointer hover:bg-[#75664B]  px-4 py-2 lg:my-8 text-white bg-[#CFBB99] rounded-md dark:bg-gray-800 dark:text-gray-200"
+            className="flex items-center cursor-pointer hover:bg-[#75664B]  px-4 py-2 lg:my-8 text-white bg-[#827660] rounded-md dark:bg-gray-800 dark:text-gray-200"
+            //style={choice === "resume" ? { backgroundColor: "orange" } : null}
+            style={
+              choice === "resume"
+                ? {
+                    backgroundColor: "#423C31",
+                    boxShadow: "0px 10px 10px black",
+                  }
+                : { boxShadow: "0px 5px 10px black" }
+            }
           >
             <svg
               className="w-5 h-5"
@@ -83,8 +100,18 @@ const User = () => {
             </span>
           </div>{" "}
           <div
-            className="flex items-center cursor-pointer hover:bg-orange-300  px-4 py-2 lg:my-8 text-gray-700 bg-gray-100 rounded-md dark:bg-gray-800 dark:text-gray-200"
-            style={choice === "team" ? { backgroundColor: "orange" } : null}
+            //className="flex items-center cursor-pointer hover:bg-orange-300  px-4 py-2 lg:my-8 text-gray-700 bg-gray-100 rounded-md dark:bg-gray-800 dark:text-gray-200"
+            className="flex items-center cursor-pointer hover:bg-[#75664B]  px-4 py-2 lg:my-8 text-white bg-[#827660] rounded-md dark:bg-gray-800 dark:text-gray-200"
+            style={
+              choice === "team"
+                ? {
+                    backgroundColor: "#423C31",
+                    boxShadow: "0px 10px 10px black",
+                  }
+                : { boxShadow: "0px 5px 10px black" }
+            }
+
+            //style={choice === "team" ? { backgroundColor: "orange" } : null}
           >
             <svg
               className="w-5 h-5"
@@ -110,8 +137,17 @@ const User = () => {
             </span>
           </div>{" "}
           <div
-            className="flex items-center cursor-pointer hover:bg-orange-300 px-4 py-2 lg:my-8 text-gray-700 bg-gray-100 rounded-md dark:bg-gray-800 dark:text-gray-200"
-            style={choice === "create" ? { backgroundColor: "orange" } : null}
+            //className="flex items-center cursor-pointer hover:bg-orange-300 px-4 py-2 lg:my-8 text-gray-700 bg-gray-100 rounded-md dark:bg-gray-800 dark:text-gray-200"
+            //style={choice === "create" ? { backgroundColor: "orange" } : null}
+            className="flex items-center cursor-pointer hover:bg-[#75664B]  px-4 py-2 lg:my-8 text-white bg-[#827660] rounded-md dark:bg-gray-800 dark:text-gray-200"
+            style={
+              choice === "create"
+                ? {
+                    backgroundColor: "#423C31",
+                    boxShadow: "0px 10px 10px black",
+                  }
+                : { boxShadow: "0px 5px 10px black" }
+            }
           >
             <svg
               className="w-5 h-5"
@@ -137,9 +173,18 @@ const User = () => {
             </span>
           </div>{" "}
           <div
-            className="flex items-center cursor-pointer hover:bg-orange-300 px-4 py-2 lg:my-8 text-gray-700 bg-gray-100 rounded-md dark:bg-gray-800 dark:text-gray-200"
+            //className="flex items-center cursor-pointer hover:bg-orange-300 px-4 py-2 lg:my-8 text-gray-700 bg-gray-100 rounded-md dark:bg-gray-800 dark:text-gray-200"
+            // style={
+            //   choice === "invitation" ? { backgroundColor: "orange" } : null
+            // }
+            className="flex items-center cursor-pointer hover:bg-[#75664B]  px-4 py-2 lg:my-8 text-white bg-[#827660] rounded-md dark:bg-gray-800 dark:text-gray-200"
             style={
-              choice === "invitation" ? { backgroundColor: "orange" } : null
+              choice === "invitation"
+                ? {
+                    backgroundColor: "#423C31",
+                    boxShadow: "0px 10px 10px black",
+                  }
+                : { boxShadow: "0px 5px 10px black" }
             }
           >
             <svg
@@ -165,7 +210,11 @@ const User = () => {
               View Invitation
             </span>
           </div>
-          <div className="flex items-center cursor-pointer hover:bg-orange-300 px-4 py-2 lg:my-8 text-gray-700 bg-gray-100 rounded-md dark:bg-gray-800 dark:text-gray-200">
+          <div
+            //className="flex items-center cursor-pointer hover:bg-orange-300 px-4 py-2 lg:my-8 text-gray-700 bg-gray-100 rounded-md dark:bg-gray-800 dark:text-gray-200">
+            className="flex items-center cursor-pointer hover:bg-[#75664B]  px-4 py-2 lg:my-8 text-white bg-[#827660] rounded-md dark:bg-gray-800 dark:text-gray-200"
+            style={{ boxShadow: "0px 5px 10px black" }}
+          >
             <svg
               className="w-5 h-5"
               viewBox="0 0 24 24"
@@ -193,7 +242,16 @@ const User = () => {
           </div>
           {userData && userToken && userData.role == "Admin" && (
             <a
-              className="flex items-center px-4 py-2 my-8 text-gray-700 bg-gray-100 rounded-md dark:bg-gray-800 dark:text-gray-200"
+              //className="flex items-center px-4 py-2 my-8 text-gray-700 bg-gray-100 rounded-md dark:bg-gray-800 dark:text-gray-200"
+              className="flex items-center cursor-pointer hover:bg-[#75664B]  px-4 py-2 lg:my-8 text-white bg-[#827660] rounded-md dark:bg-gray-800 dark:text-gray-200"
+              style={
+                choice === "admin"
+                  ? {
+                      backgroundColor: "#423C31",
+                      boxShadow: "0px 10px 10px black",
+                    }
+                  : { boxShadow: "0px 5px 10px black" }
+              }
               href="/admin"
             >
               <svg
@@ -355,7 +413,7 @@ const User = () => {
           )}
         </div>
 
-        <div className="flex w-full h-full items-center p-2  ml-2 bg-gray-600 bg-opacity-20 rounded shadow-lg backdrop-filter backdrop-blur-md justify-center md:w-[85%] overflow-y-scroll">
+        <div className="flex w-full h-full lg:items-center p-2 lg:ml-3 bg-transparent justify-center lg:w-[85%] overflow-y-scroll">
           {choice === "view" && <View />}
           {choice === "team" && <Team />}
           {choice === "invitation" && <Invitations />}
