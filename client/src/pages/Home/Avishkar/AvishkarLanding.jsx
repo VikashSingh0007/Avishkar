@@ -8,7 +8,7 @@ import EventsComputer from "./eventsComputer";
 import Navbar from "../Navbar";
 const AvishkarLanding = () => {
  
- 
+  
 
   return (
     <div
@@ -23,9 +23,9 @@ const AvishkarLanding = () => {
           "linear-gradient(to bottom, #d95f3b, #f0984a, #fcd6a5, #7aa9a3, #338f9a, #1c4c70)",
       }}
     >
-      
+ 
       <Navbar />
-
+ 
       
       {/* <div className="custom-class text-center justify-center">
         <div>
