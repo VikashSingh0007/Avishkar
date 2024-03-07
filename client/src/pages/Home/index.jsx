@@ -12,8 +12,8 @@ import FAQ from "./FAQ.jsx";
 import Gallery from "./Gallery.jsx";
 import { toast } from "react-toastify";
 import Navbar from "./Navbar.jsx";
-import Clock from "../../assets/clockVintage.jpeg";
-import mnnitImg from "../../assets/mnnitImg.jpeg";
+import Clock from "../../assets/clockVintage.png";
+
 
 const App = () => {
   return (
@@ -21,11 +21,7 @@ const App = () => {
       <div className="absolute top-0 left-0 w-full h-full flex justify-center items-center">
         <div className="fixed left-0 w-full h-full flex justify-center items-center">
           {/* <div className="absolute  transform -translate-x-1/2 -translate-y-1/2"> */}
-            <img
-              src={Clock}
-              alt="mnnitImg"
-              className="h-full w-full object-cover"
-            />
+          <img src={Clock} alt="mnnitImg" className=" object-cover w-full" />
           {/* </div> */}
         </div>
 

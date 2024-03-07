@@ -9,13 +9,11 @@ const HomePageLayout = ({ children }) => (
     className=" min-h-screen overflow-hidden containerHomePage "
     // style={{ backgroundImage: `url(${BackGroundImage})` }}
   >
-    <div className="mb-16 hidden sm:flex">
+    <div className="  hidden sm:flex">
       <Navbar />
     </div>
-    <div className="sm:hidden z-[5] absolute top-0 left-0 w-full ">
-      <Navbar />
-    </div>
-    <div>
+    
+    <div className="-mt-[2px] ">
       <Video />
     </div>
 

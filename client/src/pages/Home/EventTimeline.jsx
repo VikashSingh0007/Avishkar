@@ -1,5 +1,6 @@
 import React from "react";
 import "./EventTimeLine.css";
+import { BiSolidCalendar } from "react-icons/bi";
 const timelineData = [
   {
     text: "Inaugural Ceremony, gnoTalks  ",
@@ -137,15 +138,16 @@ const Timeline = () =>
   timelineData.length > 0 && (
     <>
       <h2
-        className="text-[4rem] text-white font-bold mb-4 flex justify-center mt-[10%] rumoura-font"
+        className="md:text-[4rem] text-[2.5rem] text-white font-bold mb-4 flex justify-center mt-[10%] rumoura-font"
         style={{
           fontWeight: "bolder",
           textAlign: "center",
           textShadow: "0 0 10px white", // Add white shadow with 10px blur
         }}
       >
-        Event Timeline
+       <BiSolidCalendar size={28} className="mt-[3px] mr-2 hover:rotate-90 transition-all duration-300"/>  Event Timeline 
       </h2>
+     
       <div
         className="timeline-container "
         id="timelineContainer"

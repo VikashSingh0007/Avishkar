@@ -7,19 +7,26 @@ const AboutUs = () => {
 
   return (
     <div>
-      <section id="product" className={layout.sectionReverse}>
+      <section id="product" className={`${layout.sectionReverse} `}>
         <div className={layout.sectionInfo}>
           <h2
-            className="text-3xl text-black font-bold mb-4  justify-center rumoura-font "
+            className="md:text-[2.5rem] text-[1.8rem] text-black font-bold mb-4  justify-center rumoura-font "
             style={{
-              fontSize: "xx-large",
               fontWeight: "bolder",
               textAlign: "center",
+              textShadow: "0 0 10px white",
             }}
           >
             About Culrav-Avishkar 2024
           </h2>
-          <h6 className=" text-xl text-justify rumoura-font">
+          <h6
+            className="md:text-[1.5rem] text-[1.2rem] text-justify text-white "
+            // style={{
+            //   fontWeight: "bolder",
+             
+            //   textShadow: "0 0 5px white",
+            // }}
+          >
             CULRAV-AVISHKAR 2024, Techno-Cultural Fest at MNNIT Allahabad,
             Prayagraj, is an electrifying extravaganza that seamlessly merges
             technology with cultural diversity. Featuring dynamic competitions,

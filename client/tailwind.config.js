@@ -13,7 +13,8 @@ export default {
     },
     extend: {},
     fontFamily: {
-      custom: ["Italianno", "cursive"],
+      custom: ["Festive", "cursive"],
+      Robo:["Croissant One","serif"]
     },
   },
   plugins: [],
