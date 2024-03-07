@@ -11,37 +11,48 @@ import FAQ from "./FAQ.jsx";
 
 import Gallery from "./Gallery.jsx";
 import { toast } from "react-toastify";
-
 import Navbar from "./Navbar.jsx";
+import Clock from "../../assets/clockVintage.jpeg";
+import mnnitImg from "../../assets/mnnitImg.jpeg";
+
 const App = () => {
   return (
     <>
-      {/* <AvishkarCard /> */}
-
-      <HomePageLayout>
-        {/* <div className={`bg-primary ${styles.flexStart}`}>
-        <div className={`${styles.boxWidth}`}>
-         
-        </div>
-      </div> */}
-
-        <div className={`bg-primary ${styles.paddingX} ${styles.flexCenter}`}>
-          <div className={`${styles.boxWidth}`}>
-            <AvishkarCulrav />
-            <About />
-            <AboutAvishkarCulrav />
-          </div>
+      <div className="absolute top-0 left-0 w-full h-full flex justify-center items-center">
+        <div className="fixed left-0 w-full h-full flex justify-center items-center">
+          {/* <div className="absolute  transform -translate-x-1/2 -translate-y-1/2"> */}
+            <img
+              src={Clock}
+              alt="mnnitImg"
+              className="h-full w-full object-cover"
+            />
+          {/* </div> */}
         </div>
 
-        <EventTimeLine />
-        <Gallery />
-        <div className={`bg-primary ${styles.paddingX} ${styles.flexCenter}`}>
-          <div className={`${styles.boxWidth}`}> {/* <Gallery /> */}</div>
+        <div className="z-2 absolute w-full h-full ">
+          <HomePageLayout>
+            <div
+              className={`bg-primary ${styles.paddingX} ${styles.flexCenter}`}
+            >
+              <div className={`${styles.boxWidth}`}>
+                <AvishkarCulrav />
+                <About />
+                <AboutAvishkarCulrav />
+              </div>
+            </div>
+
+            <EventTimeLine />
+            <Gallery />
+            <div
+              className={`bg-primary ${styles.paddingX} ${styles.flexCenter}`}
+            >
+              <div className={`${styles.boxWidth}`}> </div>
+            </div>
+            <PastPerformance />
+            <Sponsors />
+          </HomePageLayout>
         </div>
-        <PastPerformance />
-        <Sponsors />
-        {/* <FAQ/> */}
-      </HomePageLayout>
+      </div>
     </>
   );
 };

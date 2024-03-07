@@ -138,12 +138,11 @@ const Carousel = () => {
   return (
     <div>
       <h2
-        className="text-3xl text-black font-bold mb-2 flex justify-center mt-[10%] rumoura-font underline"
+        className="text-[4rem] text-white font-bold mb-2 flex justify-center mt-[10%] rumoura-font "
         style={{
-          fontSize: "xx-large",
           fontWeight: "bolder",
           textAlign: "center",
-          // fontFamily: "Libre Bodoni, serif",
+          textShadow: "0 0 10px white", // Add white shadow with 10px blur
         }}
       >
         Our Past Sponsors

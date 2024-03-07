@@ -48,15 +48,13 @@ const App = () => {
                 />
                 <img
                   src={Clouds1}
-                  className="absolute bottom-0 right-[0%] lg:w-[400px]  md:w-[0] sm:w-[0] animate-clouds"
+                  className="absolute bottom-0 right-[-2%] lg:w-[400px]  md:w-[0] sm:w-[0] animate-clouds"
                 />
+                 
               </div>
             )}
 
-            {/* <div className="absolute inset-0">
-              <Navbar />{" "}
-             
-            </div> */}
+            
           </div>
         </div>
       </div>

@@ -43,12 +43,12 @@ h1 {
   flex-direction: column;
   position: relative;
   margin: 40px 0;
-  height: 1100px; /* Example height for the scrollable container */
+  height: 1500px; /* Example height for the scrollable container */
   overflow-y: auto; /* Enable vertical scrolling */
 }
 
 .timeline-container::after {
-  background-color: #f96d68;
+  background-color: rgb(30, 27, 27);
   content: "";
   position: absolute;
   left: calc(50% - 2px);
@@ -56,6 +56,7 @@ h1 {
   bottom: 0; /* Stretch to the bottom of the container */
   width: 4px;
   height: 100%; /* Stretch the line to match the height of the container */
+  box-shadow: 2px 12px 12px rgba(59, 54, 48, 0.8);
 }
 
 .timeline-item {
@@ -76,7 +77,7 @@ h1 {
 }
 
 .timeline-item-content {
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  box-shadow: 10px 10px 5px rgba(59, 54, 48, 0.8);
   border-radius: 5px;
   /* background-color: #fff; */
   display: flex;
@@ -85,14 +86,15 @@ h1 {
   padding: 15px;
   position: relative;
   width: 400px;
-  max-width: 70%;
+  max-width: 100%;
   text-align: right;
+  height: auto;
 }
 
 .timeline-item-content::after {
   content: " ";
-  background-color: #fff;
-  box-shadow: 1px -1px 1px rgba(0, 0, 0, 0.2);
+  background-color: #1c1a1a;
+  box-shadow: 5px 0px 12px rgba(245, 139, 18, 0.8);
   position: absolute;
   right: -20.5px;
   top: calc(50% - 7.5px);
@@ -109,18 +111,17 @@ h1 {
 .timeline-item:nth-child(odd) .timeline-item-content::after {
   right: auto;
   left: -20.5px;
-  box-shadow: -1px 1px 1px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 0px 12px rgba(245, 139, 18, 0.8);
 }
 
 .timeline-item-content .tag {
-  color: #fff;
+  color: #1c1a1a;
   font-size: 12px;
   font-weight: bold;
   top: 5px;
   left: 5px;
   letter-spacing: 1px;
   padding: 5px;
-  position: absolute;
   border-radius: 10%;
   text-transform: uppercase;
 }

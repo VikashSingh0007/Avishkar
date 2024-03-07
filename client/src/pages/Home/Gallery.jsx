@@ -70,7 +70,9 @@ const Timeline = () => {
 
         if (
           timelineRef.current.scrollLeft >=
-          timelineRef.current.scrollWidth - timelineRef.current.offsetWidth-200
+          timelineRef.current.scrollWidth -
+            timelineRef.current.offsetWidth -
+            200
         ) {
           timelineRef.current.scrollLeft = 0;
           // Reload the data after reaching the end
@@ -90,11 +92,11 @@ const Timeline = () => {
   return (
     <div className="custom-boy-css rootGallary  flex justify-center">
       <h2
-        className="text-3xl text-black font-bold flex justify-center mt-[10%] rumoura-font underline"
+        className="text-[4rem] text-white font-bold flex justify-center mt-[10%] rumoura-font"
         style={{
-          fontSize: "xx-large",
           fontWeight: "bolder",
           textAlign: "center",
+          textShadow: "0 0 10px white", // Add white shadow with 10px blur
         }}
       >
         Gallery
