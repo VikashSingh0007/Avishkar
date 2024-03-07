@@ -8,8 +8,21 @@ import Performance1 from "../Home/assets/performance.png";
 import Performance2 from "../Home/assets/Performance2.png";
 import Performance3 from "../Home/assets/Performance3.png";
 import Performance4 from "../Home/assets/Performance4.png";
-
+import ias from "../Home/assets/avishkar.jpg";
+import igt from "../Home/assets/flute avishkar.jpg";
+import sunburn from "../Home/assets/sunburn.jpg";
+import EDM from "../Home/assets/EDM.jpg";
+import EDMNIGHT from "../Home/assets/edm night.jpg";
+import IAS from "../Home/assets/ias.jpg";
+import YD from "../Home/assets/yd.jpg";
+import Speaker from "../Home/assets/speaker.jpg";
 const timelineData = [
+  {
+    imgSrc: EDM,
+    title: "Oracle of Seasons",
+    year: "2001",
+    platform: "Game Boy Color",
+  },
   {
     imgSrc: MameKhan,
     title: "The legend of Zelda",
@@ -29,6 +42,12 @@ const timelineData = [
     platform: "SNES",
   },
   {
+    imgSrc: Speaker,
+    title: "Oracle of Seasons",
+    year: "2001",
+    platform: "Game Boy Color",
+  },
+  {
     imgSrc: Performance2,
     title: "Link's Awakening",
     year: "1993",
@@ -40,24 +59,73 @@ const timelineData = [
     year: "1998",
     platform: "Nintendo 64",
   },
+ 
+  {
+    imgSrc: YD,
+    title: "Oracle of Seasons",
+    year: "2001",
+    platform: "Game Boy Color",
+  },
+  {
+    imgSrc: ias,
+    title: "Oracle of Seasons",
+    year: "2001",
+    platform: "Game Boy Color",
+  },
+  {
+    imgSrc: igt,
+    title: "Oracle of Seasons",
+    year: "2001",
+    platform: "Game Boy Color",
+  },
+  {
+    imgSrc: sunburn,
+    title: "Oracle of Seasons",
+    year: "2001",
+    platform: "Game Boy Color",
+  },
+ 
+  {
+    imgSrc: EDMNIGHT,
+    title: "Oracle of Seasons",
+    year: "2001",
+    platform: "Game Boy Color",
+  },
+ 
+ 
+ 
   {
     imgSrc: Performance4,
     title: "Majora's Mask",
     year: "2000",
     platform: "Nintendo 64",
   },
-  {
-    imgSrc: Spandan,
-    title: "Oracle of Seasons",
-    year: "2001",
-    platform: "Game Boy Color",
-  },
 ];
 
 const Timeline = () => {
   const timelineRef = useRef(null);
   const [data, setData] = useState(timelineData);
-
+  useEffect(() => {
+    const handleAutoSwipe = () => {
+      if (window.innerWidth <= 800 && timelineRef.current) {
+        // Move to the first item when reaching the end
+        if (timelineRef.current.scrollLeft >= timelineRef.current.scrollWidth - timelineRef.current.offsetWidth-200) {
+          timelineRef.current.scrollLeft = 0;
+          // Reload the data after reaching the end
+          setData(timelineData);
+        } else {
+          timelineRef.current.scrollLeft += timelineRef.current.offsetWidth;
+        }
+      }
+      // Call handleAutoSwipe again after a delay
+      setTimeout(handleAutoSwipe, 3000);
+    };
+  
+    // Call handleAutoSwipe initially
+    handleAutoSwipe();
+  
+    // No need to return setInterval cleanup function
+  }, [data]); // Add data as dependency to re-run effect when data changes
   return (
     <div className="custom-boy-css rootGallary  flex justify-center">
       <div className="mb-[-10%]">

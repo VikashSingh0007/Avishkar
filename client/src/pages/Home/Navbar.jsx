@@ -118,13 +118,13 @@ const Navbar = () => {
         <img
           src={toggle ? close : menu}
           alt="menu"
-          className="block md:hidden  w-6 h-6"
+          className="block md:hidden bg-slate-100 rounded-md p-[3px] bg-opacity-80 w-6 h-6"
           onClick={() => setToggle(!toggle)}
-        />
+        fill="white"/>
       </div>
 
       {toggle && (
-        <div className=" md:hidden p-6 bg-gray-100 absolute z-[20] top-20 right-0 mx-4 my-2 min-w-[140px] rounded-xl sidebar">
+        <div className=" md:hidden p-6 bg-white absolute z-[20] top-20 right-0 mx-4 my-2 min-w-[140px] rounded-xl sidebar">
           <ul className="flex flex-col space-y-2">
             {navLinks.map((nav) => (
               <li
