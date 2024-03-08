@@ -213,7 +213,7 @@ const SignUp = () => {
                 <div className="text-black  font-Robo text-md font-semibold tracking-tighter">
                   Already have an account ?{" "}
                   <span
-                    className=" font-Robo text-sm font-semibold text-orange-800 tracking-tighter cursor-pointer"
+                    className=" font-Robo text-sm font-semibold text-orange-800 hover:text-orange-950 tracking-tighter cursor-pointer"
                     onClick={() => {
                       navigate("/login");
                     }}
