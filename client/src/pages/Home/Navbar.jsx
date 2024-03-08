@@ -102,12 +102,12 @@ const Navbar = ({ page }) => {
             <li
               key={"accommodation"}
               className={`font-Robo tracking-[2px] mr-8  md:mr-12  md:text-sm lg:text-xl font-extrabold cursor-pointer rumoura-font ${
-                active === "Accomodation"
+                active === "Accommodation"
                   ? "text-black bg-[#ae9e7f] p-2 rounded-xl"
                   : "text-slate-200"
               }`}
               style={
-                active === "Accomodation"
+                active === "Accommodation"
                   ? { boxShadow: "0 10px 20px rgba(0, 0, 0, 0.2)" }
                   : null
               }
@@ -156,21 +156,28 @@ const Navbar = ({ page }) => {
           alt="menu"
           className="block md:hidden bg-slate-100 rounded-md p-[3px] bg-opacity-80 w-6 h-6"
           onClick={() => setToggle(!toggle)}
-        fill="white"/>
+          fill="white"
+        />
       </div>
 
       {toggle && (
-        <div className=" md:hidden p-6 bg-white absolute z-[20] top-20 right-0 mx-4 my-2 min-w-[140px] rounded-xl sidebar">
+        <div className="md:hidden p-2 bg-[#6a5937] bg-opacity-70 backdrop-blur-md bg-brown absolute z-[20] top-20 right-0 mx-4 my-2 min-w-[140px] rounded-xl sidebar shadow-lg"
+        style={{boxShadow:"0px 5px 10px black"}}>
           <ul className="flex flex-col space-y-2">
-            {navLinks.map((nav) => (
+            {navLinks.map((nav, index) => (
               <li
                 key={nav.id}
-                className={`font-poppins font-medium cursor-pointer ${
-                  active === nav.title ? "text-black" : "text-gray-600"
+                className={`font-poppins font-medium cursor-pointer  text-white relative ${
+                  active === nav.title ? "bg-[#b79e6e] rounded-t-md" : ""
                 }`}
                 onClick={() => setActive(nav.title)}
               >
-                <Link to={`/${nav.id}`}>{nav.title}</Link>
+                <Link to={`/${nav.id}`} className="block py-2 px-4">
+                  {nav.title}
+                </Link>
+                {index < navLinks.length - 1 && (
+                  <div className="border-t border-white absolute w-full top-full"></div>
+                )}
               </li>
             ))}
           </ul>
