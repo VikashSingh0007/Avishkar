@@ -10,7 +10,7 @@ import "./Nav.css";
 
 const Footer = () => (
   <div
-    className="w-full h-full flex flex-col text-center m-0 bottom-0"
+    className="w-full h-full flex flex-col text-center m-0 bottom-0 mt-28"
     style={{ backgroundColor: "rgba(0, 0, 0, 0.3)" }}
   >
     <div className="flex w-full mt-4 h-full md:flex-row flex-col p-5 ">
