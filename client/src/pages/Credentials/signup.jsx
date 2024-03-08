@@ -6,7 +6,7 @@ import axios from "axios";
 import signUp from "../../services/authService.js";
 import Navbar from "../Home/Navbar";
 import { useNavigate } from "react-router-dom";
-
+import { toast } from "react-toastify"
 const SignUp = () => {
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
@@ -19,14 +19,21 @@ const SignUp = () => {
   const [isRotated, setIsRotated] = useState(false); // New state for rotation
   const [showQr, setShowQr] = useState(false);
 
+
+
   const navigate = useNavigate();
   useEffect(() => {
+    
     const response = localStorage.getItem("userData");
     if (response && localStorage.getItem("userToken")) return navigate("/");
+    //toast.info("Mnnit Student Should Use G Suite Id for no fee payment")
   }, []);
 
   const handleCollege = (value) => {
-    if (value === "other") setShowOther(true);
+    if (value === "other") {
+      setShowOther(true);
+      toast.info("Upload Payment ScreenShot To Drive and Submit The Link")
+    }
     else setShowOther(false);
     setCollege(value);
   };
@@ -165,13 +172,13 @@ const SignUp = () => {
                       placeholder="Enter your college"
                       onChange={(e) => setCollege(e.target.value)}
                     />
-                    <label htmlFor="email">TransactionId:</label>
+                    <label htmlFor="email">PaymentLink:</label>
                     <input
                       className="input"
                       type="text"
                       id="email"
                       name="transactionId"
-                      placeholder="Enter transactionId"
+                      placeholder="Enter Payment Drive Link"
                       onChange={(e) => setTransactionId(e.target.value)}
                     />
                   </div>

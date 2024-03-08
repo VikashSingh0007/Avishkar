@@ -20,6 +20,7 @@ const Invitations = () => {
 
   const handleClick = async (teamId, status) => {
     try {
+      console.log("here")
       const teamdata = {
         teamId: teamId,
         status: status,
@@ -62,7 +63,7 @@ const Invitations = () => {
                 </div>
                 <div className="flex justify-center lg:w-4/5 sm:mx-auto sm:mb-2 -mx-2">
                   <div className="p-2 sm:w-1/4 w-full">
-                    <div className="bg-gray-800 hover:bg-green-800 rounded flex p-4 h-full items-center cursor-pointer">
+                    <div className="bg-gray-800 hover:bg-green-800 rounded flex p-4 h-full items-center cursor-pointer"  onClick={() => handleClick(team._id, true)}>
                       <svg
                         fill="none"
                         stroke="currentColor"
@@ -77,14 +78,14 @@ const Invitations = () => {
                       </svg>
                       <span
                         className="title-font font-medium text-white"
-                        onClick={() => handleClick(team._id, true)}
+                       
                       >
-                        ACCEPT
+                      
                       </span>
                     </div>
                   </div>
                   <div className="p-2 sm:w-1/4 w-full">
-                    <div className="bg-gray-800 hover:bg-red-500 rounded flex p-4 h-full items-center cursor-pointer">
+                    <div className="bg-gray-800 hover:bg-red-500 rounded flex p-4 h-full items-center cursor-pointer" onClick={() => handleClick(team._id, false)}>
                       <svg
                         fill="none"
                         stroke="currentColor"
@@ -99,9 +100,9 @@ const Invitations = () => {
                       </svg>
                       <span
                         className="title-font font-medium text-white"
-                        onClick={() => handleClick(team._id, false)}
+                        
                       >
-                        Reject
+                        
                       </span>
                     </div>
                   </div>

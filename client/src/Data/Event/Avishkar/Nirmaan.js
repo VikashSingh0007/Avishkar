@@ -1,6 +1,7 @@
 import Nirman3 from "../../Images/Nirman.png";
 import Nirman1 from "../../Images/Nirman.png";
 import image from "../../../../src/Data/Images/Logo/Nirmaan2k24 logo.png"
+import image2 from "../../../../src/Data/Images/Logo/Nirmaan/Openpositions.jpeg"
 export const Nirmaan = [
   {
     title: "Nirmaan",
@@ -58,7 +59,7 @@ export const Nirmaan = [
           },
         ],
         TeamSize: "1-1",
-        BGImageLink: "",
+        BGImageLink:image2,
         PsLink: "",
         coordinators: [
           {
