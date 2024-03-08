@@ -2,28 +2,23 @@ import { useEffect, useState } from "react";
 import { getAllParticipating, inviteTeam } from "../../services/teamService";
 import Loader from "../Home/loader.jsx";
 const Team = () => {
-
   const [email, setEmail] = useState("");
   const [fetchedData, setFetchedData] = useState();
-  const [isloading,setLoading]=useState(false);
-  const handleSubmit = async(teamId) => {
-    try{
+  const [isloading, setLoading] = useState(false);
+  const handleSubmit = async (teamId) => {
+    try {
       const data = {
         teamId: teamId,
         email: email,
       };
-      setLoading(true)
+      setLoading(true);
       console.log(data);
       await inviteTeam(data);
       setLoading(false);
-    }
-    catch(error){
-      console.log(error)
+    } catch (error) {
+      console.log(error);
       setLoading(false);
     }
-   
-
-
   };
   useEffect(() => {
     const fetchData = async () => {
@@ -32,11 +27,11 @@ const Team = () => {
         const data = await getAllParticipating();
         console.log("gotted from loki ", data);
         setFetchedData(data);
-        setLoading(false)
+        setLoading(false);
         console.log(typeof data.teams);
       } catch (error) {
         console.error("Error fetching data:", error);
-        setLoading(false)
+        setLoading(false);
       }
     };
 
@@ -45,12 +40,12 @@ const Team = () => {
   console.log("FetchedData", fetchedData);
 
   return (
-    <>
-      {isloading && <Loader/>}
+    <div className="flex flex-wrap overflow-y-scroll p-5 gap-[10%]">
+      {isloading && <Loader />}
       {fetchedData?.teams?.participating?.map((team, index) => (
         <div
           key={index}
-          className="w-full flex flex-col  mx-auto max-h-[80% md:w-[60%]   p-6 bg-gradient-to-b from-[#63462D]  rounded-lg shadow-md text-white"
+          className="w-full flex flex-col  mx-auto  md:w-[60%]  p-6 bg-gradient-to-b from-[#63462D]  rounded-lg shadow-md text-white"
           style={{
             boxShadow: "0px 10px 10px black",
           }}
@@ -100,15 +95,15 @@ const Team = () => {
                   {member.name}
                 </div>
 
-                
-                <div className="text-[#423C31] font-bold lg:text-[1em] md:text-[0.8em] text-[0.5em]">{member.username}</div>
-
+                <div className="text-[#423C31] font-bold lg:text-[1em] md:text-[0.8em] text-[0.5em]">
+                  {member.username}
+                </div>
               </div>
             ))}
           </div>
         </div>
       ))}
-    </>
+    </div>
   );
 };
 

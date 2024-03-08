@@ -106,7 +106,7 @@ const CulravLAnding = () => {
           <div className="flex justify-center items-center">
             <Link to="/culravLanding">
               <button
-                className="bg-[#63462DE6] hover:bg-[#3c2b1de6] text-white text-[1rem] mt-2 sm:text-[1.4rem] font-bold py-2 px-5 rounded-full"
+                className="bg-[#63462DE6] hover:bg-[#3c2b1de6] text-white text-[1.5rem] mt-2 sm:text-[1.4rem] font-bold py-2 px-5 rounded-full"
                 style={{
                   boxShadow: "0 0 20px black", // Add white shadow with 10px blur
                 }}

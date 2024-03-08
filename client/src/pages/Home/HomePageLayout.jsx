@@ -3,6 +3,8 @@ import Footer from "./Footer.jsx";
 import Video from "./Video.jsx";
 import Navbar from "./Navbar.jsx";
 import "./HomePageLatout.css";
+import mohit from "./assets/mohit.png";
+// import juhi from "./assets/juhi.png";
 
 const HomePageLayout = ({ children }) => (
   <div
@@ -12,11 +14,11 @@ const HomePageLayout = ({ children }) => (
     <div className=" flex">
       <Navbar />
     </div>
-    
+
     <div className="-mt-[2px] ">
       <Video />
     </div>
-
+    
     <div
       className={` ${styles.paddingX} ${styles.flexCenter} bg-opacity-20 relative z-10`}
       style={{ boxShadow: "20 0px 10px 0 rgba(255,165,0, 5)" }}
