@@ -17,6 +17,13 @@ import IAS from "../Home/assets/ias.jpg";
 import YD from "../Home/assets/yd.jpg";
 import Speaker from "../Home/assets/speaker.jpg";
 const timelineData = [
+  
+  {
+    imgSrc: Performance4,
+    title: "Majora's Mask",
+    year: "2000",
+    platform: "Nintendo 64",
+  },
   {
     imgSrc: EDM,
     title: "Oracle of Seasons",
@@ -92,46 +99,51 @@ const timelineData = [
     platform: "Game Boy Color",
   },
  
- 
- 
-  {
-    imgSrc: Performance4,
-    title: "Majora's Mask",
-    year: "2000",
-    platform: "Nintendo 64",
-  },
 ];
 
 const Timeline = () => {
   const timelineRef = useRef(null);
   const [data, setData] = useState(timelineData);
+
   useEffect(() => {
-    const handleAutoSwipe = () => {
-      if (window.innerWidth <= 800 && timelineRef.current) {
-        // Move to the first item when reaching the end
-        if (timelineRef.current.scrollLeft >= timelineRef.current.scrollWidth - timelineRef.current.offsetWidth-200) {
-          timelineRef.current.scrollLeft = 0;
-          // Reload the data after reaching the end
-          setData(timelineData);
-        } else {
-          timelineRef.current.scrollLeft += timelineRef.current.offsetWidth;
+    const galleryWidth = timelineRef.current.scrollWidth;
+    const itemWidth = timelineRef.current.offsetWidth;
+    let currentPosition = 0;
+  
+    const startAutoScroll = () => {
+      const interval = setInterval(() => {
+        if (timelineRef.current) {
+          // Check if reached the end of the gallery
+          if (currentPosition + itemWidth >= galleryWidth) {
+            currentPosition = 0;
+          } else {
+            currentPosition += itemWidth;
+          }
+  
+          // Smoothly scroll to the next item
+          timelineRef.current.scrollTo({
+            left: currentPosition,
+            behavior: "smooth",
+          });
         }
-      }
-      // Call handleAutoSwipe again after a delay
-      setTimeout(handleAutoSwipe, 3000);
+      }, 3000); // Adjust the interval as needed (currently set to 3 seconds)
+  
+      return () => clearInterval(interval);
     };
   
-    // Call handleAutoSwipe initially
-    handleAutoSwipe();
+    startAutoScroll();
   
-    // No need to return setInterval cleanup function
-  }, [data]); // Add data as dependency to re-run effect when data changes
+    // Cleanup the interval on component unmount
+    return () => clearInterval();
+  }, [data]); // Add data as a dependency to re-run the effect when data changes
+  
+
   return (
     <div className="custom-boy-css rootGallary  flex justify-center">
       <div className="mb-[-10%]">
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          xmlns:xlink="http://www.w3.org"
+          xmlnsXlink="http://www.w3.org/1999/xlink"
           id="camera-loader"
           width="85.708488"
           height="100"
@@ -186,13 +198,14 @@ const Timeline = () => {
       >
         Gallery
       </h2>
-      <section // Wrap section with motion component
+      <section
         ref={timelineRef}
         className="timeline mb-[-10%] overflow-x-hidden sm:overflow-x-scroll"
       >
         {data.map((item, index) => (
-          <article // Wrap article with motion component
-            className="transition-opacity ease-in-out duration-1000" // Tailwind CSS classes for smooth transition
+          <article
+            className="transition-opacity ease-in-out duration-1000"
+            key={index}
           >
             <img
               className="imgGallery"

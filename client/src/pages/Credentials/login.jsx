@@ -1,28 +1,33 @@
-import "./login.css"; // Import your CSS file
 import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import bg from "./loginbg1.jpeg";
 import { userLogin } from "../../services/authService";
-import { useNavigate } from "react-router-dom";
 import Navbar from "../Home/Navbar";
+
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
+
   useEffect(() => {
     const response = localStorage.getItem("userData");
     if (response && localStorage.getItem("userToken")) return navigate("/");
   }, []);
+
   const handleForgot = (e) => {
     e.preventDefault();
     navigate("/forgotpassword");
   };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     const data = {
       email: email,
       password: password,
     };
+
     const response = await userLogin(data);
+
     if (!response) {
       return;
     } else {
@@ -31,15 +36,12 @@ const Login = () => {
       navigate("/");
       return;
     }
-    // if(response.data){
-
-    // }
-    // await axios.post("http://localhost:5000/api/auth/resetpassword", data);
   };
+
   return (
     <div className="containerAcco">
-      {/* <Navbar page="Login"/> */}
-      <div className="flex justify-center flex-wrap items-center h-[200vh] ">
+      <Navbar page="Login" />
+      <div className="flex justify-center flex-wrap items-center h-[100vh] ">
         <div className="locard flex justify-center flex-col bg-yellow-200">
           <form className="w-full h-full gap-5 flex flex-col">
             <div className="gap-5 flex flex-col w-[15em] font-medium">
@@ -66,7 +68,7 @@ const Login = () => {
                 />
                 <a
                   onClick={handleForgot}
-                  className="text-blue-900 cursor-pointer"
+                  className="text-#0219e5-900 cursor-pointer"
                 >
                   Forgot password?
                 </a>
@@ -102,7 +104,10 @@ const Login = () => {
               numOctaves="3"
               seed="1"
             ></feTurbulence>
-            <feDisplacementMap in="SourceGraphic" scale="6"></feDisplacementMap>
+            <feDisplacementMap
+              in="SourceGraphic"
+              scale="6"
+            ></feDisplacementMap>
           </filter>
         </svg>
       </div>
