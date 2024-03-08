@@ -18,9 +18,9 @@ const User = () => {
   // Effect to add event listener when the component mounts
 
   return (
-    <div className="absolute  top-0 left-0 w-full h-full overflow-hidden flex flex-col containerHomePage">
+    <div className="absolute  top-0 left-0 w-full h-full overflow-hidden flex flex-col containerUser">
       <div className="h-[10%] ">
-        <Navbar />
+        <Navbar page="Profile"/>
       </div>
       <div className="h-[90%]  p-2 flex lg:flex-row flex-col">
         <div

@@ -5,8 +5,9 @@ import logo from "./culrav/assets/culravAviskarLogo.png";
 import "./Nav.css";
 import { Link } from "react-router-dom";
 
-const Navbar = () => {
-  const [active, setActive] = useState("Home");
+const Navbar = ({ page }) => {
+  console.log(page);
+  const [active, setActive] = useState(page);
   const [toggle, setToggle] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const userData = localStorage.getItem("userData");
@@ -69,8 +70,15 @@ const Navbar = () => {
             <li
               key={"culravLanding"}
               className={`font-Robo mr-8 tracking-[4px]  md:mr-12  md:text-sm font-extrabold lg:text-xl cursor-pointer ${
-                active === "Culrav" ? "text-black" : "text-slate-200"
+                active === "Culrav"
+                  ? "text-black bg-[#ae9e7f] p-2 rounded-xl "
+                  : "text-slate-200"
               }`}
+              style={
+                active === "Culrav"
+                  ? { boxShadow: "0 10px 20px rgba(0, 0, 0, 0.2)" }
+                  : null
+              }
               onClick={() => setActive("Culrav")}
             >
               {<Link to={"/culravLanding"}>Culrav</Link>}
@@ -78,8 +86,15 @@ const Navbar = () => {
             <li
               key={"avishkar-landing"}
               className={`font-Robo tracking-[3px] font-extrabold text-xxl mr-8  md:mr-12  md:text-sm lg:text-xl  cursor-pointer rumoura-font ${
-                active === "Avishkar" ? "text-black" : "text-slate-200"
+                active === "Avishkar"
+                  ? "text-black bg-[#ae9e7f] p-2 rounded-xl"
+                  : "text-slate-200"
               }`}
+              style={
+                active === "Avishkar"
+                  ? { boxShadow: "0 10px 20px rgba(0, 0, 0, 0.2)" }
+                  : null
+              }
               onClick={() => setActive("Avishkar")}
             >
               {<Link to={"/avishkar-landing"}>Avishkar</Link>}
@@ -87,8 +102,15 @@ const Navbar = () => {
             <li
               key={"accommodation"}
               className={`font-Robo tracking-[2px] mr-8  md:mr-12  md:text-sm lg:text-xl font-extrabold cursor-pointer rumoura-font ${
-                active === "Accommodation" ? "text-black" : "text-slate-200"
+                active === "Accomodation"
+                  ? "text-black bg-[#ae9e7f] p-2 rounded-xl"
+                  : "text-slate-200"
               }`}
+              style={
+                active === "Accomodation"
+                  ? { boxShadow: "0 10px 20px rgba(0, 0, 0, 0.2)" }
+                  : null
+              }
               onClick={() => setActive("Accommodation")}
             >
               {<Link to={"/accommodation"}>Accommodation</Link>}
@@ -96,8 +118,15 @@ const Navbar = () => {
             <li
               key={"team"}
               className={`font-Robo tracking-[3px] text-xxl mr-8  md:mr-12  md:text-sm lg:text-xl font-extrabold cursor-pointer rumoura-font ${
-                active === "Team" ? "text-black" : "text-slate-200"
+                active === "Team"
+                  ? "text-black bg-[#ae9e7f] p-2 rounded-xl"
+                  : "text-slate-200"
               }`}
+              style={
+                active === "Team"
+                  ? { boxShadow: "0 10px 20px rgba(0, 0, 0, 0.2)" }
+                  : null
+              }
               onClick={() => setActive("Team")}
             >
               {<Link to={"/team"}>Team</Link>}
@@ -105,8 +134,15 @@ const Navbar = () => {
             <li
               key={"login"}
               className={`font-Robo tracking-[3px] text-xxl mr-8  md:mr-12  md:text-sm lg:text-xl font-extrabold cursor-pointer rumoura-font ${
-                active === "Login" ? "text-black" : "text-slate-200"
+                active === "Login" || active === "Profile"
+                  ? "text-black bg-[#ae9e7f] p-2 rounded-xl"
+                  : "text-slate-200"
               }`}
+              style={
+                active === "Login" || active === "Profile"
+                  ? { boxShadow: "0 10px 20px rgba(0, 0, 0, 0.2)" }
+                  : null
+              }
               onClick={() => setActive("Login")}
             >
               {(!userData || !userToken) && <Link to={"/login"}>Login</Link>}

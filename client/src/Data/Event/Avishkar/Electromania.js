@@ -1,5 +1,5 @@
 import BgImg from "../../Images/electromania.png";
-
+// import image from "../../../../src/Data/Images/Logo
 export const Electromania = [
   {
     title: "",

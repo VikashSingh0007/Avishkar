@@ -2,11 +2,12 @@ import TheQuizofEverything from "../../Images/TheQuizofEverything.png";
 import StellearInnovations from "../../Images/StellearInnovations.png";
 import CapturetheStars from "../../Images/CapturetheStars.png";
 import Nightpture from "../../Images/Nightpture.png";
+import image from "../../../../src/Data/Images/Logo/Astrowing.png"
 export const CosmoCon = [
   {
     title: "",
     tagline: "",
-    BgImageLink: "",
+    BgImageLink: image,
     instagramLink: "",
     events: [
       {

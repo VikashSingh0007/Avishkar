@@ -108,52 +108,7 @@ export const Team = [
   {
     department: "Festival Secretary",
     data: [
-      {
-        email: "adityabaranwal013@gmail.com",
-        name: "Aditya Baranwal",
-        registration: 20201010,
-        image:Aditya,
-        mobile: 7903326808,
-        branch: "Civil Engineering",
-        position: "Festival Secretary",
-        department: "NA",
-        photo:
-          "https://drive.google.com/open?id=1WZM0QKwMPosGOOMWKuWOdOBPfYgwyVMC",
-        linkedin: "https://www.linkedin.com/in/aditya-baranwal-013/",
-        instagram_url: "https://www.instagram.com/_adityabaranwal/",
-        instagram_username: "_adityabaranwal",
-      },
-      {
-        email: "shikha.20206047@mnnit.ac.in",
-        name: "Shikha Tiwari",
-        registration: 20206047,
-        image:Shikha,
-        mobile: 9580340131,
-        branch: "Mechanical Engineering",
-        position: "Festival Secretary",
-        department: "NA",
-        photo:
-          "https://drive.google.com/open?id=1w9JyYIC1S3_ZMGD59XASqG1VcRmz2NeC",
-        linkedin: "https://www.linkedin.com/in/shikha-tiwari-45b6781bb/",
-        instagram_url:
-          "https://www.instagram.com/beyond_scope_002?igsh=MTZmajBzN2F5NzV3ZQ==",
-        instagram_username: "beyond_scope_002",
-      },
-      {
-        email: "ayushh3696@gmail.com",
-        name: "Ayush Gupta",
-        registration: 20200014,
-        image:Ayush,
-        mobile: 9305867392,
-        branch: "Chemical Engineering",
-        position: "Festival Secretary",
-        department: "NA",
-        photo:
-          "https://drive.google.com/open?id=1SIhLWxVEywvUbCipiHNlOYfq3xbmrwS9",
-        linkedin: "https://in.linkedin.com/in/ayush-gupta24",
-        instagram_url: "https://www.instagram.com/ayushh._.18/",
-        instagram_username: "ayushh._.18",
-      },
+      
       {
         email: "nandini.20208082@mnnit.ac.in",
         name: "Nandini Karad",
@@ -187,6 +142,37 @@ export const Team = [
         instagram_url:
           "https://www.instagram.com/oye_._ananya?igsh=MTY0NjB2NGg5dWZyZQ==",
         instagram_username: "oye_._ananya",
+      },
+      {
+        email: "shikha.20206047@mnnit.ac.in",
+        name: "Shikha Tiwari",
+        registration: 20206047,
+        image:Shikha,
+        mobile: 9580340131,
+        branch: "Mechanical Engineering",
+        position: "Festival Secretary",
+        department: "NA",
+        photo:
+          "https://drive.google.com/open?id=1w9JyYIC1S3_ZMGD59XASqG1VcRmz2NeC",
+        linkedin: "https://www.linkedin.com/in/shikha-tiwari-45b6781bb/",
+        instagram_url:
+          "https://www.instagram.com/beyond_scope_002?igsh=MTZmajBzN2F5NzV3ZQ==",
+        instagram_username: "beyond_scope_002",
+      },
+      {
+        email: "adityabaranwal013@gmail.com",
+        name: "Aditya Baranwal",
+        registration: 20201010,
+        image:Aditya,
+        mobile: 7903326808,
+        branch: "Civil Engineering",
+        position: "Festival Secretary",
+        department: "NA",
+        photo:
+          "https://drive.google.com/open?id=1WZM0QKwMPosGOOMWKuWOdOBPfYgwyVMC",
+        linkedin: "https://www.linkedin.com/in/aditya-baranwal-013/",
+        instagram_url: "https://www.instagram.com/_adityabaranwal/",
+        instagram_username: "_adityabaranwal",
       },
       {
         email: "anupamyadav506@gmail.com",
@@ -320,6 +306,21 @@ export const Team = [
         instagram_url:
           "https://www.instagram.com/mayank_.2?igsh=MWQ5OTByY2Jib2dwOQ==",
         instagram_username: "mayank_.2",
+      },
+      {
+        email: "ayushh3696@gmail.com",
+        name: "Ayush Gupta",
+        registration: 20200014,
+        image:Ayush,
+        mobile: 9305867392,
+        branch: "Chemical Engineering",
+        position: "Festival Secretary",
+        department: "NA",
+        photo:
+          "https://drive.google.com/open?id=1SIhLWxVEywvUbCipiHNlOYfq3xbmrwS9",
+        linkedin: "https://in.linkedin.com/in/ayush-gupta24",
+        instagram_url: "https://www.instagram.com/ayushh._.18/",
+        instagram_username: "ayushh._.18",
       },
       {
         email: "shantanukr2201@gmail.com",

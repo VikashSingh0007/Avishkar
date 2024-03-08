@@ -9,13 +9,13 @@ import Operaomnia from "../../Images/Operaomnia.png";
 import Mathrush from "../../Images/Mathrush.png";
 import Cssbattle from "../../Images/Cssbattle.png";
 import Designrush from "../../Images/Designrush.png";
-
+import image from "../../../../src/Data/Images/Logo/cyberquest_logo.png"
 export const Cyberquest = [
   {
     title: "CyberQuest",
     tagline: "I see the code!",
     BgImageLink:
-      "https://drive.google.com/file/d/1kcWEArs3sWdOD0R4lT99no1sAaUFfyCH/view?usp=sharing",
+      image,
     instagramLink:
       "https://www.instagram.com/invites/contact/?i=1r0r12k3lapnr&utm_content=tqc8geh",
     events: [

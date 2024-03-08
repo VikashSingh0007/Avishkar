@@ -17,7 +17,7 @@ const CulravLanding = () => {
         backgroundAttachment: "fixed",
       }}
     >
-      <Navbar style={{ zIndex: -4 }} />
+      <Navbar page="Culrav" style={{ zIndex: -4 }} />
       {/* <div className=" w-full h-full flex flex-wrap p-4"> */}
 
       <div>
