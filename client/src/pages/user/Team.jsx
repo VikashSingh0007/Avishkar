@@ -33,7 +33,7 @@ const Team = () => {
       {fetchedData?.teams?.participating?.map((team, index) => (
         <div
           key={index}
-          className="w-full mx-auto max-h-[80%] overflow-y-scroll md:w-[60%]  p-6 bg-gradient-to-b from-[#63462D]  rounded-lg shadow-md text-white"
+          className="w-full flex flex-col  mx-auto max-h-[80% md:w-[60%]   p-6 bg-gradient-to-b from-[#63462D]  rounded-lg shadow-md text-white"
           style={{
             boxShadow: "0px 10px 10px black",
           }}
