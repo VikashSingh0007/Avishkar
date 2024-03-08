@@ -34,7 +34,7 @@ const Accommodation = () => {
   return (
     <div className="h-screen overflow-y-scroll mb-10 containerAccomodation">
       <Navbar page="Accomodation" />
-      <Navbar page="Accommodation" />
+     
       <section className="text-gray-600 body-font mt-0 ">
         <div className="px-0 md:px-5 py-24 w-full p-5 mx-auto ">
           <div className="text-center mb-20 p-5">
