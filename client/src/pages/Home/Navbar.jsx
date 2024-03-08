@@ -49,7 +49,7 @@ const Navbar = ({ page }) => {
     },
     {
       id: "profile",
-      title: "Login",
+      title: "Profile",
     },
   ];
 
