@@ -38,7 +38,7 @@ const View = () => {
   console.log(fetchedData);
   return (
     <>
-      <div className="flex justify-center h-auto w-[90%] ">
+      <div className="flex justify-center  w-[90%]  h-screen overflow-y-scroll ">
         <div
           className="  bg-gradient-to-b from-[#63462D] rounded-lg p-8 shadow-md text-center text-white"
           style={{
