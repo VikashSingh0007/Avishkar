@@ -7,7 +7,7 @@ import Team from "./pages/Team/team.jsx";
 import CulravCarousel from "./pages/Home/culrav/Rangmanch/rangmanchCarousel.jsx";
 import Page from "./pages/Home/Avishkar/Event/Page.jsx";
 import AvishkarPage from "./pages/Home/Avishkar/Event/AvishkarPage.jsx";
-
+import AddEventPage from "./pages/Home/Avishkar/AddEvent.jsx";
 import Carousel2 from "./pages/Home/Avishkar/TemplateComponents/Carousel2.jsx";
 import Sponsors from "./pages/Home/Avishkar/TemplateComponents/Sponsors.jsx";
 import User from "./pages/user/User.jsx";
@@ -51,6 +51,7 @@ const App = () => {
           <Route path="/avishkar" element={<AvishkarIndex />} />
           <Route path="/verify/:id" element={<VerifyUser />} />
           <Route path="/accommodation" element={<Accomodation />} />
+          <Route path="/addEvent" element={<AddEventPage />} />
         </Routes>
       </BrowserRouter>
     </>
