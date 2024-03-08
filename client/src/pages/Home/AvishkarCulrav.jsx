@@ -11,7 +11,7 @@ import WoodenBar from "./culrav/assets/wooden111.png";
 
 const FixedDivsComponent = () => {
   return (
-    <div className="columns-2xs flex flex-col  sm:flex-row gap-8 p-0 relative z-[0] opacity-2 relative">
+    <div className="columns-2xs flex flex-col  sm:flex-row gap-8 p-0 z-[0] opacity-2 relative">
       <div className="flex-1 sm:w-1/2 lg:w-1/4  rounded-lg -mt-[10%] ">
         <div className="comic-button-container">
           {/* <button className="comic-button">Events</button> */}

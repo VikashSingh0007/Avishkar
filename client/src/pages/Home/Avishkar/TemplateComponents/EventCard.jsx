@@ -4,7 +4,6 @@ import "./Event.css";
 import { useParams } from "react-router-dom";
 import page from "../Event/Page";
 import General from "../../assets/general.png";
-// import data from "../../../../Data/Event/Culrav/Department";
 
 const EventCard = ({ data }) => {
   console.log(data);
@@ -13,12 +12,15 @@ const EventCard = ({ data }) => {
     <div className="EventCard">
       {" "}
       {/* Wrap the card with Link */}
-      <div className="card">
+      <div
+        className="card p-3 bg-[#63462D]"
+        style={{ boxShadow: "0px 10px 10px black" }}
+      >
         <Link
           to={`/avishkarpage/${encodeURIComponent(JSON.stringify(data))}`}
-          className="flex items-center justify-center cursor-pointer"
+          className="flex items-center justify-center cursor-pointer "
         >
-          <div className="wrapper-card">
+          <div className="wrapper-card ">
             {/* <h1 className="w-full flex justify-center border-2  border-black  sm:text-2xl xl:text-3xl font-custom ">
               {data.event}
             </h1> */}
@@ -34,7 +36,6 @@ const EventCard = ({ data }) => {
                     // className="flex flex-col"
                     style={{
                       textAlign: "center",
-
                       position: "absolute",
                       marginTop: "90px",
                       justifyContent: "block",
@@ -49,7 +50,7 @@ const EventCard = ({ data }) => {
                 )}
                 <span className="flex text-center mx-auto text-3xl text-amber-100 font-custom hover:opacity-70 transition-opacity duration-300 ">
                   <div className="flex-col">
-                    <h4 className="text-3xl text-black w-full mt-2 rumoura-font">
+                    <h4 className="text-3xl text-white w-full mt-2 rumoura-font">
                       Explore !
                     </h4>
                   </div>
@@ -58,12 +59,6 @@ const EventCard = ({ data }) => {
             </div>
           </div>{" "}
         </Link>
-
-        {/* <img
-            src="https://ggayane.github.io/css-experiments/cards/force_mage-character.webp"
-            alt="Event Character"
-            className="character"
-          /> */}
       </div>
     </div>
   );

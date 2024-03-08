@@ -62,15 +62,8 @@ const Lo = () => {
       // }}
     >
       {/* <Navbar page="Login"/> */}
-      <div
-        className="flex justify-center flex-wrap items-center h-[100vh]"
-        // style={{
-        //   backgroundImage: `url(${bg})`,
-        //   backgroundSize: "cover",
-        //   backgroundRepeat: "no-repeat",
-        // }}
-      >
-        <div className="locard flex justify-center flex-col">
+      <div className="flex justify-center flex-wrap items-center h-[200vh] ">
+        <div className="locard flex justify-center flex-col bg-yellow-200">
           <form className="w-full h-full gap-5 flex flex-col">
             <div className="gap-5 flex flex-col w-[15em] font-medium">
               <div>
@@ -142,4 +135,4 @@ const Lo = () => {
   );
 };
 
-export default Lo;
+export default Login;

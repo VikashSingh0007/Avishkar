@@ -5,27 +5,33 @@ import team from "../../Data/Event/Team";
 import { SocialIcon } from "react-social-icons";
 
 const Team = () => {
-  const Instagram = <SocialIcon url="https://instagram.com" />;
-  const Linkedin = <SocialIcon url="https://linkedin.com" />;
-
+  
   return (
     <>
-      <main
-        className="containerAcco"
-        // style={{
-        //   background:
-        //     "linear-gradient(to bottom, #d95f3b, #f0984a, #fcd6a5, #7aa9a3, #338f9a, #1c4c70)",
-        // }}
-      >
+      <main className="containerTeam">
         <Navbar page="Team" />
 
-        <div className="flex text-black justify-center pt-24 text-4xl font-bold rumoura-font">
+        <div
+          className="flex text-[2.5rem] sm:text-[3.5rem] tracking-wider text-white justify-center pt-24 text-4xl font-bold rumoura-font"
+          style={{
+            fontWeight: "bolder",
+            textAlign: "center",
+            textShadow: "0 0 10px black", // Add white shadow with 10px blur
+          }}
+        >
           TEAM
         </div>
 
         {team.map((department, index) => (
           <div key={index}>
-            <div className="flex text-black justify-center mt-5 text-[5vw] sm:text-[2vw]  rumoura-font">
+            <div
+              className="flex text-[2rem] sm:text-[3rem] tracking-wider text-white justify-center mt-5  rumoura-font"
+              style={{
+                fontWeight: "bolder",
+                textAlign: "center",
+                textShadow: "0 0 10px black", // Add white shadow with 10px blur
+              }}
+            >
               {department.department}
             </div>
 
@@ -49,14 +55,14 @@ const Team = () => {
                         rel="noopener noreferrer"
                         className=""
                       >
-                        {Instagram}
+                       <SocialIcon url={`https://www.instagram.com/${sponsor.instagram_username}`}/>
                       </a>
                       <a
                         href={`${sponsor.linkedin}`}
                         target="_blank"
                         rel="noopener noreferrer"
                       >
-                        {Linkedin}
+                        <SocialIcon url={`${sponsor.linkedin}`}/>
                       </a>
                     </span>
                   ) : department.department === "Director" ||
@@ -88,14 +94,14 @@ const Team = () => {
                           target="_blank"
                           rel="noopener noreferrer"
                         >
-                          {Instagram}
+                          <SocialIcon url={`https://www.instagram.com/${sponsor.instagram_username}`}/>
                         </a>
                         <a
-                          href={`${sponsor.linkedin}`}
+                           href={`${sponsor.linkedin}`}
                           target="_blank"
                           rel="noopener noreferrer"
                         >
-                          {Linkedin}
+                         <SocialIcon url={`${sponsor.linkedin}`}/>
                         </a>
                       </span>
                     </>
