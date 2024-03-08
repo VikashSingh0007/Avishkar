@@ -6,7 +6,7 @@ const dc = "DepartmentCordinator";
 const fes = "FestivalSecretary";
 
 const createEvent = async (req ,res , next) => {
-    const { eventName  , minTeamsize , maxTeamsize,department } = req.body;
+    const { eventName  , minTeamsize , maxTeamsize, department } = req.body;
     if(!eventName || !minTeamsize || !maxTeamsize||!department){
         res.statusCode = 400;
         res.json({
@@ -28,7 +28,7 @@ const createEvent = async (req ,res , next) => {
             return;
         }
        
-        if(false){
+        if(false){ // privilage hata di
             res.statusCode = 401;
             res.json(
                 {
