@@ -90,7 +90,7 @@ const timelineData = [
 
 const TimelineItem = ({ data }) => (
   <div className="timeline-item protest-revolution-regular rumoura-font   ">
-    <div className="timeline-item-content protest-revolution-regular items-start rumoura-font bg-[#F3B95F] flex flex-col md:flex-row-reverse justify-around">
+    <div className="timeline-item-content protest-revolution-regular items-start rumoura-font bg-[#3A3416CC] flex flex-col md:flex-row-reverse justify-around">
       <div
         className="tag protest-revolution-regular rumoura-font"
         style={{ background: data.category.color, whiteSpace: "pre-line" }}
@@ -112,12 +112,20 @@ const TimelineItem = ({ data }) => (
           {data.category.tag}
         </div>
       </div>
-      <div className=" w-full text-left">
-        <time style={{ color: "black", fontSize: "1.5em" }}>{data.date}</time>
+      <div className=" w-full text-white text-left">
+        <time
+          style={{
+            color: "white",
+            fontSize: "1.5em",
+            textShadow: "0px 0px 10px black",
+          }}
+        >
+          {data.date}
+        </time>
 
         <div
-          className="text-black break-all text-[.9em] sm:text-[1.3em] font-bold kelly-slab-regular"
-          style={{ textAlign: "justify" }}
+          className=" break-all text-white text-[.9em] sm:text-[1.3em] font-bold kelly-slab-regular"
+          style={{ textShadow: "0px 0px 10px black" }}
         >
           {data.text}
         </div>
@@ -126,7 +134,12 @@ const TimelineItem = ({ data }) => (
           <a
             href={data.link.url}
             target="_blank"
-            style={{ color: "black", fontSize: "16px" }}
+            style={{
+              fontSize: "16px",
+              color: "white",
+              textShadow: "0px 0px 10px black",
+              
+            }}
             rel="noopener noreferrer"
           >
             {data.link.text}
