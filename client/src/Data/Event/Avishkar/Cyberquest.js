@@ -190,12 +190,12 @@ export const Cyberquest = [
         PsLink: "",
         coordinators: [
           {
-            name: "Khaliq Hussain",
-            phone: "7839978981",
+            name: "Prince Kumar",
+            phone: "9125106389",
           },
           {
-            name: "Mohammad Ali Khan",
-            phone: "8979976639",
+            name: "Birendra Kumar",
+            phone: "6206986527",
           },
         ],
       },
