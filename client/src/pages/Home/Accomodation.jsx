@@ -47,6 +47,7 @@ const Accommodation = () => {
                 textShadow: "0 0 15px black", // Add white shadow with 10px blur
               }}
             >
+            
               Welcome to Our College Fest Accommodation Experience!
             </h1>
             <h6
