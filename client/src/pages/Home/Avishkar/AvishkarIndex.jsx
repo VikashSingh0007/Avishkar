@@ -19,7 +19,7 @@ const AvishkarLanding = () => {
           {/* </div> */}
         </div>
       </div>
-      <div className="flex xl:flex-row flex-col">
+      <div className="flex xl:flex-row flex-col h-full">
         <Navbar />
         <div className="flex mt-24 bounce-animation">
           <Computer />
@@ -74,7 +74,7 @@ const AvishkarLanding = () => {
           </div>
         </div>
       </div>
-      <div className="relative  h-auto">
+      <div className="relative h-auto">
         <div className="bottom-0 w-full mb-2 ">
           <Footer />
         </div>
