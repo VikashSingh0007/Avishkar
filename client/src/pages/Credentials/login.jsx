@@ -83,6 +83,7 @@ const Login = () => {
         // Add box shadow styles here
         boxShadow: "0 0 0 1.5px #000000", // Example box shadow
       }}
+      onClick={handleSubmit}
     >
               Login
             </button>
