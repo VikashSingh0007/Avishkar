@@ -171,6 +171,59 @@ const SignUp = () => {
 
                   {showQr && <p className="">Pay here</p>}
 
+                {showOther && (
+                  <div>
+                    <label htmlFor="email">College Name:</label>
+                    <input
+                      className="input"
+                      type="text"
+                      id="email"
+                      name="college"
+                      placeholder="Enter your college"
+                      onChange={(e) => setCollege(e.target.value)}
+                    />
+                    <label htmlFor="email">PaymentLink:</label>
+                    <input
+                      className="input"
+                      type="text"
+                      id="email"
+                      name="transactionId"
+                      placeholder="Enter Payment Drive Link"
+                      onChange={(e) => setTransactionId(e.target.value)}
+                    />
+                  </div>
+                )}
+              </div>
+              <div className="h-[10%] flex justify-center items-center  w-full">
+                <button
+                    className="containerUser px-4 font-Robo   text-orange-950  font-bold rounded-[2px] h-10 text-[1em] border-opacity-25 hover:bg-orange-800 hover:shadow-9xl"
+                    style={{
+                      // Add box shadow styles here
+                      boxShadow: "0 0 0 1.5px #000000", // Example box shadow
+                    }}
+                  onClick={(e) => handleSubmit(e)}
+                  // style={{ backgroundColor: "rgb(248, 213, 177, 0.84)",border:"1px solid" }}
+                >
+                  Submit
+                </button>
+              </div>
+              <div>
+                <div className="text-black  font-Robo text-md font-semibold tracking-tighter">
+                  Already have an account ?{" "}
+                  <span
+                    className=" font-Robo text-sm font-semibold text-orange-800 hover:text-orange-950 tracking-tighter cursor-pointer"
+                    onClick={() => {
+                      navigate("/login");
+                    }}
+                  >
+                    Sign In
+                  </span>
+                </div>
+              </div>
+            </form>
+          ) : (
+            <img src={qr} alt="qr" />
+          )}
                   {showOther && (
                     <div>
                       <label htmlFor="email">College Name:</label>
