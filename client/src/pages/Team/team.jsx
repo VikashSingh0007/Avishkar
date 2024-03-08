@@ -4,12 +4,16 @@ import Navbar from "../Home/Navbar";
 import team from "../../Data/Event/Team";
 import { SocialIcon } from "react-social-icons";
 const Team = () => {
-  const Instagram = <SocialIcon url="https://instagram.com" />;
-  const Linkedin = <SocialIcon url="https://linkedin.com" />;
-
+  
   return (
     <>
+<<<<<<< HEAD
       <main className="containerTeam">
+=======
+      <main
+        className="containerAcco"
+      >
+>>>>>>> 52ce726977908e543b177d8859ee6c61cdf22d98
         <Navbar page="Team" />
 
         <div
@@ -56,14 +60,14 @@ const Team = () => {
                         rel="noopener noreferrer"
                         className=""
                       >
-                        {Instagram}
+                       <SocialIcon url={`https://www.instagram.com/${sponsor.instagram_username}`}/>
                       </a>
                       <a
                         href={`${sponsor.linkedin}`}
                         target="_blank"
                         rel="noopener noreferrer"
                       >
-                        {Linkedin}
+                        <SocialIcon url={`${sponsor.linkedin}`}/>
                       </a>
                     </span>
                   ) : department.department === "Director" ||
@@ -95,14 +99,14 @@ const Team = () => {
                           target="_blank"
                           rel="noopener noreferrer"
                         >
-                          {Instagram}
+                          <SocialIcon url={`https://www.instagram.com/${sponsor.instagram_username}`}/>
                         </a>
                         <a
-                          href={`${sponsor.linkedin}`}
+                           href={`${sponsor.linkedin}`}
                           target="_blank"
                           rel="noopener noreferrer"
                         >
-                          {Linkedin}
+                         <SocialIcon url={`${sponsor.linkedin}`}/>
                         </a>
                       </span>
                     </>

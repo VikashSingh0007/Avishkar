@@ -45,6 +45,10 @@ const Navbar = ({ page }) => {
       id: "login",
       title: "Login",
     },
+    {
+      id: "profile",
+      title: "Profile",
+    },
   ];
 
   return (
@@ -161,8 +165,10 @@ const Navbar = ({ page }) => {
       </div>
 
       {toggle && (
-        <div className="md:hidden p-2 bg-[#6a5937] bg-opacity-70 backdrop-blur-md bg-brown absolute z-[20] top-20 right-0 mx-4 my-2 min-w-[140px] rounded-xl sidebar shadow-lg"
-        style={{boxShadow:"0px 5px 10px black"}}>
+        <div
+          className="md:hidden p-2 bg-[#6a5937] bg-opacity-70 backdrop-blur-md bg-brown absolute z-[20] top-20 right-0 mx-4 my-2 min-w-[140px] rounded-xl sidebar shadow-lg"
+          style={{ boxShadow: "0px 5px 10px black" }}
+        >
           <ul className="flex flex-col space-y-2">
             {navLinks.map((nav, index) => (
               <li

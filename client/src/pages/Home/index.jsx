@@ -13,6 +13,7 @@ import Gallery from "./Gallery.jsx";
 import { toast } from "react-toastify";
 import Navbar from "./Navbar.jsx";
 import Clock from "../../assets/clockVintage.png";
+import Loader from "./loader.jsx";
 
 
 const App = () => {
@@ -32,6 +33,7 @@ const App = () => {
             >
               <div className={`${styles.boxWidth}`}>
                 <AvishkarCulrav />
+                {/* <Loader /> */}
                 <About />
                 <AboutAvishkarCulrav />
               </div>
@@ -46,6 +48,7 @@ const App = () => {
             </div>
             <PastPerformance />
             <Sponsors />
+  
           </HomePageLayout>
         </div>
       </div>

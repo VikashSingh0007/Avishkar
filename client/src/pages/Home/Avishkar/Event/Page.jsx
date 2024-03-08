@@ -55,6 +55,7 @@ const Page = () => {
             teams={fetchedData?.teams?.participating}
             setShowModal={setShowModal}
             event={decodedData.name}
+           
           />
         </div>
       )}

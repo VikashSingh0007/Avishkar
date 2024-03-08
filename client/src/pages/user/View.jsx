@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 import { getProfile } from "../../services/teamService";
+import { toast } from "react-toastify";
 
 const View = () => {
   const [fetchedData, setFetchedData] = useState({
@@ -21,6 +22,9 @@ const View = () => {
         const d = await getProfile();
         console.log(d.success);
         if (d.success) {
+          if(!d.profile.resumeLink){
+            toast.info("Please Upload Resume Link")
+          }
           setFetchedData(d.profile.data);
         }
       } catch (error) {
@@ -34,7 +38,7 @@ const View = () => {
   console.log(fetchedData);
   return (
     <>
-      <div className="flex justify-center h-auto w-[90%] ">
+      <div className="flex justify-center  w-[90%]  h-screen overflow-y-scroll ">
         <div
           className="  bg-gradient-to-b from-[#63462D] rounded-lg p-8 shadow-md text-center text-white"
           style={{

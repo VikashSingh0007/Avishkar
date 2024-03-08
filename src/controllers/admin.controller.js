@@ -9,6 +9,8 @@ const fes = "Admin";
 const XLSX = require('xlsx');
 const fs = require('fs');
 const { error } = require('console');
+const { json } = require('stream/consumers');
+const { sendActivationNotice } = require('../helper/mailHandler');
 
 const makeDepartmentalSecretary = async (req,res,next) => {
     const { email,department  } = req.body;
@@ -281,6 +283,17 @@ const verifyPayment = async (req,res) => { // to be called by DC or FS after fee
         if(status){
             tuser.isFeePaid = true;
             await tuser.save();
+            
+            const flag = await sendActivationNotice(tuser.email , "Your Account Has Been Activated by Payment Verification By Admin")
+            if(!flag){
+                res.statusCode = 410;
+                res.json({
+                    success : false,
+                    message : "Could Not Send the Mail to User",
+                    error : "Email Not Sent"
+                })
+                return;
+            }
             res.statusCode = 200;
             res.json({
                 success : true,
@@ -290,6 +303,17 @@ const verifyPayment = async (req,res) => { // to be called by DC or FS after fee
         }
         else{
             await User.deleteOne({email : email});
+            
+            const flag = await sendActivationNotice(tuser.email , "Your Account Has Been Deactivated After Payment Verification By Admin")
+            if(!flag){
+                res.statusCode = 410;
+                res.json({
+                    success : false,
+                    message : "Could Not Send the Mail to User",
+                    error : "Email Not Sent"
+                })
+                return;
+            }
             res.statusCode = 200;
             res.json({
                 success : true,
@@ -378,6 +402,7 @@ const downloadExcelEvent = async (req,res,next) => {
         }
         
         const jsonData = event.particpatingTeams
+        console.log("acceptemem" , jsonData)
         let count = 1;
         const sendThisToFront = jsonData.map((data) => {
             var singleEntry = {
@@ -385,10 +410,15 @@ const downloadExcelEvent = async (req,res,next) => {
                 teamSize : data.size,
             }
             for(let i = 0; i < data.acceptedMembers.length ; i++){
+                var resumeLink = data.acceptedMembers[i].resumeLink;
+                if(resumeLink == null || resumeLink == ''){
+                    resumeLink = "No Link Submitted"
+                }
                 singleEntry = {
                     [`name ${i+1}`] : data.acceptedMembers[i].name,
                     [`email ${i+1}`] : data.acceptedMembers[i].email,
                     [`mobile ${i+1}`] : data.acceptedMembers[i].phone,
+                    [`resume ${i+1}`] : resumeLink,
                     ...singleEntry
                 }
                 

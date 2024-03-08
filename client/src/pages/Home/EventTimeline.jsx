@@ -76,7 +76,7 @@ const timelineData = [
   },
   {
     text: "Celebrity Night",
-    date: "April 22 2024",
+    date: "March 22 2024",
     category: {
       tag: "Day-7",
       color: "#000",

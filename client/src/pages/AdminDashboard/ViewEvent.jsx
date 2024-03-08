@@ -67,6 +67,7 @@ const View = ({ event }) => {
                 <div>Name: {participant.name}</div>
                 <div>Email: {participant.email}</div>
                 <div>Mobile No: {participant.phone}</div>
+                <div>Resume : {participant.resumeLink}</div>
               </div>
             ))} 
           </div>
