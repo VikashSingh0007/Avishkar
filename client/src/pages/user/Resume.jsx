@@ -1,14 +1,30 @@
 import { useState } from "react";
-
+import Loader from "../Home/loader.jsx";
+import { updateResume } from "../../services/authService.js";
 const ResumeUploadContainer = () => {
   const [resumeLink, setResumeLink] = useState("");
-
-  const handleUploadResume = () => {
+  const [isloading,setLoading]=useState(false);
+  const handleUploadResume = async () => {
     // Add your logic for handling the resume upload here
-    console.log("Uploading Resume:", resumeLink);
+    try{
+      const messageData = {
+        resumeLink : resumeLink,
+      }
+      setLoading(true)
+      console.log("Uploading Resume:", resumeLink);
+      await updateResume(messageData)
+      setLoading(false);
+    }
+    catch(error){
+      console.log(error);
+      setLoading(false)
+    }
+    
   };
 
   return (
+    <>
+   {isloading && <Loader/>}
     <div
       className="w-[90%] md:w-[50%] mx-auto p-6  bg-gradient-to-b from-[#63462D] rounded-lg shadow-md"
       style={{
@@ -50,6 +66,8 @@ const ResumeUploadContainer = () => {
         Upload Resume
       </button>
     </div>
+    </>
+    
   );
 };
 

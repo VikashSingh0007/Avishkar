@@ -1,18 +1,28 @@
 import { useState } from "react";
 import { createTeam } from "../../services/teamService";
 import "./user.css";
+import Loader from "../Home/loader.jsx";
 const Create = () => {
   const [data, setData] = useState({});
-
-  const handleSubmit = () => {
-    const messageData = {
-      teamName: data.teamName,
-      teamSize: data.teamSize,
-    };
-    console.log("creating Team");
-    createTeam(messageData).then((res) => {
-      console.log(res);
-    });
+  const [isloading , setLoading] = useState(false);
+  const handleSubmit = async () => {
+    try{
+      setLoading(true)
+      const messageData = {
+        teamName: data.teamName,
+        teamSize: data.teamSize,
+      };
+      console.log("creating Team");
+      await createTeam(messageData).then((res) => {
+        console.log(res);
+      });
+      setLoading(false);
+    }
+    catch(error){
+      console.log(error);
+      setLoading(false);
+    }
+    
   };
   function handleChange(e) {
     setData((old) => {
@@ -23,7 +33,9 @@ const Create = () => {
     });
   }
   return (
-    <div>
+    <>
+      {isloading && <Loader/>}
+      <div>
       <section className=" body-font text-white ">
         <div className="flex lg:justify-center m-4  ">
           <div
@@ -112,6 +124,8 @@ const Create = () => {
         </div>
       </section>
     </div>
+    </>
+    
   );
 };
 

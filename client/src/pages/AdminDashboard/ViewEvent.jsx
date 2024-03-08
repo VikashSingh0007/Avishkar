@@ -5,21 +5,26 @@ import services from "./services/adminServices";
 import { getAllParticipating } from "../../services/teamService";
 import { downloadExcelEventFile, getTeamParticipatingInEvent } from "../../services/adminService";
 import axios from 'axios'
+
+import Loader from "../Home/loader";
 const View = ({ event }) => {
   const [openTeamIndex, setOpenTeamIndex] = useState(null);
   const [teams, setTeams] = useState([])
-
+  const [isloading , setLoading] = useState(false)
   // console.log("events ",event)
   useEffect(()=>{
     const fetchTeams = async () => {
       try {
+        setLoading(true)
         const d = await getTeamParticipatingInEvent(event);
         console.log("D",d)
         if (d.success) {
           setTeams(d.data);
         }
+        setLoading(false)
       } catch (error) {
         // history("/login");
+        setLoading(false)
         console.error("Error fetching data:", error);
       }
     };
@@ -37,6 +42,9 @@ const View = ({ event }) => {
   
 
   return (
+    <>{
+      isloading && <Loader/>
+    }
     <div className="lg:w-[80%] w-full overflow-y-scroll">
       <div>
         {" "}
@@ -74,6 +82,8 @@ const View = ({ event }) => {
         </div>
       ))}
     </div>
+    </>
+    
   );
 };
 

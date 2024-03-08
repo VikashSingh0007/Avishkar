@@ -7,6 +7,7 @@ import signUp from "../../services/authService.js";
 import Navbar from "../Home/Navbar";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify"
+import Loader from "../Home/loader.jsx";
 const SignUp = () => {
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
@@ -18,9 +19,7 @@ const SignUp = () => {
   const [gender, setGender] = useState("");
   const [isRotated, setIsRotated] = useState(false); // New state for rotation
   const [showQr, setShowQr] = useState(false);
-
-
-
+  const [isloading,setLoading]=useState(false);
   const navigate = useNavigate();
   useEffect(() => {
     
@@ -45,6 +44,7 @@ const SignUp = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setLoading(true);
     const data = {
       name: name,
       email: email,
@@ -55,10 +55,19 @@ const SignUp = () => {
       paymentLink: transactionId,
     };
     console.log(data);
-    const success = await signUp(data);
+    try {
+      const success = await signUp(data);
+      setLoading(false);
+    } catch (error) {
+      setLoading(false);
+      console.log(error);
+    }
+   
     // await axios.post("http://localhost:5000/api/auth/signup", data);
   };
   return (
+    <>
+    {isloading&&<Loader/>}
     <div
       style={{
         background:
@@ -257,6 +266,8 @@ const SignUp = () => {
         </svg>
       </div>
     </div>
+    </>
+    
   );
 };
 

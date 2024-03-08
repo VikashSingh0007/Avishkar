@@ -4,14 +4,19 @@ import bg from "./loginbg1.jpeg";
 import { userLogin } from "../../services/authService";
 import { useNavigate } from "react-router-dom";
 import Navbar from "../Home/Navbar";
+
+import Loader from "../Home/loader.jsx";
 const Lo = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [isloading,setLoading]=useState(false);
   const navigate = useNavigate();
+
   useEffect(() => {
     const response = localStorage.getItem("userData");
     if (response && localStorage.getItem("userToken")) return navigate("/");
   }, []);
+
   const handleForgot = (e) => {
     e.preventDefault();
     navigate("/forgotpassword");
@@ -22,21 +27,33 @@ const Lo = () => {
       email: email,
       password: password,
     };
-    const response = await userLogin(data);
-    if (!response) {
-      return;
-    } else {
-      localStorage.setItem("userToken", response.token);
-      localStorage.setItem("userData", JSON.stringify(response.userData));
-      navigate("/");
+    try{
+      setLoading(true);
+      const response = await userLogin(data);
+      if (!response) {
+       
+      } else {
+        localStorage.setItem("userToken", response.token);
+        localStorage.setItem("userData", JSON.stringify(response.userData));
+        navigate("/");
+    
+      }
+      setLoading(false)
       return;
     }
+    catch(error){
+      console.log(error);
+      setLoading(false)
+    }
+    
     // if(response.data){
 
     // }
     // await axios.post("http://localhost:5000/api/auth/resetpassword", data);
   };
   return (
+    <>
+    {isloading && <Loader/>}
     <div
       className="containerAcco"
       // style={{
@@ -120,6 +137,8 @@ const Lo = () => {
         </svg>
       </div>
     </div>
+    </>
+    
   );
 };
 

@@ -1,19 +1,23 @@
 import React, { useEffect, useState } from "react";
 import {getFeeNotPaid, verifyPayment} from "../../services/adminService"
 import {toast} from "react-toastify"
-
+import Loader from "../Home/loader";
 const Create = () => {
 
   const [fetchedData , setFetchedData ] = useState([]);
   // console.log(fetchedData)
+  const [isloading , setLoading ] = useState(false);
   useEffect(() => {
     const fetchData = async () => {
       try {
+        setLoading(true);
         const res = await getFeeNotPaid();
         console.log("gotted from loki ", res);
         setFetchedData(res.data);
+        setLoading(false);
         
       } catch (error) {
+        setLoading(false);
         console.error("Error fetching data:", error);
       }
     };
@@ -25,11 +29,14 @@ const Create = () => {
      try{
       const fetchData = async () => {
         try {
+          setLoading(true);
+
           const response = await getFeeNotPaid();
           
           setFetchedData(response.data);
-          
+          setLoading(false)
         } catch (error) {
+          setLoading(false);
           console.error("Error fetching data:", error);
         }
       };
@@ -56,6 +63,7 @@ const Create = () => {
 
   
   return (<>
+  {isloading && <Loader/>}
    <div className="bg-orange-200 mt-4 rounded-xl p-4">
     {fetchedData.length==0&&<><h1>No User has registered</h1></>}
       {fetchedData.length>0&&fetchedData.map((item, index) => (
