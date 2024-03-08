@@ -97,7 +97,7 @@ const Accommodation = () => {
                     {data.date}
                   </h6>
                   <h6 className="leading-relaxed text-lg croissant-one-regular">
-                    {data.date}
+                    {data.fee}
                   </h6>
                   <h6 className="leading-relaxed text-lg text-justify croissant-one-regular">
                     {data.description}
