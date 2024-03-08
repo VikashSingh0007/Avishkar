@@ -11,6 +11,7 @@ import Clouds1 from "./culrav/assets/clouds11.png";
 import Clouds2 from "./culrav/assets/clouds2.png";
 import Clouds3 from "./culrav/assets/clouds3.png";
 import Mohit from "./culrav/assets/Mohit.png";
+import juhi from "./culrav/assets/juhi.png";
 
 const App = () => {
   const navigate = useNavigate();
@@ -32,40 +33,45 @@ const App = () => {
               muted
               className="absolute top-0 left-0 w-full h-full rounded"
               style={{ width: "100%", height: "100%", objectFit: "cover" }}
-
             />
-             <img
-                  src={Mohit}
-                  className="absolute  bottom-[-4%] left-[-15%] lg:w-[700px] md:w-[0] sm:w-[0] animate-clouds"
-                  style={{ zIndex: 2 }}
-                />
-              
 
             {window.innerWidth > 768 && (
-             <div className="absolute bottom-[-13%] left-0 w-full hidden md:block">
-                      <img
-                  src={Clouds2}
-                  className="absolute bottom-0 left-[-10%] lg:w-[450px] md:w-[0] sm:w-[0] animate-clouds"
+              <div>
+                {" "}
+                <img
+                  src={Mohit}
+                  className="absolute  bottom-[-4%] left-[-15%] lg:w-[700px] md:w-[0] sm:w-[0] animate-clouds"
                   style={{ zIndex: 1 }}
                 />
                 <img
-                  src={Clouds1}
-                  className="absolute bottom-[50%] left-10 lg:w-[400px] md:w-[0] sm:w-[0] animate-clouds"
+                  src={juhi}
+                  className="absolute  bottom-[-4%] right-[-0%] lg:w-[400px] md:w-[0] sm:w-[0] animate-clouds"
                   style={{ zIndex: 1 }}
                 />
-                <img
-                  src={Clouds3}
-                  className="absolute bottom-0 right-0 lg:w-[300px] md:w-[0] sm:w-[0] animate-clouds"
-                />
-                <img
-                  src={Clouds1}
-                  className="absolute bottom-0 right-[-2%] lg:w-[400px]  md:w-[0] sm:w-[0] animate-clouds"
-                />
-                 
+                <div className="absolute bottom-[-13%] left-0 w-full hidden md:block">
+                  <img
+                    src={Clouds2}
+                    className="absolute bottom-0 left-[-10%] lg:w-[450px] md:w-[0] sm:w-[0] animate-clouds"
+                    style={{ zIndex: 2 }}
+                  />
+                  <img
+                    src={Clouds1}
+                    className="absolute bottom-[50%] left-10 lg:w-[400px] md:w-[0] sm:w-[0] animate-clouds"
+                    style={{ zIndex: 2 }}
+                  />
+                  <img
+                    src={Clouds3}
+                    className="absolute bottom-0 right-0 lg:w-[300px] md:w-[0] sm:w-[0] animate-clouds"
+                    style={{ zIndex: 2 }}
+                  />
+                  <img
+                    src={Clouds1}
+                    className="absolute bottom-0 right-[-2%] lg:w-[400px]  md:w-[0] sm:w-[0] animate-clouds"
+                    style={{ zIndex: 2 }}
+                  />
+                </div>
               </div>
             )}
-
-            
           </div>
         </div>
       </div>
