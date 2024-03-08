@@ -1,6 +1,6 @@
 const express = require('express');
 
-const { isUserAuthenticated } = require('../middlewares/authMiddleware');
+const { isUserAuthenticated , isFestivalSecretary , isDepartmentalCoordinator} = require('../middlewares/authMiddleware');
 const { makeDepartmentalSecretary, verifyPayment , getAllNotFeePaid, getAllTeamsParticipatingInEvent,deleteDepartmentCoordie, downloadExcelEvent,getDepartmentCoordies } = require('../controllers/admin.controller');
 
 
@@ -14,11 +14,11 @@ router.use((req,res,next) => {
 
 router.use(isUserAuthenticated);
 
-router.post('/makedc',makeDepartmentalSecretary);
-router.post('/verifypayment',verifyPayment);
-router.get('/getallfeenotpaid' , getAllNotFeePaid);
-router.post('/getallteamevent' , getAllTeamsParticipatingInEvent);
-router.post('/download' , downloadExcelEvent)
-router.get('/getcoordie',getDepartmentCoordies)
-router.post('/deletecoordie',deleteDepartmentCoordie)
+router.post('/makedc',isFestivalSecretary,makeDepartmentalSecretary);
+router.post('/verifypayment',isFestivalSecretary,verifyPayment);
+router.get('/getallfeenotpaid' , isFestivalSecretary ,getAllNotFeePaid);
+router.post('/getallteamevent' , isDepartmentalCoordinator ,getAllTeamsParticipatingInEvent);
+router.post('/download' , isDepartmentalCoordinator ,downloadExcelEvent)
+router.get('/getcoordie', isFestivalSecretary ,getDepartmentCoordies)
+router.post('/deletecoordie', isFestivalSecretary ,deleteDepartmentCoordie)
 module.exports = router
