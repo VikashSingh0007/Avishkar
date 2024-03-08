@@ -84,7 +84,7 @@ const Team = () => {
                 </div>
 
                 
-                <div className="text-[#423C31] font-bold lg:text-[1em] md:text-[0.8em] text-[0.5em]">{member.role}</div>
+                <div className="text-[#423C31] font-bold lg:text-[1em] md:text-[0.8em] text-[0.5em]">{member.username}</div>
 
               </div>
             ))}
