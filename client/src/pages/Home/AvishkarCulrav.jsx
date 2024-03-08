@@ -45,7 +45,7 @@ const FixedDivsComponent = () => {
         <div className="flex justify-between  flex-wrap ">
           <Link
             to="/culravOpening"
-            className="flex justify-center ml-0 w-full sm:w-1/2  lg:w-auto"
+            className="flex justify-center ml-0 w-full sm:w-1/2  lg:w-auto z-[10]"
           >
             <div className="relative w-full h-60 md:w-64 md:h-64 lg:w-80 lg:h-80 xl:h-[400px] xl:w-[500px]">
               <img
@@ -57,7 +57,7 @@ const FixedDivsComponent = () => {
           </Link>
           <Link
             to={"/avishkar"}
-            className="p-0 flex justify-center ml-0 w-full sm:w-1/2  lg:w-auto"
+            className="p-0 flex justify-center ml-0 w-full sm:w-1/2  lg:w-auto z-[10]"
           >
             <div className="relative w-full mb-10 h-70 md:w-64 md:h-64 lg:w-80 lg:h-80 xl:h-[400px] xl:w-[500px] ">
               <img
