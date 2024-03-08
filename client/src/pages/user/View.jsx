@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 import { getProfile } from "../../services/teamService";
+import { toast } from "react-toastify";
 
 const View = () => {
   const [fetchedData, setFetchedData] = useState({
@@ -21,6 +22,9 @@ const View = () => {
         const d = await getProfile();
         console.log(d.success);
         if (d.success) {
+          if(!d.profile.resumeLink){
+            toast.info("Please Upload Resume Link")
+          }
           setFetchedData(d.profile.data);
         }
       } catch (error) {

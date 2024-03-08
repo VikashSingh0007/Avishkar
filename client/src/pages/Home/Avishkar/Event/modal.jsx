@@ -1,10 +1,11 @@
 import { registerEvent } from "../../../../services/teamService";
 
-const Modal = ({ teams, setShowModal, event }) => {
+const Modal = ({ teams, setShowModal, event}) => {
   const handleRegister = (teamId) => {
     const data = {
       eventName: event,
       teamId: teamId,
+      
     };
     registerEvent(data);
     console.log(data);
