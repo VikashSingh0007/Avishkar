@@ -413,7 +413,7 @@ const User = () => {
           )}
         </div>
 
-        <div className="flex flex-col justify-around gap-y-24 w-full h-screen   lg:items-center p-2 lg:ml-3 bg-transparent lg:w-[85%] ">
+        <div className="flex flex-col justify-around gap-y-24 w-full overflow-scroll lg:items-center p-2 lg:ml-3 bg-transparent lg:w-[85%] ">
           {choice === "view" && <View />}
           {choice === "team" && <Team className="" />}
           {choice === "invitation" && <Invitations />}

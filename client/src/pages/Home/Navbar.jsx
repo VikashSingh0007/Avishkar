@@ -170,22 +170,24 @@ const Navbar = ({ page }) => {
           style={{ boxShadow: "0px 5px 10px black" }}
         >
           <ul className="flex flex-col space-y-2">
-            {navLinks.map((nav, index) => (
-              <li
-                key={nav.id}
-                className={`font-poppins font-medium cursor-pointer  text-white relative ${
-                  active === nav.title ? "bg-[#b79e6e] rounded-t-md" : ""
-                }`}
-                onClick={() => setActive(nav.title)}
-              >
-                <Link to={`/${nav.id}`} className="block py-2 px-4">
-                  {nav.title}
-                </Link>
-                {index < navLinks.length - 1 && (
-                  <div className="border-t border-white absolute w-full top-full"></div>
-                )}
-              </li>
-            ))}
+            {navLinks.map((nav, index) =>
+              userToken && nav.title === "Login" ? null : (
+                <li
+                  key={nav.id}
+                  className={`font-poppins font-medium cursor-pointer  text-white relative ${
+                    active === nav.title ? "bg-[#b79e6e] rounded-t-md" : ""
+                  }`}
+                  onClick={() => setActive(nav.title)}
+                >
+                  <Link to={`/${nav.id}`} className="block py-2 px-4">
+                    {nav.title}
+                  </Link>
+                  {index < navLinks.length - 1 && (
+                    <div className="border-t border-white absolute w-full top-full"></div>
+                  )}
+                </li>
+              )
+            )}
           </ul>
         </div>
       )}

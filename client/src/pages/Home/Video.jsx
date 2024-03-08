@@ -35,7 +35,7 @@ const App = () => {
               style={{ width: "100%", height: "100%", objectFit: "cover" }}
             />
 
-            {window.innerWidth > 768 && (
+            {window.innerWidth > 640 && (
               <div>
                 {" "}
                 <img
