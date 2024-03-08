@@ -82,8 +82,10 @@ const Team = () => {
                 <div className="text-white lg:text-[1.3em] md:text-[1em] text-[0.8em] font-medium mb-2">
                   {member.name}
                 </div>
+
                 
                 <div className="text-[#423C31] font-bold lg:text-[1em] md:text-[0.8em] text-[0.5em]">{member.role}</div>
+
               </div>
             ))}
           </div>

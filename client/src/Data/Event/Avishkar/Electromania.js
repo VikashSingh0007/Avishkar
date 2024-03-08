@@ -1,10 +1,10 @@
-import BgImg from "../../Images/electromania.png";
-// import image from "../../../../src/Data/Images/Logo
+// import BgImg from "../../Images/electromania.png";
+import image from "../../../../src/Data/Images/Logo/electromania1.png";
 export const Electromania = [
   {
     title: "",
     tagline: "“Creativity Amplified, Faults Rectified",
-    BgImageLink: "",
+    BgImageLink: image,
     instagramLink:
       ": https://www.instagram.com/electromania2k24?igsh=ZW1yZ3B4c2ZmbHRp",
     facebookLink:
