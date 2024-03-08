@@ -16,7 +16,7 @@ const EventCard = ({ data }) => {
         style={{ boxShadow: "0px 10px 10px black" }}
       >
         <Link
-          to={`/culravEvent/${encodeURIComponent(JSON.stringify(data))}`}
+          to={`/page/${encodeURIComponent(JSON.stringify(data))}`}
           className="flex items-center justify-center cursor-pointer"
         >
           <div className="wrapper-card">
