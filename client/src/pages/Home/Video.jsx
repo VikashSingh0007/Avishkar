@@ -40,7 +40,7 @@ const App = () => {
                 {" "}
                 <img
                   src={Mohit}
-                  className="absolute  bottom-[-4%] left-[-15%] lg:w-[700px] md:w-[0] sm:w-[0] animate-clouds"
+                  className="absolute  bottom-[0%] left-[-15%] lg:w-[700px] md:w-[0] sm:w-[0] animate-clouds"
                   style={{ zIndex: 1 }}
                 />
                 <img
@@ -51,7 +51,7 @@ const App = () => {
                 <div className="absolute bottom-[-13%] left-0 w-full hidden md:block">
                   <img
                     src={Clouds2}
-                    className="absolute bottom-0 left-[-10%] lg:w-[450px] md:w-[0] sm:w-[0] animate-clouds"
+                    className="absolute bottom-[-10%] left-[-8%] lg:w-[450px] md:w-[0] sm:w-[0] animate-clouds"
                     style={{ zIndex: 2 }}
                   />
                   <img
