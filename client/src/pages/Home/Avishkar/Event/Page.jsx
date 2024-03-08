@@ -6,13 +6,14 @@ import Navbar from "../../../Home/Navbar";
 import Modal from "./modal.jsx";
 import { getAllParticipating } from "../../../../services/teamService.js";
 import { toast } from "react-toastify";
-
+import Loader from "../../../Home/loader.jsx"
 const Page = () => {
   const { data } = useParams();
   const decodedData = JSON.parse(decodeURIComponent(data));
   const [showModal, setShowModal] = useState(false);
   const [fetchedData, setFetchedData] = useState();
   const navigate = useNavigate();
+  const [isloading , setLoading] = useState(false);
   console.log(decodedData);
 
   const handleClick = async () => {
@@ -26,11 +27,14 @@ const Page = () => {
     }
     const fetchData = async () => {
       try {
+        setLoading(true)
         const data = await getAllParticipating();
         console.log("gotted from loki ", data);
         setFetchedData(data);
+        setLoading(false);
         console.log(typeof data.teams);
       } catch (error) {
+        setLoading(false);
         console.error("Error fetching data:", error);
       }
     };
@@ -42,6 +46,7 @@ const Page = () => {
   const blurproperty = `flex text-gray-300 justify-center bg-opacity-15  backdrop-blur-sm p-8 rounded-md shadow-md`;
   return (
     <>
+      {isloading && <Loader/>}
       {showModal && (
         <div
           className="flex justify-center items-center h-[100vh]"
@@ -51,6 +56,7 @@ const Page = () => {
               "linear-gradient(to bottom, #d95f3b, #f0984a)",
           }}
         >
+          
           <Modal
             teams={fetchedData?.teams?.participating}
             setShowModal={setShowModal}
