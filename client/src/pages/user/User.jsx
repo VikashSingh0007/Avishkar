@@ -20,7 +20,7 @@ const User = () => {
   return (
     <div className="absolute  top-0 left-0 w-full h-full overflow-hidden flex flex-col containerUser">
       <div className="h-[10%] ">
-        <Navbar page="Profile"/>
+        <Navbar page="Profile" />
       </div>
       <div className="h-[90%]  p-2 flex lg:flex-row flex-col">
         <div
@@ -337,7 +337,7 @@ const User = () => {
                   className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900"
                   role="menuitem"
                 >
-                  upload Resume
+                  Upload Resume
                 </button>
                 <button
                   onClick={() => {

@@ -43,7 +43,7 @@ const Lo = () => {
           "linear-gradient(to bottom, #d95f3b, #f0984a, #fcd6a5, #7aa9a3, #338f9a, #1c4c70)",
       }}
     >
-      <Navbar page="Login"/>
+      {/* <Navbar page="Login"/> */}
       <div
         className="flex justify-center flex-wrap items-center h-[100vh]"
         // style={{

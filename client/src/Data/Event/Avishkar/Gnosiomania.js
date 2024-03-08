@@ -1,10 +1,10 @@
-// import image from "../../../../src/Data/Images/Logo/"
+import image from "../../../../src/Data/Images/Logo/GNO.jpeg";
 export const Gnosiomania = [
   {
     title: "Gnosiomania",
     tagline: "Where Knowledge Meets Wisdom",
-    BgImageLink:
-      "https://drive.google.com/file/d/1o3jRyPo3B0V0aD5A-BGJsXPC1VgX3Wbp/view?usp=drivesdk",
+    BgImageLink: image,
+
     instagramLink: "https://www.instagram.com/gnotalks",
     facebookLink: "https://www.facebook.com/gnoTalks",
     events: [

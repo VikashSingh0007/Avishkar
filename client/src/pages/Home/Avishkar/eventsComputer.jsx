@@ -12,7 +12,7 @@ const EventsComputer = ({ data }) => {
     "computerButton computerButtonOff"
   );
 
-  console.log(screenState)
+  console.log(screenState);
 
   useEffect(() => {
     let initialized = false;
@@ -184,22 +184,16 @@ const EventsComputer = ({ data }) => {
       }, 300); // 300 milliseconds delay
     }
   }
-  console.log("heklo",data.info[0].BgImageLink)
+  // console.log("heklo", data.info[0].BgImageLink);
   return (
     <div className="relative w-auto  flex flex-col justify-center items-center">
       <div className="screenBox">
         <div className="frame">
           <div className="screenBox2 ">
             <div className="screenBox3 flex text-center items-center">
-              <div
-                className="screen relative"
-               
-              >
-                <span
-                 
-                  className="absolute left-0 w-full  text-2xl opacity-100 top-4 z-[1] rumoura-font "
-                >
-                  {eventName}
+              <div className="screen relative">
+                <span className="absolute left-0 w-full  text-2xl opacity-100 top-4 z-[1] rumoura-font ">
+                  {/* {eventName} */}
                 </span>
                 <div className="absolute top-0 z-[0]">
                   {/* <Link
@@ -207,27 +201,30 @@ const EventsComputer = ({ data }) => {
                       JSON.stringify(data)
                     )}`}
                   > */}
-                  <Link to={`/AvishkarEvent/${encodeURIComponent(JSON.stringify(data))}`}><img 
-                    className=""
-                   
-                    src={data.info[0].BgImageLink}
-                  /></Link>
-                  
+                  <Link
+                    to={`/AvishkarEvent/${encodeURIComponent(
+                      JSON.stringify(data)
+                    )}`}
+                  >
+                    <img
+                      className=""
+                      src={data.info[0].BgImageLink}
+                      style={{ width: "250px", height: "190px" }} // Adjust the width and height
+                    />
+                  </Link>
+
                   {/* </Link> */}
                 </div>
               </div>
             </div>
           </div>
-          <div
-            className="bottomFrame"
-            
-          >
+          <div className="bottomFrame">
             <div className="fan"></div>
             <img
-                src={Avishkar}
-                alt="Avishkar"
-                className="logo -mt-[18.5px] -ml-[6px] w-14 h-14 object-cover rounded-lg hover:scale-150 transition duration-300 ease-in-out"
-              />
+              src={Avishkar}
+              alt="Avishkar"
+              className="logo -mt-[18.5px] -ml-[6px] w-14 h-14 object-cover rounded-lg hover:scale-150 transition duration-300 ease-in-out"
+            />
             <div className="powerButton">
               <div className="powerIcon"></div>
             </div>
@@ -259,10 +256,7 @@ const EventsComputer = ({ data }) => {
           <div className="screw5"></div>
           <div className="powerButton">
             <div className="">
-              <div
-               
-                className={centralUnitButtonClass}
-              ></div>
+              <div className={centralUnitButtonClass}></div>
             </div>
             <div className="offIndicator"></div>
             <div className="onIndicator"></div>
