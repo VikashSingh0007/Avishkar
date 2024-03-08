@@ -4,7 +4,7 @@ import bg from "./loginbg1.jpeg";
 import { userLogin } from "../../services/authService";
 import { useNavigate } from "react-router-dom";
 import Navbar from "../Home/Navbar";
-const Lo = () => {
+const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
@@ -37,23 +37,10 @@ const Lo = () => {
     // await axios.post("http://localhost:5000/api/auth/resetpassword", data);
   };
   return (
-    <div
-      className="containerAcco"
-      // style={{
-      //   background:
-      //     "linear-gradient(to bottom, #d95f3b, #f0984a, #fcd6a5, #7aa9a3, #338f9a, #1c4c70)",
-      // }}
-    >
+    <div className="containerAcco">
       {/* <Navbar page="Login"/> */}
-      <div
-        className="flex justify-center flex-wrap items-center h-[100vh]"
-        // style={{
-        //   backgroundImage: `url(${bg})`,
-        //   backgroundSize: "cover",
-        //   backgroundRepeat: "no-repeat",
-        // }}
-      >
-        <div className="locard flex justify-center flex-col">
+      <div className="flex justify-center flex-wrap items-center h-[200vh] ">
+        <div className="locard flex justify-center flex-col bg-yellow-200">
           <form className="w-full h-full gap-5 flex flex-col">
             <div className="gap-5 flex flex-col w-[15em] font-medium">
               <div>
@@ -123,4 +110,4 @@ const Lo = () => {
   );
 };
 
-export default Lo;
+export default Login;

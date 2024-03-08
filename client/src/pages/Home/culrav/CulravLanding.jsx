@@ -7,6 +7,7 @@ import reel from "../assets/reel.jpg";
 import lightLamp from "../assets/chair.jpg";
 import Footer from "../Footer";
 
+
 const CulravLanding = () => {
   return (
     <div className="containerCulrav">

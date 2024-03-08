@@ -8,7 +8,7 @@ export const PowerSurge = [
     facebookLink: "https://www.facebook.com/powersurge2k24",
     events: [
       {
-        name: " War of Currents",
+        name: "War of Currents",
         disc: " About Event :Embark on an Offline Quiz Adventure and Activate Your Inner Detective and Crack the Case! Get ready to unravel mysteries, chuckle at jokes, and crack riddles!",
         rule: [
           {

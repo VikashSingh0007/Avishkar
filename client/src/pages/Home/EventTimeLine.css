@@ -50,7 +50,7 @@ h1 {
 }
 
 .timeline-container::after {
-  background-color: rgba(58, 52, 22, 0.8);
+  background-color: #3A3416CC;
   content: "";
   position: absolute;
   left: calc(50% - 2px);
@@ -79,7 +79,7 @@ h1 {
 }
 
 .timeline-item-content {
-  box-shadow: 5px 10px 5px rgba(255, 249, 241, 0.902);
+  box-shadow: 5px 10px 5px rgba(0,10,10, 0.8);
   border-radius: 5px;
   /* background-color: #fff; */
   display: flex;
@@ -96,7 +96,7 @@ h1 {
 .timeline-item-content::after {
   content: " ";
   background-color: #1c1a1a;
-  box-shadow: 5px 0px 12px rgba(245, 139, 18, 0.8);
+  box-shadow: 5px 0px 12px rgba(30, 29, 29, 0.8);
   position: absolute;
   right: -20.5px;
   top: calc(50% - 7.5px);
@@ -113,7 +113,8 @@ h1 {
 .timeline-item:nth-child(odd) .timeline-item-content::after {
   right: auto;
   left: -20.5px;
-  box-shadow: 0px 0px 12px rgba(245, 139, 18, 0.8);
+  box-shadow: 5px 10px 5px rgba(0,0,10px, 0.8);
+
 }
 
 .timeline-item-content .tag {

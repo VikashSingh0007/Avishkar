@@ -3,13 +3,13 @@ import HAZOPIUM from "../../Images/HAZOPIUM.png";
 import CLASH from "../../Images/CLASH-OF-CHEMIST.png";
 import CODEINDROME from "../../Images/CODEINDROME.png";
 import CHEMETHLON from "../../Images/CHEMETHLON.png";
-import image from "../../../../src/Data/Images/Logo/Rasayans.png"
+import image from "../../../../src/Data/Images/Logo/Rasayans.png";
 import SCAVENGERHUNT from "../../Images/SCAVENGERHUNT.png";
 export const Rasayans = [
   {
     title: "Rasayans",
     tagline: "",
-    BgImageLink:image,
+    BgImageLink: image,
     instagramLink: "https://www.instagram.com/rasayans/",
     events: [
       {
@@ -123,7 +123,7 @@ export const Rasayans = [
         ],
       },
       {
-        name: "",
+        name: "CODEINDROME",
         disc: "In the era of increasing environmental awareness, individuals and organizations need to visualize the environmental impacts of various activities. This event revolves around the creation of environmental impact dashboard using web-dev technologies.",
         rule: [
           {
@@ -253,7 +253,7 @@ export const Rasayans = [
           {
             rule_1: "Team Size: 2-4 members",
             rule_2: "All branches and years are allowed",
-            rule_3:"Cross-year teams allowed",
+            rule_3: "Cross-year teams allowed",
           },
         ],
         TeamSize: "",
