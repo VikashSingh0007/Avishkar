@@ -66,6 +66,7 @@ import DivyanshuY from "../Images/Team/Divyanshu_Yadav0020.jpg"
 import SameerSir from "../Images/Team/SameerSir.jpeg"
 import Silkie from "../Images/Team/Silkie_Agarwal5162.jpg"
 import Sarah from "../Images/Team/Sarah_Nasim4177.jpg"
+import Shivani from "../Images/Team/Shivani_Jha9054.jpg"
 export const Team = [
   {
     department: "Director",
@@ -1048,6 +1049,23 @@ export const Team = [
         instagram_url:
           "https://www.instagram.com/i.m.a_man?igsh=OGQ5ZDc2ODk2ZA==",
         instagram_username: "i.m.a_man",
+      },
+      {
+        email: "jhashivaniradhekrishna@gmail.com",
+        name: "Shivani Kumari",
+        registration: 20209054,
+        image:Shivani,
+        mobile: 6207231730,
+        branch: "Chemical Engineering",
+        position: "Departmental Coordinator",
+        department: "Rasayans",
+        photo:
+          "https://drive.google.com/open?id=14q2MT5E353Ge15HQQoT_i3TO290K6Wr6",
+        linkedin:
+          "https://www.linkedin.com/in/shivani-kumari0212",
+        instagram_url:
+          "https://www.instagram.com/shivani_kumari_jha_?igsh=MzNlNGNkZWQ4Mg==",
+        instagram_username: "shivani_kumari_jha_",
       },
 
       {
