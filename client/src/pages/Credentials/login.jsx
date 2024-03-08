@@ -4,13 +4,9 @@ import bg from "./loginbg1.jpeg";
 import { userLogin } from "../../services/authService";
 import Navbar from "../Home/Navbar";
 
-import Loader from "../Home/loader.jsx";
-
 const Login = () => {
-
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [isloading,setLoading]=useState(false);
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -30,49 +26,22 @@ const Login = () => {
       password: password,
     };
 
-    try{
-      setLoading(true);
-      const response = await userLogin(data);
-      if (!response) {
-       
-      } else {
-        localStorage.setItem("userToken", response.token);
-        localStorage.setItem("userData", JSON.stringify(response.userData));
-        navigate("/");
-    
-      }
-      setLoading(false)
+    const response = await userLogin(data);
+
+    if (!response) {
+      return;
+    } else {
+      localStorage.setItem("userToken", response.token);
+      localStorage.setItem("userData", JSON.stringify(response.userData));
+      navigate("/");
       return;
     }
-    catch(error){
-      console.log(error);
-      setLoading(false)
-    }
-    
-    // if(response.data){
-
-    // }
-    // await axios.post("http://localhost:5000/api/auth/resetpassword", data);
-
   };
 
   return (
-    <>
-    {isloading && <Loader/>}
-    <div
-      className="containerAcco"
-      // style={{
-      //   background:
-      //     "linear-gradient(to bottom, #d95f3b, #f0984a, #fcd6a5, #7aa9a3, #338f9a, #1c4c70)",
-      // }}
-    >
-      {/* <Navbar page="Login"/> */}
-      <div className="flex justify-center flex-wrap items-center h-[200vh] ">
-
     <div className="containerAcco">
       <Navbar page="Login" />
       <div className="flex justify-center flex-wrap items-center h-[100vh] ">
-
         <div className="locard flex justify-center flex-col bg-yellow-200">
           <form className="w-full h-full gap-5 flex flex-col">
             <div className="gap-5 flex flex-col w-[15em] font-medium">
@@ -143,13 +112,7 @@ const Login = () => {
         </svg>
       </div>
     </div>
-    </div>
-    </div>
-    </>
-    
-    
-    
-  )
-}
+  );
+};
 
 export default Login;
