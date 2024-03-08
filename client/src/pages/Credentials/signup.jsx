@@ -1,15 +1,13 @@
 import "./SignUp.css"; // Import your CSS file
 import { useState, useEffect } from "react";
-import qr from "../../assets/Qr.jpg";
+import qr from "../../assets/ACcount.png";
 import bg from "./loginbg1.jpeg";
-import ACcount from "../../assets/ACcount.png";
 import axios from "axios";
 import signUp from "../../services/authService.js";
 import Navbar from "../Home/Navbar";
 import { useNavigate } from "react-router-dom";
-import { toast } from "react-toastify";
 import Old from "../Home/assets/old.jpg";
-// import { toast } from "react-toastify";
+import { toast } from "react-toastify";
 import Loader from "../Home/loader.jsx";
 const SignUp = () => {
   const [email, setEmail] = useState("");
@@ -23,6 +21,7 @@ const SignUp = () => {
   const [isRotated, setIsRotated] = useState(false); // New state for rotation
   const [showQr, setShowQr] = useState(false);
   const [isloading, setLoading] = useState(false);
+
   const navigate = useNavigate();
   useEffect(() => {
     const response = localStorage.getItem("userData");
@@ -69,25 +68,23 @@ const SignUp = () => {
   return (
     <>
       {isloading && <Loader />}
-      <div
-        style={{
-          background:
-            "linear-gradient(to bottom, #d95f3b, #f0984a, #fcd6a5, #7aa9a3, #338f9a, #1c4c70)",
-        }}
-      >
-        <Navbar page="SignUp" />
+      <div className="containerAcco absolute w-full h-full overflow-hidden">
+        <div className="absolute z-[-1] ">
+          <img src={Old} className=" object-cover w-screen h-screen  z-[-1]" />
+        </div>
+        <Navbar className="" page="SignUp" />
         <div
           className={`flex justify-center flex-wrap items-center h-[100vh] scene ${
             isRotated ? "rotation" : ""
           }`}
 
           // style={{
-          //   backgroundImage: `url(${bg})`,
+          //   backgroundImage: url(${bg}),
           //   backgroundSize: "cover",
           //   backgroundRepeat: "no-repeat",
           // }}
         >
-          <div className="locard flex justify-center flex-col p-5">
+          <div className="locard  opacity-80 hover:opacity-100 bg-yellow-200 rounded-2xl flex justify-center flex-col p-5">
             {/* {isRotated && (
           <div> */}
             {/* {showQr === false && (
@@ -99,8 +96,10 @@ const SignUp = () => {
                 className="w-full h-full   gap-5 flex flex-col justify-center items-center"
                 style={showQr ? {} : { marginTop: "5%" }}
               >
-                <div className="gap-5  flex flex-col h-[90%] font-medium overflow-y-scroll w-full pt-5 pb-3 p-2 bg-gray-200 bg-opacity-20 rounded shadow-lg backdrop-filter backdrop-blur-md">
-                  <label htmlFor="email">Name:</label>
+                <div className="gap-5   flex flex-col h-[90%] font-medium overflow-y-scroll w-full pt-5 pb-3 p-2 bg-gray-200 bg-opacity-20 rounded shadow-lg backdrop-filter backdrop-blur-md">
+                  <label htmlFor="email" className="font-Robo">
+                    Name
+                  </label>
                   <input
                     className="input"
                     type="text"
@@ -109,7 +108,9 @@ const SignUp = () => {
                     placeholder="Enter your name"
                     onChange={(e) => setName(e.target.value)}
                   />
-                  <label htmlFor="email">Email:</label>
+                  <label className="font-Robo" htmlFor="email">
+                    Email
+                  </label>
                   <input
                     className="input"
                     type="email"
@@ -119,7 +120,9 @@ const SignUp = () => {
                     onChange={(e) => setEmail(e.target.value)}
                   />
 
-                  <label htmlFor="password">Password:</label>
+                  <label className="font-Robo" htmlFor="password">
+                    Password
+                  </label>
                   <input
                     className="input"
                     type="password"
@@ -128,7 +131,9 @@ const SignUp = () => {
                     placeholder="Enter your password"
                     onChange={(e) => setPassword(e.target.value)}
                   />
-                  <label htmlFor="gender">Gender:</label>
+                  <label className="font-Robo" htmlFor="gender">
+                    Gender
+                  </label>
                   <select
                     className="input"
                     id="gender"
@@ -140,7 +145,9 @@ const SignUp = () => {
                     <option value="female">Female</option>
                   </select>
                   <div className="bg-#ffffff p-2 rounded-lg max-w-[350px]">
-                    <label htmlFor="gender">Phone Number :</label>
+                    <label className="font-Robo" htmlFor="gender">
+                      Phone Number{" "}
+                    </label>
                     <div className="relative mt-2 max-w-xs text-#ffffff-500">
                       <div className="absolute inset-y-0 left-3 my-auto h-6 flex items-center border-r pr-2">
                         <option>+91</option>
@@ -156,7 +163,9 @@ const SignUp = () => {
                       />
                     </div>
                   </div>
-                  <label htmlFor="college">College:</label>
+                  <label className="font-Robo" htmlFor="college">
+                    College
+                  </label>
                   <select
                     id="college"
                     name="college"
@@ -171,59 +180,6 @@ const SignUp = () => {
 
                   {showQr && <p className="">Pay here</p>}
 
-                {showOther && (
-                  <div>
-                    <label htmlFor="email">College Name:</label>
-                    <input
-                      className="input"
-                      type="text"
-                      id="email"
-                      name="college"
-                      placeholder="Enter your college"
-                      onChange={(e) => setCollege(e.target.value)}
-                    />
-                    <label htmlFor="email">PaymentLink:</label>
-                    <input
-                      className="input"
-                      type="text"
-                      id="email"
-                      name="transactionId"
-                      placeholder="Enter Payment Drive Link"
-                      onChange={(e) => setTransactionId(e.target.value)}
-                    />
-                  </div>
-                )}
-              </div>
-              <div className="h-[10%] flex justify-center items-center  w-full">
-                <button
-                    className="containerUser px-4 font-Robo   text-orange-950  font-bold rounded-[2px] h-10 text-[1em] border-opacity-25 hover:bg-orange-800 hover:shadow-9xl"
-                    style={{
-                      // Add box shadow styles here
-                      boxShadow: "0 0 0 1.5px #000000", // Example box shadow
-                    }}
-                  onClick={(e) => handleSubmit(e)}
-                  // style={{ backgroundColor: "rgb(248, 213, 177, 0.84)",border:"1px solid" }}
-                >
-                  Submit
-                </button>
-              </div>
-              <div>
-                <div className="text-black  font-Robo text-md font-semibold tracking-tighter">
-                  Already have an account ?{" "}
-                  <span
-                    className=" font-Robo text-sm font-semibold text-orange-800 hover:text-orange-950 tracking-tighter cursor-pointer"
-                    onClick={() => {
-                      navigate("/login");
-                    }}
-                  >
-                    Sign In
-                  </span>
-                </div>
-              </div>
-            </form>
-          ) : (
-            <img src={qr} alt="qr" />
-          )}
                   {showOther && (
                     <div>
                       <label htmlFor="email">College Name:</label>
@@ -249,7 +205,11 @@ const SignUp = () => {
                 </div>
                 <div className="h-[10%] flex justify-center items-center  w-full">
                   <button
-                    className="  text-[1.3em]  px-4 py-2 rounded-xl hover:shadow-lg button-33"
+                    className="containerUser px-4 font-Robo   text-orange-950  font-bold rounded-[2px] h-10 text-[1em] border-opacity-25 hover:bg-orange-800 hover:shadow-9xl"
+                    style={{
+                      // Add box shadow styles here
+                      boxShadow: "0 0 0 1.5px #000000", // Example box shadow
+                    }}
                     onClick={(e) => handleSubmit(e)}
                     // style={{ backgroundColor: "rgb(248, 213, 177, 0.84)",border:"1px solid" }}
                   >
@@ -257,10 +217,10 @@ const SignUp = () => {
                   </button>
                 </div>
                 <div>
-                  <div className="text-black text-md">
+                  <div className="text-black  font-Robo text-md font-semibold tracking-tighter">
                     Already have an account ?{" "}
                     <span
-                      className="text-blue-600 cursor-pointer"
+                      className=" font-Robo text-sm font-semibold text-orange-800 hover:text-orange-950 tracking-tighter cursor-pointer"
                       onClick={() => {
                         navigate("/login");
                       }}
@@ -271,18 +231,16 @@ const SignUp = () => {
                 </div>
               </form>
             ) : (
-              <img src={ACcount} alt="qr" />
+              <img src={qr} alt="qr" />
             )}
 
             {/* </div>
         )} */}
             {showQr === false && showOther && (
               <button
-                className="mb-[-3.2em] mt-[3em] p-2 rounded-xl hover:shadow-xl font-bold"
+                className="mb-[-3.2em] mt-[3em] text-orange-950 containerUser  hover:bg-opacity-25 border-8  p-2 rounded-xl hover:shadow-xl font-bold"
                 onClick={handleToggleRotation}
                 style={{
-                  backgroundColor: "rgb(248, 213, 177, 0.84)",
-                  color: "#000",
                   border: "1px solid #000",
                 }}
               >
