@@ -36,7 +36,7 @@
   align-items: flex-end;
 
   perspective: 2500px;
-  transform: translateX(-50%);
+  transform: translateX(0%);
   opacity: 0.9;
 }
 
