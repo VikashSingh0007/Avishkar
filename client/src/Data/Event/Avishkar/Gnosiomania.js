@@ -1,10 +1,10 @@
-import image from "../../../../src/Data/Images/Logo/Gnosiomania/NEWgnO.jpeg";
-import imag1 from "../../../../src/Data/Images/Logo/Gnosiomania/1.png"
-import imag2 from "../../../../src/Data/Images/Logo/Gnosiomania/5.png"
-import imag3 from "../../../../src/Data/Images/Logo/Gnosiomania/6.png"
-import imag4 from "../../../../src/Data/Images/Logo/Gnosiomania/3.png"
-import imag5 from "../../../../src/Data/Images/Logo/Gnosiomania/7.png"
-import imag6 from "../../../../src/Data/Images/Logo/Gnosiomania/4.png"
+import image from "../../../../src/Data/Images/Logo/GNO.jpeg";
+import imag1 from "../../../../src/Data/Images/Logo/Gnosiomania/1.png";
+import imag2 from "../../../../src/Data/Images/Logo/Gnosiomania/5.png";
+import imag3 from "../../../../src/Data/Images/Logo/Gnosiomania/6.png";
+import imag4 from "../../../../src/Data/Images/Logo/Gnosiomania/3.png";
+import imag5 from "../../../../src/Data/Images/Logo/Gnosiomania/7.png";
+import imag6 from "../../../../src/Data/Images/Logo/Gnosiomania/4.png";
 export const Gnosiomania = [
   {
     title: "Gnosiomania",
@@ -17,18 +17,10 @@ export const Gnosiomania = [
       {
         name: "gnoTalks",
         disc: "Wisdom, Entertainment, Thrill and Lessons - gnoTalks holds something exciting for all hearts and minds. It is a platform where the most remarkable personalities enlighten us with their life stories, and talented artists showcase the best of their art. Speakers from various walks of life impart their wisdom and life experiences through their mesmerizing presence and words. An interview is conducted as well, thus, providing an opportunity for the speakers to share their life perspectives more subjectively. All at once - on the grandstand of gnoTalks!",
-        rule: [
-          {
-            rule_1: "Teams of not more than 3 participants",
-            rule_2:
-              "Quiz will consist of a written prelims round, then the finals round",
-            rule_3: "Top 8 teams will make it to the finals",
-            rule_4: "Team size: 2-3 members",
-          },
-        ],
+        rule: [{}],
         TeamSize: "",
-        BGImageLink:imag1,
-        PsLink:imag1,
+        BGImageLink: imag1,
+        PsLink: imag1,
         coordinators: [
           {
             name: "Shambhavi Shukla",
@@ -72,7 +64,7 @@ export const Gnosiomania = [
           },
         ],
         TeamSize: "",
-        BGImageLink:imag2,
+        BGImageLink: imag2,
         PsLink: "",
         coordinators: [
           {
@@ -102,7 +94,7 @@ export const Gnosiomania = [
           },
         ],
         TeamSize: "",
-        BGImageLink:imag3,
+        BGImageLink: imag3,
         PsLink: "",
         coordinators: [
           {
@@ -132,7 +124,7 @@ export const Gnosiomania = [
           },
         ],
         TeamSize: "",
-        BGImageLink:imag4,
+        BGImageLink: imag4,
         PsLink: "",
         coordinators: [
           {
@@ -162,7 +154,7 @@ export const Gnosiomania = [
           },
         ],
         TeamSize: "",
-        BGImageLink:imag5,
+        BGImageLink: imag5,
         PsLink: "",
         coordinators: [
           {
@@ -192,7 +184,7 @@ export const Gnosiomania = [
           },
         ],
         TeamSize: "",
-        BGImageLink:imag6,
+        BGImageLink: imag6,
         PsLink: "",
         coordinators: [
           {
