@@ -1,26 +1,42 @@
 import { useEffect, useState } from "react";
 import { getAllParticipating, inviteTeam } from "../../services/teamService";
-
+import Loader from "../Home/loader.jsx";
 const Team = () => {
+
   const [email, setEmail] = useState("");
   const [fetchedData, setFetchedData] = useState();
-  const handleSubmit = (teamId) => {
-    const data = {
-      teamId: teamId,
-      email: email,
-    };
-    console.log(data);
-    inviteTeam(data);
+  const [isloading,setLoading]=useState(false);
+  const handleSubmit = async(teamId) => {
+    try{
+      const data = {
+        teamId: teamId,
+        email: email,
+      };
+      setLoading(true)
+      console.log(data);
+      await inviteTeam(data);
+      setLoading(false);
+    }
+    catch(error){
+      console.log(error)
+      setLoading(false);
+    }
+   
+
+
   };
   useEffect(() => {
     const fetchData = async () => {
       try {
+        setLoading(true);
         const data = await getAllParticipating();
         console.log("gotted from loki ", data);
         setFetchedData(data);
+        setLoading(false)
         console.log(typeof data.teams);
       } catch (error) {
         console.error("Error fetching data:", error);
+        setLoading(false)
       }
     };
 
@@ -30,6 +46,7 @@ const Team = () => {
 
   return (
     <>
+      {isloading && <Loader/>}
       {fetchedData?.teams?.participating?.map((team, index) => (
         <div
           key={index}

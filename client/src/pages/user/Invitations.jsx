@@ -1,16 +1,20 @@
 import { useEffect, useState } from "react";
 import { getAllInvite, respondTeam } from "../../services/teamService";
-
+import Loader from "../Home/loader";
 const Invitations = () => {
   const [selectedteamId, setSelectedTeamId] = useState(null);
   const [invitation, setInvitation] = useState([]);
   const [check,setCheck]=useState(false);
+  const [isloading , setLoading] = useState(false);
   useEffect(() => {
     const fetchData = async () => {
       try {
+        setLoading(true)
         const d = await getAllInvite();
         setInvitation(d.teams?.invites);
+        setLoading(false)
       } catch (error) {
+        setLoading(false)
         console.error("Error fetching data:", error);
       }
     };
@@ -21,20 +25,25 @@ const Invitations = () => {
   const handleClick = async (teamId, status) => {
     try {
       console.log("here")
+      setLoading(true)
       const teamdata = {
         teamId: teamId,
         status: status,
       };
       const res =await respondTeam(teamdata)
       setCheck(!check);
+      setLoading(false)
       return;
 
     } catch (error) {
+      setLoading(false)
       console.error("Error fetching data:", error);
     }
   };
 
   return (
+    <>
+    {isloading && <Loader/>}
     <div>
       <section
         className="text-gray-400 h-[100vh]  body-font"
@@ -113,6 +122,8 @@ const Invitations = () => {
         </div>
       </section>
     </div>
+    </>
+    
   );
 };
 

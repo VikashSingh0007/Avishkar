@@ -7,6 +7,7 @@ import Navbar from "../Home/Navbar";
 import { getAllEvents } from "../../services/adminService";
 import ViewDC from "./viewDC";
 import { useNavigate } from "react-router-dom";
+import Loader from "../Home/loader";
 const User = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const sidebarRef = useRef(null);
@@ -15,6 +16,7 @@ const User = () => {
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedEvent, setSelectedEvent] = useState(null);
   const [events, setEvents] = useState([]);
+  const [isloading , setLoading] = useState(false);
   // var filteredEvents=[]
   const navigate = useNavigate();
   const user = JSON.parse(localStorage.getItem("userData"));
@@ -27,9 +29,11 @@ const User = () => {
     //Get All events
     const fetchEvents = async () => {
       try {
+        setLoading(true)
         const { data } = await getAllEvents();
 
         setEvents(data);
+        setLoading(false)
         //  filteredEvents=data;
       } catch (error) {
         console.error("Error fetching data at events:", error);
@@ -69,6 +73,10 @@ const User = () => {
   );
 
   return (
+    <>
+     {
+      isloading && <Loader/>
+    }
     <div
       className="absolute flex flex-col w-full h-full top-0 left-0 p-2"
       style={{
@@ -192,6 +200,8 @@ const User = () => {
         </div>
       )}
     </div>
+    </>
+   
   );
 };
 

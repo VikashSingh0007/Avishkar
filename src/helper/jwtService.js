@@ -4,7 +4,6 @@ module.exports = {
     const token = await jwt.sign(user, process.env.VERIFICATION_TOKEN_SECRET, {
       expiresIn: "24h",
     });
-    console.log(token);
     const tokenParam = Buffer.from(token).toString("base64");
     return tokenParam;
   },
