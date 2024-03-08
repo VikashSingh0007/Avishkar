@@ -1,4 +1,4 @@
-import image from "../../../../src/Data/Images/Logo/GNO.jpeg";
+import image from "../../../../src/Data/Images/Logo/Gnosiomania/NEWgnO.jpeg";
 import imag1 from "../../../../src/Data/Images/Logo/Gnosiomania/1.png"
 import imag2 from "../../../../src/Data/Images/Logo/Gnosiomania/5.png"
 import imag3 from "../../../../src/Data/Images/Logo/Gnosiomania/6.png"
