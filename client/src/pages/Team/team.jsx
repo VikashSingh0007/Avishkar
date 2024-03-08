@@ -7,18 +7,36 @@ const Team = () => {
   
   return (
     <>
+<<<<<<< HEAD
+      <main className="containerTeam">
+=======
       <main
         className="containerAcco"
       >
+>>>>>>> 52ce726977908e543b177d8859ee6c61cdf22d98
         <Navbar page="Team" />
 
-        <div className="flex text-black justify-center pt-24 text-4xl font-bold rumoura-font">
+        <div
+          className="flex text-[2.5rem] sm:text-[3.5rem] tracking-wider text-white justify-center pt-24 text-4xl font-bold rumoura-font"
+          style={{
+            fontWeight: "bolder",
+            textAlign: "center",
+            textShadow: "0 0 10px black", // Add white shadow with 10px blur
+          }}
+        >
           TEAM
         </div>
 
         {team.map((department, index) => (
           <div key={index}>
-            <div className="flex text-black justify-center mt-5 text-[5vw] sm:text-[2vw]  rumoura-font">
+            <div
+              className="flex text-[2rem] sm:text-[3rem] tracking-wider text-white justify-center mt-5  rumoura-font"
+              style={{
+                fontWeight: "bolder",
+                textAlign: "center",
+                textShadow: "0 0 10px black", // Add white shadow with 10px blur
+              }}
+            >
               {department.department}
             </div>
 

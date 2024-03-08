@@ -3,7 +3,7 @@ import logo from "./culrav/assets/culravAviskarLogo.png";
 import { useNavigate } from "react-router-dom";
 import "./AboutUs.css";
 const AboutUs = () => {
-  const navigate = useNavigate();
+
 
   return (
     <div>
