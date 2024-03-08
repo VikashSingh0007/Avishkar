@@ -7,10 +7,12 @@ const EventCard = ({ data }) => {
   console.log(data.info[0]);
   const { index } = useParams();
   return (
-    <div className="EventCard">
+    <div className="EventCard "
+    >
       {" "}
       {/* Wrap the card with Link */}
-      <div className="card">
+      <div className="card p-3 bg-[#63462D]"
+      style={{boxShadow:"0px 10px 10px black"}}>
         <Link
           to={`/culravEvent/${encodeURIComponent(JSON.stringify(data))}`}
           className="flex items-center justify-center cursor-pointer"
@@ -28,7 +30,7 @@ const EventCard = ({ data }) => {
                 />
                 <span className="flex text-center mx-auto text-3xl text-amber-100 font-custom hover:opacity-70 transition-opacity duration-300 ">
                   <div className="flex-col">
-                    <p className="text-3xl w-full mt-2 text-black rumoura-font">
+                    <p className="text-3xl w-full mt-2 text-white rumoura-font">
                       Explore !
                     </p>
                   </div>

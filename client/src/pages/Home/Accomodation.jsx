@@ -1,7 +1,7 @@
 import "./Nav.css";
 import Navbar from "./Navbar";
 import { Link } from "react-router-dom";
-const Accomodation = () => {
+const Accommodation = () => {
   return (
     <div
       className="h-screen overflow-y-scroll mb-10 containerAcco"
@@ -12,6 +12,7 @@ const Accomodation = () => {
       // }}
     >
       <Navbar page="Accomodation" />
+      <Navbar page="Accommodation" />
       <section className="text-gray-600 body-font mt-0 ">
         <div className="container px-0 md:px-5 py-24 mx-auto">
           <div className="text-center mb-20">
@@ -140,4 +141,4 @@ const Accomodation = () => {
     </div>
   );
 };
-export default Accomodation;
+export default Accommodation;

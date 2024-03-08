@@ -6,6 +6,7 @@ import { SocialIcon } from "react-social-icons";
 const Team = () => {
   const Instagram = <SocialIcon url="https://instagram.com" />;
   const Linkedin = <SocialIcon url="https://linkedin.com" />;
+
   return (
     <>
       <main
