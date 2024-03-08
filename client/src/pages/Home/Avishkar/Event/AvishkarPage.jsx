@@ -42,21 +42,19 @@ const AvishkarPage = () => {
   };
 
   return (
-    <div className="containerRulesPage flex flex-col">
+    <div className="top-0 left-0 w-full h-auto containerRulesPage flex flex-col ">
       <div className="absolute z-[-1] top-0 left-0 w-full h-full flex justify-center items-center">
-        <div className="fixed left-0 w-full h-full flex justify-center items-center">
-          {/* <div className="absolute  transform -translate-x-1/2 -translate-y-1/2"> */}
+        <div className="fixed left-0 w-full h-full flex">
           <img
             src={retroImg}
             alt="mnnitImg"
-            className=" object-cover w-full h-full"
+            className=" object-cover w-full h-full "
           />
-          {/* </div> */}
         </div>
       </div>
       <div>
         {showModal && (
-          <div className="flex justify-center items-center h-[100vh]">
+          <div className="flex justify-center items-center">
             <Modal
               teams={fetchedData?.teams?.participating}
               setShowModal={setShowModal}
@@ -65,19 +63,19 @@ const AvishkarPage = () => {
           </div>
         )}
         {showModal === false && (
-          <div className="h-[100vh]">
+          <div className="">
             <div>
               <Navbar />
             </div>
-            <div className="absolute inset-0 bg-black opacity-0 "></div>
-            <div className="absolute inset-0 ">
+            <div className=" inset-0 bg-black opacity-0 "></div>
+            <div className=" inset-0 ">
               <div className="">
                 <div
                   style={{
                     backdropFilter: "blur(5px)",
                   }}
                 >
-                  <div className="flex justify-center ">
+                  <div className="flex justify-center h-auto">
                     <div className="w-full lg:w-[60%] max-w-[90%]">
                       <div
                         style={{
