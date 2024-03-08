@@ -11,6 +11,7 @@ import Clouds1 from "./culrav/assets/clouds11.png";
 import Clouds2 from "./culrav/assets/clouds2.png";
 import Clouds3 from "./culrav/assets/clouds3.png";
 import Mohit from "./culrav/assets/Mohit.png";
+import juhi from "./culrav/assets/juhi.png";
 
 const App = () => {
   const navigate = useNavigate();
@@ -37,6 +38,11 @@ const App = () => {
              <img
                   src={Mohit}
                   className="absolute  bottom-[-4%] left-[-15%] lg:w-[700px] md:w-[0] sm:w-[0] animate-clouds"
+                  style={{ zIndex: 2 }}
+                />
+             <img
+                  src={juhi}
+                  className="absolute  bottom-[-4%] right-[-0%] lg:w-[400px] md:w-[0] sm:w-[0] animate-clouds"
                   style={{ zIndex: 2 }}
                 />
               
