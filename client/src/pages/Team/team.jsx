@@ -7,13 +7,7 @@ const Team = () => {
   
   return (
     <>
-<<<<<<< HEAD
       <main className="containerTeam">
-=======
-      <main
-        className="containerAcco"
-      >
->>>>>>> 52ce726977908e543b177d8859ee6c61cdf22d98
         <Navbar page="Team" />
 
         <div
