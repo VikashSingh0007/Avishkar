@@ -1,14 +1,26 @@
 import image from "../../../../src/Data/Images/Logo/Kreedomania (2).png";
+// import img1 from "../../../../src/Data/Images/Credomania/1.png";
+// import img1 from "../../../../src/Data/Images/Credomania/2.png";
+// import img2 from "../../../../src/Data/Images/Credomania/3.png";
+// import img3 from "../../../../src/Data/Images/Credomania/4.png";
+// import img4 from "../../../../src/Data/Images/Credomania/5.png";
+// import img5 from "../../../../src/Data/Images/Credomania/6.png";
+// import img6 from "../../../../src/Data/Images/Credomania/7.png";
+// import img7 from "../../../../src/Data/Images/Credomania/8.png";
+// import img8 from "../../../../src/Data/Images/Credomania/9.png";
+// import img9 from "../../../../src/Data/Images/Credomania/10.png";
+// import img12 from "../../../../src/Data/Images/Credomania/12.png";
 export const Kreedomania = [
   {
     title: "Kreedomania",
     tagline: "LET THE GAME BEGIN",
-    BgImageLink:image,
+    BgImageLink: image,
     instagramLink: "https://www.instagram.com/kreedomania_mnnit/",
     events: [
       {
         name: "VALORANT",
         disc: "",
+
         rule: [
           {
             rule_1: "PLAYED IN A 5V5 TEAM FORMAT",
@@ -39,6 +51,7 @@ export const Kreedomania = [
       {
         name: "CSGO 2.0",
         disc: "",
+        BGImageLink: "",
         rule: [
           {
             rule_1: "PLAYED IN A 5V5 TEAM FORMAT.",
@@ -49,7 +62,7 @@ export const Kreedomania = [
           },
         ],
 
-        BGImageLink: "",
+        // BGImageLink: "",
         PsLink: "",
         coordinators: [
           {
@@ -70,6 +83,7 @@ export const Kreedomania = [
       {
         name: "FIFA’23",
         disc: "",
+        BGImageLink: "",
         rule: [
           {
             rule_1: "MATCHES PLAYED IN STANDARD 1V1 MODE",
@@ -77,7 +91,7 @@ export const Kreedomania = [
           },
         ],
 
-        BGImageLink: "",
+        //  BGImageLink: "",
         PsLink: "",
         coordinators: [
           {
@@ -102,6 +116,7 @@ export const Kreedomania = [
       {
         name: "MORTAL KOMBAT",
         disc: "",
+        BGImageLink: "",
         rule: [
           {
             rule_1: "Rules- MATCHES PLAYED IN 1V1 BATTLE FORMAT",
@@ -109,7 +124,7 @@ export const Kreedomania = [
           },
         ],
 
-        BGImageLink: "",
+        //  BGImageLink: "",
         PsLink: "",
         coordinators: [
           {
@@ -134,6 +149,7 @@ export const Kreedomania = [
       {
         name: "MINI MILITIA",
         disc: "",
+        BGImageLink: "",
         rule: [
           {
             rule_1: "PLAYED IN A 4V4 TEAM FORMAT",
@@ -144,7 +160,7 @@ export const Kreedomania = [
           },
         ],
 
-        BGImageLink: "",
+        //  BGImageLink: "",
         PsLink: "",
         coordinators: [
           {
@@ -169,6 +185,7 @@ export const Kreedomania = [
       {
         name: "BGMI MOBILE",
         disc: "",
+        BGImageLink: "",
         rule: [
           {
             rule_1: "PLAYED IN A 4v4 TEAM FORMAT.",
@@ -179,7 +196,7 @@ export const Kreedomania = [
           },
         ],
 
-        BGImageLink: "",
+        //  BGImageLink: "",
         PsLink: "",
         coordinators: [
           {
@@ -203,6 +220,7 @@ export const Kreedomania = [
       {
         name: "COD MOBILE",
         disc: "",
+        BGImageLink: "",
         rule: [
           {
             rule_1: "PLAYED IN A 4v4 TEAM FORMAT.",
@@ -213,7 +231,7 @@ export const Kreedomania = [
           },
         ],
 
-        BGImageLink: "",
+        //  BGImageLink: "",
         PsLink: "",
         coordinators: [
           {
@@ -237,6 +255,7 @@ export const Kreedomania = [
       {
         name: "SCRIBBLE",
         disc: "",
+        BGImageLink: "",
         rule: [
           {
             rule_1: "Rules: Each team should have at least two players",
@@ -245,7 +264,7 @@ export const Kreedomania = [
           },
         ],
 
-        BGImageLink: "",
+        //  BGImageLink: "",
         PsLink: "",
         coordinators: [
           {
@@ -269,6 +288,7 @@ export const Kreedomania = [
       {
         name: "ROCKET LEAGUE",
         disc: "",
+        BGImageLink: "",
         rule: [
           {
             rule_1: "MAX TEAM SIZE: 3",
