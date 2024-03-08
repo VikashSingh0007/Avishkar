@@ -18,9 +18,9 @@ const User = () => {
   // Effect to add event listener when the component mounts
 
   return (
-    <div className="absolute  top-0 left-0 w-full h-full overflow-hidden flex flex-col containerUser">
+    <div className="absolute  top-0 left-0 w-full h-full flex flex-col  containerUser">
       <div className="h-[10%] ">
-        <Navbar page="Profile"/>
+        <Navbar page="Profile" />
       </div>
       <div className="h-[90%]  p-2 flex lg:flex-row flex-col">
         <div
@@ -337,7 +337,7 @@ const User = () => {
                   className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900"
                   role="menuitem"
                 >
-                  upload Resume
+                  Upload Resume
                 </button>
                 <button
                   onClick={() => {
@@ -413,9 +413,9 @@ const User = () => {
           )}
         </div>
 
-        <div className="flex w-full h-full lg:items-center p-2 lg:ml-3 bg-transparent justify-center lg:w-[85%] overflow-y-scroll">
+        <div className="flex flex-col justify-around gap-y-24 w-full h-screen   lg:items-center p-2 lg:ml-3 bg-transparent lg:w-[85%] ">
           {choice === "view" && <View />}
-          {choice === "team" && <Team />}
+          {choice === "team" && <Team className="" />}
           {choice === "invitation" && <Invitations />}
           {choice === "create" && <Create />}
           {choice === "resume" && <Resume />}

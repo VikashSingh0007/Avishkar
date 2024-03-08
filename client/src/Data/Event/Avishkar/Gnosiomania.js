@@ -1,10 +1,16 @@
-// import image from "../../../../src/Data/Images/Logo/"
+import image from "../../../../src/Data/Images/Logo/GNO.jpeg";
+import imag1 from "../../../../src/Data/Images/Logo/Gnosiomania/1.png"
+import imag2 from "../../../../src/Data/Images/Logo/Gnosiomania/5.png"
+import imag3 from "../../../../src/Data/Images/Logo/Gnosiomania/6.png"
+import imag4 from "../../../../src/Data/Images/Logo/Gnosiomania/3.png"
+import imag5 from "../../../../src/Data/Images/Logo/Gnosiomania/7.png"
+import imag6 from "../../../../src/Data/Images/Logo/Gnosiomania/4.png"
 export const Gnosiomania = [
   {
     title: "Gnosiomania",
     tagline: "Where Knowledge Meets Wisdom",
-    BgImageLink:
-      "https://drive.google.com/file/d/1o3jRyPo3B0V0aD5A-BGJsXPC1VgX3Wbp/view?usp=drivesdk",
+    BgImageLink: image,
+
     instagramLink: "https://www.instagram.com/gnotalks",
     facebookLink: "https://www.facebook.com/gnoTalks",
     events: [
@@ -21,8 +27,8 @@ export const Gnosiomania = [
           },
         ],
         TeamSize: "",
-        BGImageLink: "",
-        PsLink: "",
+        BGImageLink:imag1,
+        PsLink:imag1,
         coordinators: [
           {
             name: "Shambhavi Shukla",
@@ -66,7 +72,7 @@ export const Gnosiomania = [
           },
         ],
         TeamSize: "",
-        BGImageLink: "",
+        BGImageLink:imag2,
         PsLink: "",
         coordinators: [
           {
@@ -96,7 +102,7 @@ export const Gnosiomania = [
           },
         ],
         TeamSize: "",
-        BGImageLink: "",
+        BGImageLink:imag3,
         PsLink: "",
         coordinators: [
           {
@@ -126,7 +132,7 @@ export const Gnosiomania = [
           },
         ],
         TeamSize: "",
-        BGImageLink: "",
+        BGImageLink:imag4,
         PsLink: "",
         coordinators: [
           {
@@ -156,7 +162,7 @@ export const Gnosiomania = [
           },
         ],
         TeamSize: "",
-        BGImageLink: "",
+        BGImageLink:imag5,
         PsLink: "",
         coordinators: [
           {
@@ -186,7 +192,7 @@ export const Gnosiomania = [
           },
         ],
         TeamSize: "",
-        BGImageLink: "",
+        BGImageLink:imag6,
         PsLink: "",
         coordinators: [
           {

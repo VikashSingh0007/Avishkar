@@ -9,12 +9,15 @@ import "./Nav.css";
 // </div>
 
 const Footer = () => (
-  <div className="w-full h-full flex flex-col text-center m-4">
+  <div
+    className="w-full h-full flex flex-col text-center m-0 mt-28"
+    style={{ backgroundColor: "rgba(0, 0, 0, 0.3)" }}
+  >
     <div className="flex w-full mt-4 h-full md:flex-row flex-col p-5 ">
       <div className="w-full md:w-[70%] flex flex-col justify-center p-5">
         <div className="lg:text-[1.6em] md:text-[1.4em] text-[1.2rem] flex font-Robo flex-wrap justify-center mb-2 text-center  text-white font-bold rumoura-font">
           {" "}
-          Motilal Nehru National Institute of technology Allahabad
+          Motilal Nehru National Institute of Technology Allahabad
         </div>
         <div className="lg:text-[1.6em] md:text-[1.4em] text-[1.2rem] font-Robo flex flex-wrap justify-center text- text-center  font-bold rumoura-font text-white">
           {" "}

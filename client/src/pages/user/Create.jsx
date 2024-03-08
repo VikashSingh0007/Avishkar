@@ -49,7 +49,7 @@ const Create = () => {
                   id="full-name"
                   name="teamName"
                   className="w-full h-[5vh] text-3xl
-                   text-white bg-opacity-20 focus:bg-transparent focus:ring-2  rounded border py-1 px-3 
+                   text-white bg-opacity-20 bg-transparent focus:ring-2  rounded border py-1 px-3 
                 "
                 />
               </div>

@@ -33,7 +33,7 @@ const Team = () => {
       {fetchedData?.teams?.participating?.map((team, index) => (
         <div
           key={index}
-          className="w-full mx-auto max-h-[80%] overflow-y-scroll md:w-[60%]  p-6 bg-gradient-to-b from-[#63462D]  rounded-lg shadow-md text-white"
+          className="w-full flex flex-col  mx-auto max-h-[80% md:w-[60%]   p-6 bg-gradient-to-b from-[#63462D]  rounded-lg shadow-md text-white"
           style={{
             boxShadow: "0px 10px 10px black",
           }}
@@ -80,9 +80,12 @@ const Team = () => {
                 style={{ boxShadow: "0 2px 5px 0 black" }}
               >
                 <div className="text-white lg:text-[1.3em] md:text-[1em] text-[0.8em] font-medium mb-2">
-                  {member.username}
+                  {member.name}
                 </div>
-                <div className="text-[#423C31] font-bold lg:text-[1em] md:text-[0.8em] text-[0.5em]">{member.role}</div>
+
+                
+                <div className="text-[#423C31] font-bold lg:text-[1em] md:text-[0.8em] text-[0.5em]">{member.username}</div>
+
               </div>
             ))}
           </div>

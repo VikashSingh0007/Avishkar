@@ -1,9 +1,9 @@
-// import image from "../../../../src/Data/Images/Logo"
+import image from "../../../../src/Data/Images/Logo/powersurge.png";
 export const PowerSurge = [
   {
     title: "",
     tagline: "",
-    BgImageLink: "",
+    BgImageLink: image,
     instagramLink: ": https://www.instagram.com/powersurge2k24/",
     facebookLink: "https://www.facebook.com/powersurge2k24",
     events: [

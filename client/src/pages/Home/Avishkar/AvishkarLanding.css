@@ -6,6 +6,28 @@
   --powerOn: #1bcf60;
 }
 
+/* .containerAvishkar{
+  background-image: linear-gradient(
+    to bottom,
+    rgba(0,0,0,1),
+    rgba(228, 161, 72, 0.9),
+    rgba(118, 89, 57, 0.9),
+    rgba(78, 69, 57, 0.8),
+    rgba(107, 81, 56, 0.8),
+    rgba(0,0,0,1.8)
+  );
+} */
+
+.containerAvishkar {
+  background-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 1.8),
+    rgba(228, 161, 72, 0.8),
+    rgba(195, 126, 52, 0.8),
+    rgba(0, 0, 0, 2)
+  );
+}
+
 .center {
   /* position: absolute; */
   left: 0;
@@ -512,5 +534,3 @@ div[class^="socket"] {
     background-position: 100% 50%;
   }
 }
-
-

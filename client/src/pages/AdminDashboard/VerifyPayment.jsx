@@ -85,6 +85,16 @@ const Create = () => {
                   </a>
                 </div>
                 <div style={{ flex: "1", padding: "8px", textAlign: "left" }}>
+                  <strong>Resume:</strong>{" "}
+                  <a
+                    href={item.paymentLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    {item.resumeLink}
+                  </a>
+                </div>
+                <div style={{ flex: "1", padding: "8px", textAlign: "left" }}>
                   <strong>Email:</strong> {item.email}
                 </div>
                 <div style={{ flex: "1", padding: "8px", textAlign: "left" }}>

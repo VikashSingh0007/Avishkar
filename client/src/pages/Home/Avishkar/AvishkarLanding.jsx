@@ -6,51 +6,52 @@ import { BsJoystick } from "react-icons/bs";
 import avishkarData from "../../../Data/Event/Avishkar";
 import EventsComputer from "./eventsComputer";
 import Navbar from "../Navbar";
+import lamp from "../assets/createEng.jpg";
+import Footer from "../Footer";
+
 const AvishkarLanding = () => {
   return (
-    <div
-      className="absolute top-0 bottom-0 left-0  overflow-scroll  w-full h-full bg-opacity-90 flex flex-col"
-      // style={{ backgroundColor: "#090D00" }}
-      // style={{
-      //   backgroundImage: "linear-gradient(to bottom, #0099ff, #66ccff)",
-      //   backgroundColor: "#090D00",
-      // }}
-      style={{
-        background:
-          // "linear-gradient(to bottom, #d95f3b, #f0984a, #fcd6a5, #7aa9a3, #338f9a, #1c4c70)",
-          "linear-gradient(to bottom, #34626C, #839B97, #CFD3CE, #C6B497, #1c4c70)",
-      }}
-    >
-      <Navbar page="Avishkar"/>
+    <div className="absolute top-0 bottom-0 left-0  overflow-scroll  w-full h-full bg-opacity-90 flex flex-col containerAvishkar">
+      <div className="absolute z-[-1] top-0 left-0 w-full h-full flex justify-center items-center">
+        <div className="fixed left-0 w-full h-full flex justify-center items-center">
+          <img
+            src={lamp}
+            alt="mnnitImg"
+            className="object-cover w-full h-full"
+          />
+        </div>
+      </div>
 
-      {/* <div className="custom-class text-center justify-center">
-        <div>
-          <p className="avishkar_title">
-            The Technical Fest of MNNIT , Allahabad
-            <span>Avishkar</span>
-          </p>
-        </div>className="flex text-black justify-center pt-24 text-4xl font-bold rumoura-font"
-      </div> */}
+      <Navbar page="Avishkar" />
 
       <div>
-        <h1 className="w-fit flex mx-auto text-4xl font-bold mb-10 mt-24  text-center  rumoura-font">
+        <h1
+          className="text-[2rem] flex  sm:text-[3rem] items-center gap-2 text-white w-fit mx-auto bg justify-center font-bold mb-10 mt-24  text-center  rumoura-font"
+          style={{
+            fontWeight: "bolder",
+            textAlign: "center",
+            textShadow: "0 0 20px black", // Add white shadow with 10px blur
+          }}
+        >
           <BsJoystick
-            size={32}
-            className="hover:rotate-45 transition-all duration-300 mr-2 mt-[1.5px]"
+            size={40}
+            className="hover:rotate-45 transition-all duration-300 mr-2 "
           />{" "}
           Events
         </h1>
       </div>
 
       <div className="relative flex flex-wrap justify-evenly w-full">
-        {avishkarData.map((data,index) => {
+        {avishkarData.map((data, index) => {
           return (
             <div key={index} className=" mb-8 mr-6 ml-6 relative">
               <EventsComputer data={data} />
-              
             </div>
           );
         })}
+      </div>
+      <div className="pb-0">
+        <Footer />
       </div>
     </div>
   );
