@@ -7,6 +7,16 @@
   font-weight: 900;
   font-style: italic;
 }
+
+.containerPage {
+  background-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.6),
+    rgba(235, 152, 63, 0.4),
+    rgba(0, 0, 0, 1.8)
+  );
+}
+
 .kelly-slab-regular {
   font-family: "Kelly Slab", sans-serif;
   font-weight: bolder;
