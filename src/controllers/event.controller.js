@@ -240,7 +240,15 @@ const getAllEvents = async (req , res , next ) => {
     try{
         const {department}=req.user;
         console.log(req.user);
-        const event = await Event.find({} , {name : 1 });
+        const role = req.user.role;
+        var event;
+        if(role == "Admin"){
+             event = await Event.find({} , {name : 1 });
+        }
+        else{
+            event = await Event.find({department : department} , {name : 1 });
+        }
+        
         console.log(event);
         res.statusCode = 200;
         return res.json({
