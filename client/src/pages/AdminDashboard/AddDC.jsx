@@ -2,10 +2,11 @@ import React, { useState } from "react";
 
 import { makeDc } from "../../services/adminService";
 import { toast } from "react-toastify";
-
+import Loader from "../Home/loader";
 const Resume = () => {
   const [data, setData] = useState({ email: "" });
-   const departments=["Cyberquest","Electromania","Powersurge","Mechrocosm","Rasayans","Nirmaan","Genesis","Oligopoly","Monopoly","Gnosiomania","Robomania","Cosmocon","Aerodynamix","Rungmunch","Annunaad","Litmuse","Darkroom","Rangsazzi","Razzmatazz","Footprints"]
+  const [isloading , setLoading] = useState(false);
+   const departments=["Cyberquest","Electromania","Powersurge","Mechrocosm","Rasayans","Nirmaan","Genesis","Oligopoly","Monopoly","Gnosiomania","Robomania","Cosmocon","Aerodynamix","Rangmanch","Annunaad","Litmuse","Darkroom","Rangsazzi","Razzmatazz","Footprints"]
   const handleChange = (e) => {
     setData((prevData) => ({
       ...prevData,
@@ -14,17 +15,28 @@ const Resume = () => {
   };
 const [selectDepartment,handleDepartment]=useState(null)
   const handleSubmit = async () => {
-    console.log(data);
-    const requestData={
-      email:data.email,
-      department:selectDepartment
+    try{
+      setLoading(true);
+      console.log(data);
+      const requestData={
+        email:data.email,
+        department:selectDepartment
+      }
+      
+      await makeDc(requestData);
+      setLoading(false);
+    }
+    catch(error){
+      setLoading(false);
+      console.log(error);
     }
     
-    await makeDc(requestData);
   };
 
   return (
-    <div className="mt-5 bg-gradient-to-br from-orange-200 via-orange-300 to-orange-400 p-8 rounded shadow-lg backdrop-filter backdrop-blur-md">
+    <>
+    {isloading && <Loader/>}
+      <div className="mt-5 bg-gradient-to-br from-orange-200 via-orange-300 to-orange-400 p-8 rounded shadow-lg backdrop-filter backdrop-blur-md">
       <h2 className="text-2xl font-bold mb-4 text-black">
         Add Department Coordinator
       </h2>
@@ -62,6 +74,8 @@ const [selectDepartment,handleDepartment]=useState(null)
         Add
       </button>
     </div>
+    </>
+    
   );
 };
 

@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./rangmanchCarousel.css";
 import { Link } from "react-router-dom";
 import { useParams } from "react-router-dom";
-import EventCard from "../../Avishkar/TemplateComponents/EventCard";
+import EventCard from "./EventPageCulrav";
 import Footer from "../../Footer";
 import retroImg from "../../assets/blocks.jpg";
 
@@ -10,7 +10,7 @@ import Navbar from "../../Navbar";
 const Carousel = ({}) => {
   const { data } = useParams();
   const Data = JSON.parse(decodeURIComponent(data));
-  console.log(Data.info[0]);
+
   return (
     <div className="flex flex-col containerEvents">
       <div className="absolute z-[-1] top-0 left-0 w-full h-full flex justify-center items-center">
@@ -41,12 +41,11 @@ const Carousel = ({}) => {
             Events
           </h1>
 
-          <div className="flex justify-center align-middle mt-[60%]  xsm:mt-[60%] sm:mt-[35%] md:mt-[35%] lg:mt-[20%] xl:mt-[15%] h-full ">
-            <div className="grid grid-cols-1  justify-center mb-10 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-3 xl:grid-cols-3  gap-y-[60%]  gap-x-[350px] md:gap-x-[350px] md:gap-y-[60%]  lg:gap-x-[350%]  lg:gap-y-[75%] xl:gap-y-[600px] xl:gap-x-[500px]       ">
-              {/* <div className="flex flex-wrap gap-20"> */}
+          <div className="flex justify-center align-middle mt-[60%]  xsm:mt-[60%] sm:mt-[30%] md:mt-[30%] lg:mt-[20%] xl:mt-[10%] h-full ">
+            <div className="p-2  justify-center mb-10 flex flex-wrap gap-x-[5%] gap-y-[10%]  ">
               {Data.info[0].events.map((data, index) => {
                 return (
-                  <div className="mb-5 mt-4 mr-4 ml-4 relative " key={index}>
+                  <div key={index} className="mb-5 mr-4 ml-4 ">
                     <EventCard data={data} style={{ zIndex: 2 }} />
                   </div>
                 );

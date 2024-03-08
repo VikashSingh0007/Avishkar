@@ -3,6 +3,7 @@ import "./team.css"; // Replace with the actual CSS file path
 import Navbar from "../Home/Navbar";
 import team from "../../Data/Event/Team";
 import { SocialIcon } from "react-social-icons";
+
 const Team = () => {
   
   return (

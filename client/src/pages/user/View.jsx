@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 
 import { getProfile } from "../../services/teamService";
 import { toast } from "react-toastify";
-
+import Loader from "../Home/loader";
 const View = () => {
   const [fetchedData, setFetchedData] = useState({
     name: "NAME",
@@ -15,10 +15,11 @@ const View = () => {
     collegeName: "MNNIT",
   });
   const history = useNavigate();
-
+  const [isloading,setLoading]=useState(false); 
   useEffect(() => {
     const fetchData = async () => {
       try {
+        setLoading(true);
         const d = await getProfile();
         console.log(d.success);
         if (d.success) {
@@ -27,9 +28,12 @@ const View = () => {
           }
           setFetchedData(d.profile.data);
         }
+        setLoading(false);
       } catch (error) {
+        setLoading(false)
         history("/login");
         console.error("Error fetching data:", error);
+        
       }
     };
 
@@ -38,6 +42,7 @@ const View = () => {
   console.log(fetchedData);
   return (
     <>
+      {isloading && <Loader/>}
       <div className="flex justify-center  w-[90%]  h-screen overflow-y-scroll ">
         <div
           className="  bg-gradient-to-b from-[#63462D] rounded-lg p-8 shadow-md text-center text-white"

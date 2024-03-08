@@ -240,7 +240,7 @@ const User = () => {
               Logout
             </span>
           </div>
-          {userData && userToken && userData.role == "Admin" && (
+          {userData && userToken && (userData.role == "Admin" || userData.role == "Coordie")&& (
             <a
               //className="flex items-center px-4 py-2 my-8 text-gray-700 bg-gray-100 rounded-md dark:bg-gray-800 dark:text-gray-200"
               className="flex items-center cursor-pointer hover:bg-[#75664B]  px-4 py-2 lg:my-8 text-white bg-[#827660] rounded-md dark:bg-gray-800 dark:text-gray-200"

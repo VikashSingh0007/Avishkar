@@ -7,7 +7,6 @@ import reel from "../assets/reel.jpg";
 import lightLamp from "../assets/chair.jpg";
 import Footer from "../Footer";
 
-
 const CulravLanding = () => {
   return (
     <div className="containerCulrav">
@@ -46,12 +45,11 @@ const CulravLanding = () => {
             Events
           </div>
         </div>
-        <div className="flex justify-center align-middle mt-[80%]  xsm:mt-[60%] sm:mt-[40%] md:mt-[35%] lg:mt-[20%] xl:mt-[15%] h-full ">
-          <div className="p-2 grid grid-cols-1 justify-center mb-10 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-3 xl:grid-cols-3  gap-y-[60%]  gap-x-[350px] md:gap-x-[350px] md:gap-y-[60%]  lg:gap-x-[350%]  lg:gap-y-[75%] xl:gap-y-[600px] xl:gap-x-[500px]       ">
-            {/* <div className="flex flex-wrap gap-20"> */}
+        <div className="flex justify-center align-middle mt-[45%]  sm:mt-[25%]  lg:mt-[10%] xl:mt-[10%] h-full ">
+          <div className="p-2  justify-center mb-10 flex flex-wrap gap-x-[5%] gap-y-[20%]  ">
             {Data.map((data, index) => {
               return (
-                <div key={index} className="mb-5 mr-4 ml-4 relative ">
+                <div key={index} className="mb-5 mr-4 ml-4 ">
                   <EventCard data={data} style={{ zIndex: 2 }} />
                 </div>
               );

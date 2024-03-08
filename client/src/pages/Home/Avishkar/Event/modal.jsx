@@ -1,16 +1,29 @@
 import { registerEvent } from "../../../../services/teamService";
-
+import Loader from "../../loader";
+import { useState } from "react";
 const Modal = ({ teams, setShowModal, event}) => {
-  const handleRegister = (teamId) => {
+  const [isloading , setLoading ] = useState(false);
+  const handleRegister = async (teamId) => {
     const data = {
       eventName: event,
       teamId: teamId,
       
     };
-    registerEvent(data);
-    console.log(data);
+    try{
+      setLoading(true);
+      await registerEvent(data);
+      console.log(data);
+      setLoading(false);
+    }
+    catch(error){
+      setLoading(false);
+      console.log(error);
+    }
+    
   };
   return (
+    <>
+    {isloading && <Loader/>}
     <div
       className="z-5 w-full  h-screen sm:h-[90vh] overflow-y-auto "
       style={{
@@ -51,7 +64,8 @@ const Modal = ({ teams, setShowModal, event}) => {
           );
         })}
       </div>
-    </div>
+    </div></>
+    
   );
 };
 

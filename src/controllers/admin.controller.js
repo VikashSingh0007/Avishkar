@@ -406,10 +406,9 @@ const downloadExcelEvent = async (req,res,next) => {
         let count = 1;
         const sendThisToFront = jsonData.map((data) => {
             var singleEntry = {
-                teamName : data.name,
-                teamSize : data.size,
+                
             }
-            for(let i = 0; i < data.acceptedMembers.length ; i++){
+            for(let i = data.acceptedMembers.length - 1; i >= 0 ; i--){
                 var resumeLink = data.acceptedMembers[i].resumeLink;
                 if(resumeLink == null || resumeLink == ''){
                     resumeLink = "No Link Submitted"
@@ -422,6 +421,11 @@ const downloadExcelEvent = async (req,res,next) => {
                     ...singleEntry
                 }
                 
+            }
+            singleEntry = {
+                teamName : data.name,
+                teamSize : data.size,
+                ...singleEntry,
             }
             return singleEntry
         })

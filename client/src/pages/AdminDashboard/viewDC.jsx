@@ -1,16 +1,21 @@
 import React, { useEffect, useState } from "react";
 import { toast } from "react-toastify";
 import {getDepartmentalCoordies,removeDC} from "../../services/adminService"
+import Loader from "../Home/loader";
 const ViewDC = () => {
   
   const [data,setData]=useState([]);
   const [check,setCheck]=useState(false);
+  const [isloading , setLoading] = useState(false);
 useEffect(()=>{
   const fetchTeams = async () => {
     try {
+      setLoading(true)
       const response = await getDepartmentalCoordies();
       setData(response)
+      setLoading(false);
     } catch (error) {
+      setLoading(false);
       console.error("Error fetching data:", error);
     }
   };
@@ -18,16 +23,20 @@ useEffect(()=>{
 },[check])
   const removeDepartmentalCoordie = async (email) => {
     try {
+      setLoading(true)
       const response=await removeDC(email);
       console.log("rahul response",response);
       if(response) setCheck(!check)
+      setLoading(false);
     } catch (error) {
-  
+      setLoading(false);
       console.log(error.message);
     }
   };
   return (
-    <div className="bg-orange-200 mt-4 rounded-xl p-4">
+    <>
+    {isloading && <Loader/>}
+     <div className="bg-orange-200 mt-4 rounded-xl p-4">
       {data.length==0&&<><h1>No Departmental Coordinator Present</h1></>}
       {data.length>0&&data?.map((item, index) => (
         <div key={index} style={{ marginBottom: "16px" }}>
@@ -74,6 +83,8 @@ useEffect(()=>{
         </div>
       ))}
     </div>
+    </>
+   
   );
 };
 

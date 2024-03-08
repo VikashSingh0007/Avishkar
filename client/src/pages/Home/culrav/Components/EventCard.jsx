@@ -7,20 +7,19 @@ const EventCard = ({ data }) => {
   console.log(data.info[0]);
   const { index } = useParams();
   return (
-    <div className="EventCard "
-    >
+    <div className="h-full w-full relative ">
       {" "}
       {/* Wrap the card with Link */}
-      <div className="card p-3 bg-[#63462D]"
-      style={{boxShadow:"0px 10px 10px black"}}>
+      <div
+        className="card1 p-3 bg-[#63462D] "
+        style={{ boxShadow: "0px 10px 10px black" }}
+      >
         <Link
           to={`/culravEvent/${encodeURIComponent(JSON.stringify(data))}`}
           className="flex items-center justify-center cursor-pointer"
         >
           <div className="wrapper-card">
-            {/* <h1 className="w-full flex justify-center border-2  border-black  sm:text-2xl xl:text-3xl font-custom ">
-              {data.event}
-            </h1> */}
+           
             <div className="flex justify-center items-center h-full">
               <div className="flex flex-col items-center">
                 <img
@@ -38,12 +37,6 @@ const EventCard = ({ data }) => {
               </div>
             </div>
           </div>
-
-          {/* <img
-            src="https://ggayane.github.io/css-experiments/cards/force_mage-character.webp"
-            alt="Event Character"
-            className="character"
-          /> */}
         </Link>
       </div>
     </div>

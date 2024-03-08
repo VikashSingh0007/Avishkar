@@ -1,9 +1,11 @@
 const mongoose =require('mongoose');
+const { loadAllEvents } = require('../controllers/event.controller');
 const pool=mongoose.connect(process.env.DATABASE_URL,{
     connectTimeoutMS: 10000
 })
 .then(function(db){
   console.log("DB is connected 🎉🎉🎉");
+  loadAllEvents()
 })
 .catch(function(err){
   console.log('Error at DataBase Connection!!',err.message);
