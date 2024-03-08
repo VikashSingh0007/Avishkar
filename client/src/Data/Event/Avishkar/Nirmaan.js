@@ -1,12 +1,13 @@
 import Nirman3 from "../../Images/Nirman.png";
 import Nirman1 from "../../Images/Nirman.png";
+import image from "../../../../src/Data/Images/Logo/Nirmaan2k24 logo.png"
 export const Nirmaan = [
   {
     title: "Nirmaan",
     tagline: "Structuring Tomorrow",
     BgImageLink: Nirman3,
     instagramLink:
-      "https://www.instagram.com/nirmaan_2024?igsh=MWhxbHB1ejc5dzNsdw==",
+      image,
     events: [
       {
         name: "Codigo",

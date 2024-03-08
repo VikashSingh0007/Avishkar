@@ -1,10 +1,11 @@
+import image from "../../../../src/Data/Images/Logo/Oligopoly-Logo.png"
 export const Oligopoly = [
   {
     title: " OLIGOPOLY ",
     tagline: "Leading the way in limited competition.",
-    BgImageLink: "",
+    BgImageLink: image,
     instagramLink:
-      "https://www.instagram.com/oligopoly_mnnit?igsh=bDkwM3RxdzliMXBr",
+      image,
     events: [
       {
         name: "AD-Hole",

@@ -1,3 +1,4 @@
+// import image from "../../../../src/Data/Images/Logo"
 export const PowerSurge = [
   {
     title: "",

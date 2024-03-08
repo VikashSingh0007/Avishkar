@@ -3,11 +3,12 @@ import NavigatetheDark from "../../Images/NavigatetheDark.png";
 import Detectndirect from "../../Images/Detectndirect.png";
 import HACKQUEST from "../../Images/HACK-QUEST.png";
 import CozmoClench from "../../Images/CozmoClench.png";
+import image from "../../../../src/Data/Images/Logo/Robotics.png"
 export const Robomania = [
   {
     title: "Robomania",
     tagline: ": Innovate Automate Dominate",
-    BgImageLink: "",
+    BgImageLink:image,
     instagramLink: "https://www.facebook.com/robotics.club.mnnit",
     events: [
       {

@@ -1,8 +1,9 @@
+import image from "../../../../src/Data/Images/Logo/Mechrocosm_Avishkar 2K24.jpeg"
 export const Mechrocosm = [
   {
     title: "Mechrocosm",
     tagline: "We are mechies",
-    BgImageLink: "",
+    BgImageLink: image,
     instagramLink:
       "https://www.instagram.com/mechrocosm_2024?igsh=M2YwdDhkN2NtenNv",
     events: [

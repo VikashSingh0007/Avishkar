@@ -2,12 +2,12 @@
 // import Genesis from '../Images/genesis.jpg'
 // import Palladin from "../../Images/palladin.jpg";
 // import CenrtalDogma from "../Images/CentralDogma.jpg";
-
+import image from "../../../../src/Data/Images/Logo/genesis_logo.jpg";
 export const Genesis = [
   {
     title: "Genesis",
     tagline: "Treasure Trails and Biotech Tales",
-    BgImageLink: "",
+    BgImageLink:image,
     instagramLink: "",
     events: [
       {

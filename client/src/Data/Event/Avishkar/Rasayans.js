@@ -3,13 +3,13 @@ import HAZOPIUM from "../../Images/HAZOPIUM.png";
 import CLASH from "../../Images/CLASH-OF-CHEMIST.png";
 import CODEINDROME from "../../Images/CODEINDROME.png";
 import CHEMETHLON from "../../Images/CHEMETHLON.png";
-
+import image from "../../../../src/Data/Images/Logo/Rasayans.png"
 import SCAVENGERHUNT from "../../Images/SCAVENGERHUNT.png";
 export const Rasayans = [
   {
     title: "Rasayans",
     tagline: "",
-    BgImageLink: "",
+    BgImageLink:image,
     instagramLink: "https://www.instagram.com/rasayans/",
     events: [
       {

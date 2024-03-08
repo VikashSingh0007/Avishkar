@@ -12,6 +12,8 @@ const EventsComputer = ({ data }) => {
     "computerButton computerButtonOff"
   );
 
+  console.log(screenState)
+
   useEffect(() => {
     let initialized = false;
 
@@ -129,9 +131,9 @@ const EventsComputer = ({ data }) => {
       super.on();
       this.button.removeClass("computerButtonOff");
       this.button.addClass("computerButtonOn");
-      screen.connect(function () {
-        callback();
-      });
+      // screen.connect(function () {
+      //   callback();
+      // });
     }
 
     off(screen) {
@@ -182,6 +184,7 @@ const EventsComputer = ({ data }) => {
       }, 300); // 300 milliseconds delay
     }
   }
+  console.log("heklo",data.info[0].BgImageLink)
   return (
     <div className="relative w-auto  flex flex-col justify-center items-center">
       <div className="screenBox">
@@ -207,8 +210,7 @@ const EventsComputer = ({ data }) => {
                   <Link to={`/AvishkarEvent/${encodeURIComponent(JSON.stringify(data))}`}><img 
                     className=""
                    
-                    src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/125707/sidebar-bg.png"
-                    alt="Event Cover"
+                    src={data.info[0].BgImageLink}
                   /></Link>
                   
                   {/* </Link> */}
