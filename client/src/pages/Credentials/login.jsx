@@ -38,10 +38,11 @@ const Lo = () => {
   };
   return (
     <div
-      style={{
-        background:
-          "linear-gradient(to bottom, #d95f3b, #f0984a, #fcd6a5, #7aa9a3, #338f9a, #1c4c70)",
-      }}
+      className="containerAcco"
+      // style={{
+      //   background:
+      //     "linear-gradient(to bottom, #d95f3b, #f0984a, #fcd6a5, #7aa9a3, #338f9a, #1c4c70)",
+      // }}
     >
       {/* <Navbar page="Login"/> */}
       <div
@@ -85,7 +86,7 @@ const Lo = () => {
               </div>
             </div>
             <button
-              className="button-33 text-[1em]"
+              className=" containerUser button-33 text-[1em]"
               onClick={(e) => handleSubmit(e)}
             >
               Login

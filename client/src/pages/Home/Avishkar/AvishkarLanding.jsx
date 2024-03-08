@@ -50,7 +50,7 @@ const AvishkarLanding = () => {
           );
         })}
       </div>
-      <div className="pb-4">
+      <div className="pb-0">
         <Footer />
       </div>
     </div>

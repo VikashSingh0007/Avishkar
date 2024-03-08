@@ -40,32 +40,32 @@ import Shubhranshu from "../Images/Team/Shubhranshu_Pandey411.png";
 import Rishabh from "../Images/Team/Rishabh_Chaurasia2066.jpg";
 import Divyansh from "../Images/Team/Divyansh_Gangwar2034.jpg";
 // import Shashank from "../Images/Team/Shashank_Singh2085.jpg"
-import Bipul from "../Images/Team/Bipul_Karna1037.jpg";
-import Nikhil from "../Images/Team/Nikhil_Chaurasia6028.jpg";
-import Siddharth from "../Images/Team/Siddharth_Yadav8121.jpg";
-import Gautam from "../Images/Team/Gautam_Kumar3059.jpg";
-import Ashish from "../Images/Team/Ashish_Ranjan3036.jpg";
-import AnanyaP from "../Images/Team/Ananya_Patil5031.jpg";
-import AdityaP from "../Images/Team/Aditya_Pandey5010.jpg";
-import Mohd from "../Images/Team/Mohd_Taha1066.jpg";
-import Sneha from "../Images/Team/Sneha_VarshneyMB31.jpg";
-import Sukhwant from "../Images/Team/Sukhwant_KumarMB33.jpg";
-import Niharika from "../Images/Team/Niharika_JainMB23.jpg";
-import AyushG from "../Images/Team/Ayush_Gupta1033.jpg";
-import Kartikey from "../Images/Team/Kartikey_Gupta8064.jpeg";
-import Shashwat from "../Images/Team/Shashwat_Gupta6045.jpg";
-import Yashwanth from "../Images/Team/Racha_Yashwanth6033.jpg";
-import Ishaan from "../Images/Team/Ishaan_Pachauri1054.jpg";
-import Pradeep from "../Images/Team/pradeep_singh6032.jpg";
-import Aniket from "../Images/Team/Aniket_Yadav9007.jpg";
-import Praveen from "../Images/Team/Praveen_Awasthi9041.jpg";
-import Rahul from "../Images/Team/Rahul_Garg8101.jpg";
-import Aman from "../Images/Team/Aman_Kumar9004.jpeg";
-import Sandeep from "../Images/Team/Sandeep_Oraon2072.jpg";
-import DivyanshuY from "../Images/Team/Divyanshu_Yadav0020.jpg";
-import SameerSir from "../Images/Team/SameerSir.jpeg";
-import Silkie from "../Images/Team/Silkie_Agarwal5162.jpg";
-import Sarah from "../Images/Team/Sarah_Nasim4177.jpg";
+// import Bipul from "../Images/Team/Bipul_Karna1037.jpg";
+// import Nikhil from "../Images/Team/Nikhil_Chaurasia6028.jpg";
+// import Siddharth from "../Images/Team/Siddharth_Yadav8121.jpg";
+// import Gautam from "../Images/Team/Gautam_Kumar3059.jpg";
+// import Ashish from "../Images/Team/Ashish_Ranjan3036.jpg";
+// import AnanyaP from "../Images/Team/Ananya_Patil5031.jpg";
+// import AdityaP from "../Images/Team/Aditya_Pandey5010.jpg";
+// import Mohd from "../Images/Team/Mohd_Taha1066.jpg";
+// import Sneha from "../Images/Team/Sneha_VarshneyMB31.jpg";
+// import Sukhwant from "../Images/Team/Sukhwant_KumarMB33.jpg";
+// import Niharika from "../Images/Team/Niharika_JainMB23.jpg";
+// import AyushG from "../Images/Team/Ayush_Gupta1033.jpg";
+// import Kartikey from "../Images/Team/Kartikey_Gupta8064.jpeg";
+// import Shashwat from "../Images/Team/Shashwat_Gupta6045.jpg";
+// import Yashwanth from "../Images/Team/Racha_Yashwanth6033.jpg";
+// import Ishaan from "../Images/Team/Ishaan_Pachauri1054.jpg";
+// import Pradeep from "../Images/Team/pradeep_singh6032.jpg";
+// import Aniket from "../Images/Team/Aniket_Yadav9007.jpg";
+// import Praveen from "../Images/Team/Praveen_Awasthi9041.jpg";
+// import Rahul from "../Images/Team/Rahul_Garg8101.jpg";
+// import Aman from "../Images/Team/Aman_Kumar9004.jpeg";
+// import Sandeep from "../Images/Team/Sandeep_Oraon2072.jpg";
+// import DivyanshuY from "../Images/Team/Divyanshu_Yadav0020.jpg";
+// import SameerSir from "../Images/Team/SameerSir.jpeg";
+// import Silkie from "../Images/Team/Silkie_Agarwal5162.jpg";
+// import Sarah from "../Images/Team/Sarah_Nasim4177.jpg";
 import Bipul from "../Images/Team/Bipul_Karna1037.jpg";
 import Nikhil from "../Images/Team/Nikhil_Chaurasia6028.jpg";
 import Siddharth from "../Images/Team/Siddharth_Yadav8121.jpg";
@@ -351,21 +351,7 @@ export const Team = [
           "https://www.instagram.com/mayank_.2?igsh=MWQ5OTByY2Jib2dwOQ==",
         instagram_username: "mayank_.2",
       },
-      {
-        email: "ayushh3696@gmail.com",
-        name: "Ayush Gupta",
-        registration: 20200014,
-        image: Ayush,
-        mobile: 9305867392,
-        branch: "Chemical Engineering",
-        position: "Festival Secretary",
-        department: "NA",
-        photo:
-          "https://drive.google.com/open?id=1SIhLWxVEywvUbCipiHNlOYfq3xbmrwS9",
-        linkedin: "https://in.linkedin.com/in/ayush-gupta24",
-        instagram_url: "https://www.instagram.com/ayushh._.18/",
-        instagram_username: "ayushh._.18",
-      },
+
       {
         email: "shantanukr2201@gmail.com",
         name: "Shantanu Kumar Singh",
