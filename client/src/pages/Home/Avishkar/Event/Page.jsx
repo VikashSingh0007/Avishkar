@@ -95,12 +95,12 @@ const Page = () => {
                       <div>
                         <div className="flex justify-center text-4xl font-semibold py-8 protest-revolution-regular2 rumoura-font mt-16">
                           {decodedData.name}
-                        </div>
-                        <div className="flex justify-center text-2xl py-4 text-4xl font-semibold rumoura-font underline">
+                          </div>
+                          <div className="flex justify-center text-2xl py-4 text-4xl font-semibold rumoura-font underline">
                           Description
-                        </div>
-                        <div className="flex justify-center py-4 px-6 kelly-slab-regular text-xl border border-black rounded-lg">
-                          <h4 className="text-xl sm:text-xl text-justify">
+                          </div>
+                            <div className="flex justify-center py-4 px-6 kelly-slab-regular text-xl border border-black rounded-lg">
+                            <h4 className="text-xl sm:text-xl text-justify">
                             {decodedData.disc}
                           </h4>
                         </div>
