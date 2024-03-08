@@ -2,9 +2,12 @@ import "./CulravLanding.css";
 import EventCard from "./Components/EventCard";
 import Data from "../../../Data/Event/Culrav";
 import Navbar from "../Navbar";
+import { MdOutlineFestival } from "react-icons/md";
 
 const CulravLanding = () => {
   return (
+    <>
+
     <div
       className="h-screen overflow-y-scroll mb-10 "
       style={{
@@ -18,8 +21,16 @@ const CulravLanding = () => {
       {/* <div className=" w-full h-full flex flex-wrap p-4"> */}
 
       <div>
-        <h1 className="w-full text-4xl font-bold mb-10 pt-24  text-center  rumoura-font">
-          Events
+      <h1 className="w-fit flex mx-auto tracking-widest text-4xl font-bold mb-10 mt-24 text-white  text-center  rumoura-font"  style={{
+          fontWeight: "bolder",
+          textAlign: "center",
+          textShadow: "0 0 15px black", // Add white shadow with 10px blur
+        }}>
+        <MdOutlineFestival size={32} className="hover:rotate-45  text-black transition-all duration-300 mr-2 mt-[4px]  " style={{
+          fontWeight: "bolder",
+          textAlign: "center",
+          
+        }} />  Events
         </h1>
       </div>
       <div className="flex justify-center align-middle mt-[80%]  xsm:mt-[60%] sm:mt-[40%] md:mt-[35%] lg:mt-[20%] xl:mt-[15%] h-full ">
@@ -37,6 +48,7 @@ const CulravLanding = () => {
 
       {/* <Footer /> */}
     </div>
+    </>
   );
 };
 
