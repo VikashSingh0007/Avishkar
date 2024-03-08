@@ -3,7 +3,19 @@ import "./EventTimeLine.css";
 import { BiSolidCalendar } from "react-icons/bi";
 const timelineData = [
   {
-    text: "Inaugural Ceremony, gnoTalks  ",
+    text: "Inaugural Ceremony ",
+    date: "March 15 2024",
+    category: {
+      tag: "Day-1",
+      color: "#000",
+    },
+    link: {
+      url: "",
+      text: "Get Schedule of Day 1",
+    },
+  },
+  {
+    text: "gnoTalks  ",
     date: "March 16 2024",
     category: {
       tag: "Day-1",

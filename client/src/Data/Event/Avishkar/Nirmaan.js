@@ -1,7 +1,13 @@
 import Nirman3 from "../../Images/Nirman.png";
 import Nirman1 from "../../Images/Nirman.png";
 import image from "../../../../src/Data/Images/Logo/Nirmaan2k24 logo.png"
+import image1 from "../../../../src/Data/Images/Logo/Nirmaan/6.png"
 import image2 from "../../../../src/Data/Images/Logo/Nirmaan/Openpositions.jpeg"
+import image3 from "../../../../src/Data/Images/Logo/Nirmaan/5.png"
+import image4 from "../../../../src/Data/Images/Logo/Nirmaan/4.png"
+import image5 from "../../../../src/Data/Images/Logo/Nirmaan/7.png"
+import image6 from "../../../../src/Data/Images/Logo/Nirmaan/3.png"
+import image7 from "../../../../src/Data/Images/Logo/Nirmaan/8.png"
 export const Nirmaan = [
   {
     title: "Nirmaan",
@@ -26,7 +32,7 @@ export const Nirmaan = [
           },
         ],
         TeamSize: "1-1",
-        BGImageLink: "",
+        BGImageLink:image1,
         PsLink: "",
         coordinators: [
           {
@@ -91,7 +97,7 @@ export const Nirmaan = [
           },
         ],
         TeamSize: "1-1",
-        BGImageLink: "",
+        BGImageLink: image3,
         PsLink: "",
         coordinators: [
           {
@@ -125,7 +131,7 @@ export const Nirmaan = [
           },
         ],
         TeamSize: "3-4",
-        BGImageLink: "",
+        BGImageLink:image4,
         PsLink: "http://tinyurl.com/Ziggurare2024",
         coordinators: [
           {
@@ -159,7 +165,7 @@ export const Nirmaan = [
           },
         ],
         TeamSize: "",
-        BGImageLink: "",
+        BGImageLink:image5,
         PsLink: "",
         coordinators: [
           {
@@ -194,7 +200,7 @@ export const Nirmaan = [
           },
         ],
         TeamSize: "",
-        BGImageLink: "",
+        BGImageLink:image6,
         PsLink: "",
         coordinators: [
           {
@@ -233,7 +239,7 @@ export const Nirmaan = [
           },
         ],
         TeamSize: "",
-        BGImageLink: "",
+        BGImageLink:image7,
         PsLink: "http://tinyurl.com/Constrengtho2024",
         coordinators: [
           {

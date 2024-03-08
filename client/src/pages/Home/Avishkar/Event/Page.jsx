@@ -6,14 +6,18 @@ import Navbar from "../../../Home/Navbar";
 import Modal from "./modal.jsx";
 import { getAllParticipating } from "../../../../services/teamService.js";
 import { toast } from "react-toastify";
-import Loader from "../../../Home/loader.jsx"
+import Loader from "../../../Home/loader.jsx";
+import "./page.css";
+import retroImg from "../../assets/radio.jpg";
+import Footer from "../../Footer.jsx";
+
 const Page = () => {
   const { data } = useParams();
   const decodedData = JSON.parse(decodeURIComponent(data));
   const [showModal, setShowModal] = useState(false);
   const [fetchedData, setFetchedData] = useState();
   const navigate = useNavigate();
-  const [isloading , setLoading] = useState(false);
+  const [isloading, setLoading] = useState(false);
   console.log(decodedData);
 
   const handleClick = async () => {
@@ -27,7 +31,7 @@ const Page = () => {
     }
     const fetchData = async () => {
       try {
-        setLoading(true)
+        setLoading(true);
         const data = await getAllParticipating();
         console.log("gotted from loki ", data);
         setFetchedData(data);
@@ -43,126 +47,156 @@ const Page = () => {
   };
   // useEffect(, []);
 
-  const blurproperty = `flex text-gray-300 justify-center bg-opacity-15  backdrop-blur-sm p-8 rounded-md shadow-md`;
   return (
     <>
-      {isloading && <Loader/>}
-      {showModal && (
-        <div
-          className="flex justify-center items-center h-[100vh]"
-          style={{
-            backgroundImage:
-              // "linear-gradient(to bottom, #d95f3b, #f0984a, #fcd6a5, #7aa9a3, #338f9a, #1c4c70)",
-              "linear-gradient(to bottom, #d95f3b, #f0984a)",
-          }}
-        >
-          
-          <Modal
-            teams={fetchedData?.teams?.participating}
-            setShowModal={setShowModal}
-            event={decodedData.name}
-           
-          />
-        </div>
-      )}
-      {showModal === false && (
-        <div
-          className="h-[100vh]"
-          style={{
-            backgroundImage:
-              // "linear-gradient(to bottom, #d95f3b, #f0984a, #fcd6a5, #7aa9a3, #338f9a, #1c4c70)",
-              "linear-gradient(to bottom, #d95f3b, #f0984a)",
-          }}
-          // style={{ backgroundImage: `url(${background})` }}
-        >
-          <div>
-            <Navbar />
+      <div className="top-0 left-0 w-full h-auto containerPage flex flex-col ">
+        <div className="absolute z-[-1] top-0 left-0 w-full h-full flex justify-center items-center">
+          <div className="fixed left-0 w-full h-full flex">
+            <img
+              src={retroImg}
+              alt="mnnitImg"
+              className=" object-cover w-full h-full "
+            />
           </div>
-          <div className="absolute inset-0 bg-black opacity-0 "></div>
-          <div className="absolute inset-0 overflow-y-auto ">
-            {/* Your other content goes here */}
-            <div className="">
-              <div
-                style={
-                  {
-                    // backdropFilter: "blur(5px)", // Adjust the blur value as needed
-                  }
-                }
-                // className={blurproperty}
-              >
-                <div className="flex justify-center ">
-                  <div className="w-full lg:w-[60%] max-w-[90%]">
-                    <div
-                      style={{
-                        backdropFilter: "blur(5px)",
-                      }}
-                      // className={blurproperty}
-                    >
-                      <div>
-                        <div className="flex justify-center text-4xl font-semibold py-8 protest-revolution-regular2 rumoura-font mt-16">
-                          {decodedData.name}
-                          </div>
-                          <div className="flex justify-center text-2xl py-4 text-4xl font-semibold rumoura-font underline">
-                          Description
-                          </div>
-                            <div className="flex justify-center py-4 px-6 kelly-slab-regular text-xl border border-black rounded-lg">
-                            <h4 className="text-xl sm:text-xl text-justify">
-                            {decodedData.disc}
-                          </h4>
-                        </div>
+        </div>
+        <div>
+          {isloading && <Loader />}
+          {showModal && (
+            <div className="flex justify-center items-center ">
+              <Modal
+                teams={fetchedData?.teams?.participating}
+                setShowModal={setShowModal}
+                event={decodedData.name}
+              />
+            </div>
+          )}
+          {showModal === false && (
+            <div>
+              <div>
+                <Navbar />
+              </div>
+              <div className=" inset-0 bg-black opacity-0 "></div>
+              <div className=" inset-0 ">
+                {/* Your other content goes here */}
+                <div className="">
+                  <div>
+                    <div className="flex justify-center h-auto">
+                      <div className="w-full lg:w-[60%] max-w-[90%]">
+                        <div
+                          style={{
+                            backdropFilter: "blur(5px)",
+                          }}
+                          // className={blurproperty}
+                        >
+                          <div>
+                            <div
+                              className="flex justify-center text-white tracking-widest  text-justify text-[2rem] sm:text-[3rem] font-semibold py-8 protest-revolution-regular2 rumoura-font mt-16"
+                              style={{
+                                fontWeight: "bolder",
+                                textAlign: "center",
+                                textShadow: "0 0 15px black", // Add white shadow with 10px blur
+                              }}
+                            >
+                              {decodedData.name}
+                            </div>
+                            <div
+                              className="flex justify-center text-white tracking-widest  text-justify text-[1.5rem] sm:text-[2rem] font-semibold rumoura-font "
+                              style={{
+                                fontWeight: "bolder",
+                                textAlign: "center",
+                                textShadow: "0 0 15px black", // Add white shadow with 10px blur
+                              }}
+                            >
+                              Description
+                            </div>
+                            <div
+                              className="flex bg-[#63472DE6] text-white mt-2 justify-center py-4 px-6 kelly-slab-regular text-xl border border-black rounded-lg"
+                              style={{
+                                boxShadow: "0px 10px 10px black",
+                                textShadow: "0px 0px 10px black",
+                                border: "none",
+                              }}
+                            >
+                              <h4 className="text-xl sm:text-2xl text-justify croissant-one-regular">
+                                {decodedData.disc}
+                              </h4>
+                            </div>
 
-                        <div className="flex justify-center py-4 text-4xl font-semibold rumoura-font underline">
-                          Rules
-                        </div>
-                        <div className="flex text-xl sm:text-xl justify-center py-4 kelly-slab-regular  text-justify">
-                          <ol>
-                            {decodedData.rule.map((ruleObj, index) => (
-                              <li key={index}>
-                                {Object.entries(ruleObj).map(([key, value]) => (
-                                  <div key={key}>
-                                    {"❖ "}
-                                    {value}
+                            <div
+                              className="flex text-white tracking-widest w-full justify-center mt-6  text-justify text-[1.5rem] sm:text-[2rem] font-semibold rumoura-font "
+                              style={{
+                                textShadow: "0px 0px 10px black",
+                              }}
+                            >
+                              Rules
+                            </div>
+                            <div className="flex text-xl sm:text-xl justify-center py-4 kelly-slab-regular text-justify">
+                              <div className="flex flex-col">
+                                {decodedData.rule.map((ruleObj, index) => (
+                                  <div
+                                    key={index}
+                                    className="croissant-one-regular text-white text-2xl sm:text-xl mb-2"
+                                    style={{
+                                      textShadow: "0px 0px 10px black",
+                                    }}
+                                  >
+                                    {Object.entries(ruleObj).map(
+                                      ([key, value]) => (
+                                        <div key={key}>
+                                          {"❖ "}
+                                          {value}
+                                        </div>
+                                      )
+                                    )}
                                   </div>
                                 ))}
-                              </li>
-                            ))}
-                          </ol>
-                        </div>
+                              </div>
+                            </div>
 
-                        <div className="flex justify-center py-4 text-4xl font-semibold rumoura-font underline">
-                          Coordinators
+                            <div className="flex justify-center tracking-widest text-justify text-[1.5rem] sm:text-[2rem] py-4  font-semibold rumoura-font text-white">
+                              Coordinators
+                            </div>
+                            <div className="flex text-2xl justify-center py-4">
+                              <ol className="flex flex-col text-white lg:flex-row space-x-4">
+                                {decodedData.coordinators.map(
+                                  (coordinator, index) => (
+                                    <li
+                                      key={index}
+                                      className="croissant-one-regular text-2xl sm:text-xl"
+                                      style={{
+                                        textShadow: "0px 0px 10px black",
+                                      }}
+                                    >
+                                      <div>{coordinator.name}</div>
+                                      {/* <div>{coordinator.phone}</div> */}
+                                    </li>
+                                  )
+                                )}
+                              </ol>
+                            </div>
+                          </div>
                         </div>
-                        <div className="flex text-2xl justify-center py-4">
-                          <ol className="flex flex-col lg:flex-row space-x-4">
-                            {decodedData.coordinators.map(
-                              (coordinator, index) => (
-                                <li
-                                  key={index}
-                                  className="flex flex-col items-center kelly-slab-regular text-lg"
-                                >
-                                  <div>{coordinator.name}</div>
-                                  {/* <div>{coordinator.phone}</div> */}
-                                </li>
-                              )
-                            )}
-                          </ol>
-                        </div>
+                        <button
+                          className="flex mx-auto mt-8 bg-[#63462DE6] hover:bg-[#3c2b1de6] text-white text-[1rem] sm:text-[1.4rem] font-bold py-2 px-6 rounded-full"
+                          style={{
+                            boxShadow: "0 0 20px black", // Add white shadow with 10px blur
+                          }}
+                          onClick={() => handleClick()}
+                        >
+                          Register
+                        </button>
                       </div>
                     </div>
-                    <button
-                      className="bn632-hover bn24 mb-5"
-                      style={{ display: "block", margin: "0 auto" }}
-                      onClick={() => handleClick()}
-                    >
-                      Register
-                    </button>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
+          )}
         </div>
-      )}
+        <div>
+          <Footer />
+        </div>
+      </div>
     </>
   );
 };

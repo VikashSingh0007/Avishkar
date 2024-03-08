@@ -8,6 +8,8 @@ import signUp from "../../services/authService.js";
 import Navbar from "../Home/Navbar";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
+import Old from "../Home/assets/old.jpg";
+// import { toast } from "react-toastify";
 import Loader from "../Home/loader.jsx";
 const SignUp = () => {
   const [email, setEmail] = useState("");

@@ -8,7 +8,7 @@ import { getAllParticipating } from "../../../../services/teamService.js";
 import { toast } from "react-toastify";
 import "./avishkarPage.css";
 import Footer from "../../Footer.jsx";
-import retroImg from "../../assets/balancer.jpg";
+import retroImg from "../../assets/radio.jpg";
 
 const AvishkarPage = () => {
   const { data } = useParams();
