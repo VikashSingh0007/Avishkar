@@ -3,6 +3,9 @@
 // import Palladin from "../../Images/palladin.jpg";
 // import CenrtalDogma from "../Images/CentralDogma.jpg";
 import image from "../../../../src/Data/Images/Logo/genesis_logo.jpg";
+import image1 from "../../../../src/Data/Images/Logo/Genesis/PALLADI.jpeg"
+import image2 from "../../../../src/Data/Images/Logo/Genesis/CENTRAL_DOGM1.jpeg"
+import image3 from "../../../../src/Data/Images/Logo/Genesis/CLUE_QUESS.jpeg"
 export const Genesis = [
   {
     title: "Genesis",
@@ -23,7 +26,7 @@ export const Genesis = [
           },
         ],
         TeamSize: "1",
-        BGImageLink: "",
+        BGImageLink:image1,
         PsLink: "",
         coordinators: [
           {
@@ -55,7 +58,7 @@ export const Genesis = [
           },
         ],
         TeamSize: "",
-        BGImageLink: "",
+        BGImageLink:image2,
         PsLink: "",
         coordinators: [
           {
@@ -88,7 +91,8 @@ export const Genesis = [
           },
         ],
         TeamSize: "",
-        BGImageLink: "",
+        BGImageLink:image3
+        ,
         PsLink: "",
         coordinators: [
           {

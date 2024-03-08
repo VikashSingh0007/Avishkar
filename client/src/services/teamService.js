@@ -100,6 +100,7 @@ export const inviteTeam = async (data) => {
 }
 
 export const respondTeam = async (data) => {
+    console.log("here")
     try{
         const messageData = {
             teamId : data.teamId,

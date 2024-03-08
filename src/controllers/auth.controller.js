@@ -8,6 +8,7 @@ const {
 const {
   sendUserVerificationMail,
   sendUserResetPassword,
+  sendUserVerificationMailOtherCollege,
 } = require("../helper/mailHandler");
 
 const dc = "DepartmentCordinator";
@@ -157,7 +158,7 @@ const userSignup = async (req, res, next) => {
           name: newUser.name,
           email: newUser.email,
         });
-        const mailSent = await sendUserVerificationMail(email, token); // same thing different style
+        const mailSent = await sendUserVerificationMailOtherCollege(email, token); // same thing different style
         if (!newUser) {
           res.statusCode = 407;
           res.json({ message: "Could Not Create User", success: false });
@@ -184,7 +185,7 @@ const userSignup = async (req, res, next) => {
   } catch (error) {
     console.log("error occured in the userSignup() controller!");
     res.statusCode = 410;
-
+    console.log(error)
     res.json({ message: "Could Not SignUp", success: "false" });
     return;
     next(error);

@@ -7,6 +7,8 @@ const rolePriority={
     "Coordie":1,
     "User":2
 }
+
+
 const isUserAuthenticated =  async (req, res, next) => {
     try {
       
@@ -71,6 +73,13 @@ const isFestivalSecretary=async(req,res,next)=>{
     }
     else next();
 }
+
+// const isFeePaid = async (req,res,next) => {
+//     try{
+//       const id = req.user._id;
+//       const user = await User.findOne({})  
+//     }
+// }
 module.exports = {
     isUserAuthenticated,
     isDepartmentalCoordinator,

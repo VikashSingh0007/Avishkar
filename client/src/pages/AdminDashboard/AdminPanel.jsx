@@ -64,7 +64,7 @@ const User = () => {
   };
 
   // Filter events based on search term
-  var filteredEvents = events.filter((event) =>
+  var filteredEvents = events?.filter((event) =>
     event.name.toLowerCase().includes(searchTerm.toLowerCase())
   );
 
@@ -174,7 +174,7 @@ const User = () => {
             />
 
             <div>
-              {filteredEvents.map((event, index) => (
+              {filteredEvents?.map((event, index) => (
                 <div
                   key={index}
                   className="bg-orange-200 p-3 rounded mb-2 cursor-pointer hover:bg-orange-300"
