@@ -57,7 +57,6 @@ const Login = () => {
   };
 
   return (
-
     <>
     {isloading && <Loader/>}
     <div
@@ -144,9 +143,13 @@ const Login = () => {
         </svg>
       </div>
     </div>
+    </div>
+    </div>
     </>
     
-  );
-};
+    
+    
+  )
+}
 
 export default Login;

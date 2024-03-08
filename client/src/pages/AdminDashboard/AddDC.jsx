@@ -6,7 +6,7 @@ import Loader from "../Home/loader";
 const Resume = () => {
   const [data, setData] = useState({ email: "" });
   const [isloading , setLoading] = useState(false);
-   const departments=["Cyberquest","Electromania","Powersurge","Mechrocosm","Rasayans","Nirmaan","Genesis","Oligopoly","Monopoly","Gnosiomania","Robomania","Cosmocon","Aerodynamix","Rungmunch","Annunaad","Litmuse","Darkroom","Rangsazzi","Razzmatazz","Footprints"]
+   const departments=["Cyberquest","Electromania","Powersurge","Mechrocosm","Rasayans","Nirmaan","Genesis","Oligopoly","Monopoly","Gnosiomania","Robomania","Cosmocon","Aerodynamix","Rangmanch","Annunaad","Litmuse","Darkroom","Rangsazzi","Razzmatazz","Footprints"]
   const handleChange = (e) => {
     setData((prevData) => ({
       ...prevData,

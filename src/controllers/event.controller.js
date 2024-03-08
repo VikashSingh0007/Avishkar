@@ -4,7 +4,7 @@ const Event = require('../models/event.model')
 const { addUserToDepartment, findUserInDepartment , checkIfJoined} = require('../helper/eventHelper');
 const dc = "DepartmentCordinator";
 const fes = "FestivalSecretary";
-
+const events = require("../../eventEntry");
 const createEvent = async (req ,res , next) => {
     const { eventName  , minTeamsize , maxTeamsize, department } = req.body;
     if(!eventName || !minTeamsize || !maxTeamsize||!department){
@@ -269,10 +269,31 @@ const getAllEvents = async (req , res , next ) => {
     }
 }
 
+const loadAllEvents = async() => {
+    try{
+        
+
+        for(let i=0;i<events.length;i++){
+            await Event.create({
+                name : events[i].eventName,
+                minTeamsize : events[i].minTeamsize,
+                maxTeamsize :  events[i].maxTeamsize,
+                department : events[i].department
+            });
+        }
+    }
+    catch(error){
+        console.log(error);
+       
+    }
+}
+
+
 
 module.exports = {
     joinEvent,
     leaveEvent,
     createEvent,
-    getAllEvents
+    getAllEvents,
+    loadAllEvents
 }
