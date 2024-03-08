@@ -47,25 +47,25 @@ const Navbar = ({ page }) => {
     },
     {
       id: "profile",
-      title: "Profile",
+      title: "Login",
     },
   ];
 
   return (
     <nav
-    className={`w-full ${active === undefined ? "p-[20px]" : "p-[24px]"} fixed top-0 z-20 ${
-      scrolled
-        ? "bg-[#ad9152cc] border-black border-t-[5px] rounded-b-[30px] border-b-1 border-l-[5px] border-r-[5px] bg-opacity-75"
-        : "border-[4px] bg-[#63462D] border-opacity-80 bg-opacity-90 border-t-[12px] -mt-2 border-black"
-    }`}
-  >
-      <div className="flex justify-between items-center  px-4 py-0">
-        <div className="w-[10%] ">
+      className={`w-full fixed top-0 z-20 ${
+        scrolled
+          ? "bg-[#3A3416CC]  border-black border-t-[5px] rounded-b-[30px] border-b-1 border-l-[5px] border-r-[5px]   bg-opacity-75"
+          : "border-[4px]  bg-[#63462D]  border-opacity-80 bg-opacity-90 border-t-[12px] -mt-2 border-black "
+      }`}
+    >
+      <div className="flex justify-between items-center px-4 py-0">
+        <div className="w-[10%]">
           <Link to="/">
             <img
               src={logo}
               alt="AvishkarCulrav"
-              className="w-12 h-14 absolute left-2 -top-2 md:w-16 md:h-16 lg:w-[100px] lg:h-[100px] "
+              className="w-12 h-14 md:w-16 md:h-16 lg:w-20 lg:h-16 "
             />
           </Link>
         </div>
@@ -73,7 +73,7 @@ const Navbar = ({ page }) => {
           <ul className="list-none  ml-[20%] md:flex hidden justify-end items-center flex-1 text-xl rumoura-font ">
             <li
               key={"culravLanding"}
-              className={`font-Robo hover:text-opacity-70 mr-8 tracking-[4px] hover:text-zinc-900 hover:font-extrabold transition-all duration-300  md:mr-12  md:text-sm font-extrabold lg:text-xl cursor-pointer ${
+              className={`font-Robo mr-8 tracking-[4px]  md:mr-12  md:text-sm font-extrabold lg:text-xl cursor-pointer ${
                 active === "Culrav"
                   ? "text-black bg-[#ae9e7f] p-2 rounded-xl "
                   : "text-slate-200"
@@ -89,7 +89,7 @@ const Navbar = ({ page }) => {
             </li>
             <li
               key={"avishkar-landing"}
-              className={`font-Robo hover:text-opacity-70 tracking-[3px] hover:text-zinc-900 hover:font-extrabold transition-all duration-300 font-extrabold text-xxl mr-8  md:mr-12  md:text-sm lg:text-xl  cursor-pointer rumoura-font ${
+              className={`font-Robo tracking-[3px] font-extrabold text-xxl mr-8  md:mr-12  md:text-sm lg:text-xl  cursor-pointer rumoura-font ${
                 active === "Avishkar"
                   ? "text-black bg-[#ae9e7f] p-2 rounded-xl"
                   : "text-slate-200"
@@ -105,7 +105,7 @@ const Navbar = ({ page }) => {
             </li>
             <li
               key={"accommodation"}
-              className={`font-Robo hover:text-opacity-70 tracking-[2px] hover:text-zinc-900 hover:font-extrabold transition-all duration-300 mr-8  md:mr-12  md:text-sm lg:text-xl font-extrabold cursor-pointer rumoura-font ${
+              className={`font-Robo tracking-[2px] mr-8  md:mr-12  md:text-sm lg:text-xl font-extrabold cursor-pointer rumoura-font ${
                 active === "Accommodation"
                   ? "text-black bg-[#ae9e7f] p-2 rounded-xl"
                   : "text-slate-200"
@@ -121,7 +121,7 @@ const Navbar = ({ page }) => {
             </li>
             <li
               key={"team"}
-              className={`font-Robo hover:text-opacity-70 tracking-[3px] hover:text-zinc-900 hover:font-extrabold transition-all duration-300 text-xxl mr-8  md:mr-12  md:text-sm lg:text-xl font-extrabold cursor-pointer rumoura-font ${
+              className={`font-Robo tracking-[3px] text-xxl mr-8  md:mr-12  md:text-sm lg:text-xl font-extrabold cursor-pointer rumoura-font ${
                 active === "Team"
                   ? "text-black bg-[#ae9e7f] p-2 rounded-xl"
                   : "text-slate-200"
@@ -137,7 +137,7 @@ const Navbar = ({ page }) => {
             </li>
             <li
               key={"login"}
-              className={`font-Robo hover:text-opacity-70   tracking-[3px] hover:text-zinc-900 hover:font-extrabold transition-all duration-300 text-xxl mr-8  md:mr-12  md:text-sm lg:text-xl font-extrabold cursor-pointer rumoura-font ${
+              className={`font-Robo tracking-[3px] text-xxl mr-8  md:mr-12  md:text-sm lg:text-xl font-extrabold cursor-pointer rumoura-font ${
                 active === "Login" || active === "Profile"
                   ? "text-black bg-[#ae9e7f] p-2 rounded-xl"
                   : "text-slate-200"
