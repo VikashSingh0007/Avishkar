@@ -20,6 +20,7 @@ import AdityaB from "../Images/Team/Aditya_bhardwaj1011.jpeg";
 import Anubhav from "../Images/Team/Anubhav_shrivastava9011.jpeg";
 // import Suneel from "../Images/Team/Sunil_Sharma8124.jpg";
 import Riya from "../Images/Team/Riya_Singh0044.jpeg";
+import Aayur from "../Images/Team/Aayuraditya1.png";
 import Krishna from "../Images/Team/KRISHNA_GUPTA9033.jpg";
 import Ritesh from "../Images/Team/Ritesh_chandra.jpg";
 import Vivek from "../Images/Team/Vivek.jpg";
@@ -108,22 +109,22 @@ import Aryaman from "../Images/Team/Aryaman_Sharma3034.jpeg";
 import Shruti from "../Images/Team/Shruti_Mokhashi0052.jpg";
 import Divyam from "../Images/Team/Divyam_Kumar9023.jpeg";
 import Utkarsh from "../Images/Team/Utkarsh_Deorah8126.jpg";
-import Smriti1 from "../Images/Team/smriti_pic_imrac.jpg"
-import Suresh from "../Images/Team/Suresh.jpg"
-import AmitB from "../Images/Team/Amit_M.png"
-import Mitu from "../Images/Team/Mitu_pic.jpg"
-import Supriya from "../Images/Team/supriyaY.jpg"
-import Ankur from "../Images/Team/ankur_passport.jpg"
-import Ranvijay from "../Images/Team/Ranvijay.jpg"
-import ShashankSir from "../Images/Team/ShashankSir.png"
-import Anand from "../Images/Team/AnandSharma.jpg"
-import Sunil from "../Images/Team/sunil_k_gupta_photo.jpg"
-import Dipayan from "../Images/Team/DipayanGuha_photo.jpg"
-import Suantak from "../Images/Team/Suantak.jpg"
-import satish from "../Images/Team/Satish.jpg"
-import Snehalk from "../Images/Team/SnehalK.jpg"
-import jyobrata from "../Images/Team/Joybrata.jpg"
-import indu from "../Images/Team/Indu-photo.jpg"
+import Smriti1 from "../Images/Team/smriti_pic_imrac.jpg";
+import Suresh from "../Images/Team/Suresh.jpg";
+import AmitB from "../Images/Team/Amit_M.png";
+import Mitu from "../Images/Team/Mitu_pic.jpg";
+import Supriya from "../Images/Team/supriyaY.jpg";
+import Ankur from "../Images/Team/ankur_passport.jpg";
+import Ranvijay from "../Images/Team/Ranvijay.jpg";
+import ShashankSir from "../Images/Team/ShashankSir.png";
+import Anand from "../Images/Team/AnandSharma.jpg";
+import Sunil from "../Images/Team/sunil_k_gupta_photo.jpg";
+import Dipayan from "../Images/Team/DipayanGuha_photo.jpg";
+import Suantak from "../Images/Team/Suantak.jpg";
+import satish from "../Images/Team/Satish.jpg";
+import Snehalk from "../Images/Team/SnehalK.jpg";
+import jyobrata from "../Images/Team/Joybrata.jpg";
+import indu from "../Images/Team/Indu-photo.jpg";
 export const Team = [
   // {
   //   department: "Director",
@@ -167,82 +168,82 @@ export const Team = [
     department: "Faculty Coordinator",
     data: [
       {
-        image:Smriti1,
+        image: Smriti1,
         name: "Dr.Smriti Agarwal",
         Profile_Url: "http://www.mnnit.ac.in/profile/smritiagarwal",
       },
       {
-        image:Suresh,
+        image: Suresh,
         name: "Dr. Suresh Bandi",
         Profile_Url: "http://mnnit.ac.in/profile/sureshbandi",
       },
       {
-        image:AmitB,
+        image: AmitB,
         name: "Dr. Amit Biswas",
         Profile_Url: "http://mnnit.ac.in/profile/amitb",
       },
       {
-        image:Mitu,
+        image: Mitu,
         name: "Dr. Mitu Mandal",
         Profile_Url: "http://mnnit.ac.in/profile/previewp.php?id=1581",
       },
       {
-        image:Supriya,
+        image: Supriya,
         name: "Dr. Supriya Yadav",
         Profile_Url: "http://mnnit.ac.in/profile/previewa.php?id=1760",
       },
       {
-        image:Ankur,
+        image: Ankur,
         name: "Dr. Ankur Gaur",
         Profile_Url: "http://mnnit.ac.in/profile/ankur",
       },
       {
-        image:Ranvijay,
+        image: Ranvijay,
         name: "Dr. Ranvijay",
         Profile_Url: "http://www.mnnit.ac.in/profile/ranvijay",
       },
       {
-        image:ShashankSir,
+        image: ShashankSir,
         name: "Dr. Shashank Srivastava",
         Profile_Url: "http://mnnit.ac.in/profile/shashank12",
       },
       {
-        image:Anand,
+        image: Anand,
         name: "Dr. Anand Sharma",
         Profile_Url: "http://mnnit.ac.in/profile/previewr.php?id=1470",
       },
       {
-        image:Sunil,
+        image: Sunil,
         name: "Dr. Sunil Kumar Gupta",
         Profile_Url: "http://mnnit.ac.in/profile/sunilg",
       },
       {
-        image:Dipayan,
+        image: Dipayan,
         name: "Dr. Dipayan Guha",
         Profile_Url: "http://mnnit.ac.in/profile/dipayan",
       },
       {
-        image:Suantak,
+        image: Suantak,
         name: "Dr. Suantak Kamsonlian",
         Profile_Url: "http://mnnit.ac.in/profile/previewp.php?id=1753",
       },
       {
-        image:satish,
+        image: satish,
         name: "Dr. Satish Chandra",
         Profile_Url: "http://mnnit.ac.in/profile/satishchandra",
       },
       {
-        image:Snehalk,
+        image: Snehalk,
         name: "Dr. Snehal K",
         Profile_Url: "http://mnnit.ac.in/profile/snehalk",
       },
       {
-        image:jyobrata,
+        image: jyobrata,
         name: "Dr. Joyabrata Mal",
         Profile_Url: "http://mnnit.ac.in/profile/joyabrata",
       },
       {
-        image:indu,
+        image: indu,
         name: "Dr. Indu Dohore",
         Profile_Url: "http://mnnit.ac.in/profile/indudohare",
       },
@@ -426,23 +427,6 @@ export const Team = [
         instagram_username: "aditi._.verma._.002",
       },
       {
-        email: "aryaman533@gmail.com",
-        name: "Aryaman Sharma ",
-        registration: "20203034",
-        image:Aryaman,
-        mobile: 9001241418,
-        branch: "Mechanical Engineering",
-        position: "Festival Secretary",
-        department: "",
-        photo:
-          "https://drive.google.com/open?id=1FNahjZqayW5Ep9aoCat2JxPCVbzlCwKE",
-        linkedin:
-          "https://www.linkedin.com/in/aryaman-sharma-b248b7203?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
-        instagram_url: "https://www.instagram.com/confused_aryaman?igsh=cnNyYmd6MHE1d29u",
-        instagram_username: "confused_aryaman",
-      }
-      ,
-      {
         email: "anushkamuskan.a1@gmail.com",
         name: "Anushka",
         registration: 20206009,
@@ -472,6 +456,39 @@ export const Team = [
         linkedin: "https://www.linkedin.com/in/khaliqhussain/",
         instagram_url: "https://www.instagram.com/khaliq_hussain786/",
         instagram_username: "khaliq_hussain786",
+      },
+      ,
+      {
+        email: "aryaman533@gmail.com",
+        name: "Aryaman Sharma ",
+        registration: "20203034",
+        image: Aryaman,
+        mobile: 9001241418,
+        branch: "Mechanical Engineering",
+        position: "Festival Secretary",
+        department: "",
+        photo:
+          "https://drive.google.com/open?id=1FNahjZqayW5Ep9aoCat2JxPCVbzlCwKE",
+        linkedin:
+          "https://www.linkedin.com/in/aryaman-sharma-b248b7203?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+        instagram_url:
+          "https://www.instagram.com/confused_aryaman?igsh=cnNyYmd6MHE1d29u",
+        instagram_username: "confused_aryaman",
+      },
+      {
+        email: "aryaman533@gmail.com",
+        name: "Aayuraditya Saraswat  ",
+        registration: "20202002",
+        image: Aayur,
+        mobile: 7599261100,
+        branch: "Electrical Engineering",
+        position: "Festival Secretary",
+        department: "",
+        photo:
+          "https://drive.google.com/file/d/1iry5iK976to-q0E5RwRYedbmhgoA-WbS/view",
+        linkedin: "https://www.linkedin.com/in/aayuraditya-saraswat-555082215/",
+        instagram_url: "https://www.instagram.com/aa_sars",
+        instagram_username: "aa_sars",
       },
       // Add more data for Festival Secretary...
     ],
@@ -550,19 +567,17 @@ export const Team = [
         email: "abhay.20209002@mnnit.ac.in",
         name: "Abhay Agarwal ",
         registration: "20209002",
-        image:Abhay,
+        image: Abhay,
         mobile: 7017127561,
         branch: "Chemical Engineering",
         position: "Departmental Coordinator",
         department: "Public Relation Lead",
         photo:
           "https://drive.google.com/open?id=1VrEHW6V67hR3MawMHb7jl_uJn2H9e2ez",
-        linkedin:
-          "https://www.linkedin.com/in/abhay-agarwal18",
+        linkedin: "https://www.linkedin.com/in/abhay-agarwal18",
         instagram_url: "Instagram.com/abhayagarwal18 ",
         instagram_username: "abhayagarwal18",
-      }
-      ,
+      },
       // {
       //   email: "sunil.20208124@mnnit.ac.in",
       //   name: "Sunil Kumar Sharma",
@@ -683,7 +698,6 @@ export const Team = [
   {
     department: "Design Lead",
     data: [
-      
       // Add more data for Web Team...
       {
         email: "divyanshu.20200020@mnnit.ac.in",
@@ -706,7 +720,6 @@ export const Team = [
   {
     department: "Media Leads",
     data: [
-     
       {
         email: "sandeeporaon9459@gmail.com",
         name: "Sandeep Oraon",
@@ -1521,7 +1534,7 @@ export const Team = [
       //   instagram_username: "_shubh.s_",
       // }
       // ,
-      
+
       // {
       //   email: "ayush.20209021@mnnit.ac.in",
       //   name: "Ayush Tripathi ",
@@ -1574,7 +1587,7 @@ export const Team = [
       //   instagram_username: "sweetyyswamiii._",
       // }
       // ,
-     
+
       // {
       //   email: "ishika.20200024@mnnit.ac.in",
       //   name: "Ishika Agrawal",

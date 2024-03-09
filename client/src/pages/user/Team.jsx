@@ -60,7 +60,7 @@ const Team = () => {
               type="text"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              placeholder="Team Member's ID"
+              placeholder="Team Member's Email Id"
               className="w-full p-2 lg:text-[1.3em] md:text-[1em] text-[0.8em] border rounded-md bg-gray-600 bg-opacity-20 focus:bg-transparent focus:ring-2 focus:ring-[#423C31] outline-none text-white"
             />
           </div>

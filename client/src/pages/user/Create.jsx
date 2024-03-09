@@ -74,38 +74,17 @@ const Create = () => {
                   <select
                     onChange={handleChange}
                     name="teamSize"
-                    className="w-full h-[5vh] bg-gray-900  bg-opacity-20 focus:bg-transparent focus:ring-2 focus:ring-[#63462D] rounded border border-gray-900  outline-none text-gray-800 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out text-2xl mt-2"
+                    className="w-full h-[5vh] bg-gray-900 bg-opacity-20 focus:bg-transparent focus:ring-2 focus:ring-[#63462D] rounded border border-gray-900 outline-none text-gray-800 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out text-2xl mt-2"
                   >
-                    <option className="text-black" value="1">
-                      1
-                    </option>
-                    <option className="text-black" value="2">
-                      2
-                    </option>
-                    <option className="text-black" value="3">
-                      3
-                    </option>
-                    <option className="text-black" value="4">
-                      4
-                    </option>
-                    <option className="text-black" value="5">
-                      5
-                    </option>
-                    <option className="text-black" value="5">
-                      6
-                    </option>
-                    <option className="text-black" value="5">
-                      7
-                    </option>
-                    <option className="text-black" value="5">
-                      8
-                    </option>
-                    <option className="text-black" value="5">
-                      9
-                    </option>
-                    <option className="text-black" value="5">
-                      10
-                    </option>
+                    {Array.from({ length: 40 }, (_, index) => (
+                      <option
+                        key={index + 1}
+                        className="text-black"
+                        value={index + 1}
+                      >
+                        {index + 1}
+                      </option>
+                    ))}
                   </select>
                 </div>
                 <button

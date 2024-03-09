@@ -27,7 +27,6 @@ const Navbar = ({ page }) => {
   }, []);
 
   const navLinks = [
-  
     {
       id: "culravLanding",
       title: "Culrav",
@@ -58,8 +57,8 @@ const Navbar = ({ page }) => {
     <nav
       className={`w-full fixed top-0 z-20 ${
         scrolled
-          ? "bg-[#ad9152cc] border-black border-t-[5px] border-b-black border-4 border-b-1 border-l-[5px] border-r-[5px] bg-opacity-75"
-          : "border-[4px] bg-[#63462D] border-opacity-80 bg-opacity-90 border-t-[12px] -mt-2 border-black"
+          ? "bg-[#ad9152cc]   bg-opacity-75"
+          : " bg-[#63462D] border-opacity-80 bg-opacity-90 border-t-[12px] -mt-2 border-black"
       }`}
     >
       <div className="flex justify-between items-center  px-4 py-0">
