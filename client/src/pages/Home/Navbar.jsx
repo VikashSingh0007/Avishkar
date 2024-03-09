@@ -35,10 +35,10 @@ const Navbar = ({ page }) => {
       id: "avishkar-landing",
       title: "Avishkar",
     },
-    {
-      id: "accommodation",
-      title: "Accommodation",
-    },
+    // {
+    //   id: "accommodation",
+    //   title: "Accommodation",
+    // },
     {
       id: "team",
       title: "Team",
@@ -105,7 +105,7 @@ const Navbar = ({ page }) => {
             >
               {<Link to={"/avishkar-landing"}>Avishkar</Link>}
             </li>
-            <li
+            {/* <li
               key={"accommodation"}
               className={`font-Robo tracking-[2px] mr-8  md:mr-12  md:text-sm lg:text-xl font-extrabold cursor-pointer rumoura-font ${
                 active === "Accommodation"
@@ -120,7 +120,7 @@ const Navbar = ({ page }) => {
               onClick={() => setActive("Accommodation")}
             >
               {<Link to={"/accommodation"}>Accommodation</Link>}
-            </li>
+            </li> */}
             <li
               key={"team"}
               className={`font-Robo tracking-[3px] text-xxl mr-8  md:mr-12  md:text-sm lg:text-xl font-extrabold cursor-pointer rumoura-font ${
