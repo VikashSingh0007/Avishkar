@@ -14,11 +14,11 @@ const FixedDivsComponent = () => {
   return (
     <div className="columns-2xs flex flex-col  sm:flex-row gap-8 p-0 z-[0] opacity-2 relative">
       <div className="absolute  top-[0] z-[5] w-[80%] h-[80%] sm:hidden">
-        <img
+        {/* <img
           src={mohit}
           alt="mohit"
           className="absolute top-[-10%] left-[-50%]  md:w-[0] sm:w-[0] animate-clouds"
-        />
+        /> */}
         <img
           src={Clouds1}
           alt="cloud"
@@ -26,11 +26,11 @@ const FixedDivsComponent = () => {
         />
       </div>
       <div className="absolute right-0 top-[0] z-[5] w-[100%] h-[100%] sm:hidden">
-        <img
+        {/* <img
           src={juhi}
           alt="juhi"
           className="absolute top-[-8%] sm:h-[35%] xsm:right-[-17%] h-[20%] w-[40%] sm:w-[35%] right-[-8%]  sm:right-[-5%]  md:w-[0]  animate-clouds"
-        />
+        /> */}
         <img
           src={Clouds1}
           alt="cloud"

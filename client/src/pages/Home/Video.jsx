@@ -5,12 +5,12 @@ import Fog from "../../Animations/fog.jsx";
 import MusicDisc from "../../Animations/musicDisc.jsx";
 import { useNavigate } from "react-router-dom";
 import vintage11 from "../../assets/vintage12.png";
-import video from "../../assets/FINAL1.mp4";
+import video from "../../assets/FINAL2.mp4";
 import Navbar from "./Navbar.jsx";
 import Clouds1 from "./culrav/assets/clouds11.png";
 import Clouds2 from "./culrav/assets/clouds2.png";
 import Clouds3 from "./culrav/assets/clouds3.png";
-import Mohit from "./culrav/assets/mohit.png";
+import Mohit from "./culrav/assets/Mohit.png";
 import juhi from "./culrav/assets/juhi.png";
 
 const App = () => {
@@ -38,7 +38,7 @@ const App = () => {
             {window.innerWidth > 640 && (
               <div>
                 {" "}
-                <img
+                {/* <img
                   src={Mohit}
                   className="absolute  bottom-[-7%] left-[-2%] lg:w-[600px] md:w-[0] sm:w-[0] animate-clouds"
                   style={{ zIndex: 1 }}
@@ -48,7 +48,7 @@ const App = () => {
                   src={juhi}
                   className="absolute  bottom-[-4%] right-[-0%] lg:w-[400px] md:w-[0] sm:w-[0] animate-clouds"
                   style={{ zIndex: 1 }}
-                />
+                /> */}
                 <div className="absolute bottom-[-13%] left-0 w-full hidden md:block">
                   <img
                     src={Clouds2}
