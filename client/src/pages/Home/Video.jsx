@@ -42,6 +42,7 @@ const App = () => {
                   src={Mohit}
                   className="absolute  bottom-[-7%] left-[-2%] lg:w-[600px] md:w-[0] sm:w-[0] animate-clouds"
                   style={{ zIndex: 1 }}
+                  loading="lazy"
                 />
                 <img
                   src={juhi}
