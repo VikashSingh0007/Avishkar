@@ -10,7 +10,7 @@ import Navbar from "./Navbar.jsx";
 import Clouds1 from "./culrav/assets/clouds11.png";
 import Clouds2 from "./culrav/assets/clouds2.png";
 import Clouds3 from "./culrav/assets/clouds3.png";
-import Mohit from "./culrav/assets/Mohit.png";
+import Mohit from "./culrav/assets/mohit.png";
 import juhi from "./culrav/assets/juhi.png";
 
 const App = () => {
@@ -40,7 +40,7 @@ const App = () => {
                 {" "}
                 <img
                   src={Mohit}
-                  className="absolute  bottom-[0%] left-[-15%] lg:w-[700px] md:w-[0] sm:w-[0] animate-clouds"
+                  className="absolute  bottom-[-7%] left-[-2%] lg:w-[600px] md:w-[0] sm:w-[0] animate-clouds"
                   style={{ zIndex: 1 }}
                   loading="lazy"
                 />

@@ -27,6 +27,7 @@ const Navbar = ({ page }) => {
   }, []);
 
   const navLinks = [
+  
     {
       id: "culravLanding",
       title: "Culrav",
