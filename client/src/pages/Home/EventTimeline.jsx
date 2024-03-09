@@ -3,7 +3,7 @@ import "./EventTimeLine.css";
 import { BiSolidCalendar } from "react-icons/bi";
 const timelineData = [
   {
-    text: "Inaugural Ceremony ",
+    text: "Inauguration, Juhi Babbar Performance",
     date: "March 15 2024",
     category: {
       tag: "Day-1",
@@ -18,18 +18,6 @@ const timelineData = [
     text: "gnoTalks  ",
     date: "March 16 2024",
     category: {
-      tag: "Day-1",
-      color: "#000",
-    },
-    link: {
-      url: "",
-      text: "Get Schedule of Day 1",
-    },
-  },
-  {
-    text: "gnoTalks",
-    date: "March 17 2024",
-    category: {
       tag: "Day-2",
       color: "#000",
     },
@@ -39,8 +27,8 @@ const timelineData = [
     },
   },
   {
-    text: "Special Performance",
-    date: "March 18 2024",
+    text: "gnoTalks",
+    date: "March 17 2024",
     category: {
       tag: "Day-3",
       color: "#000",
@@ -51,8 +39,8 @@ const timelineData = [
     },
   },
   {
-    text: "Kavyasandhya",
-    date: "March 19 2024",
+    text: "Special Performance",
+    date: "March 18 2024",
     category: {
       tag: "Day-4",
       color: "#000",
@@ -63,8 +51,8 @@ const timelineData = [
     },
   },
   {
-    text: "EDM Night",
-    date: "March 20 2024",
+    text: "Kavyasandhya",
+    date: "March 19 2024",
     category: {
       tag: "Day-5",
       color: "#000",
@@ -75,8 +63,8 @@ const timelineData = [
     },
   },
   {
-    text: "Band Performance",
-    date: "March 21 2024",
+    text: "EDM Night",
+    date: "March 20 2024",
     category: {
       tag: "Day-6",
       color: "#000",
@@ -87,8 +75,8 @@ const timelineData = [
     },
   },
   {
-    text: "Celebrity Night",
-    date: "March 22 2024",
+    text: "Band Performance",
+    date: "March 21 2024",
     category: {
       tag: "Day-7",
       color: "#000",
@@ -96,6 +84,18 @@ const timelineData = [
     link: {
       url: "",
       text: "Get Schedule of Day 7",
+    },
+  },
+  {
+    text: "Celebrity Night - Mohit Chauhan",
+    date: "March 22 2024",
+    category: {
+      tag: "Day-8",
+      color: "#000",
+    },
+    link: {
+      url: "",
+      text: "Get Schedule of Day 8",
     },
   },
 ];
@@ -150,7 +150,6 @@ const TimelineItem = ({ data }) => (
               fontSize: "16px",
               color: "white",
               textShadow: "0px 0px 10px black",
-              
             }}
             rel="noopener noreferrer"
           >
@@ -177,7 +176,17 @@ const Timeline = () =>
         {/* <BiSolidCalendar className="mt-[22px] hidden lg:inline  md:w-12 md:h-12  mr-2 hover:rotate-90 transition-all duration-300  " />{" "} */}
         Event Timeline
       </h2>
-
+      <h2
+        className="text-[1rem] sm:text-[2rem] tracking-wider text-white font-medium flex justify-center  rumoura-font"
+        style={{
+          fontWeight: "bolder",
+          textAlign: "center",
+          textShadow: "0 0 10px black", // Add white shadow with 10px blur
+        }}
+      >
+        {/* <BiSolidCalendar className="mt-[22px] hidden lg:inline  md:w-12 md:h-12  mr-2 hover:rotate-90 transition-all duration-300  " />{" "} */}
+        (March 15 - March 22)
+      </h2>
       <div
         className="timeline-container "
         id="timelineContainer"

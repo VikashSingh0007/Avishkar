@@ -93,33 +93,33 @@ import SameerSir from "../Images/Team/SameerSir.jpeg";
 import Silkie from "../Images/Team/Silkie_Agarwal5162.jpg";
 import Sarah from "../Images/Team/Sarah_Nasim4177.jpg";
 import Shivani from "../Images/Team/Shivani_Jha9054.jpg";
-import Ritesh2 from "../Images/Team/Bhujbal_Arun4055.jpg"
-import Devesh from "../Images/Team/Devesh_Pant3052.jpg"
-import PoojaG from "../Images/Team/Pooja_Gautam5112.jpg"
-import Shaily from "../Images/Team/SHAILY_RANI8113.jpeg"
-import ShubhamS from "../Images/Team/Shubham_Sahay5158.jpg"
-import Abhay from "../Images/Team/Abhay_Agarwal9002.jpg"
-import AyushT from "../Images/Team/Ayush_Tripathi9021.jpg"
-import ShivangiS from "../Images/Team/Shivangi_Chauhan0050.jpg"
-import PiyushK from "../Images/Team/PIYUSH_KASHYAP1075.jpg"
-import Sweeti from "../Images/Team/Sweety_Swami9057.jpeg"
-import Aryaman from "../Images/Team/Aryaman_Sharma3034.jpeg"
+import Ritesh2 from "../Images/Team/Bhujbal_Arun4055.jpg";
+import Devesh from "../Images/Team/Devesh_Pant3052.jpg";
+import PoojaG from "../Images/Team/Pooja_Gautam5112.jpg";
+import Shaily from "../Images/Team/SHAILY_RANI8113.jpeg";
+import ShubhamS from "../Images/Team/Shubham_Sahay5158.jpg";
+import Abhay from "../Images/Team/Abhay_Agarwal9002.jpg";
+import AyushT from "../Images/Team/Ayush_Tripathi9021.jpg";
+import ShivangiS from "../Images/Team/Shivangi_Chauhan0050.jpg";
+import PiyushK from "../Images/Team/PIYUSH_KASHYAP1075.jpg";
+import Sweeti from "../Images/Team/Sweety_Swami9057.jpeg";
+import Aryaman from "../Images/Team/Aryaman_Sharma3034.jpeg";
 // import Ishika from "../Images/Team/"
-import Shruti from "../Images/Team/Shruti_Mokhashi0052.jpg"
-import Divyam from "../Images/Team/Divyam_Kumar9023.jpeg"
-import Utkarsh from "../Images/Team/Utkarsh_Deorah8126.jpg"
+import Shruti from "../Images/Team/Shruti_Mokhashi0052.jpg";
+import Divyam from "../Images/Team/Divyam_Kumar9023.jpeg";
+import Utkarsh from "../Images/Team/Utkarsh_Deorah8126.jpg";
 export const Team = [
-  {
-    department: "Director",
-    data: [
-      {
-        image: DirectorSir,
-        name: "Prof. Rama Shanker Verma",
-        Profile_Url:
-          "http://www.mnnit.ac.in/index.php/institute/437-profile-prof-rs-verma",
-      },
-    ],
-  },
+  // {
+  //   department: "Director",
+  //   data: [
+  //     {
+  //       image: DirectorSir,
+  //       name: "Prof. Rama Shanker Verma",
+  //       Profile_Url:
+  //         "http://www.mnnit.ac.in/index.php/institute/437-profile-prof-rs-verma",
+  //     },
+  //   ],
+  // },
   {
     department: "SAC President",
     data: [
@@ -197,8 +197,8 @@ export const Team = [
         photo:
           "https://drive.google.com/open?id=17K5xjakyThwKmaV48CGWWBPDhx68Bcr5",
         linkedin: "https://www.linkedin.com/in/ayush-gupta24/",
-        instagram_url: "https://www.instagram.com/ayush._.18/",
-        instagram_username: "ayush._.18",
+        instagram_url: "https://www.instagram.com/ayushh._.18/",
+        instagram_username: "ayushh._.18",
       },
 
       {
@@ -829,6 +829,23 @@ export const Team = [
         instagram_username: "kartikeygg",
       },
       {
+        email: "bhujbal.20204055@mnnit.ac.in",
+        name: "Ritesh",
+        registration: "20204055",
+        image: Ritesh2,
+        mobile: 7049851826,
+        branch: "Computer Science and Engineering",
+        position: "Departmental Coordinator",
+        department: "Dance (Razzmatazz)",
+        photo:
+          "https://drive.google.com/open?id=1wipziO_RRW2iO_XPc7OuVUwnW3hZaNHC",
+        linkedin:
+          "https://www.linkedin.com/in/ritesh-bhujbal-899a15208?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+        instagram_url:
+          "https://www.instagram.com/_the_world_of_rits?igsh=MWM1djRocjJ5aG9tYw==",
+        instagram_username: "_the_world_of_rits",
+      },
+      {
         email: "ananya.20205031@mnnit.ac.in",
         name: "Ananya Patil",
         registration: 20205031,
@@ -1181,6 +1198,24 @@ export const Team = [
           "https://www.instagram.com/shaury_a_nonymous?igsh=bnl4cWN1M296MjBy",
         instagram_username: "shaury_a_nonymous",
       },
+
+      {
+        email: "kashyappiyush2002@gmail.com",
+        name: "Piyush kashyap",
+        registration: "20201075",
+        image: PiyushK,
+        mobile: 9973509863,
+        branch: "Civil Engineering",
+        position: "Departmental Coordinator",
+        department: "NIRMAAN",
+        photo:
+          "https://drive.google.com/open?id=1jerZ73KLui4ZOjyloYWpQHYbXnfsjf70",
+        linkedin:
+          "https://www.linkedin.com/in/piyushkashyap22?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+        instagram_url:
+          "https://www.instagram.com/imkashyappiyush?igsh=dDN1dDc0cmFyam5t",
+        instagram_username: "imkashyappiyush",
+      },
       {
         email: "divyansh.20202034@mnnit.ac.in",
         name: "Divyansh Gangwar",
@@ -1261,24 +1296,8 @@ export const Team = [
           "https://www.linkedin.com/in/niharika-jain-8219a4257?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
         instagram_url: "NA",
         instagram_username: "thetalkativeone__",
-      }
-      ,
-      // {
-      //   email: "bhujbal.20204055@mnnit.ac.in",
-      //   name: "Ritesh",
-      //   registration: "20204055",
-      //   image: Ritesh2,
-      //   mobile: 7049851826,
-      //   branch: "Computer Science and Engineering",
-      //   position: "Departmental Coordinator",
-      //   department: "Dance (Razzmatazz)",
-      //   photo:
-      //     "https://drive.google.com/open?id=1wipziO_RRW2iO_XPc7OuVUwnW3hZaNHC",
-      //   linkedin:
-      //     "https://www.linkedin.com/in/ritesh-bhujbal-899a15208?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
-      //   instagram_url: "https://www.instagram.com/_the_world_of_rits?igsh=MWM1djRocjJ5aG9tYw==",
-      //   instagram_username: "_the_world_of_rits",
-      // },
+      },
+
       // {
       //   email: "deveshpant1703@gmail.com",
       //   name: "Devesh Pant",
@@ -1312,7 +1331,7 @@ export const Team = [
       //   instagram_username: "_sirrah._",
       // }
       // ,
-      
+
       // {
       //   email: "shailyrani2002@gmail.com",
       //   name: "Shaily Rani",
@@ -1397,23 +1416,7 @@ export const Team = [
       //   instagram_url: "https://www.instagram.com/shivangi17576?igsh=MTc4cWdrMTZjdjJm",
       //   instagram_username: "shivangi17576",
       // }
-      // ,
-      // {
-      //   email: "kashyappiyush2002@gmail.com",
-      //   name: "Piyush kashyap",
-      //   registration: "20201075",
-      //   image:PiyushK,
-      //   mobile:9973509863 ,
-      //   branch: "Civil Engineering",
-      //   position: "Departmental Coordinator",
-      //   department: "NIRMAAN",
-      //   photo:
-      //     "https://drive.google.com/open?id=1jerZ73KLui4ZOjyloYWpQHYbXnfsjf70",
-      //   linkedin:
-      //     "https://www.linkedin.com/in/piyushkashyap22?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
-      //   instagram_url: "https://www.instagram.com/imkashyappiyush?igsh=dDN1dDc0cmFyam5t",
-      //   instagram_username: "imkashyappiyush",
-      // }
+
       // ,
       // {
       //   email: "sweetyswami634@gmail.com",
@@ -1514,7 +1517,7 @@ export const Team = [
       //   instagram_username: "utkarshdeorah",
       // }
       // ,
-      
+
       // {
       //   email: "",
       //   name: "",
@@ -1532,7 +1535,7 @@ export const Team = [
       //   instagram_username: "",
       // }
       // ,
-      
+
       // {
       //   email: "",
       //   name: "",
@@ -1550,7 +1553,7 @@ export const Team = [
       //   instagram_username: "",
       // }
       // ,
-      
+
       // {
       //   email: "",
       //   name: "",
@@ -1568,7 +1571,7 @@ export const Team = [
       //   instagram_username: "",
       // }
       // ,
-      
+
       // {
       //   email: "",
       //   name: "",
@@ -1586,7 +1589,6 @@ export const Team = [
       //   instagram_username: "",
       // }
       // ,
-      
 
       // Add more data for Dc's...
     ],
