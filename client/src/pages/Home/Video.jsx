@@ -27,7 +27,7 @@ const App = () => {
           <div className="w-full relative" style={{ paddingTop: "56.25%" }}>
             <div className="  bg-gradient-to-b from-transparent to-black opacity-75"></div>
             <video
-              src={video}
+              src="https://res.cloudinary.com/dyn42yyxr/video/upload/v1710008048/FINAL2_t6koev.mp4"
               autoPlay
               loop
               muted
