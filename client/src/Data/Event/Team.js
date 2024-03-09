@@ -108,6 +108,22 @@ import Aryaman from "../Images/Team/Aryaman_Sharma3034.jpeg";
 import Shruti from "../Images/Team/Shruti_Mokhashi0052.jpg";
 import Divyam from "../Images/Team/Divyam_Kumar9023.jpeg";
 import Utkarsh from "../Images/Team/Utkarsh_Deorah8126.jpg";
+import Smriti1 from "../Images/Team/smriti_pic_imrac.jpg"
+import Suresh from "../Images/Team/Suresh.jpg"
+import AmitB from "../Images/Team/Amit_M.png"
+import Mitu from "../Images/Team/Mitu_pic.jpg"
+import Supriya from "../Images/Team/supriyaY.jpg"
+import Ankur from "../Images/Team/ankur_passport.jpg"
+import Ranvijay from "../Images/Team/Ranvijay.jpg"
+import ShashankSir from "../Images/Team/ShashankSir.png"
+import Anand from "../Images/Team/AnandSharma.jpg"
+import Sunil from "../Images/Team/sunil_k_gupta_photo.jpg"
+import Dipayan from "../Images/Team/DipayanGuha_photo.jpg"
+import Suantak from "../Images/Team/Suantak.jpg"
+import satish from "../Images/Team/Satish.jpg"
+import Snehalk from "../Images/Team/SnehalK.jpg"
+import jyobrata from "../Images/Team/Joybrata.jpg"
+import indu from "../Images/Team/Indu-photo.jpg"
 export const Team = [
   // {
   //   department: "Director",
@@ -145,6 +161,103 @@ export const Team = [
         image: SameerSir,
         Profile_Url: "http://www.mnnit.ac.in/profile/sameers",
       },
+      // Add more data for Dc's...
+    ],
+  },
+  {
+    department: "Faculty Coordinator",
+    data: [
+      {
+        image:Smriti1,
+        name: "Dr.Smriti Agarwal",
+        Profile_Url: "http://www.mnnit.ac.in/profile/smritiagarwal",
+      },
+      {
+        image:Suresh,
+        name: "Dr. Suresh Bandi",
+        Profile_Url: "http://mnnit.ac.in/profile/sureshbandi",
+      },
+      {
+        image:AmitB,
+        name: "Dr. Amit Biswas",
+        Profile_Url: "http://mnnit.ac.in/profile/amitb",
+      },
+      {
+        image:Mitu,
+        name: "Dr. Mitu Mandal",
+        Profile_Url: "http://mnnit.ac.in/profile/previewp.php?id=1581",
+      },
+      {
+        image:Supriya,
+        name: "Dr. Supriya Yadav",
+        Profile_Url: "http://mnnit.ac.in/profile/previewa.php?id=1760",
+      },
+      {
+        image:Ankur,
+        name: "Dr. Ankur Gaur",
+        Profile_Url: "http://mnnit.ac.in/profile/ankur",
+      },
+      {
+        image:Ranvijay,
+        name: "Dr. Ranvijay",
+        Profile_Url: "http://www.mnnit.ac.in/profile/ranvijay",
+      },
+      {
+        image:ShashankSir,
+        name: "Dr. Shashank Srivastava",
+        Profile_Url: "http://mnnit.ac.in/profile/shashank12",
+      },
+      {
+        image:Anand,
+        name: "Dr. Anand Sharma",
+        Profile_Url: "http://mnnit.ac.in/profile/previewr.php?id=1470",
+      },
+      {
+        image:Sunil,
+        name: "Dr. Sunil Kumar Gupta",
+        Profile_Url: "http://mnnit.ac.in/profile/sunilg",
+      },
+      {
+        image:Dipayan,
+        name: "Dr. Dipayan Guha",
+        Profile_Url: "http://mnnit.ac.in/profile/dipayan",
+      },
+      {
+        image:Suantak,
+        name: "Dr. Suantak Kamsonlian",
+        Profile_Url: "http://mnnit.ac.in/profile/previewp.php?id=1753",
+      },
+      {
+        image:satish,
+        name: "Dr. Satish Chandra",
+        Profile_Url: "http://mnnit.ac.in/profile/satishchandra",
+      },
+      {
+        image:Snehalk,
+        name: "Dr. Snehal K",
+        Profile_Url: "http://mnnit.ac.in/profile/snehalk",
+      },
+      {
+        image:jyobrata,
+        name: "Dr. Joyabrata Mal",
+        Profile_Url: "http://mnnit.ac.in/profile/joyabrata",
+      },
+      {
+        image:indu,
+        name: "Dr. Indu Dohore",
+        Profile_Url: "http://mnnit.ac.in/profile/indudohare",
+      },
+      // {
+      //   image:"",
+      //   name: "",
+      //   Profile_Url: "",
+      // },
+      // {
+      //   image:"",
+      //   name: "",
+      //   Profile_Url: "",
+      // },
+
       // Add more data for Dc's...
     ],
   },

@@ -67,7 +67,7 @@ const Team = () => {
                     </span>
                   ) : department.department === "Director" ||
                     department.department === "SAC President" ||
-                    department.department === "Faculty Incharge" ? (
+                    department.department === "Faculty Incharge"||"Faculty Coordinator" ? (
                     <a
                       href={sponsor.Profile_Url}
                       target="_blank"
