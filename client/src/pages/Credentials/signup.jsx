@@ -191,13 +191,13 @@ const SignUp = () => {
                         placeholder="Enter your college"
                         onChange={(e) => setCollege(e.target.value)}
                       />
-                      <label htmlFor="email">PaymentLink:</label>
+                      <label htmlFor="email">College ID Card:</label>
                       <input
                         className="input"
                         type="text"
                         id="email"
                         name="transactionId"
-                        placeholder="Enter Payment Drive Link"
+                        placeholder="Drive Link of ID Card"
                         onChange={(e) => setTransactionId(e.target.value)}
                       />
                     </div>
@@ -236,7 +236,7 @@ const SignUp = () => {
 
             {/* </div>
         )} */}
-            {showQr === false && showOther && (
+            {/* {showQr === false && showOther && (
               <button
                 className="mb-[-3.2em] mt-[3em] text-orange-950 containerUser  hover:bg-opacity-25 border-8  p-2 rounded-xl hover:shadow-xl font-bold"
                 onClick={handleToggleRotation}
@@ -246,15 +246,15 @@ const SignUp = () => {
               >
                 Pay here
               </button>
-            )}
-            {showQr && (
+            )} */}
+            {/* {showQr && (
               <button
                 className="mb-[-3.2em] mt-[3em] rotation"
                 onClick={handleToggleRotation}
               >
                 Done
               </button>
-            )}
+            )} */}
           </div>
 
           <svg className="lofilter">
