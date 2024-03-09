@@ -161,7 +161,6 @@ export const Team = [
         image: SameerSir,
         Profile_Url: "http://www.mnnit.ac.in/profile/sameers",
       },
-      // Add more data for Dc's...
     ],
   },
   {
@@ -427,6 +426,23 @@ export const Team = [
         instagram_username: "aditi._.verma._.002",
       },
       {
+        email: "aryaman533@gmail.com",
+        name: "Aryaman Sharma ",
+        registration: "20203034",
+        image:Aryaman,
+        mobile: 9001241418,
+        branch: "Mechanical Engineering",
+        position: "Festival Secretary",
+        department: "",
+        photo:
+          "https://drive.google.com/open?id=1FNahjZqayW5Ep9aoCat2JxPCVbzlCwKE",
+        linkedin:
+          "https://www.linkedin.com/in/aryaman-sharma-b248b7203?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+        instagram_url: "https://www.instagram.com/confused_aryaman?igsh=cnNyYmd6MHE1d29u",
+        instagram_username: "confused_aryaman",
+      }
+      ,
+      {
         email: "anushkamuskan.a1@gmail.com",
         name: "Anushka",
         registration: 20206009,
@@ -530,6 +546,23 @@ export const Team = [
           "https://www.instagram.com/a.shrivastava.1110?igsh=cWozZDAydHRrbG9z",
         instagram_username: "a.shrivastava.1110",
       },
+      {
+        email: "abhay.20209002@mnnit.ac.in",
+        name: "Abhay Agarwal ",
+        registration: "20209002",
+        image:Abhay,
+        mobile: 7017127561,
+        branch: "Chemical Engineering",
+        position: "Departmental Coordinator",
+        department: "Public Relation Lead",
+        photo:
+          "https://drive.google.com/open?id=1VrEHW6V67hR3MawMHb7jl_uJn2H9e2ez",
+        linkedin:
+          "https://www.linkedin.com/in/abhay-agarwal18",
+        instagram_url: "Instagram.com/abhayagarwal18 ",
+        instagram_username: "abhayagarwal18",
+      }
+      ,
       // {
       //   email: "sunil.20208124@mnnit.ac.in",
       //   name: "Sunil Kumar Sharma",
@@ -648,8 +681,10 @@ export const Team = [
   },
 
   {
-    department: "Media Leads",
+    department: "Design Lead",
     data: [
+      
+      // Add more data for Web Team...
       {
         email: "divyanshu.20200020@mnnit.ac.in",
         name: "Divyanshu Yadav ",
@@ -665,6 +700,13 @@ export const Team = [
         instagram_url: "https://www.instagram.com/divy.anshu.yadav/",
         instagram_username: "divy.anshu.yadav",
       },
+    ],
+  },
+
+  {
+    department: "Media Leads",
+    data: [
+     
       {
         email: "sandeeporaon9459@gmail.com",
         name: "Sandeep Oraon",
@@ -1479,23 +1521,7 @@ export const Team = [
       //   instagram_username: "_shubh.s_",
       // }
       // ,
-      // {
-      //   email: "abhay.20209002@mnnit.ac.in",
-      //   name: "Abhay Agarwal ",
-      //   registration: "20209002",
-      //   image:Abhay,
-      //   mobile: 7017127561,
-      //   branch: "Chemical Engineering",
-      //   position: "Departmental Coordinator",
-      //   department: "Public Relation Lead",
-      //   photo:
-      //     "https://drive.google.com/open?id=1VrEHW6V67hR3MawMHb7jl_uJn2H9e2ez",
-      //   linkedin:
-      //     "https://www.linkedin.com/in/abhay-agarwal18",
-      //   instagram_url: "Instagram.com/abhayagarwal18 ",
-      //   instagram_username: "abhayagarwal18",
-      // }
-      // ,
+      
       // {
       //   email: "ayush.20209021@mnnit.ac.in",
       //   name: "Ayush Tripathi ",
@@ -1548,23 +1574,8 @@ export const Team = [
       //   instagram_username: "sweetyyswamiii._",
       // }
       // ,
+     
       // {
-      //   email: "aryaman533@gmail.com",
-      //   name: "Aryaman Sharma ",
-      //   registration: "20203034",
-      //   image:Aryaman,
-      //   mobile: 9001241418,
-      //   branch: "Mechanical Engineering",
-      //   position: "Festival Secretary",
-      //   department: "",
-      //   photo:
-      //     "https://drive.google.com/open?id=1FNahjZqayW5Ep9aoCat2JxPCVbzlCwKE",
-      //   linkedin:
-      //     "https://www.linkedin.com/in/aryaman-sharma-b248b7203?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
-      //   instagram_url: "https://www.instagram.com/confused_aryaman?igsh=cnNyYmd6MHE1d29u",
-      //   instagram_username: "confused_aryaman",
-      // }
-      // ,{
       //   email: "ishika.20200024@mnnit.ac.in",
       //   name: "Ishika Agrawal",
       //   registration: "20200024",
