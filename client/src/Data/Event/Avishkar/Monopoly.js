@@ -2,7 +2,7 @@ import Chankyaniti from "../../Images/Chankyaniti.png";
 import Putting from "../../Images/putting.png";
 import Navachar from "../../Images/Navachar.png";
 import Stallmart from "../../Images/Stallmart.png";
-import image from "../../../../src/Data/Images/Logo/Monopoly-Logo.png"
+import image from "../../../../src/Data/Images/Logo/Monopoly-Logo.png";
 export const Monopoly = [
   {
     title: "Monopoly ",
@@ -42,7 +42,7 @@ export const Monopoly = [
         ],
       },
       {
-        name: "Putting Words Into Action",
+        name: "Netritva",
         disc: "Netritva is about how efficient and articulate one leader is in their thought process. It emphasizes an individual’s speaking skills, clarity of thought, organization skills, leadership skills, debating skills and perseverance skills",
         rule: [
           {
@@ -55,7 +55,7 @@ export const Monopoly = [
           },
         ],
 
-        BGImageLink: Putting,
+        BGImageLink: "",
         PsLink: "",
         coordinators: [
           {

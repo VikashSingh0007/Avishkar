@@ -72,7 +72,7 @@ export const Oligopoly = [
         ],
       },
       {
-        name: " Pitchers",
+        name: "Pitchers",
         disc: " Pitchers aims to provide the budding entrepreneurs a platform to present their idea to a wide audience. Entrepreneurs are the new age freedom fighter and as the Prime Minister mentions the “Backbone of New India.",
         rule: [
           {
