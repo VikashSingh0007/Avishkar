@@ -11,12 +11,12 @@ const ResumeUploadContainer = () => {
         resumeLink : resumeLink,
       }
       setLoading(true)
-      console.log("Uploading Resume:", resumeLink);
+      // console.log("Uploading Resume:", resumeLink);
       await updateResume(messageData)
       setLoading(false);
     }
     catch(error){
-      console.log(error);
+      // console.log(error);
       setLoading(false)
     }
     

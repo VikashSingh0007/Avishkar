@@ -67,7 +67,7 @@ export const getFeeNotPaid = async () => {
 
 export const getTeamParticipatingInEvent = async (data) => {
     try{
-        console.log("event name"+data)
+        // console.log("event name"+data)
         const messageData = {
             eventName : data
         }

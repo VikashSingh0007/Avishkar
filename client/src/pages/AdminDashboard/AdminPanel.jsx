@@ -24,7 +24,7 @@ const User = () => {
     const response = JSON.parse(localStorage.getItem("userData"));
     if (!response || response.role == "User") return navigate("/");
   }, []);
-  console.log(user);
+  // console.log(user);
   useEffect(() => {
     //Get All events
     const fetchEvents = async () => {
@@ -63,7 +63,7 @@ const User = () => {
   }, []);
 
   const handleChoice = (choice) => {
-    console.log("Choice", choice);
+    // console.log("Choice", choice);
     setChoice(choice);
   };
 

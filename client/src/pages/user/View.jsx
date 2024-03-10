@@ -21,7 +21,7 @@ const View = () => {
       try {
         setLoading(true);
         const d = await getProfile();
-        console.log(d.success);
+        // console.log(d.success);
         if (d.success) {
           if(!d.profile.resumeLink){
             toast.info("Please Upload Resume Link")
@@ -39,7 +39,7 @@ const View = () => {
 
     fetchData();
   }, []);
-  console.log(fetchedData);
+  // console.log(fetchedData);
   return (
     <>
       {isloading && <Loader/>}

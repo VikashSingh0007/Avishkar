@@ -12,7 +12,7 @@ const Create = () => {
       try {
         setLoading(true);
         const res = await getFeeNotPaid();
-        console.log("gotted from loki ", res);
+        // console.log("gotted from loki ", res);
         setFetchedData(res.data);
         setLoading(false);
         

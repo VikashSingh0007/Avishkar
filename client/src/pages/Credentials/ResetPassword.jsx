@@ -32,7 +32,7 @@ export default function ResetPassword() {
       showError();
     } else {
       const token = params.token;
-      console.log(token);
+      // console.log(token);
       const messageData = {
         token: token,
         password: password,

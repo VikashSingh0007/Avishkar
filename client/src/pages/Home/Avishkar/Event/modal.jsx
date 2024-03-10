@@ -12,12 +12,12 @@ const Modal = ({ teams, setShowModal, event}) => {
     try{
       setLoading(true);
       await registerEvent(data);
-      console.log(data);
+      // console.log(data);
       setLoading(false);
     }
     catch(error){
       setLoading(false);
-      console.log(error);
+      // console.log(error);
     }
     
   };

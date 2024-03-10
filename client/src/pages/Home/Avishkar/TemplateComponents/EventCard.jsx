@@ -6,7 +6,7 @@ import page from "../Event/Page";
 import General from "../../assets/general.png";
 
 const EventCard = ({ data }) => {
-  console.log(data);
+  // console.log(data);
 
   return (
     <div className="EventCard">

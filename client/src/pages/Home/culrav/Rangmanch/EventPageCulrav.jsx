@@ -5,7 +5,7 @@ import { useParams } from "react-router-dom";
 
 const EventCard = ({ data }) => {
   // console.log(data.info[0]);
-  console.log(data)
+  // console.log(data)
   const { index } = useParams();
   return (
     <div className="h-full w-full relative ">
