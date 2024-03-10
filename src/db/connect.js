@@ -5,7 +5,7 @@ const pool=mongoose.connect(process.env.DATABASE_URL,{
 })
 .then(function(db){
   console.log("DB is connected 🎉🎉🎉");
-  loadAllEvents()
+ 
 })
 .catch(function(err){
   console.log('Error at DataBase Connection!!',err.message);

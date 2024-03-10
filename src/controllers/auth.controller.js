@@ -212,7 +212,7 @@ const userLogin = async (req, res, next) => {
       res.statusCode = 404;
       return res.json({
         error: "user not found",
-        message: "email and password don't match!", //check if verified
+        message: "No User Exist BY This Email!", //check if verified
         success: false,
       });
     } else {

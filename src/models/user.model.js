@@ -68,10 +68,17 @@ const userSchema = new Schema(
     paymentLink : {
       type : String,
     },
-    participatingEvent : {
-      type : [mongoose.Schema.Types.ObjectId],
-      ref : "Event"
-    },
+    participatingEvent : [{
+      event : {
+        type : mongoose.Schema.Types.ObjectId,
+        ref : "Event"
+      }
+      ,
+      team : {
+        type : mongoose.Schema.Types.ObjectId,
+        ref : "Team"
+      }
+    }],
     department : {
       type:String
     }

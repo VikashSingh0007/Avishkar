@@ -182,7 +182,10 @@ const joinEvent = async (req, res , next) => { // called by frontend when joinin
                 members[i].participatingEvent = [...members[i].participatingEvent , event._id]
                 await members[i].save();
             }
+            
+            team.participatingEvents = addUserToDepartment(team.participatingEvents,event.name);
             await event.save();
+            await team.save();
             res.statusCode = 200;
             res.json({ message: "team participation done!", success: true });
         }
