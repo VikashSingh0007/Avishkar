@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { toast } from "react-toastify";
 import "./ForgotPassword.css";
-
+import Old from "../Home/assets/old.jpg";
 import { resetPassword } from "../../services/authService";
 function checkIfSame(a, b) {
   return a !== b;
@@ -50,36 +50,46 @@ export default function ResetPassword() {
     setPassword(e.target.value);
   };
   return (
-    <div className="backgroundrecard flex justify-center flex-wrap items-center h-[100vh]">
-      <div className="recard flex justify-center m-4 flex-col">
-        <div className="  text-4xl font-semibold"> Reset Password </div>
-        <form className="w-full h-full flex flex-col">
-          <div className="gap-5 flex flex-col w-[15em] font-medium">
-            <label htmlFor="password">Password</label>
-            <input
-              type="password"
-              id="password"
-              name="password"
-              placeholder="Enter your password"
-              onChange={handlePasswordChange}
-            />
+    <div className="containerAcco absolute w-full h-full overflow-hidden">
+      <div className="absolute z-[-1] ">
+        <img src={Old} className=" object-cover w-screen h-screen  z-[-1]" />
+      </div>
+      <div className="flex justify-center flex-wrap items-center h-[100vh]">
+        <div
+          className=" locard  opacity-80 hover:opacity-100 bg-yellow-200 rounded-2xl flex justify-center flex-col p-5"
+          style={{
+            background: "#d7d0a7",
+          }}
+        >
+          <div className="  text-4xl font-semibold"> Reset Password </div>
+          <form className="w-full h-full flex flex-col">
+            <div className="gap-5 flex flex-col w-[15em] font-medium">
+              <label htmlFor="password">Password</label>
+              <input
+                type="password"
+                id="password"
+                name="password"
+                placeholder="Enter your password"
+                onChange={handlePasswordChange}
+              />
 
-            <label htmlFor="password">Confirm Password:</label>
-            <input
-              type="password"
-              id="password"
-              name="password"
-              placeholder="Enter your password"
-              onChange={handleConfirmChange}
-            />
-          </div>
-          <button
-            className="text-[1.3em] mb-12"
-            onClick={(e) => handleSubmit(e)}
-          >
-            Reset
-          </button>
-        </form>
+              <label htmlFor="password">Confirm Password:</label>
+              <input
+                type="password"
+                id="password"
+                name="password"
+                placeholder="Enter your password"
+                onChange={handleConfirmChange}
+              />
+            </div>
+            <button
+              className="text-[1.3em] mb-12"
+              onClick={(e) => handleSubmit(e)}
+            >
+              Reset
+            </button>
+          </form>
+        </div>
       </div>
       <svg className="refilter">
         <filter id="wavy2">
