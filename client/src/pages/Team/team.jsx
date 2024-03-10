@@ -5,7 +5,6 @@ import team from "../../Data/Event/Team";
 import { SocialIcon } from "react-social-icons";
 
 const Team = () => {
-  
   return (
     <>
       <main className="containerTeam">
@@ -38,10 +37,7 @@ const Team = () => {
             <div id="gallery">
               {department.data.map((sponsor, sponsorIndex) => (
                 <div className="figure_1 active" key={sponsorIndex}>
-                  <img
-                    src={sponsor.image}
-                    alt="Pink and blue clouds at sunset"
-                  />
+                  <img src={sponsor.image} alt="Image Loading....." />
                   <span className="text-xl font-bold">{sponsor.name}</span>
                   <br />
                   {department.department === "Departmental Coordinator" ? (
@@ -55,20 +51,22 @@ const Team = () => {
                         rel="noopener noreferrer"
                         className=""
                       >
-                       <SocialIcon url={`https://www.instagram.com/${sponsor.instagram_username}`}/>
+                        <SocialIcon
+                          url={`https://www.instagram.com/${sponsor.instagram_username}`}
+                        />
                       </a>
                       <a
                         href={`${sponsor.linkedin}`}
                         target="_blank"
                         rel="noopener noreferrer"
                       >
-                        <SocialIcon url={`${sponsor.linkedin}`}/>
+                        <SocialIcon url={`${sponsor.linkedin}`} />
                       </a>
                     </span>
                   ) : department.department === "Director" ||
                     department.department === "SAC President" ||
-                    department.department === "Faculty Incharge"
-                    ||department.department === "Faculty Coordinator" ? (
+                    department.department === "Faculty Incharge" ||
+                    department.department === "Faculty Coordinator" ? (
                     <a
                       href={sponsor.Profile_Url}
                       target="_blank"
@@ -95,14 +93,16 @@ const Team = () => {
                           target="_blank"
                           rel="noopener noreferrer"
                         >
-                          <SocialIcon url={`https://www.instagram.com/${sponsor.instagram_username}`}/>
+                          <SocialIcon
+                            url={`https://www.instagram.com/${sponsor.instagram_username}`}
+                          />
                         </a>
                         <a
-                           href={`${sponsor.linkedin}`}
+                          href={`${sponsor.linkedin}`}
                           target="_blank"
                           rel="noopener noreferrer"
                         >
-                         <SocialIcon url={`${sponsor.linkedin}`}/>
+                          <SocialIcon url={`${sponsor.linkedin}`} />
                         </a>
                       </span>
                     </>

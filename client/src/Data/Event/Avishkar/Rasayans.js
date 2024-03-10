@@ -46,8 +46,8 @@ export const Rasayans = [
         rule: [
           {
             rule_1: "Team Size for First year: 3 members ",
-            rule_2: "Team Size for Second year: 2 - 3 members",
-            rule_3: "Team size for Third year: 2 members",
+            rule_2: "Team Size for Second year: 2 - 3  members",
+            rule_3: "Team size for Third year: 2 - 3 members",
             rule_4: "Chemical Engineering branch allowed ",
           },
         ],
@@ -70,14 +70,6 @@ export const Rasayans = [
           {
             name: " Sweeti ",
             phone: "(9588105190)",
-          },
-          {
-            name: "Ayush Tripathi ",
-            phone: "(6388114798)",
-          },
-          {
-            name: "Vedant Goyal ",
-            phone: "(7725972190)",
           },
         ],
       },
@@ -108,17 +100,10 @@ export const Rasayans = [
             name: "Shivani Kumari ",
             phone: "6207231730",
           },
-          {
-            name: "Aniket Yadav",
-            phone: "6386216334",
-          },
+
           {
             name: "Aakash Lakhra",
             phone: "7248342176",
-          },
-          {
-            name: "",
-            phone: "",
           },
         ],
       },
@@ -147,8 +132,12 @@ export const Rasayans = [
             phone: "6386216334",
           },
           {
-            name: "Shivani Kumari",
-            phone: "6207231730",
+            name: "Aakash Lakhra",
+            phone: "7248342176",
+          },
+          {
+            name: "Sanskar Arora",
+            phone: "7417261028",
           },
 
           {
@@ -185,20 +174,20 @@ export const Rasayans = [
             phone: "9005156153",
           },
           {
-            name: "Krishna Gupta",
-            phone: "9672422332",
+            name: "Nandan Kumar",
+            phone: "8077746577",
           },
           {
-            name: "Rajeev Ranjan Singh",
-            phone: "6299746362",
+            name: "Shantanu Kumar Singh",
+            phone: "8235856700",
           },
           {
-            name: "Sweeti",
-            phone: "9588105190",
+            name: "Ishika Jain",
+            phone: "7078399517",
           },
           {
-            name: "Vishwajeet Kumar",
-            phone: "8829807456",
+            name: "Divyam  Kumar",
+            phone: "8171785058",
           },
         ],
       },
@@ -225,11 +214,11 @@ export const Rasayans = [
             phone: "6386216334",
           },
           {
-            name: "Shivani Kumari",
-            phone: "6207231730",
+            name: "Krishna Gupta",
+            phone: "9672422332",
           },
           {
-            name: " Rishabh Pate",
+            name: " Rishabh Patel",
             phone: "9793555208",
           },
           {
@@ -237,12 +226,8 @@ export const Rasayans = [
             phone: "6299746362",
           },
           {
-            name: "Sweeti",
-            phone: "9588105190",
-          },
-          {
-            name: "Vishwajeet Kumar",
-            phone: "8829807456",
+            name: "Mukul Gond",
+            phone: "8675191531",
           },
         ],
       },
@@ -257,7 +242,7 @@ export const Rasayans = [
           },
         ],
         TeamSize: "",
-        BGImageLink: SCAVENGERHUNT,
+        BGImageLink: "",
         PsLink: "",
         coordinators: [
           {
@@ -273,12 +258,12 @@ export const Rasayans = [
             phone: "6207231730",
           },
           {
-            name: " Rishabh Pate",
+            name: " Rishabh Patel",
             phone: "9793555208",
           },
           {
             name: "Ishika Jain",
-            phone: " 7078399517",
+            phone: "7078399517",
           },
         ],
       },

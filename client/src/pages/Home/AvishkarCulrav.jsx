@@ -22,7 +22,7 @@ const FixedDivsComponent = () => {
         <img
           src={Clouds1}
           alt="cloud"
-          className="absolute top-[5%] left-[-50%] animate-clouds sm:hidden"
+          className="absolute top-[-12%] left-[-50%] animate-clouds sm:hidden"
         />
       </div>
       <div className="absolute right-0 top-[0] z-[5] w-[100%] h-[100%] sm:hidden">
@@ -34,7 +34,7 @@ const FixedDivsComponent = () => {
         <img
           src={Clouds1}
           alt="cloud"
-          className="absolute top-[2%] sm:top-[5%] w-[80%] sm:w-[90%] sm:h-[30%] right-[-32%] animate-clouds"
+          className="absolute top-[-12%] sm:top-[5%] w-[80%] sm:w-[90%] sm:h-[30%] right-[-32%] animate-clouds"
         />
       </div>
       <div className="flex-1 sm:w-1/2 lg:w-1/4 mt-4 rounded-lg -mt-[10%] ">

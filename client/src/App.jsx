@@ -22,6 +22,7 @@ import AwishkarRules from "./pages/Home/Avishkar/AwishkarRules.jsx";
 import AvishkarLanding from "./pages/Home/Avishkar/AvishkarLanding.jsx";
 import AvishkarIndex from "./pages/Home/Avishkar/AvishkarIndex.jsx";
 import VerifyUser from "./pages/Credentials/VerifyUser.jsx";
+// import Coc from "./pages/Home/CircuitOfTheDay.jsx";
 // import Accomodation from "./pages/Home/Accomodation.jsx";
 import Page404 from "./pages/Home/Page404.jsx";
 const App = () => {
@@ -30,6 +31,7 @@ const App = () => {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Index />} />
+          {/* <Route path="/coc" element={<Coc />} /> */}
           <Route path="/profile" element={<User />} />
           <Route path="/admin" element={<AdminPanel />} />
           <Route path="/sponsors" element={<Sponsors />} />
