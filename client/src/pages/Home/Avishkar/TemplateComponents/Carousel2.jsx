@@ -10,7 +10,7 @@ import Navbar from "../../Navbar";
 const Carousel = ({}) => {
   const { data } = useParams();
   const Data = JSON.parse(decodeURIComponent(data));
-  console.log(Data.info[0]);
+  // console.log(Data.info[0]);
   return (
     <div className="flex flex-col containerEvents">
       <div className="absolute z-[-1] top-0 left-0 w-full h-full flex justify-center items-center">

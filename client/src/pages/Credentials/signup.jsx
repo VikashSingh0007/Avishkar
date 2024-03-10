@@ -54,13 +54,13 @@ const SignUp = () => {
       college: college,
       paymentLink: transactionId,
     };
-    console.log(data);
+    // console.log(data);
     try {
       const success = await signUp(data);
       setLoading(false);
     } catch (error) {
       setLoading(false);
-      console.log(error);
+      // console.log(error);
     }
 
     // await axios.post("http://localhost:5000/api/auth/signup", data);

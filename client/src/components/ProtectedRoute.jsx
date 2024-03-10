@@ -28,16 +28,16 @@ export default function ProtectedRoute({ children }) {
       // console.log(res.data);
       if (res.data.success) {
         dispatch(setUser(res.data.data));
-        console.log(res.data.data);
+        // console.log(res.data.data);
       } else {
         localStorage.clear();
-        console.log("fail");
+        // console.log("fail");
         return <Navigate to="/login" />;
       }
     } catch (error) {
       localStorage.clear();
       dispatch(hideLoading());
-      console.log(error);
+      // console.log(error);
     }
   };
 

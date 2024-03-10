@@ -16,7 +16,7 @@ const AvishkarPage = () => {
   const [showModal, setShowModal] = useState(false);
   const [fetchedData, setFetchedData] = useState();
   const navigate = useNavigate();
-  console.log(decodedData);
+  // console.log(decodedData);
 
   const handleClick = async () => {
     const userData = localStorage.getItem("userData");
@@ -30,9 +30,9 @@ const AvishkarPage = () => {
     const fetchData = async () => {
       try {
         const data = await getAllParticipating();
-        console.log("gotted from loki ", data);
+        //console.log("gotted from loki ", data);
         setFetchedData(data);
-        console.log(typeof data.teams);
+        //console.log(typeof data.teams);
       } catch (error) {
         console.error("Error fetching data:", error);
       }

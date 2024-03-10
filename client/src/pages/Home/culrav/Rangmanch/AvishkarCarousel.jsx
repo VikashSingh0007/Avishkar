@@ -5,7 +5,7 @@ import { useParams } from "react-router-dom";
 const Carousel = ({}) => {
   const { data } = useParams();
   const decodedData = JSON.parse(decodeURIComponent(data));
-  console.log(decodedData.info[0]);
+  // console.log(decodedData.info[0]);
 
   const [numberOfImages, setNum] = useState(10);
   const [selected, setSelected] = useState(0); // Initial index of the selected image

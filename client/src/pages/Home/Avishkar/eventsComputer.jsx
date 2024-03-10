@@ -12,7 +12,7 @@ const EventsComputer = ({ data }) => {
     "computerButton computerButtonOff"
   );
 
-  console.log(screenState);
+  // console.log(screenState);
 
   useEffect(() => {
     let initialized = false;
