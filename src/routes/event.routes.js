@@ -16,6 +16,7 @@ router.post('/join',joinEvent);
 router.post('/leave',leaveEvent);
 router.post('/create' , createEvent); // close this before going live
 router.get('/getallevent' , isDepartmentalCoordinator ,getAllEvents);
+router.get('/getalleventparticipating',)
 //router.post('/loadall' , isFestivalSecretary , loadAllEvents)
 
 module.exports =  router;

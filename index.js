@@ -7,6 +7,7 @@ const authRouter = require("./src/routes/auth.routes");
 const teamRouter = require("./src/routes/team.routes");
 const eventRouter = require("./src/routes/event.routes");
 const adminRouter  = require("./src/routes/admin.routes");
+const { limiter } = require("./src/db/ratelimiter");
 
 dotenv.config();
 require("./src/db/connect");
@@ -16,6 +17,7 @@ const corsOptions = {
   origin: "*",
   methods: "GET,POST,PUT,DELETE",
 };
+app.use(limiter)
 app.use(cors(corsOptions));
 app.use(morgan("📋[server-log]: :method :url :status :response-time ms"));
 app.use(express.urlencoded({ extended: false }));
