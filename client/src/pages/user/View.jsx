@@ -15,7 +15,7 @@ const View = () => {
     collegeName: "MNNIT",
   });
   const history = useNavigate();
-  const [isloading,setLoading]=useState(false); 
+  const [isloading, setLoading] = useState(false);
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -23,17 +23,26 @@ const View = () => {
         const d = await getProfile();
         // console.log(d.success);
         if (d.success) {
-          if(!d.profile.resumeLink){
-            toast.info("Please Upload Resume Link")
+          if (!d.profile.data.resumeLink) {
+            toast.info("Please Upload Resume Link");
           }
           setFetchedData(d.profile.data);
+        } else {
+          if (localStorage.getItem("userToken"))
+            localStorage.removeItem("userToken");
+          if (localStorage.getItem("userData"))
+            localStorage.removeItem("userData");
+          return history("/login");
         }
         setLoading(false);
       } catch (error) {
-        setLoading(false)
+        setLoading(false);
+        if (localStorage.getItem("userToken"))
+          localStorage.removeItem("userToken");
+        if (localStorage.getItem("userData"))
+          localStorage.removeItem("userData");
         history("/login");
         console.error("Error fetching data:", error);
-        
       }
     };
 
@@ -42,7 +51,7 @@ const View = () => {
   // console.log(fetchedData);
   return (
     <>
-      {isloading && <Loader/>}
+      {isloading && <Loader />}
       <div className="flex justify-center items-center w-[90%]  h-screen overflow-y-scroll ">
         <div
           className="  bg-gradient-to-b from-[#63462D] rounded-lg p-8 shadow-md text-center text-white h-auto"
