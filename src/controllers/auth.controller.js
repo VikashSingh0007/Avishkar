@@ -15,22 +15,31 @@ const dc = "DepartmentCordinator";
 const fes = "FestivalSecretary";
 
 const userSignup = async (req, res, next) => {
-  const { name, email, college, gender, phone, password, resumeLink , paymentLink } = req.body;
+  const {
+    name,
+    email,
+    college,
+    gender,
+    phone,
+    password,
+    resumeLink,
+    paymentLink,
+  } = req.body;
   console.log(req.body);
   //   console.log(phone);
   // generating salt for password hash and token for user email verification
   try {
     console.log("entered try catch");
-    if( college != "mnnit" && !paymentLink ){
+    if (college != "mnnit" && !paymentLink) {
       res.statusCode = 400;
       res.json({
-        error : "bad request",
-        message : "no payment link provided",
-        success : false
-      })
+        error: "bad request",
+        message: "no Id Card link provided",
+        success: false,
+      });
       return;
     }
-    if (!name || !email || !college || !gender || !phone || !password ) {
+    if (!name || !email || !college || !gender || !phone || !password) {
       // check if all field are filled
 
       console.log("data missing");
@@ -58,7 +67,7 @@ const userSignup = async (req, res, next) => {
     const emailUser = await User.findOne({ email: email });
     const mobileUser = await User.findOne({ phone: phone });
     console.log(emailUser);
-    console.log(mobileUser)
+    console.log(mobileUser);
     if (emailUser != null || mobileUser != null) {
       console.log("user already exists");
       res.statusCode = 402;
@@ -149,7 +158,7 @@ const userSignup = async (req, res, next) => {
           isVerified: false,
           isFeePaid: false,
           resumeLink,
-          paymentLink
+          paymentLink,
         });
         // console.log(newUser);
 
@@ -158,7 +167,10 @@ const userSignup = async (req, res, next) => {
           name: newUser.name,
           email: newUser.email,
         });
-        const mailSent = await sendUserVerificationMailOtherCollege(email, token); // same thing different style
+        const mailSent = await sendUserVerificationMailOtherCollege(
+          email,
+          token
+        ); // same thing different style
         if (!newUser) {
           res.statusCode = 407;
           res.json({ message: "Could Not Create User", success: false });
@@ -185,7 +197,7 @@ const userSignup = async (req, res, next) => {
   } catch (error) {
     console.log("error occured in the userSignup() controller!");
     res.statusCode = 410;
-    console.log(error)
+    console.log(error);
     res.json({ message: "Could Not SignUp", success: "false" });
     return;
     next(error);
@@ -237,26 +249,31 @@ const userLogin = async (req, res, next) => {
         success: false,
       });
     }
-var department
-if(user.department){
-  department=user.department
-}
+    var department;
+    if (user.department) {
+      department = user.department;
+    }
     const token = await generateVerificationToken({
       _id: user._id,
       email: user.email,
       username: user.username,
-      role:user.role,
-      department
+      role: user.role,
+      department,
     }); // generate token
     // this generated Token Will be stored in backend
-     const userData={
+    const userData = {
       email: user.email,
       username: user.username,
-      role:user.role,
-      department
-    }
+      role: user.role,
+      department,
+    };
     res.statusCode = 200;
-    res.json({ message: "user login successful!", token,userData, success: true });
+    res.json({
+      message: "user login successful!",
+      token,
+      userData,
+      success: true,
+    });
   } catch (error) {
     console.log("error occured in the userSignin() controller!");
     next(error);
