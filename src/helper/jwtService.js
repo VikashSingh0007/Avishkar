@@ -1,9 +1,7 @@
 const jwt = require("jsonwebtoken");
 module.exports = {
   generateVerificationToken: async function (user) {
-    const token = await jwt.sign(user, process.env.VERIFICATION_TOKEN_SECRET, {
-      expiresIn: "24h",
-    });
+    const token = await jwt.sign(user, process.env.VERIFICATION_TOKEN_SECRET);
     const tokenParam = Buffer.from(token).toString("base64");
     return tokenParam;
   },
