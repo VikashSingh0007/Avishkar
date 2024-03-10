@@ -67,7 +67,8 @@ const Team = () => {
                     </span>
                   ) : department.department === "Director" ||
                     department.department === "SAC President" ||
-                    department.department === "Faculty Incharge" ? (
+                    department.department === "Faculty Incharge"
+                    ||department.department === "Faculty Coordinator" ? (
                     <a
                       href={sponsor.Profile_Url}
                       target="_blank"
@@ -114,5 +115,30 @@ const Team = () => {
       </main>
     </>
   );
+  useEffect(() => {
+    const gallery = document.querySelector("#gallery");
+    const time = 10000;
+
+    function animStart() {
+      if (!gallery.classList.contains("active")) {
+        gallery.classList.add("active");
+        setTimeout(() => {
+          animEnd();
+        }, time);
+      }
+    }
+
+    function animEnd() {
+      gallery.classList.remove("active");
+      gallery.offsetWidth;
+    }
+
+    document.addEventListener("scroll", function () {
+      animStart();
+    });
+
+    window.addEventListener("resize", animStart);
+    animStart();
+  }, []);
 };
 export default Team;

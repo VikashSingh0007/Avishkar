@@ -7,7 +7,7 @@ import Resume from "./Resume";
 import Navbar from "../Home/Navbar";
 import { useNavigate } from "react-router-dom";
 import "./user.css";
-
+import Footer from "../Home/Footer";
 const User = () => {
   const [choice, setChoice] = useState("view");
   const [showMenu, setShowMenu] = useState(false);
@@ -18,11 +18,11 @@ const User = () => {
   // Effect to add event listener when the component mounts
 
   return (
-    <div className="absolute  top-0 left-0 w-full h-full flex flex-col  containerUser">
+    <div className="absolute  top-0 left-0 w-full h-full overflow-scroll flex flex-col  containerUser">
       <div className="h-[10%] ">
         <Navbar page="Profile" />
       </div>
-      <div className="h-[90%]  p-2 flex lg:flex-row flex-col">
+      <div className="h-[90%]  pl-0 pt-20 flex lg:flex-row flex-col">
         <div
           className="w-full hidden overflow-y-scroll lg:flex lg:flex-col gap-2 lg:w-[15%] rounded-lg p-4 bg-[#63462D] bg-opacity-40 shadow-md backdrop-filter backdrop-blur-md"
           style={{
@@ -240,45 +240,47 @@ const User = () => {
               Logout
             </span>
           </div>
-          {userData && userToken && (userData.role == "Admin" || userData.role == "Coordie")&& (
-            <a
-              //className="flex items-center px-4 py-2 my-8 text-gray-700 bg-gray-100 rounded-md dark:bg-gray-800 dark:text-gray-200"
-              className="flex items-center cursor-pointer hover:bg-[#75664B]  px-4 py-2 lg:my-8 text-white bg-[#827660] rounded-md dark:bg-gray-800 dark:text-gray-200"
-              style={
-                choice === "admin"
-                  ? {
-                      backgroundColor: "#423C31",
-                      boxShadow: "0px 10px 10px black",
-                    }
-                  : { boxShadow: "0px 5px 10px black" }
-              }
-              href="/admin"
-            >
-              <svg
-                className="w-5 h-5"
-                viewBox="0 0 24 24"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
+          {userData &&
+            userToken &&
+            (userData.role == "Admin" || userData.role == "Coordie") && (
+              <a
+                //className="flex items-center px-4 py-2 my-8 text-gray-700 bg-gray-100 rounded-md dark:bg-gray-800 dark:text-gray-200"
+                className="flex items-center cursor-pointer hover:bg-[#75664B]  px-4 py-2 lg:my-8 text-white bg-[#827660] rounded-md dark:bg-gray-800 dark:text-gray-200"
+                style={
+                  choice === "admin"
+                    ? {
+                        backgroundColor: "#423C31",
+                        boxShadow: "0px 10px 10px black",
+                      }
+                    : { boxShadow: "0px 5px 10px black" }
+                }
+                href="/admin"
               >
-                <path
-                  d="M19 11H5M19 11C20.1046 11 21 11.8954 21 13V19C21 20.1046 20.1046 21 19 21H5C3.89543 21 3 20.1046 3 19V13C3 11.8954 3.89543 11 5 11M19 11V9C19 7.89543 18.1046 7 17 7M5 11V9C5 7.89543 5.89543 7 7 7M7 7V5C7 3.89543 7.89543 3 9 3H15C16.1046 3 17 3.89543 17 5V7M7 7H17"
-                  stroke="currentColor"
-                  strokeWidth={2}
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-              </svg>
-              <span
-                className="mx-4 font-medium"
-                onClick={() => {
-                  setChoice("view");
-                }}
-                // onClick={() => setIsSidebarOpen(!isSidebarOpen)}
-              >
-                Admin Portal
-              </span>
-            </a>
-          )}
+                <svg
+                  className="w-5 h-5"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M19 11H5M19 11C20.1046 11 21 11.8954 21 13V19C21 20.1046 20.1046 21 19 21H5C3.89543 21 3 20.1046 3 19V13C3 11.8954 3.89543 11 5 11M19 11V9C19 7.89543 18.1046 7 17 7M5 11V9C5 7.89543 5.89543 7 7 7M7 7V5C7 3.89543 7.89543 3 9 3H15C16.1046 3 17 3.89543 17 5V7M7 7H17"
+                    stroke="currentColor"
+                    strokeWidth={2}
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                </svg>
+                <span
+                  className="mx-4 font-medium"
+                  onClick={() => {
+                    setChoice("view");
+                  }}
+                  // onClick={() => setIsSidebarOpen(!isSidebarOpen)}
+                >
+                  Admin Portal
+                </span>
+              </a>
+            )}
         </div>
 
         <div className="relative h-[10%] lg:hidden inline-block text-left w-full">
@@ -320,7 +322,7 @@ const User = () => {
               <div className="py-1" role="none">
                 <button
                   onClick={() => {
-                    setChoice("profile");
+                    setChoice("view");
                     setShowMenu(false);
                   }}
                   className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900"
@@ -413,7 +415,7 @@ const User = () => {
           )}
         </div>
 
-        <div className="flex flex-col justify-around gap-y-24 w-full h-screen   lg:items-center p-2 lg:ml-3 bg-transparent lg:w-[85%] ">
+        <div className="flex flex-col justify-around gap-y-24 w-full overflow-scroll lg:items-center p-2 lg:ml-3 bg-transparent lg:w-[85%] ">
           {choice === "view" && <View />}
           {choice === "team" && <Team className="" />}
           {choice === "invitation" && <Invitations />}
@@ -421,6 +423,7 @@ const User = () => {
           {choice === "resume" && <Resume />}
         </div>
       </div>
+      <Footer />
     </div>
   );
 };

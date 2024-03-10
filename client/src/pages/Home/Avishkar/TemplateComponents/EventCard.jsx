@@ -7,13 +7,13 @@ import General from "../../assets/general.png";
 
 const EventCard = ({ data }) => {
   console.log(data);
-  const { index } = useParams();
+
   return (
     <div className="EventCard">
       {" "}
       {/* Wrap the card with Link */}
       <div
-        className="card p-3 bg-[#63462D]"
+        className="card1 p-3 bg-[#63462D]"
         style={{ boxShadow: "0px 10px 10px black" }}
       >
         <Link

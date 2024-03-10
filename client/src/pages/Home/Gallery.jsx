@@ -131,7 +131,10 @@ const Timeline = () => {
       return () => clearInterval(interval);
     };
   
-    startAutoScroll();
+    // Start auto scroll only for screen sizes smaller than 800px
+    if (window.innerWidth < 800) {
+      startAutoScroll();
+    }
   
     // Cleanup the interval on component unmount
     return () => clearInterval();

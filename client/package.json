@@ -19,6 +19,7 @@
     "framer-motion": "^11.0.8",
     "gsap": "^3.12.5",
     "jquery": "^3.7.1",
+    "localtunnel": "^2.0.2",
     "react": "^18.2.0",
     "react-cookie": "^7.0.2",
     "react-cookies": "^0.1.1",

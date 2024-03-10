@@ -22,7 +22,7 @@ import AwishkarRules from "./pages/Home/Avishkar/AwishkarRules.jsx";
 import AvishkarLanding from "./pages/Home/Avishkar/AvishkarLanding.jsx";
 import AvishkarIndex from "./pages/Home/Avishkar/AvishkarIndex.jsx";
 import VerifyUser from "./pages/Credentials/VerifyUser.jsx";
-import Accomodation from "./pages/Home/Accomodation.jsx";
+// import Accomodation from "./pages/Home/Accomodation.jsx";
 import Page404 from "./pages/Home/Page404.jsx";
 const App = () => {
   return (
@@ -50,7 +50,7 @@ const App = () => {
           <Route path="/AvishkarRules" element={<AwishkarRules />} />
           <Route path="/avishkar" element={<AvishkarIndex />} />
           <Route path="/verify/:id" element={<VerifyUser />} />
-          <Route path="/accommodation" element={<Accomodation />} />
+          {/* <Route path="/accommodation" element={<Accomodation />} /> */}
           <Route path="/addEvent" element={<AddEventPage />} />
           <Route path="/*" element={<Page404 />} />
         </Routes>

@@ -271,7 +271,10 @@ const EventsComputer = ({ data }) => {
         to={`/AvishkarEvent/${encodeURIComponent(JSON.stringify(data))}`}
         className="flex items-center justify-center cursor-pointer"
       >
-        <p className="text-3xl text-black w-full mt-2 rumoura-font">
+        <p
+          className="text-3xl text-white w-full mt-2 rumoura-font"
+          style={{ textShadow: "0px 0px 10px black" }}
+        >
           Explore !
         </p>
       </Link>

@@ -1,9 +1,12 @@
+import React, { useEffect, useState, Suspense } from "react";
 import styles from "../../style.js";
 import Footer from "./Footer.jsx";
 import Video from "./Video.jsx";
 import Navbar from "./Navbar.jsx";
 import "./HomePageLatout.css";
-
+import mohit from "./assets/mohit.png";
+// import juhi from "./assets/juhi.png";
+const Video1 = React.lazy(() => import("./Video.jsx"));
 const HomePageLayout = ({ children }) => (
   <div
     className=" min-h-screen overflow-hidden containerHomePage "
@@ -12,9 +15,9 @@ const HomePageLayout = ({ children }) => (
     <div className=" flex">
       <Navbar />
     </div>
-    
+
     <div className="-mt-[2px] ">
-      <Video />
+      <Video1 />
     </div>
 
     <div

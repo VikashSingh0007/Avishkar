@@ -12,6 +12,8 @@ const Navbar = ({ page }) => {
   const [scrolled, setScrolled] = useState(false);
   const userData = localStorage.getItem("userData");
   const userToken = localStorage.getItem("userToken");
+
+  console.log(page);
   useEffect(() => {
     const handleScroll = () => {
       const isScrolled = window.scrollY > 70;
@@ -33,10 +35,10 @@ const Navbar = ({ page }) => {
       id: "avishkar-landing",
       title: "Avishkar",
     },
-    {
-      id: "accommodation",
-      title: "Accommodation",
-    },
+    // {
+    //   id: "accommodation",
+    //   title: "Accommodation",
+    // },
     {
       id: "team",
       title: "Team",
@@ -55,12 +57,12 @@ const Navbar = ({ page }) => {
     <nav
       className={`w-full fixed top-0 z-20 ${
         scrolled
-          ? "bg-[#3A3416CC]  border-black border-t-[5px] rounded-b-[30px] border-b-1 border-l-[5px] border-r-[5px]   bg-opacity-75"
-          : "border-[4px]  bg-[#63462D]  border-opacity-80 bg-opacity-90 border-t-[12px] -mt-2 border-black "
+          ? "bg-[#ad9152cc]   bg-opacity-75"
+          : " bg-[#63462D] border-opacity-80 bg-opacity-90 border-t-[12px] -mt-2 border-black"
       }`}
     >
-      <div className="flex justify-between items-center px-4 py-0">
-        <div className="w-[10%]">
+      <div className="flex justify-between items-center  px-4 py-0">
+        <div className="">
           <Link to="/">
             <img
               src={logo}
@@ -103,7 +105,7 @@ const Navbar = ({ page }) => {
             >
               {<Link to={"/avishkar-landing"}>Avishkar</Link>}
             </li>
-            <li
+            {/* <li
               key={"accommodation"}
               className={`font-Robo tracking-[2px] mr-8  md:mr-12  md:text-sm lg:text-xl font-extrabold cursor-pointer rumoura-font ${
                 active === "Accommodation"
@@ -118,7 +120,7 @@ const Navbar = ({ page }) => {
               onClick={() => setActive("Accommodation")}
             >
               {<Link to={"/accommodation"}>Accommodation</Link>}
-            </li>
+            </li> */}
             <li
               key={"team"}
               className={`font-Robo tracking-[3px] text-xxl mr-8  md:mr-12  md:text-sm lg:text-xl font-extrabold cursor-pointer rumoura-font ${
@@ -170,22 +172,24 @@ const Navbar = ({ page }) => {
           style={{ boxShadow: "0px 5px 10px black" }}
         >
           <ul className="flex flex-col space-y-2">
-            {navLinks.map((nav, index) => (
-              <li
-                key={nav.id}
-                className={`font-poppins font-medium cursor-pointer  text-white relative ${
-                  active === nav.title ? "bg-[#b79e6e] rounded-t-md" : ""
-                }`}
-                onClick={() => setActive(nav.title)}
-              >
-                <Link to={`/${nav.id}`} className="block py-2 px-4">
-                  {nav.title}
-                </Link>
-                {index < navLinks.length - 1 && (
-                  <div className="border-t border-white absolute w-full top-full"></div>
-                )}
-              </li>
-            ))}
+            {navLinks.map((nav, index) =>
+              userToken && nav.title === "Login" ? null : (
+                <li
+                  key={nav.id}
+                  className={`font-poppins font-medium cursor-pointer  text-white relative ${
+                    active === nav.title ? "bg-[#b79e6e] rounded-t-md" : ""
+                  }`}
+                  onClick={() => setActive(nav.title)}
+                >
+                  <Link to={`/${nav.id}`} className="block py-2 px-4">
+                    {nav.title}
+                  </Link>
+                  {index < navLinks.length - 1 && (
+                    <div className="border-t border-white absolute w-full top-full"></div>
+                  )}
+                </li>
+              )
+            )}
           </ul>
         </div>
       )}

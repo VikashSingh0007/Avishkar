@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import React, { useEffect, useState, Suspense } from "react";
 import styles from "../../style.js";
 import HomePageLayout from "./HomePageLayout.jsx";
 import PastPerformance from "./PastPerformance.jsx";
@@ -14,15 +14,18 @@ import { toast } from "react-toastify";
 import Navbar from "./Navbar.jsx";
 import Clock from "../../assets/clockVintage.png";
 import Loader from "./loader.jsx";
-
-
+// const AvishkarCulrav1 = React.lazy(() => import("./AvishkarCulrav.jsx"));
 const App = () => {
   return (
     <>
       <div className="absolute top-0 left-0 w-full h-full flex justify-center items-center">
         <div className="fixed left-0 w-full h-full flex justify-center items-center">
           {/* <div className="absolute  transform -translate-x-1/2 -translate-y-1/2"> */}
-          <img src={Clock} alt="mnnitImg" className=" object-cover w-full h-full" />
+          <img
+            src={Clock}
+            alt="mnnitImg"
+            className=" object-cover w-full h-full"
+          />
           {/* </div> */}
         </div>
 
@@ -48,7 +51,6 @@ const App = () => {
             </div>
             <PastPerformance />
             <Sponsors />
-  
           </HomePageLayout>
         </div>
       </div>
