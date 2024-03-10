@@ -657,9 +657,9 @@ export const Team = [
         position: "Web Lead",
         department: "NA",
         photo: "",
-        linkedin: "",
-        instagram_url: "",
-        instagram_username: "",
+        linkedin: "https://www.linkedin.com/in/vivek-kumar-b078911b9/",
+        instagram_url: "https://www.instagram.com/vi_vek9744/",
+        instagram_username: "vi_vek9744",
       },
       {
         email: "rg356403@gmail.com",
