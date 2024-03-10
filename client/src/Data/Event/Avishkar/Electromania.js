@@ -1,12 +1,12 @@
 // import BgImg from "../../Images/electromania.png";
 import image from "../../../../src/Data/Images/Logo/electromania1.png";
-import image2 from "../../../../src/Data/Images/Logo/Electromania/1.png"
-import image3 from "../../../../src/Data/Images/Logo/Electromania/4.png"
-import image4 from "../../../../src/Data/Images/Logo/Electromania/3.png"
-import image5 from "../../../../src/Data/Images/Logo/Electromania/8.png"
-import image6 from "../../../../src/Data/Images/Logo/Electromania/2.png"
-import image7 from "../../../../src/Data/Images/Logo/Electromania/7.png"
-import image8 from "../../../../src/Data/Images/Logo/Electromania/6.png"
+import image2 from "../../../../src/Data/Images/Logo/Electromania/1.png";
+import image3 from "../../../../src/Data/Images/Logo/Electromania/4.png";
+import image4 from "../../../../src/Data/Images/Logo/Electromania/3.png";
+import image5 from "../../../../src/Data/Images/Logo/Electromania/8.png";
+import image6 from "../../../../src/Data/Images/Logo/Electromania/2.png";
+import image7 from "../../../../src/Data/Images/Logo/Electromania/7.png";
+import image8 from "../../../../src/Data/Images/Logo/Electromania/6.png";
 
 export const Electromania = [
   {
@@ -55,7 +55,7 @@ export const Electromania = [
           },
         ],
         TeamSize: "min size =1, max size: 3",
-        BGImageLink:image2,
+        BGImageLink: image2,
         PsLink: "",
         coordinators: [
           {
@@ -84,7 +84,7 @@ export const Electromania = [
           },
         ],
         TeamSize: "",
-        BGImageLink:image3,
+        BGImageLink: image3,
         PsLink: "",
         coordinators: [
           {
@@ -114,7 +114,7 @@ export const Electromania = [
           },
         ],
         TeamSize: "",
-        BGImageLink:image4,
+        BGImageLink: image4,
         PsLink: "",
         coordinators: [
           {
@@ -143,7 +143,7 @@ export const Electromania = [
           },
         ],
         TeamSize: "",
-        BGImageLink:image5,
+        BGImageLink: image5,
         PsLink: "",
         coordinators: [
           {
@@ -169,7 +169,7 @@ export const Electromania = [
           },
         ],
         TeamSize: "",
-        BGImageLink:image6,
+        BGImageLink: image6,
         PsLink: "",
         coordinators: [
           {
@@ -177,7 +177,7 @@ export const Electromania = [
             phone: "8092342770",
           },
           {
-            name: "   Aditya Pandey ",
+            name: "Aditya Pandey ",
             phone: " 9555113270",
           },
         ],
@@ -196,11 +196,11 @@ export const Electromania = [
           },
         ],
         TeamSize: "",
-        BGImageLink:image7,
+        BGImageLink: image7,
         PsLink: "",
         coordinators: [
           {
-            name: " Ananya Madan",
+            name: " Ananya Madaan",
             phone: "7455911890",
           },
           {
@@ -218,7 +218,7 @@ export const Electromania = [
           },
         ],
         TeamSize: "",
-        BGImageLink:image8,
+        BGImageLink: image8,
         PsLink: "",
         coordinators: [
           {

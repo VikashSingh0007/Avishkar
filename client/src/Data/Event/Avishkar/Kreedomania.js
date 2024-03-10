@@ -320,6 +320,118 @@ export const Kreedomania = [
           },
         ],
       },
+      {
+        name: "TEKKEN 8",
+        disc: "",
+        BGImageLink: "",
+        rule: [
+          {
+            rule_1: "THE TOURNAMENT WILL BE CONDUCTED IN OFFLINE MODE COMPLETELY.A TEAM WILL CONSIST OF 1 PLAYER",
+            rule_2: "IT WILL BE A SINGLE KNOCK-OUT TOURNAMENT OF 1 VS 1.",
+            rule_3: "ALL GAME SETTINGS, INCLUDING MATCH TIME, DIFFICULTY LEVEL, AND ROUND LENGTH, WILL BE DETERMINED BY THE TOURNAMENT ORGANIZER AND MUST BE AGREED UPON BY ALL PARTICIPANTS",
+            rule_4:"In the event of a tied game , overtime periods are typically played until a golden goal (sudden-death goal) is scored",
+            rule5:" PARTICIPANTS MUST CHOOSE A CHARACTER FROM THE CURRENT TEKKEN 8 ROSTER.",
+            rule_5:" CUSTOM CHARACTERS OR MODIFICATIONS ARE NOT ALLOWED",
+            rule_6:"IN THE EVENT OF TWO PLAYERS SELECTING THE SAME CHARACTER, A TOSS WILL DECIDE WHO GETS TO USE THAT CHARACTER.",
+            rule_7:"TIES: IN CASE OF A TIED MATCH, EXTRA ROUNDS OR SUDDEN-DEATH ROUNDS MAY BE EMPLOYED TO DETERMINE THE VICTOR, AS DECIDED BY THE TOURNAMENT ORGANIZER.",
+            rule_8:" SETUP WILL BE PROVIDED BY COORDINATORS."            
+          },
+        ],
+
+        BGImageLink: "",
+        PsLink: "",
+        coordinators: [
+          {
+            name: "Divyansh Gangwar",
+            phone: "9758987445",
+          },
+          {
+            name: "Nikhil Chaurasia",
+            phone: "9335183583",
+          },
+          {
+            name: "Shaurya Raj Srivastav",
+            phone: "8299760453",
+          },
+          {
+            name: "Utkarsh Chauhan",
+            phone: "9119391227",
+          },
+        ],
+      },
+      {
+        name: "CLASH ROYALE",
+        disc: "",
+        BGImageLink: "",
+        rule: [
+          {
+            rule_1: "Each participant will be divided into sub groups",
+            rule_2: " Round robin will be followed in the first stage.",
+            rule_3: " Top 2 from each group will be promoted to next round",
+            rule_4:" Semi finals and finals wil be a 1v1 format against each other",
+            rule5:" Only 2 legendary cards will be allowed in each game.(No hero card allowed)",
+            rule_5:"  Matches will be played offline",
+                        
+          },
+        ],
+
+        BGImageLink: "",
+        PsLink: "",
+        coordinators: [
+          {
+            name: "Divyansh Gangwar",
+            phone: "9758987445",
+          },
+          {
+            name: "Nikhil Chaurasia",
+            phone: "9335183583",
+          },
+          {
+            name: "Shaurya Raj Srivastav",
+            phone: "8299760453",
+          },
+          {
+            name: "Utkarsh Chauhan",
+            phone: "9119391227",
+          },
+        ],
+      },
+      {
+        name: "CHESS",
+        disc: "",
+        BGImageLink: "",
+        rule: [
+          {
+            rule_1: " Teams must play all the games during the tournament. Failing to do so will result in deducting the Prize money(if eligible)",
+            rule_2: " Agreement of draws is not allowed. Players can follow the 3-fold repetition rule or the 50-move rule for making a draw",
+            rule_3: " Teams must follow standard fide rules.",
+            rule_4:" Teams must not fix the outcome of any game(s)",
+            rule5:" Teams must not use any unfair means. The team will be disqualified if the organisers find any team player using unfair means.",
+                        
+          },
+        ],
+
+        BGImageLink: "",
+        PsLink: "",
+        coordinators: [
+          {
+            name: "Divyansh Gangwar",
+            phone: "9758987445",
+          },
+          {
+            name: "Nikhil Chaurasia",
+            phone: "9335183583",
+          },
+          {
+            name: "Shaurya Raj Srivastav",
+            phone: "8299760453",
+          },
+          {
+            name: "Utkarsh Chauhan",
+            phone: "9119391227",
+          },
+        ],
+      },
     ],
   },
 ];

@@ -58,7 +58,7 @@ const Navbar = ({ page }) => {
       className={`w-full fixed top-0 z-20 ${
         scrolled
           ? "bg-[#ad9152cc]   bg-opacity-75"
-          : " bg-[#63462D] border-opacity-80 bg-opacity-90 border-t-[12px] -mt-2 border-black"
+          : " border-opacity-80 bg-opacity-90 border-t-[12px] -mt-2 border-black"
       }`}
     >
       <div className="flex justify-between items-center  px-4 py-0">
