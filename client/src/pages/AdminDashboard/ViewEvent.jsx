@@ -17,7 +17,7 @@ const View = ({ event }) => {
       try {
         setLoading(true)
         const d = await getTeamParticipatingInEvent(event);
-        console.log("D",d)
+        // console.log("D",d)
         if (d.success) {
           setTeams(d.data);
         }
@@ -38,7 +38,7 @@ const View = ({ event }) => {
   const handleDownload = async () => {
     downloadExcelEventFile(event)
   }
-  console.log("teams",teams)
+  // console.log("teams",teams)
   
 
   return (

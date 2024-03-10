@@ -45,7 +45,7 @@ const signUp = async (data) => {
       return false;
     }
   } catch (error) {
-    console.log(error);
+    // console.log(error);
 
     toast.error(error.response.data.message);
     return false;
@@ -71,7 +71,7 @@ export const signIn = async (data) => {
       return false;
     }
   } catch (error) {
-    console.log("here");
+    // console.log("here");
 
     toast.error(error.response.data.message);
     return false;
@@ -93,7 +93,7 @@ export const forgotPassword = async (data) => {
       return false;
     }
   } catch (error) {
-    console.log(error.message);
+    // console.log(error.message);
     toast.error(error.response.data.message);
     return false;
   }
@@ -106,7 +106,7 @@ export const resetPassword = async (data) => {
     password: data.password,
   };
   try {
-    console.log("reseting");
+    // console.log("reseting");
     const res = await Axios.post("/auth/resetpassword", messageData);
     if (res.data) {
       toast.success(res.data.message);
@@ -116,7 +116,7 @@ export const resetPassword = async (data) => {
       return false;
     }
   } catch (error) {
-    console.log(error.message);
+    // console.log(error.message);
     toast.error(error.response.data.message);
     return false;
   }
@@ -137,7 +137,7 @@ export const verifyUser = async (token) => {
       return false;
     }
   } catch (error) {
-    console.log(error);
+    // console.log(error);
     toast.error(error.response.data.message);
     return false;
   }
@@ -156,7 +156,7 @@ export const userLogin = async (data) => {
       return false;
     }
   } catch (error) {
-    console.log(error);
+    // console.log(error);
     toast.error(error.response.data.message);
     return false;
   }

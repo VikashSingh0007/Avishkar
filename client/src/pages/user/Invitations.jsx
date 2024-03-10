@@ -24,7 +24,7 @@ const Invitations = () => {
 
   const handleClick = async (teamId, status) => {
     try {
-      console.log("here")
+      // console.log("here")
       setLoading(true)
       const teamdata = {
         teamId: teamId,

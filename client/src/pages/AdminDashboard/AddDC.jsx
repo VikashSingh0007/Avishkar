@@ -17,7 +17,7 @@ const [selectDepartment,handleDepartment]=useState(null)
   const handleSubmit = async () => {
     try{
       setLoading(true);
-      console.log(data);
+      // console.log(data);
       const requestData={
         email:data.email,
         department:selectDepartment
@@ -28,7 +28,7 @@ const [selectDepartment,handleDepartment]=useState(null)
     }
     catch(error){
       setLoading(false);
-      console.log(error);
+      // console.log(error);
     }
     
   };

@@ -25,12 +25,12 @@ useEffect(()=>{
     try {
       setLoading(true)
       const response=await removeDC(email);
-      console.log("rahul response",response);
+      // console.log("rahul response",response);
       if(response) setCheck(!check)
       setLoading(false);
     } catch (error) {
       setLoading(false);
-      console.log(error.message);
+      // console.log(error.message);
     }
   };
   return (

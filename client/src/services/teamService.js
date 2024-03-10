@@ -19,7 +19,7 @@ export const createTeam = async (data) => {
         }
     }
     catch(error){
-        console.log(error);
+        // console.log(error);
         toast.error(error.response.data.message);
         return false;
     }
@@ -43,7 +43,7 @@ export const deleteTeam = async (data) =>{
         }
     }
     catch(error){
-        console.log(error);
+        // console.log(error);
         toast.error(error.response.data.message);
         return false; 
     }
@@ -67,7 +67,7 @@ export const updateTeam = async (data) => {
         }
     }
     catch(error){
-        console.log(error);
+        // console.log(error);
         toast.error(error.response.data.message);
         return false; 
     }
@@ -92,7 +92,7 @@ export const inviteTeam = async (data) => {
         }
     }
     catch(error){
-        console.log(error);
+        // console.log(error);
         toast.error(error.response.data.message);
         return false; 
     }
@@ -100,7 +100,7 @@ export const inviteTeam = async (data) => {
 }
 
 export const respondTeam = async (data) => {
-    console.log("here")
+    // console.log("here")
     try{
         const messageData = {
             teamId : data.teamId,
@@ -117,7 +117,7 @@ export const respondTeam = async (data) => {
         }
     }
     catch(error){
-        console.log(error);
+        // console.log(error);
         toast.error(error.response.data.message);
         return false;
     }
@@ -144,7 +144,7 @@ export const getAllParticipating = async () => {
         }
     }
     catch(error){
-        console.log(error);
+        // console.log(error);
         toast.error(error.response.data.message);
         return false;
     }
@@ -224,7 +224,7 @@ export const registerEvent = async (data) => {
         }
     }
     catch(error){
-        console.log(error);
+        // console.log(error);
         toast.error(error.response.data.message);
         return false;
     }

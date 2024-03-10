@@ -12,13 +12,13 @@ const Create = () => {
         teamName: data.teamName,
         teamSize: data.teamSize,
       };
-      console.log("creating Team");
+      // console.log("creating Team");
       await createTeam(messageData).then((res) => {
-        console.log(res);
+        // console.log(res);
       });
       setLoading(false);
     } catch (error) {
-      console.log(error);
+      // console.log(error);
       setLoading(false);
     }
   };

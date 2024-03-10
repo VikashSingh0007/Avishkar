@@ -6,14 +6,14 @@ import "./Nav.css";
 import { Link } from "react-router-dom";
 
 const Navbar = ({ page }) => {
-  console.log(page);
+  // console.log(page);
   const [active, setActive] = useState(page);
   const [toggle, setToggle] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const userData = localStorage.getItem("userData");
   const userToken = localStorage.getItem("userToken");
 
-  console.log(page);
+  // console.log(page);
   useEffect(() => {
     const handleScroll = () => {
       const isScrolled = window.scrollY > 70;

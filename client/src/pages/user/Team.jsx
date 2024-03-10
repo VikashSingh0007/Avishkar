@@ -12,11 +12,11 @@ const Team = () => {
         email: email,
       };
       setLoading(true);
-      console.log(data);
+      // console.log(data);
       await inviteTeam(data);
       setLoading(false);
     } catch (error) {
-      console.log(error);
+      // console.log(error);
       setLoading(false);
     }
   };
@@ -25,19 +25,19 @@ const Team = () => {
       try {
         setLoading(true);
         const data = await getAllParticipating();
-        console.log("gotted from loki ", data);
+        // console.log("gotted from loki ", data);
         setFetchedData(data);
         setLoading(false);
-        console.log(typeof data.teams);
+        // console.log(typeof data.teams);
       } catch (error) {
-        console.error("Error fetching data:", error);
+        // console.error("Error fetching data:", error);
         setLoading(false);
       }
     };
 
     fetchData();
   }, []);
-  console.log("FetchedData", fetchedData);
+  // console.log("FetchedData", fetchedData);
 
   return (
     <div className="flex flex-wrap overflow-y-scroll p-5 gap-[10%]">
