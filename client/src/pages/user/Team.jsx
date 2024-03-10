@@ -101,6 +101,22 @@ const Team = () => {
               </div>
             ))}
           </div>
+          <div className="mt-4 flex flex-wrap w-full">
+            {team?.participatingEvents?.map((event)=>{
+              return(
+              event!==null &&
+              
+                <div
+                key={index}
+                className="bg-orange-500 p-4 rounded-lg ring-2  backdrop-filter backdrop-blur-md bg-opacity-20 relative z-10"
+                style={{ boxShadow: "0 2px 5px 0 black" }}
+              >
+                <div className="text-white  lg:text-[1.5em] md:text-[1.2em] text-[0.8em]">
+                  {event}
+                </div>
+              </div>
+              )
+            })}</div>
         </div>
       ))}
     </div>
