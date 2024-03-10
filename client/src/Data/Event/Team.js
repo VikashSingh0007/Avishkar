@@ -29,7 +29,7 @@ import Divyanshu from "../Images/Team/Divyanshu_Kushwaha8049.jpg";
 import Shambhavi from "../Images/Team/Shambhavi_Shukla2084.jpg";
 import Shashank from "../Images/Team/Shashank_Saxena5148.jpg";
 import Arghyadeep from "../Images/Team/Arghyadeep_Chakrabarti9016.jpg";
-import Ishita from "../Images/Team/Ishita_Agrawal8056.jpg";
+import Ishita from "../Images/Team/ishita.jpeg";
 import Piyush from "../Images/Team/Piyush_Patel5111.jpg";
 import Amisha from "../Images/Team/Amisha_Sinha5029.jpeg";
 import Shivam from "../Images/Team/Shivam_Ojha3138.jpg";
