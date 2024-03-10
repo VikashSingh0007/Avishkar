@@ -1,4 +1,4 @@
-import rateLimit from 'express-rate-limit';
+const rateLimit = require('express-rate-limit');
 
 // set up rate limiter: maximum of 30 requests per minute
 const limiter = rateLimit({
@@ -8,4 +8,4 @@ const limiter = rateLimit({
   headers: true,
 });
 
-export default limiter;
+module.exports = { limiter } ;

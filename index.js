@@ -7,7 +7,7 @@ const authRouter = require("./src/routes/auth.routes");
 const teamRouter = require("./src/routes/team.routes");
 const eventRouter = require("./src/routes/event.routes");
 const adminRouter  = require("./src/routes/admin.routes");
-const { default: limiter } = require("./src/db/ratelimiter");
+const { limiter } = require("./src/db/ratelimiter");
 
 dotenv.config();
 require("./src/db/connect");
