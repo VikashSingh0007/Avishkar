@@ -31,9 +31,21 @@ const checkIfJoined = (user , event) => {
     return false
 }
 
+const findInArray = (eventArray , teamId) => {
+    for(let i = 0; i < eventArray.length ; i++){
+        const id1 = JSON.stringify(eventArray[i]._id);
+        const id2 = JSON.stringify(teamId);
+        // console.log(id1,id2)
+        if(id1 == id2){
+            return true;
+        }
+    }
+    return false;
+}
 module.exports = {
     addUserToDepartment,
     findUserInDepartment,
-    checkIfJoined
+    checkIfJoined,
+    findInArray
 }
 
