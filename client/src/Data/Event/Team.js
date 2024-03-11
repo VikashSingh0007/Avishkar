@@ -800,7 +800,7 @@ export const Team = [
         linkedin:
           "https://www.linkedin.com/in/shivansh-mishra-2four3/",
         instagram_url: "https://www.instagram.com/shivansh__243?igsh=dTVwYzdxdzh6Y3Zj",
-        instagram_username: "shivansh_243",
+        instagram_username: "shivansh__243",
       }
       ,
       {
