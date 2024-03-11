@@ -1480,7 +1480,7 @@ export const Team = [
         linkedin:"https://www.linkedin.com/in/ayush-tripathi-798962237",
         instagram_url:
           "https://www.instagram.com/ayush_tripathi__23?igsh=MXJnc3Q3eTdiY3BoaQ==",
-        instagram_username: "ayush_tripathi__23_",
+        instagram_username: "ayush_tripathi__23",
       }
       ,
 
