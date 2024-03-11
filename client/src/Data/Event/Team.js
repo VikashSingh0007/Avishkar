@@ -1464,7 +1464,25 @@ export const Team = [
         instagram_url:
           "https://www.instagram.com/shivani_kumari_jha_?igsh=MzNlNGNkZWQ4Mg==",
         instagram_username: "shivani_kumari_jha_",
-      },
+      }
+      ,
+      {
+        email: "ayush.20209021@mnnit.ac.in",
+        name: "Ayush Tripathi ",
+        registration: 20209021,
+        image: AyushT,
+        mobile: 6388114798,
+        branch: "Chemical Engineering",
+        position: "Departmental Coordinator",
+        department: "Rasayans",
+        photo:
+          "https://drive.google.com/open?id=1bs8njZgJ0FMWtm1_RpwO1wHghXfC42yx",
+        linkedin:"https://www.linkedin.com/in/ayush-tripathi-798962237",
+        instagram_url:
+          "https://www.instagram.com/ayush_tripathi__23?igsh=MXJnc3Q3eTdiY3BoaQ==",
+        instagram_username: "ayush_tripathi__23_",
+      }
+      ,
 
       {
         email: "roboticsclub@mnnit.ac.in",
