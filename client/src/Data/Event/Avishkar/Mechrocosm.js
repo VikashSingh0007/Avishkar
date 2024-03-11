@@ -1,4 +1,4 @@
-import image from "../../../../src/Data/Images/Logo/Mechrocosm_Avishkar 2K24.jpeg"
+import image from "../../../../src/Data/Images/Logo/Mechrocosm_Avishkar 2K24.jpeg";
 export const Mechrocosm = [
   {
     title: "Mechrocosm",
@@ -118,7 +118,7 @@ export const Mechrocosm = [
           "https://drive.google.com/drive/folders/1IIO8VSxxORimsyytPH6bBBC1OIbx66BY",
         coordinators: [
           {
-            name: "Shashwath Gupta",
+            name: "Shashwat Gupta",
             phone: "8953971576",
           },
           {
@@ -161,7 +161,7 @@ export const Mechrocosm = [
             phone: "9305423706",
           },
           {
-            name: "Shashwath Gupta",
+            name: "Shashwat Gupta",
             phone: "8953971576",
           },
         ],
