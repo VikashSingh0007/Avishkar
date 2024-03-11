@@ -117,7 +117,7 @@ export const Kreedomania = [
       {
         name: "MORTAL KOMBAT",
         disc: "",
-        BGImageLink: img15,
+        BGImageLink: img16,
         rule: [
           {
             rule_1: "Rules- MATCHES PLAYED IN 1V1 BATTLE FORMAT",
@@ -289,7 +289,7 @@ export const Kreedomania = [
       {
         name: "ROCKET LEAGUE",
         disc: "",
-        BGImageLink: img16,
+        BGImageLink: img15,
         rule: [
           {
             rule_1: "MAX TEAM SIZE: 3",
