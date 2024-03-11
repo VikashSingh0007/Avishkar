@@ -805,7 +805,7 @@ export const Team = [
       ,
       {
         email: "shivansh.20223249@mnnit.ac.in",
-        name: "Shivansh Mishra ",
+        name: "Lokesh Wagh",
         registration: "20223249",
         image:lokeshP,
         mobile: 7007718293,
