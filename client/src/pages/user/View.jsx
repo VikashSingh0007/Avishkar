@@ -23,6 +23,7 @@ const View = () => {
         const d = await getProfile();
         // console.log(d.success);
         if (d.success) {
+          //console.log(d.profile.data)
           if (!d.profile.data.resumeLink) {
             toast.info("Please Upload Resume Link");
           }

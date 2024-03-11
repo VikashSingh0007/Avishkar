@@ -5,7 +5,7 @@ import AsimSir from "../Images/Team/AsimSir.jpg";
 import Nandini from "../Images/Team/Nandini_Karad8082.jpg";
 import Ananya from "../Images/Team/Ananya_Madaan9006.jpg";
 import Anupam from "../Images/Team/Anupam_yadav5038.jpeg";
-import Abhishek from "../Images/Team/Abhishek_Sankhla1006.jpeg";
+import Abhishek from "../Images/Team/Abhishek_Sankhla1006.jpg";
 import Ayush from "../Images/Team/Ayush_Gupta0014.jpg";
 import Shivangi from "../Images/Team/Shivangi_Singh5154.jpg";
 import Anushka from "../Images/Team/Anushka_Chauhan3029.jpg";
@@ -37,7 +37,7 @@ import Shaaurya from "../Images/Team/Shaurya_Srivastava1103.jpg";
 import Arina from "../Images/Team/Arina_Siddiqui3031.jpg";
 import ShubhamK from "../Images/Team/Shubham_Kashyap4197.jpeg";
 import Himanshu from "../Images/Team/Himanshu_Lodha1053.jpg";
-import Shubhranshu from "../Images/Team/Shubhranshu_Pandey411.png";
+import Shubhranshu from "../Images/Team/Shubhranshu_Pandey411.jpeg";
 import Rishabh from "../Images/Team/Rishabh_Chaurasia2066.jpg";
 import Divyansh from "../Images/Team/Divyansh_Gangwar2034.jpg";
 // import Shashank from "../Images/Team/Shashank_Singh2085.jpg"
@@ -105,7 +105,7 @@ import ShivangiS from "../Images/Team/Shivangi_Chauhan0050.jpg";
 import PiyushK from "../Images/Team/PIYUSH_KASHYAP1075.jpg";
 import Sweeti from "../Images/Team/Sweety_Swami9057.jpeg";
 import Aryaman from "../Images/Team/Aryaman_Sharma3034.jpeg";
-// import Ishika from "../Images/Team/"
+import Ishika from "../Images/Team/Ishika_Agrawal0024.jpg"
 import Shruti from "../Images/Team/Shruti_Mokhashi0052.jpg";
 import Divyam from "../Images/Team/Divyam_Kumar9023.jpeg";
 import Utkarsh from "../Images/Team/Utkarsh_Deorah8126.jpg";
@@ -131,6 +131,7 @@ import Mangal from "../Images/Team/mangal_photo.jpg"
 import Raman from "../Images/Team/Raman.jpg"
 import ShivanshM from "../Images/Team/ShivanshM.jpg"
 import Mrinal from "../Images/Team/MrinalPic.jpg"
+import lokeshP from "../Images/Team/lokeshP.jpeg"
 
 export const Team = [
   // {
@@ -799,7 +800,24 @@ export const Team = [
         linkedin:
           "https://www.linkedin.com/in/shivansh-mishra-2four3/",
         instagram_url: "https://www.instagram.com/shivansh__243?igsh=dTVwYzdxdzh6Y3Zj",
-        instagram_username: "shivansh_243",
+        instagram_username: "shivansh__243",
+      }
+      ,
+      {
+        email: "shivansh.20223249@mnnit.ac.in",
+        name: "Lokesh Wagh",
+        registration: "20223249",
+        image:lokeshP,
+        mobile: 7007718293,
+        branch: "",
+        position: "",
+        department: "",
+        photo:
+          "",
+        linkedin:
+          "https://www.linkedin.com/in/lokesh-wagh12/",
+        instagram_url: "https://www.instagram.com/_lokesh_wagh/",
+        instagram_username: "_lokesh_wagh",
       }
       ,
 
@@ -1446,7 +1464,25 @@ export const Team = [
         instagram_url:
           "https://www.instagram.com/shivani_kumari_jha_?igsh=MzNlNGNkZWQ4Mg==",
         instagram_username: "shivani_kumari_jha_",
-      },
+      }
+      ,
+      {
+        email: "ayush.20209021@mnnit.ac.in",
+        name: "Ayush Tripathi ",
+        registration: 20209021,
+        image: AyushT,
+        mobile: 6388114798,
+        branch: "Chemical Engineering",
+        position: "Departmental Coordinator",
+        department: "Rasayans",
+        photo:
+          "https://drive.google.com/open?id=1bs8njZgJ0FMWtm1_RpwO1wHghXfC42yx",
+        linkedin:"https://www.linkedin.com/in/ayush-tripathi-798962237",
+        instagram_url:
+          "https://www.instagram.com/ayush_tripathi__23?igsh=MXJnc3Q3eTdiY3BoaQ==",
+        instagram_username: "ayush_tripathi__23",
+      }
+      ,
 
       {
         email: "roboticsclub@mnnit.ac.in",
@@ -1556,7 +1592,7 @@ export const Team = [
         email: "ishika.20200024@mnnit.ac.in",
         name: "Ishika Agrawal",
         registration: "20200024",
-        image: Ritesh2,
+        image:Ishika,
         mobile: 6394041898,
         branch: "Biotechnology",
         position: "Departmental Coordinator",
@@ -1564,9 +1600,9 @@ export const Team = [
         photo:
           "https://drive.google.com/open?id=1laJOYwjxSGyme_fuPiI-ZG1TLxvtqjdU",
         linkedin:
-          "www.linkedin.com/in/ishika555agrawal",
+          "https://www.linkedin.com/in/ishika555agrawal",
         instagram_url: "https://www.instagram.com/ishikaagrawal16?igsh=MXRoZnp1cGFtam9ibw==",
-        instagram_username: "@ISHIKAAGRAWAL16",
+        instagram_username: "ishikaagrawal16",
       }
       ,{
         email: "shrutimokhashi34@gmail.com",
@@ -1582,7 +1618,7 @@ export const Team = [
         linkedin:
           "https://www.linkedin.com/in/shruti-mokhashi/",
         instagram_url: "https://www.instagram.com/shruti.mokha/",
-        instagram_username: "@shruti.mokha",
+        instagram_username: "shruti.mokha",
       }
       ,{
         email: "divyamkumar274@gmail.com",

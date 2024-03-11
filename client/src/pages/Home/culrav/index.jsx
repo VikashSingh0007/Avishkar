@@ -4,15 +4,15 @@ import ringTone from "./Components/phoneRingtone.mp3";
 import PopupModal from "./Components/popupmodal";
 import Card from "../../../Animations/culravCard";
 import drama from "./assets/drama.png";
-import back_img from "../Avishkar/avishkar_background.png";
+// import back_img from "../Avishkar/avishkar_background.png";
 import { useNavigate } from "react-router-dom";
 
 const Culrav = () => {
-  const divStyle = {
-    backgroundImage: `url(${back_img})`,
-    backgroundSize: "cover",
-    backgroundRepeat: "no-repeat",
-  };
+  // const divStyle = {
+  //   backgroundImage: `url(${back_img})`,
+  //   backgroundSize: "cover",
+  //   backgroundRepeat: "no-repeat",
+  // };
 
   const [start, setStart] = useState(0);
   // const [playing, setPlaying] = useState(false);
