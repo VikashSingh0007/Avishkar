@@ -5,7 +5,7 @@ import DeskTopScreen from "./components/desktopScreen";
 import ToolBar from "./components/toolBar";
 import EventsScreen from "./components/eventsScreen";
 import computerFrame from "./components/images/computerFrame.png";
-import video from "../../../../../assets/Final.mp4";
+// import video from "../../../../../assets/Final.mp4";
 // import vintageImg from "./components/images/vintageBackground.jpg";
 // import Keyboard from "./components/images/keyboard.jpg";
 import comp_component from "./components/images/comp_component.jpg";
@@ -100,7 +100,7 @@ const Computer = () => {
               />
               {/* Video */}
               <video
-                src={video}
+                src="https://res.cloudinary.com/dyn42yyxr/video/upload/v1710138008/kcnofkmhoyjnsduvtyle.mp4"
                 autoPlay
                 loop
                 muted

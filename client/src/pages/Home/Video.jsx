@@ -5,7 +5,7 @@ import Fog from "../../Animations/fog.jsx";
 import MusicDisc from "../../Animations/musicDisc.jsx";
 import { useNavigate } from "react-router-dom";
 import vintage11 from "../../assets/vintage12.png";
-import video from "../../assets/FINAL2.mp4";
+// import video from "../../assets/FINAL2.mp4";
 import Navbar from "./Navbar.jsx";
 import Clouds1 from "./culrav/assets/clouds11.png";
 import Clouds2 from "./culrav/assets/clouds2.png";
