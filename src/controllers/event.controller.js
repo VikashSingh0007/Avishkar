@@ -1,7 +1,7 @@
 const User = require('../models/user.model');
 const Team = require('../models/team.model');
 const Event = require('../models/event.model')
-const { addUserToDepartment, findUserInDepartment , checkIfJoined} = require('../helper/eventHelper');
+const { addUserToDepartment, findUserInDepartment , checkIfJoined, findInArray} = require('../helper/eventHelper');
 const dc = "DepartmentCordinator";
 const fes = "FestivalSecretary";
 const events = require("../../eventEntry");
@@ -141,7 +141,7 @@ const joinEvent = async (req, res , next) => { // called by frontend when joinin
         }
          else {
             // we simply add the team Id to the id of the participant
-           
+            console.log(event);
             for(let i = 0 ; i < event.particpatingTeams.length ; i++){
                 if(event.particpatingTeams[i] == teamId){
                     res.statusCode = 400;
@@ -159,14 +159,16 @@ const joinEvent = async (req, res , next) => { // called by frontend when joinin
            
           
             for(let i = 0; i < team.acceptedMembers.length ; i++){
-                if(checkIfJoined(team.acceptedMembers[i] , event)){
-                    res.statusCode = 410
-                    res.json({
-                        success : false,
-                        message : "Some Member has Already Joined The Event in Other Team",
-                        error : "Some Member has Already Joined The Event in Other Team",
-                    })
-                    return
+                for(let j = 0; j < team.acceptedMembers[i].participatingTeam.length ; j++){
+                    if(findInArray(event.particpatingTeams , team.acceptedMembers[i].participatingTeam[j]._id,)){
+                        res.statusCode = 400;
+                        res.json({
+                            message : `Team Member ${team.acceptedMembers[i].name} Has Already Registered With Another Team`,
+                            error : "Some User already Registered",
+                            success : false,
+                        })
+                        return;
+                    }
                 }
 
             }
