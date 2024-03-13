@@ -1,11 +1,11 @@
-import Genesis from "../Images/genesis.jpg";
+// import Genesis from "../Images/genesis.jpg";
 import Palladin from "../Images/palladin.jpg";
 
 export const Genesis = [
   {
     title: "Genesis",
     tagline: "Treasure Trails and Biotech Tales",
-    BgImageLink: Genesis,
+    BgImageLink: "",
     instagramLink: "https://www.facebook.com/genesis.avishkar.mnnit",
     events: [
       {
