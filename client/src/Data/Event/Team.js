@@ -132,7 +132,7 @@ import Raman from "../Images/Team/Raman.jpg"
 import ShivanshM from "../Images/Team/ShivanshM.jpg"
 import Mrinal from "../Images/Team/MrinalPic.jpg"
 import lokeshP from "../Images/Team/lokeshP.jpeg"
-
+import Pragya from "../Images/Team/Pragya_Jha.jpg"
 export const Team = [
   // {
   //   department: "Director",
@@ -1718,7 +1718,8 @@ export const Team = [
         instagram_url:
           "https://www.instagram.com/pyrrhic_scribbler?igsh=OGQ5ZDc2ODk2ZA==",
         instagram_username: "pyrrhic_scribbler",
-      },
+      }
+      ,
       {
         email: "niharika.2022mb23@mnnit.ac.in",
         name: "Niharika jain",
@@ -1734,7 +1735,25 @@ export const Team = [
           "https://www.linkedin.com/in/niharika-jain-8219a4257?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
         instagram_url: "NA",
         instagram_username: "thetalkativeone__",
-      },
+      }
+      ,
+      {
+        email: "pragya.2022mb38@mnnit.ac.in",
+        name: "Pragya Jha",
+        registration: "2022MB38",
+        image:Pragya,
+        mobile: 8826676629,
+        branch: "MBA",
+        position: "Departmental Coordinator",
+        department: "Monopoly",
+        photo:
+          "https://drive.google.com/open?id=1rtd17mvovUEpyt6AhIziJKdWslaTY5bz ",
+        linkedin:
+          "https://www.linkedin.com/in/pragya-j-b59761122",
+        instagram_url: "https://www.instagram.com/pragyajhaa?igsh=MXNkazBjM3pmM283bQ==",
+        instagram_username: "pragyajhaa",
+      }
+      ,
 
       {
         email: "deveshpant1703@gmail.com",
