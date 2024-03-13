@@ -1,20 +1,19 @@
 import Nirman3 from "../../Images/Nirman.png";
 import Nirman1 from "../../Images/Nirman.png";
-import image from "../../../../src/Data/Images/Logo/Nirmaan2k24 logo.png"
-import image1 from "../../../../src/Data/Images/Logo/Nirmaan/6.png"
-import image2 from "../../../../src/Data/Images/Logo/Nirmaan/Openpositions.jpeg"
-import image3 from "../../../../src/Data/Images/Logo/Nirmaan/5.png"
-import image4 from "../../../../src/Data/Images/Logo/Nirmaan/4.png"
-import image5 from "../../../../src/Data/Images/Logo/Nirmaan/7.png"
-import image6 from "../../../../src/Data/Images/Logo/Nirmaan/3.png"
-import image7 from "../../../../src/Data/Images/Logo/Nirmaan/8.png"
+import image from "../../../../src/Data/Images/Logo/Nirmaan2k24 logo.png";
+import image1 from "../../../../src/Data/Images/Logo/Nirmaan/6.png";
+import image2 from "../../../../src/Data/Images/Logo/Nirmaan/Openpositions.jpeg";
+import image3 from "../../../../src/Data/Images/Logo/Nirmaan/5.png";
+import image4 from "../../../../src/Data/Images/Logo/Nirmaan/4.png";
+import image5 from "../../../../src/Data/Images/Logo/Nirmaan/7.png";
+import image6 from "../../../../src/Data/Images/Logo/Nirmaan/3.png";
+import image7 from "../../../../src/Data/Images/Logo/Nirmaan/8.png";
 export const Nirmaan = [
   {
     title: "Nirmaan",
     tagline: "Structuring Tomorrow",
     BgImageLink: Nirman3,
-    instagramLink:
-      image,
+    instagramLink: image,
     events: [
       {
         name: "Codigo",
@@ -32,7 +31,7 @@ export const Nirmaan = [
           },
         ],
         TeamSize: "1-1",
-        BGImageLink:image1,
+        BGImageLink: image1,
         PsLink: "",
         coordinators: [
           {
@@ -65,7 +64,7 @@ export const Nirmaan = [
           },
         ],
         TeamSize: "1-1",
-        BGImageLink:image2,
+        BGImageLink: image2,
         PsLink: "",
         coordinators: [
           {
@@ -131,7 +130,7 @@ export const Nirmaan = [
           },
         ],
         TeamSize: "3-4",
-        BGImageLink:image4,
+        BGImageLink: image4,
         PsLink: "http://tinyurl.com/Ziggurare2024",
         coordinators: [
           {
@@ -165,7 +164,7 @@ export const Nirmaan = [
           },
         ],
         TeamSize: "",
-        BGImageLink:image5,
+        BGImageLink: image5,
         PsLink: "",
         coordinators: [
           {
@@ -200,7 +199,7 @@ export const Nirmaan = [
           },
         ],
         TeamSize: "",
-        BGImageLink:image6,
+        BGImageLink: image6,
         PsLink: "",
         coordinators: [
           {
@@ -223,7 +222,7 @@ export const Nirmaan = [
         rule: [
           {
             rule_1: "Only 2nd and 3rd years are allowed.",
-            rule_2: "Team size - 3",
+            rule_2: "Team size - 4",
             rule_3: "No cross year teams are allowed.",
             rule_4:
               "At Least one student should be from the civil engineering branch",
@@ -239,7 +238,7 @@ export const Nirmaan = [
           },
         ],
         TeamSize: "",
-        BGImageLink:image7,
+        BGImageLink: image7,
         PsLink: "http://tinyurl.com/Constrengtho2024",
         coordinators: [
           {
@@ -247,8 +246,8 @@ export const Nirmaan = [
             phone: "8529750334",
           },
           {
-            name: "Himanshu Shankar Lodha ",
-            phone: "8955356993",
+            name: "Purn Chandra",
+            phone: "8209633958",
           },
           {
             name: "Rishabh Gupta ",

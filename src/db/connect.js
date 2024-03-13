@@ -6,7 +6,7 @@ const pool = mongoose
   })
   .then(function (db) {
     console.log("DB is connected 🎉🎉🎉");
-    // loadAllEvents()
+    // loadAllEvents();
   })
   .catch(function (err) {
     console.log("Error at DataBase Connection!!", err.message);
