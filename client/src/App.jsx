@@ -17,7 +17,7 @@ import Culrav from "./pages/Home/culrav/index.jsx";
 import Login from "./pages/Credentials/login.jsx";
 import CulravOpening from "./pages/Home/culrav/CulravOpening.jsx";
 import CulravLanding from "./pages/Home/culrav/CulravLanding.jsx";
-import Rules from "./pages/Home/culrav/Rules.jsx";
+// import Rules from "./pages/Home/culrav/Rules.jsx";
 import AwishkarRules from "./pages/Home/Avishkar/AwishkarRules.jsx";
 import AvishkarLanding from "./pages/Home/Avishkar/AvishkarLanding.jsx";
 import AvishkarIndex from "./pages/Home/Avishkar/AvishkarIndex.jsx";
@@ -48,7 +48,7 @@ const App = () => {
           <Route path="/signup" element={<SignUp />} />
           <Route path="/login" element={<Login />} />
           <Route path="/culrav" element={<Culrav />} />
-          <Route path="/rules" element={<Rules />} />
+          {/* <Route path="/rules" element={<Rules />} /> */}
           <Route path="/AvishkarRules" element={<AwishkarRules />} />
           <Route path="/avishkar" element={<AvishkarIndex />} />
           <Route path="/verify/:id" element={<VerifyUser />} />
