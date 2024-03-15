@@ -134,6 +134,8 @@ import Mrinal from "../Images/Team/MrinalPic.jpg"
 import lokeshP from "../Images/Team/lokeshP.jpeg"
 import Pragya from "../Images/Team/Pragya_Jha.jpg"
 import Sanika from "../Images/Team/Sanika_Tare.jpeg"
+import Kuldeep from "../Images/Team/Kuldeep.jpg"
+import HimanshuSr from "../Images/Team/Himanshu_Srivastava.jpg"
 export const Team = [
   // {
   //   department: "Director",
@@ -867,19 +869,36 @@ export const Team = [
         instagram_url: "https://www.instagram.com/thesandeeporaon/",
         instagram_username: "thesandeeporaon",
       },
-      // {
-      //   email:"",
-      //   name:"",
-      //   reg:"",
-      //   mobile:"",
-      //   branch:"",
-      //   position:"",
-      //   department:"",
-      //   photo:"",
-      //   linkedin:"",
-      //   instagram_url:"",
-      //   instagram_username:""
-      // },
+      {
+        email:"himanshusrivastava.2206@gmail.com",
+        name:"Himanshu",
+        reg:"20201051",
+        image:HimanshuSr,
+        mobile:"8318091621",
+        branch:"Mechanical Engineering",
+        position:"Photography Lead",
+        department:"",
+        photo:"https://drive.google.com/open?id=1cBrDYQduUGiodljbn8IMGY6L5O4kE1tF",
+        linkedin:"https://www.linkedin.com/in/himsri22",
+        instagram_url:"https://www.instagram.com/himanshu_10110?igsh=bWphYXhidTZ6MGY0",
+        instagram_username:"himanshu_10110"
+      }
+      ,
+      {
+        email:"siddhartha.20208122@mnnit.ac.in",
+        name:"Kuldeep Yadav",
+        reg:"20203081",
+        image:Kuldeep,
+        mobile:"7755064242",
+        branch:"Mechanical Engineering",
+        position:"Photography Lead",
+        department:"",
+        photo:"https://drive.google.com/open?id=1TlPVq6sCgr8-047i7-SVNnZbGHlxwBIg",
+        linkedin:"https://www.linkedin.com/in/ykuldeep/",
+        instagram_url:"https://www.instagram.com/culdeepyadav/",
+        instagram_username:"culdeepyadav"
+      },
+      // ,
       // {
       //   email:"",
       //   name:"",
