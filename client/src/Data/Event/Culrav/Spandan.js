@@ -61,7 +61,7 @@ export const Spandan = [
           },
         ],
         TeamSize: "",
-        BGImageLink: spandan1,
+        BGImageLink: spandan2,
         PsLink: "",
         coordinators: [
           {

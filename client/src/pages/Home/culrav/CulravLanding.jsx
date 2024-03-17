@@ -4,7 +4,7 @@ import Data from "../../../Data/Event/Culrav";
 import Navbar from "../Navbar";
 import { MdOutlineFestival } from "react-icons/md";
 import reel from "../assets/reel.jpg";
-import lightLamp from "../assets/chair.jpg";
+
 import Footer from "../Footer";
 
 const CulravLanding = () => {

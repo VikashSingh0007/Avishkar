@@ -22,78 +22,78 @@ const departments = [
 ];
 const EVENTS = [
   {
-    eventName: "VALORANT",
+    eventName: "FREE FIRE",
     minTeamsize: 1,
-    maxTeamsize: 5,
+    maxTeamsize: 4,
     department: "Kreedomania",
   },
-  {
-    eventName: "CSGO 2.0",
-    minTeamsize: 1,
-    maxTeamsize: 5,
-    department: "Kreedomania",
-  },
-  {
-    eventName: "FIFA’23",
-    minTeamsize: 1,
-    maxTeamsize: 1,
-    department: "Kreedomania",
-  },
+//   {
+//     eventName: "CSGO 2.0",
+//     minTeamsize: 1,
+//     maxTeamsize: 5,
+//     department: "Kreedomania",
+//   },
+//   {
+//     eventName: "FIFA’23",
+//     minTeamsize: 1,
+//     maxTeamsize: 1,
+//     department: "Kreedomania",
+//   },
 
-  {
-    eventName: "MORTAL KOMBAT",
-    minTeamsize: 1,
-    maxTeamsize: 1,
-    department: "Kreedomania",
-  },
-  {
-    eventName: "MINI MILITIA",
-    minTeamsize: 1,
-    maxTeamsize: 4,
-    department: "Kreedomania",
-  },
-  {
-    eventName: "BGMI MOBILE",
-    minTeamsize: 1,
-    maxTeamsize: 4,
-    department: "Kreedomania",
-  },
-  {
-    eventName: "COD MOBILE",
-    minTeamsize: 1,
-    maxTeamsize: 4,
-    department: "Kreedomania",
-  },
-  {
-    eventName: "SCRIBBLE",
-    minTeamsize: 2,
-    maxTeamsize: 40,
-    department: "Kreedomania",
-  },
-  {
-    eventName: "ROCKET LEAGUE",
-    minTeamsize: 1,
-    maxTeamsize: 3,
-    department: "Kreedomania",
-  },
-  {
-    eventName: "TEKKEN 8",
-    minTeamsize: 1,
-    maxTeamsize: 1,
-    department: "Kreedomania",
-  },
-  {
-    eventName: "CLASH ROYALE",
-    minTeamsize: 1,
-    maxTeamsize: 1,
-    department: "Kreedomania",
-  },
-  {
-    eventName: "CHESS",
-    minTeamsize: 1,
-    maxTeamsize: 10,
-    department: "Kreedomania",
-  },
+//   {
+//     eventName: "MORTAL KOMBAT",
+//     minTeamsize: 1,
+//     maxTeamsize: 1,
+//     department: "Kreedomania",
+//   },
+//   {
+//     eventName: "MINI MILITIA",
+//     minTeamsize: 1,
+//     maxTeamsize: 4,
+//     department: "Kreedomania",
+//   },
+//   {
+//     eventName: "BGMI MOBILE",
+//     minTeamsize: 1,
+//     maxTeamsize: 4,
+//     department: "Kreedomania",
+//   },
+//   {
+//     eventName: "COD MOBILE",
+//     minTeamsize: 1,
+//     maxTeamsize: 4,
+//     department: "Kreedomania",
+//   },
+//   {
+//     eventName: "SCRIBBLE",
+//     minTeamsize: 2,
+//     maxTeamsize: 40,
+//     department: "Kreedomania",
+//   },
+//   {
+//     eventName: "ROCKET LEAGUE",
+//     minTeamsize: 1,
+//     maxTeamsize: 3,
+//     department: "Kreedomania",
+//   },
+//   {
+//     eventName: "TEKKEN 8",
+//     minTeamsize: 1,
+//     maxTeamsize: 1,
+//     department: "Kreedomania",
+//   },
+//   {
+//     eventName: "CLASH ROYALE",
+//     minTeamsize: 1,
+//     maxTeamsize: 1,
+//     department: "Kreedomania",
+//   },
+//   {
+//     eventName: "CHESS",
+//     minTeamsize: 1,
+//     maxTeamsize: 10,
+//     department: "Kreedomania",
+//   },
 
   //  {
   //      eventName:" SOFTATHALON",

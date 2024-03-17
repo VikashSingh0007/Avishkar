@@ -63,7 +63,7 @@ const timelineData = [
     },
   },
   {
-    text: "EDM Night",
+    text: "Celebrity Night - Mohit Chauhan",
     date: "March 20 2024",
     category: {
       tag: "Day-6",
@@ -87,7 +87,7 @@ const timelineData = [
     },
   },
   {
-    text: "Celebrity Night - Mohit Chauhan",
+    text: "Special Performance",
     date: "March 22 2024",
     category: {
       tag: "Day-8",

@@ -71,6 +71,10 @@ export const Rasayans = [
             name: " Sweeti ",
             phone: "(9588105190)",
           },
+          {
+            name: "Vedant Goyal",
+            phone: " (7725972190)",
+          },
         ],
       },
       {
