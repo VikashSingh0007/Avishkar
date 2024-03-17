@@ -135,14 +135,6 @@ import ShivanshM from "../Images/Team/ShivanshM.jpg";
 import Mrinal from "../Images/Team/MrinalPic.jpg";
 import lokeshP from "../Images/Team/lokeshP.jpeg";
 import Pragya from "../Images/Team/Pragya_Jha.jpg";
-import Vikash from "../Images/Team/Vikash4074.jpg";
-import AmanR from "../Images/Team/AmanR.jpg";
-import Mangal from "../Images/Team/mangal_photo.jpg";
-import Raman from "../Images/Team/Raman.jpg";
-import ShivanshM from "../Images/Team/ShivanshM.jpg";
-import Mrinal from "../Images/Team/MrinalPic.jpg";
-import lokeshP from "../Images/Team/lokeshP.jpeg";
-import Pragya from "../Images/Team/Pragya_Jha.jpg";
 import Sanika from "../Images/Team/Sanika_Tare.jpeg";
 import Kuldeep from "../Images/Team/Kuldeep.jpg";
 import HimanshuSr from "../Images/Team/Himanshu_Srivastava.jpg";
@@ -1807,6 +1799,23 @@ export const Team = [
         linkedin: "https://www.linkedin.com/in/pooja-gautam-12feb2004/",
         instagram_url: "https://www.instagram.com/sirrah./",
         instagram_username: "_sirrah._",
+      },
+      {
+        email: "tsanika4103@gmail.com",
+        name: "Sanika Tare",
+        registration: "20204175",
+        image: Sanika,
+        mobile: 9309431143,
+        branch: "Computer Science and Engineering",
+        position: "Departmental Coordinator",
+        department: "Spandan",
+        photo:
+          "https://drive.google.com/open?id=14-6jz9HOTCvckxmXbOOnArfnyRxsnZjY",
+        linkedin:
+          "https://www.linkedin.com/in/sanika-tare-a9853a20a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+        instagram_url:
+          "https://www.instagram.com/tsanika_?igsh=MTdjZWhibnl0MWxieg==",
+        instagram_username: "tsanika_",
       },
       {
         email: "shailyrani2002@gmail.com",
