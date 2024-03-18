@@ -1,314 +1,243 @@
 import React, { useEffect } from "react";
 import "./Sponsors.css"; // Replace with the actual CSS file path
 import Navbar from "../../Navbar";
+import BOB from "../../assets/BOB1.png";
+import Vguard from "../../assets/Vguard.png";
+import SBI from "../../assets/SBI.png";
+import KDM from "../../assets/KDM.png";
+import DKMS from "../../assets/DKMS.png";
+import VLCC from "../../assets/VLCC.png";
+import Duke from "../../assets/Duke.png";
+import meja from "../../assets/meja.jpeg";
+import Coding from "../../assets/Coding.jpeg";
+import MNNIT from "../../assets/prayag.jpeg";
+import Red from "../../assets/red.png";
+import travel from "../../assets/travel.png";
+import Safe from "../../assets/Safe.png";
+import prayagraj from "../../assets/PPGCL.jpeg";
+import Denver from "../../assets/denver.jpeg";
+import cafe from "../../assets/cafe.png";
+import Inventkart from "../../assets/Inventkart.jpeg";
 const Sponsors = () => {
-  useEffect(() => {
-    const gallery = document.querySelector("#gallery");
-    const time = 10000;
-
-    function animStart() {
-      if (!gallery.classList.contains("active")) {
-        gallery.classList.add("active");
-        setTimeout(() => {
-          animEnd();
-        }, time);
-      }
-    }
-
-    function animEnd() {
-      gallery.classList.remove("active");
-      gallery.offsetWidth;
-    }
-
-    document.addEventListener("scroll", function () {
-      animStart();
-    });
-
-    window.addEventListener("resize", animStart);
-    animStart();
-  }, []);
-
-  const sponsors_cat1 = [
+  const sponsors = [
     {
-      image:
-        "https://img.freepik.com/free-photo/lone-tree_181624-46361.jpg?w=826&t=st=1708281792~exp=1708282392~hmac=26efaff03bbeb31aae8c88f8804b19a17299e5b2f1e98d9b60c224a8824a9ebf",
-      name: "Sponsor 1",
-      role: "Gold Sponsor",
+      category: "Associate Sponsor",
+      data: [
+        {
+          image: BOB,
+          name: "Bank of Baroda",
+        },
+      ],
     },
     {
-      image:
-        "https://img.freepik.com/free-photo/lone-tree_181624-46361.jpg?w=826&t=st=1708281792~exp=1708282392~hmac=26efaff03bbeb31aae8c88f8804b19a17299e5b2f1e98d9b60c224a8824a9ebf",
-      name: "Sponsor 1",
-      role: "Gold Sponsor",
+      category: "Executive Sponsor",
+      data: [
+        {
+          image: Vguard,
+          name: "V-guard",
+        },
+        {
+          image: SBI,
+          name: "SBI",
+        },
+      ],
     },
     {
-      image:
-        "https://img.freepik.com/free-photo/lone-tree_181624-46361.jpg?w=826&t=st=1708281792~exp=1708282392~hmac=26efaff03bbeb31aae8c88f8804b19a17299e5b2f1e98d9b60c224a8824a9ebf",
-      name: "Sponsor 1",
-      role: "Gold Sponsor",
+      category: "Social Initiative Partner",
+      data: [
+        {
+          image: DKMS,
+          name: "DKMS-BMST",
+        },
+      ],
     },
     {
-      image:
-        "https://img.freepik.com/free-photo/lone-tree_181624-46361.jpg?w=826&t=st=1708281792~exp=1708282392~hmac=26efaff03bbeb31aae8c88f8804b19a17299e5b2f1e98d9b60c224a8824a9ebf",
-      name: "Sponsor 1",
-      role: "Gold Sponsor",
+      category: "Energy Partners",
+      data: [
+        {
+          image: meja,
+          name: "Meja Urja Nigam Pvt Ltd",
+        },
+        {
+          image: prayagraj,
+          name: "PPGCL",
+        },
+      ],
     },
     {
-      image:
-        "https://img.freepik.com/free-photo/lone-tree_181624-46361.jpg?w=826&t=st=1708281792~exp=1708282392~hmac=26efaff03bbeb31aae8c88f8804b19a17299e5b2f1e98d9b60c224a8824a9ebf",
-      name: "Sponsor 1",
-      role: "Gold Sponsor",
+      category: "Gifting Partners",
+      data: [
+        {
+          image: KDM,
+          name: "KDM",
+        },
+      ],
     },
     {
-      image:
-        "https://img.freepik.com/free-photo/lone-tree_181624-46361.jpg?w=826&t=st=1708281792~exp=1708282392~hmac=26efaff03bbeb31aae8c88f8804b19a17299e5b2f1e98d9b60c224a8824a9ebf",
-      name: "Sponsor 1",
-      role: "Gold Sponsor",
-    },
-  ];
-
-  const sponsors_cat2 = [
-    {
-      image:
-        "https://img.freepik.com/free-photo/lone-tree_181624-46361.jpg?w=826&t=st=1708281792~exp=1708282392~hmac=26efaff03bbeb31aae8c88f8804b19a17299e5b2f1e98d9b60c224a8824a9ebf",
-      name: "Sponsor 1",
-      role: "Gold Sponsor",
+      category: "Beauty Partners",
+      data: [
+        {
+          image: VLCC,
+          name: "VLCC",
+        },
+      ],
     },
     {
-      image:
-        "https://img.freepik.com/free-photo/lone-tree_181624-46361.jpg?w=826&t=st=1708281792~exp=1708282392~hmac=26efaff03bbeb31aae8c88f8804b19a17299e5b2f1e98d9b60c224a8824a9ebf",
-      name: "Sponsor 1",
-      role: "Gold Sponsor",
+      category: "Innovation Partner",
+      data: [
+        {
+          image: MNNIT,
+          name: "IIH MNNIT Foundation",
+        },
+      ],
     },
     {
-      image:
-        "https://img.freepik.com/free-photo/lone-tree_181624-46361.jpg?w=826&t=st=1708281792~exp=1708282392~hmac=26efaff03bbeb31aae8c88f8804b19a17299e5b2f1e98d9b60c224a8824a9ebf",
-      name: "Sponsor 1",
-      role: "Gold Sponsor",
+      category: "Tech Partner",
+      data: [
+        {
+          image: Coding,
+          name: "Coding Ninjas",
+        },
+      ],
     },
     {
-      image:
-        "https://img.freepik.com/free-photo/lone-tree_181624-46361.jpg?w=826&t=st=1708281792~exp=1708282392~hmac=26efaff03bbeb31aae8c88f8804b19a17299e5b2f1e98d9b60c224a8824a9ebf",
-      name: "Sponsor 1",
-      role: "Gold Sponsor",
+      category: "Apparel Partner",
+      data: [
+        {
+          image: Duke,
+          name: "Duke",
+        },
+      ],
     },
     {
-      image:
-        "https://img.freepik.com/free-photo/lone-tree_181624-46361.jpg?w=826&t=st=1708281792~exp=1708282392~hmac=26efaff03bbeb31aae8c88f8804b19a17299e5b2f1e98d9b60c224a8824a9ebf",
-      name: "Sponsor 1",
-      role: "Gold Sponsor",
+      category: "Supply Chain Partner",
+      data: [
+        {
+          image: Safe,
+          name: "Safe Express",
+        },
+      ],
     },
     {
-      image:
-        "https://img.freepik.com/free-photo/lone-tree_181624-46361.jpg?w=826&t=st=1708281792~exp=1708282392~hmac=26efaff03bbeb31aae8c88f8804b19a17299e5b2f1e98d9b60c224a8824a9ebf",
-      name: "Sponsor 1",
-      role: "Gold Sponsor",
-    },
-  ];
-  const sponsors_cat3 = [
-    {
-      image:
-        "https://img.freepik.com/free-photo/lone-tree_181624-46361.jpg?w=826&t=st=1708281792~exp=1708282392~hmac=26efaff03bbeb31aae8c88f8804b19a17299e5b2f1e98d9b60c224a8824a9ebf",
-      name: "Sponsor 1",
-      role: "Gold Sponsor",
+      category: "Radio  Partner",
+      data: [
+        {
+          image: Red,
+          name: "93.5 Red FM",
+        },
+      ],
     },
     {
-      image:
-        "https://img.freepik.com/free-photo/lone-tree_181624-46361.jpg?w=826&t=st=1708281792~exp=1708282392~hmac=26efaff03bbeb31aae8c88f8804b19a17299e5b2f1e98d9b60c224a8824a9ebf",
-      name: "Sponsor 1",
-      role: "Gold Sponsor",
+      category: "Travel Partner",
+      data: [
+        {
+          image: travel,
+          name: "Travelzilla",
+        },
+      ],
     },
     {
-      image:
-        "https://img.freepik.com/free-photo/lone-tree_181624-46361.jpg?w=826&t=st=1708281792~exp=1708282392~hmac=26efaff03bbeb31aae8c88f8804b19a17299e5b2f1e98d9b60c224a8824a9ebf",
-      name: "Sponsor 1",
-      role: "Gold Sponsor",
+      category: "Fragrance Partner ",
+      data: [
+        {
+          image: Denver,
+          name: "Denver",
+        },
+      ],
     },
     {
-      image:
-        "https://img.freepik.com/free-photo/lone-tree_181624-46361.jpg?w=826&t=st=1708281792~exp=1708282392~hmac=26efaff03bbeb31aae8c88f8804b19a17299e5b2f1e98d9b60c224a8824a9ebf",
-      name: "Sponsor 1",
-      role: "Gold Sponsor",
+      category: "refreshment partner",
+      data: [
+        {
+          image: cafe,
+          name: "Café 96",
+        },
+      ],
     },
     {
-      image:
-        "https://img.freepik.com/free-photo/lone-tree_181624-46361.jpg?w=826&t=st=1708281792~exp=1708282392~hmac=26efaff03bbeb31aae8c88f8804b19a17299e5b2f1e98d9b60c224a8824a9ebf",
-      name: "Sponsor 1",
-      role: "Gold Sponsor",
-    },
-    {
-      image:
-        "https://img.freepik.com/free-photo/lone-tree_181624-46361.jpg?w=826&t=st=1708281792~exp=1708282392~hmac=26efaff03bbeb31aae8c88f8804b19a17299e5b2f1e98d9b60c224a8824a9ebf",
-      name: "Sponsor 1",
-      role: "Gold Sponsor",
-    },
-  ];
-  const sponsors_cat4 = [
-    {
-      image:
-        "https://img.freepik.com/free-photo/lone-tree_181624-46361.jpg?w=826&t=st=1708281792~exp=1708282392~hmac=26efaff03bbeb31aae8c88f8804b19a17299e5b2f1e98d9b60c224a8824a9ebf",
-      name: "Sponsor 1",
-      role: "Silver Sponsor",
-    },
-    {
-      image:
-        "https://img.freepik.com/free-photo/lone-tree_181624-46361.jpg?w=826&t=st=1708281792~exp=1708282392~hmac=26efaff03bbeb31aae8c88f8804b19a17299e5b2f1e98d9b60c224a8824a9ebf",
-      name: "Sponsor 1",
-      role: "Gold Sponsor",
-    },
-    {
-      image:
-        "https://img.freepik.com/free-photo/lone-tree_181624-46361.jpg?w=826&t=st=1708281792~exp=1708282392~hmac=26efaff03bbeb31aae8c88f8804b19a17299e5b2f1e98d9b60c224a8824a9ebf",
-      name: "Sponsor 1",
-      role: "Gold Sponsor",
-    },
-    {
-      image:
-        "https://img.freepik.com/free-photo/lone-tree_181624-46361.jpg?w=826&t=st=1708281792~exp=1708282392~hmac=26efaff03bbeb31aae8c88f8804b19a17299e5b2f1e98d9b60c224a8824a9ebf",
-      name: "Sponsor 1",
-      role: "Gold Sponsor",
-    },
-    {
-      image:
-        "https://img.freepik.com/free-photo/lone-tree_181624-46361.jpg?w=826&t=st=1708281792~exp=1708282392~hmac=26efaff03bbeb31aae8c88f8804b19a17299e5b2f1e98d9b60c224a8824a9ebf",
-      name: "Sponsor 1",
-      role: "Gold Sponsor",
-    },
-    {
-      image:
-        "https://img.freepik.com/free-photo/lone-tree_181624-46361.jpg?w=826&t=st=1708281792~exp=1708282392~hmac=26efaff03bbeb31aae8c88f8804b19a17299e5b2f1e98d9b60c224a8824a9ebf",
-      name: "Sponsor 1",
-      role: "Gold Sponsor",
+      category: "Event Sponsors",
+      data: [
+        {
+          image: Inventkart,
+          name: "Inventkart (Robomania)",
+        },
+      ],
     },
   ];
 
   return (
     <>
-      <div
-        style={{
-          background:
-            "linear-gradient(to bottom, #d95f3b, #f0984a, #fcd6a5, #7aa9a3, #338f9a, #1c4c70)",
-        }}
-      >
-        <Navbar />
+      <main className="containerTeam">
+        <Navbar page="Team" />
+
         <div
-          // style={{ fontFamily: "ram" }}
-          className="flex text-black justify-center pt-24 text-4xl font-bold rumoura-font"
+          className="flex text-[2.5rem] sm:text-[3.5rem] tracking-wider text-white justify-center pt-24 text-4xl font-bold rumoura-font"
+          style={{
+            fontWeight: "bolder",
+            textAlign: "center",
+            textShadow: "0 0 10px black", // Add white shadow with 10px blur
+          }}
         >
-          SPONSORS
+          Sponsors
         </div>
-        <div
-          // style={{ fontFamily: "ram" }}
-          className="flex text-black justify-center mt-5 text-[2vw]  rumoura-font"
-        >
-          CATEGORY 1
-        </div>
-        <div id="gallery">
-          <div id="gallery">
-            {sponsors_cat1.map((sponsor, index) => {
-              return (
-                <>
-                  <div className="figure_1 ">
-                    <img
-                      src={sponsor.image}
-                      alt="Pink and blue clouds at sunset."
-                      title="Photo by Jeremy Doddridge for Unsplash"
-                      className="w-32 h-auto"
-                    />
-                    <span className="text-xl font-bold"> {sponsor.name}</span>
-                    <br />
-                    <span className="text-lg font-semibold">
-                      {" "}
-                      {sponsor.role}
-                    </span>
-                  </div>
-                </>
-              );
-            })}
+
+        {sponsors.map((category, index) => (
+          <div key={index}>
+            <div
+              className="flex text-[2rem] sm:text-[3rem] tracking-wider text-white justify-center mt-5  rumoura-font"
+              style={{
+                fontWeight: "bolder",
+                textAlign: "center",
+                textShadow: "0 0 10px black", // Add white shadow with 10px blur
+              }}
+            >
+              {category.category}
+            </div>
+
+            <div
+              id="gallery"
+              style={{
+                display: "flex",
+                flexWrap: "wrap",
+                justifyContent: "center",
+                alignItems: "center",
+              }}
+            >
+              {category.data.map((sponsor, sponsorIndex) => (
+                <div key={sponsorIndex} className="photo-container text-center">
+                  {/* <img
+                    src={sponsor.image}
+                    alt="Image Loading....."
+                    style={{ width: "300px", height: "270px" }}
+                  /> */}
+                  <img
+                    src={sponsor.image}
+                    alt="Image Loading....."
+                    style={{
+                      // category: "Associate Sponsor",
+                      width:
+                        category.category === "Associate Sponsor"
+                          ? "400px"
+                          : "300px",
+                      height:
+                        category.category === "Associate Sponsor"
+                          ? "160px"
+                          : "270px",
+                    }}
+                  />
+
+                  <span
+                    className="text-white"
+                    style={{ fontSize: "1.5rem", fontWeight: "bold" }}
+                  >
+                    {sponsor.name}
+                  </span>
+                </div>
+              ))}
+            </div>
           </div>
-          <div
-            // style={{ fontFamily: "ram" }}
-            className="flex text-black justify-center mt-5 text-[2vw]  rumoura-font"
-          >
-            CATEGORY 2
-          </div>
-          <div id="gallery">
-            {sponsors_cat2.map((sponsor, index) => {
-              return (
-                <>
-                  <div className="figure_1 ">
-                    <img
-                      src={sponsor.image}
-                      alt="Pink and blue clouds at sunset. "
-                      title="Photo by Jeremy Doddridge for Unsplash"
-                    />
-                    <span className="text-xl font-bold"> {sponsor.name}</span>
-                    <br />
-                    <span className="text-lg font-semibold">
-                      {" "}
-                      {sponsor.role}
-                    </span>
-                  </div>
-                </>
-              );
-            })}
-          </div>
-          <div
-            // style={{ fontFamily: "ram" }}
-            className="flex text-black justify-center mt-5 text-[2vw]  rumoura-font"
-          >
-            CATEGORY 3
-          </div>
-          <div id="gallery">
-            {sponsors_cat3.map((sponsor, index) => {
-              return (
-                <>
-                  <div className="figure_1 ">
-                    <img
-                      src={sponsor.image}
-                      alt="Pink and blue clouds at sunset. "
-                      title="Photo by Jeremy Doddridge for Unsplash"
-                    />
-                    <span className="text-xl font-bold"> {sponsor.name}</span>
-                    <br />
-                    <span className="text-lg font-semibold">
-                      {" "}
-                      {sponsor.role}
-                    </span>
-                  </div>
-                </>
-              );
-            })}
-          </div>
-          <div
-            // style={{ fontFamily: "ram" }}
-            className="flex text-black justify-center mt-5 text-[2vw]  rumoura-font"
-          >
-            CATEGORY 4
-          </div>
-          <div id="gallery">
-            {sponsors_cat4.map((sponsor, index) => {
-              return (
-                <>
-                  <div className="figure_1 ">
-                    <img
-                      src={sponsor.image}
-                      alt="Pink and blue clouds at sunset. "
-                      title="Photo by Jeremy Doddridge for Unsplash"
-                    />
-                    <span className="text-xl font-bold"> {sponsor.name}</span>
-                    <br />
-                    <span className="text-lg font-semibold">
-                      {" "}
-                      {sponsor.role}
-                    </span>
-                  </div>
-                </>
-              );
-            })}
-          </div>
-        </div>
-      </div>
+        ))}
+      </main>
     </>
   );
 };

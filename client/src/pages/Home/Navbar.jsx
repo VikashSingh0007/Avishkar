@@ -40,6 +40,10 @@ const Navbar = ({ page }) => {
     //   title: "Accommodation",
     // },
     {
+      id: "sponsors",
+      title: "Our Sponsors",
+    },
+    {
       id: "team",
       title: "Team",
     },
@@ -136,6 +140,22 @@ const Navbar = ({ page }) => {
               onClick={() => setActive("Team")}
             >
               {<Link to={"/team"}>Team</Link>}
+            </li>
+            <li
+              key={"sponsors"}
+              className={`font-Robo tracking-[3px] text-xxl mr-8  md:mr-12  md:text-sm lg:text-xl font-extrabold cursor-pointer rumoura-font ${
+                active === "Our Sponsors"
+                  ? "text-black bg-[#ae9e7f] p-2 rounded-xl"
+                  : "text-slate-200"
+              }`}
+              style={
+                active === "Our Sponsors"
+                  ? { boxShadow: "0 10px 20px rgba(0, 0, 0, 0.2)" }
+                  : null
+              }
+              onClick={() => setActive("Our Sponsors")}
+            >
+              {<Link to={"/sponsors"}>Our Sponsors</Link>}
             </li>
             <li
               key={"login"}
