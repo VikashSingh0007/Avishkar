@@ -70,7 +70,7 @@ const timelineData = [
       color: "#000",
     },
     link: {
-      url: "",
+      url: "https://drive.google.com/file/d/10v52ngw4llAjGXmQe5EtlIt1AacwyFU8/view?usp=sharing",
       text: "Get Schedule of Day 6",
     },
   },
